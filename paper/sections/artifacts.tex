@@ -1,7 +1,7 @@
 \section*{Artifacts}
 \label{sec:artifacts}
 
-All code and data behind this paper are in the supplementary archive submitted with it as one zip file. The
+All code and data behind this paper are available at \url{https://github.com/jackiectl2/cross-attempt-reuse-artifact}. The
 directory \texttt{code/} holds the trajectory parser, the Contract B and E certificates with their unit tests, and
 the snapshot audit behind precondition P2. It also holds the isolated replay runner, the analysis and simulator, the
 live runner with the trace-replay and concurrency tests, the cross-harness extraction and replay, the statistics,
@@ -11,10 +11,10 @@ replay cost tables, and a ledger of the states of the cluster jobs. It also cont
 experiment plan with a record of when it was written and a manifest with SHA-256 checksums. The directory
 \texttt{paper/} holds the scripts that build the data figures and tables from \texttt{results/}. It also holds a
 number ledger that maps each number printed in the paper to its source file and expression, with a checker that
-recomputes them. The archive further contains the container build scripts and package lists of the pinned runtime.
+recomputes them. The repository further contains the container build scripts and package lists of the pinned runtime.
 Under \texttt{review-stage/} it contains the prompts, responses and reviewed versions of the adversarial reviews of
 Contract B. A \texttt{README.md} gives the commands that rebuild the tables and figures from \texttt{results/} and
 the results from the public inputs. The inputs are public. They are the DAB repository and trajectory release
 \cite{ma2026dab} at revision \texttt{f6b1ad07} and the trace archives attached to DAB leaderboard pull requests \#94,
 \#96, \#99 and \#103. Rebuilding the replay cost table took 34 CPU jobs and 24.1 job-hours. The analyses and
-simulations rebuild from the tables in the archive, and the live runs need the public inputs.
+simulations rebuild from the tables in the repository, and the live runs need the public inputs.
