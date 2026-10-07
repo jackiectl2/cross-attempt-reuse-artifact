@@ -1,0 +1,116 @@
+\section{Methodology}
+\label{sec:method}
+
+
+
+\paragraph{Workload.}
+We use the public DAB release \cite{ma2026dab}: 13,482 of its 13,500 runs of five LLMs on 54 tasks over 12 datasets.
+The LLMs are Gemini-2.5-Flash, Gemini-3-Pro, GPT-5-mini, GPT-5.2 and Kimi-K2, and the databases run on SQLite,
+DuckDB, PostgreSQL and MongoDB. Parsing the trajectories yields 151,293 tool calls, of which 76,213 are
+\texttt{query\_db} calls. Re-running each task's own validator on the final answers gives 4,543 passing and 8,939
+failing runs. Table~\ref{tab:datasets} lists the datasets, which range from 0.6\,MB to 5.6\,GB on disk. The traces
+record what each call returned but not what it cost, so we measure cost by replay.
+
+\input{figures/tabd_float}
+\input{figures/tabw_float}
+
+\paragraph{Isolated replay and fidelity.}
+The 76,213 calls contain 41,616 distinct (database, query) pairs, and 66 calls lack a complete database or query
+argument. We execute each pair three times in isolation in a version-pinned runtime through DAB's own execution and
+serialization code. The runtime is a container image with Python 3.12, DuckDB 1.3.1 restricted to one thread and
+pandas 2.3.0. It also holds PostgreSQL 16.15 without parallel workers and MongoDB 7.0.43, and it applies a 120\,s cap.
+A pair is not executed again after an execution that reaches the cap. Six pairs name a database that is not in the
+task's configuration and cannot be replayed. Hence 41,610 pairs covering 76,141 calls have a replay outcome
+(Table~\ref{tab:workload}). Each pair yields an isolated execution time, which is the median of the completed runs.
+It also yields serialization and spill times, the size of the serialized result, and a byte-stability flag over the
+three results. In all, 37,675 pairs are stable, 3,917 fail, 15 time out and 3 return different values. We compare
+each replayed result with the observation recorded in the original run. That observation is the full result when it
+was inline and its 10,000-character preview when it was spilled. A replay is byte-identical to it, or equivalent
+after normalization. Normalization covers row order, missing-value rendering, float digits beyond the ninth decimal
+and MongoDB object identifiers assigned at load time. The two checks answer different questions. Stability over the
+three replays is our empirical evidence that reuse is result-preserving inside the pinned runtime. The comparison
+with the original run establishes \emph{fidelity}: the replayed cost and size describe the call the agent made. For a
+spilled result it covers the preview, because the traces do not keep the file.
+
+\paragraph{Cost model.}
+We report two time metrics. \emph{Isolated DB-execution time} is the replayed execution time of a call and measures
+the database work that reuse can avoid. \emph{Tool time} is what a design spends per call at the tool boundary. It
+covers execution and serialization on a miss, the spill-file write, a cache lookup, and the per-file work on a hit.
+The simulator charges the per-operation costs of the first live calibration. A lookup takes 1.27\,\textmu s, an alias
+12.6\,\textmu s and a copy 0.46\,ns per byte. A clone, measured in the copy-on-write calibration, takes 0.29\,ms. Two
+later calibrations measured the first three costs again and differ from these values by at most 7.3\%. When we
+validate the simulator against a live run, it charges that run's costs. A simulation contains the calls that its tier
+admits, and savings are relative to executing those calls without reuse. A task's saving is the ratio of its costs
+summed over its models and resamples, and we report the median over tasks.
+
+\paragraph{Admission tiers.}
+A cache needs an admission rule that decides, before it reuses a result, that reuse is result-preserving. We evaluate
+three tiers of decreasing strength (Table~\ref{tab:tiers}). \emph{Certified (Contract B)} is a default-deny whitelist
+over the query text and the audited schema, a conditional certificate. Table~\ref{tab:contractb} summarizes its
+construct whitelist, and the artifact holds the executable rule with its additional fail-closed checks. The rule
+admits one \texttt{SELECT} block over base tables in which every name binds to a stored column. It admits three shapes. The first is one row of counts and extrema. The second is stored columns under an \texttt{ORDER BY} that names every output. The third is groups ordered on their grouping columns. \texttt{SUM}, \texttt{AVG} and the variance family are not on the list, because
+their floating-point value depends on the order of accumulation
+\cite{mueller2018reproducible,duckdb2026nondeterminism}. Clock-dependent values are excluded as well. On MongoDB,
+whose DAB interface has no sort, the rule admits only a lookup by object identifier. The rule certifies byte
+stability under three preconditions. P1 requires a fixed snapshot, engine version and session configuration, and a
+fresh read-only session. P1 also requires a catalog without objects that act behind the query text, such as
+row-level security or user-defined functions. P2 concerns every stored column that the query outputs, groups by or
+passes to \texttt{MIN} or \texttt{MAX}. In such a column, values that the engine compares as equal print the same
+bytes. P3 requires a deterministic serializer. Under P1--P3, two completing executions of an admitted query return
+the same bytes whatever the plan, parallelism or physical row order. The joined and filtered rows form a multiset
+that the text and the data determine, and \texttt{COUNT} is a function of that multiset. \texttt{MIN}, \texttt{MAX}
+and the grouping range over columns for which P2 holds. The \texttt{ORDER BY} leaves ties only between rows that
+print the same. The plan does not decide whether the query raises an error either. Every operation that
+Table~\ref{tab:contractb} admits in a row expression returns a value or \texttt{NULL} for every input in the pinned
+engines. A one-row output is evaluated exactly once. Contract B thus certifies the bytes of an execution that
+completes. Whether a fresh execution completes within its resource limits depends on the query, the data, the limits
+and the load. Completion therefore lies outside the certificate. P2 is a property of the data that the query text
+cannot establish. A column that holds both $0.0$ and $-0.0$, or both $1$ and $1.0$, violates it. We therefore audit
+the snapshot: all 19,772 stored columns of DAB's 26 SQL databases satisfy P2, and their catalogs hold no such object.
+A unit suite of 181 assertions tests the implementation. Section~\ref{sec:threats} reports how the rule evolved after
+the experiment plan and how its argument was checked.
+
+\emph{Assumption-based (Contract E)} keeps the read-only, determinism and allow-list checks and drops the ordering
+and shape checks. Byte stability then also rests on the runtime reproducing the engine's physical row order. Without a sort, the engines leave that order unspecified \cite{postgres2026order,sqlite2026select,mongodb2026sort}. We pin it through the engine version, one thread and a static snapshot. \emph{Potential (oracle)} is the population on
+which we measure repeated work rather than an admission rule. It contains every call whose replay is equivalent to
+its recorded observation, so that the replayed cost and size describe the call the agent made. It bounds what an
+exact cache could reuse and cannot be computed before execution. Counting only byte-identical replays leaves the scope shares almost unchanged (Section~\ref{sec:robust}). Both static rules
+are decided before execution. To measure designs, we restrict each rule to the calls whose replay succeeded, is
+byte-identical to the recorded observation and is stable over three runs. These are the \emph{B-eval} and
+\emph{E-eval subsets}. They are post-hoc evaluation restrictions that apply the same gates to both rules, so the two
+subsets differ only in the rule.
+
+\input{figures/tabt_float}
+\input{figures/tabb_float}
+
+\paragraph{Scope attribution and resampling.}
+Within each dataset, we order attempts randomly. We assign every oracle-admitted call the innermost scope in which an
+exact-text equivalent occurred earlier. The scopes are the same session, another attempt of the same task and model, and another model on the same task. The outermost scopes are another task of the dataset and none. Shares are means over 200 random orders,
+weighted by calls, by isolated DB-execution time and by payload bytes. To measure how reuse grows with the number of
+attempts $N$, we sample $N$ attempts per task and model without replacement. We use 200 resamples for $N \in
+\{1,2,4,8,16,50\}$. For each such batch we simulate a session cache (S1) and a cache shared by the batch's attempts,
+both unbounded and starting empty. We label the latter S2. Without a budget, its DB-execution saving is the same for every cross-attempt design of Section~\ref{sec:designs}. Those designs differ in what they do with the result file. In all,
+268 of the 270 task--model cells have the 50 runs that $N=50$ needs. We report medians over the 54 tasks with
+task-bootstrap 95\% confidence intervals and check them with a bootstrap that resamples whole datasets. We test
+paired differences with Wilcoxon signed-rank tests, Holm-corrected over a family of 29 tests. Hypotheses and success criteria were fixed in an experiment plan after a pilot replay of the SQLite and DuckDB calls. These are 64\% of the calls. The plan preceded the full replay, and Section~\ref{sec:prereg} reports the outcomes.
+
+\paragraph{Instruments.}
+A trace-driven simulator replays sampled attempt orders through each design of Section~\ref{sec:designs}. It accounts
+the tool time, bytes written and peak footprint of every call. A live runner executes the same designs for real on
+the calibration cells. These are 12 task--model cells chosen in advance to span each engine's inline-only, mixed and
+spill-heavy tasks. The runner returns DAB's exact tool messages and writes real files. Its bytes written and peak
+footprint match the simulator exactly in all 480 runs of the E-eval calibration. A live tool-boundary trace replay
+runs the designs on one eight-attempt batch from each of the 270 task--model cells. It re-issues each attempt's
+recorded database calls and re-runs its recorded Python consumers at their trace position against each design's
+bindings. It also probes the shared store with write and delete attempts, and the LLM is not re-run. A threaded
+stress test runs attempts concurrently against one shared store. A clean-room job re-parsed the original archive and
+re-ran the scope and saving analyses. It reproduced all 8,546 values in their result files to a relative tolerance of
+$10^{-9}$. Four further seeds leave the scope shares unchanged and move the $N=4$ median saving by at most 0.6 points.
+
+\paragraph{Environment.}
+Every replay, simulation and live run ran as a batch job in Singularity containers on CPU nodes of a university
+cluster. The nodes are two-socket x86-64 machines with 28 or 36 cores and 180\,GiB of memory. Each job received the
+cores and memory it requested, without exclusive use of its node. A replay executes each query up to three times in
+a row after its dataset is loaded. We report the median of the completed executions, and Section~\ref{sec:robust}
+weights by the first one instead. Jobs that share a node can slow a run, and the median of three executions damps
+this. The live calibration runs every design of a cell within one job, in a random order per resample.

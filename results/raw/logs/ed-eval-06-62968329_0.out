@@ -1,0 +1,16 @@
+task 0 -> PATENTS shard 0/12
+INFO:    Instance stats will not be available - system configuration does not support cgroup management.
+INFO:    instance started successfully
+waiting for server to start.... done
+server started
+pg_load patent_CPCDefinition 2s stderr_lines=2
+psql:$PROJECT_DIR/data/dab/repo/query_PATENTS/query_dataset/patent_CPCDefinition.sql:11: ERROR:  unrecognized configuration parameter "transaction_timeout"
+psql:$PROJECT_DIR/data/dab/repo/query_PATENTS/query_dataset/patent_CPCDefinition.sql:54: ERROR:  role "postgres" does not exist
+postgres (PostgreSQL) 16.15 (Debian 16.15-1.pgdg13+2)
+PATENTS[0/12] 0/194 elapsed=1s
+engine    status
+postgres  error      20
+          ok         51
+sqlite    error       2
+          ok        121
+done PATENTS[0/12] n=194 wall=3002s

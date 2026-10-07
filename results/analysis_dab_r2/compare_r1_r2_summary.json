@@ -1,0 +1,21 @@
+{
+ "note": "numeric leaves of results_B1.json / results_B23.json: analysis_dab_r1 (original Contract B, rules 1-5) vs analysis_dab_r2 (reported; rules 6-7 and plain MongoDB lookups); rel. tol 1e-9",
+ "results_B1.json": {
+  "leaves": 2965,
+  "identical": 2875,
+  "different_by_section": {
+   "B1_B_certified": 90
+  },
+  "new_leaves": [
+   "/summary/seed_offset"
+  ]
+ },
+ "results_B23.json": {
+  "leaves": 5580,
+  "identical": 4460,
+  "different_by_section": {
+   "B3_B_certified": 1120
+  },
+  "new_leaves": []
+ }
+}

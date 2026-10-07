@@ -1,0 +1,20 @@
+/usr/local/lib/python3.12/site-packages/numpy/lib/_nanfunctions_impl.py:1215: RuntimeWarning: Mean of empty slice
+  return np.nanmean(a, axis, out=out, keepdims=keepdims)
+/usr/local/lib/python3.12/site-packages/numpy/lib/_nanfunctions_impl.py:1215: RuntimeWarning: Mean of empty slice
+  return np.nanmean(a, axis, out=out, keepdims=keepdims)
+B signed time error, median by system: {'S0': -0.013, 'S1': -0.02, 'S2': -0.016, 'S3': -0.015}
+B time-saving agreement, median |live - pred| by system: {'S1': 0.028, 'S2': 0.017, 'S3': 0.011}
+B median live saving vs pred saving (S2): -0.002 0.0
+B S3/S2 written live/pred median: nan nan | S3/S2 time live/pred median: 0.999 1.0
+E signed time error, median by system: {'S0': -0.195, 'S1': -0.176, 'S2': -0.292, 'S3': -0.244}
+E time-saving agreement, median |live - pred| by system: {'S1': 0.005, 'S2': 0.033, 'S3': 0.019}
+E median live saving vs pred saving (S2): 0.05 0.149
+E S3/S2 written live/pred median: 0.459 0.459 | S3/S2 time live/pred median: 0.992 0.999
+B 1/4 totals: {'S1': {'live_time_saving': np.float64(-0.039), 'pred_time_saving': np.float64(0.0), 'live_saved_s': np.float64(-0.02), 'pred_saved_s': np.float64(0.0)}, 'S2': {'live_time_saving': np.float64(0.169), 'pred_time_saving': np.float64(0.173), 'live_saved_s': np.float64(0.07), 'pred_saved_s': np.float64(0.07)}, 'S3': {'live_time_saving': np.float64(0.166), 'pred_time_saving': np.float64(0.173), 'live_saved_s': np.float64(0.07), 'pred_saved_s': np.float64(0.07)}} | S3/S2 written live/pred: 0.0 0.0 | S3/S2 time live/pred: 1.005 1.0
+B inf totals: {'S1': {'live_time_saving': np.float64(0.036), 'pred_time_saving': np.float64(0.0), 'live_saved_s': np.float64(0.02), 'pred_saved_s': np.float64(0.0)}, 'S2': {'live_time_saving': np.float64(-0.144), 'pred_time_saving': np.float64(0.259), 'live_saved_s': np.float64(-0.06), 'pred_saved_s': np.float64(0.1)}, 'S3': {'live_time_saving': np.float64(0.279), 'pred_time_saving': np.float64(0.259), 'live_saved_s': np.float64(0.12), 'pred_saved_s': np.float64(0.1)}} | S3/S2 written live/pred: 0.0 0.0 | S3/S2 time live/pred: 0.63 1.0
+E 1/4 totals: {'S1': {'live_time_saving': np.float64(-0.0), 'pred_time_saving': np.float64(0.001), 'live_saved_s': np.float64(-0.05), 'pred_saved_s': np.float64(0.08)}, 'S2': {'live_time_saving': np.float64(0.517), 'pred_time_saving': np.float64(0.564), 'live_saved_s': np.float64(54.0), 'pred_saved_s': np.float64(61.41)}, 'S3': {'live_time_saving': np.float64(0.52), 'pred_time_saving': np.float64(0.568), 'live_saved_s': np.float64(54.35), 'pred_saved_s': np.float64(61.82)}} | S3/S2 written live/pred: 0.323 0.323 | S3/S2 time live/pred: 0.993 0.991
+E inf totals: {'S1': {'live_time_saving': np.float64(-0.003), 'pred_time_saving': np.float64(0.001), 'live_saved_s': np.float64(-0.33), 'pred_saved_s': np.float64(0.08)}, 'S2': {'live_time_saving': np.float64(0.492), 'pred_time_saving': np.float64(0.564), 'live_saved_s': np.float64(51.31), 'pred_saved_s': np.float64(61.41)}, 'S3': {'live_time_saving': np.float64(0.521), 'pred_time_saving': np.float64(0.568), 'live_saved_s': np.float64(54.4), 'pred_saved_s': np.float64(61.82)}} | S3/S2 written live/pred: 0.323 0.323 | S3/S2 time live/pred: 0.942 0.991
+B 1/4 tasks 5 | S3 >= S2 live saving: 1 | heavy (S0 live >= 5 s) |live-pred| S2 saving: [] | cheap median live/pred S2 saving: -0.001 0.0
+B inf tasks 5 | S3 >= S2 live saving: 4 | heavy (S0 live >= 5 s) |live-pred| S2 saving: [] | cheap median live/pred S2 saving: -0.021 0.0
+E 1/4 tasks 12 | S3 >= S2 live saving: 8 | heavy (S0 live >= 5 s) |live-pred| S2 saving: [0.001, 0.011, 0.005] | cheap median live/pred S2 saving: 0.141 0.256
+E inf tasks 12 | S3 >= S2 live saving: 12 | heavy (S0 live >= 5 s) |live-pred| S2 saving: [0.001, 0.005, 0.009] | cheap median live/pred S2 saving: 0.026 0.256

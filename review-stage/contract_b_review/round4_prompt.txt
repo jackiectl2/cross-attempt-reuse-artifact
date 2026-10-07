@@ -1,0 +1,44 @@
+You are an adversarial reviewer of a static SQL certificate. Read `certify.py` and `p2_audit.py` in the working
+directory. The certificate under review is `certify_sql_b` (reached through `certify(text, engine, strict=True,
+schema=...)` when the environment variable ED_CONTRACT_B is unset): a default-deny whitelist whose rules and
+preconditions are in the module docstring. Ignore `certify_sql` (earlier rules, kept for old results) and
+`certify_mongo`.
+
+## What the certificate claims
+`certify(text, engine, schema=D)` returns True only for queries for which every correct execution on the same snapshot
+returns the same serialized bytes, and for which no correct execution raises an error that another one avoids,
+whatever the plan, the degree of parallelism or the physical row order. Engines: SQLite 3.x, DuckDB 1.3, PostgreSQL 16
+(database created with C collation). `D` is the audited database of the query as produced by `p2_audit.py`:
+`catalog_ok` and, for every base table, its stored columns with `safe` (no two values of the column compare equal and
+print differently) and a type `family`.
+
+Assumed and not to be attacked (preconditions P1-P3 of the docstring): the snapshot, engine versions and session
+configuration (time zone, float formatting, search path, default settings) are fixed; every call runs in a fresh
+read-only session with no temporary or attached object and no extension or user function loaded by the session; the
+catalog checks of `p2_audit.py` hold when `catalog_ok` is true; no database declares a non-binary collation; results
+are serialized by a deterministic serializer that prints every value from its engine-returned Python value. Resource
+failures (out of memory, time-outs) are out of scope.
+
+## Your task
+Break it. Find concrete queries that `certify_sql_b` ADMITS although two correct executions on the same snapshot can
+return different bytes, or one can raise an error that the other avoids, in at least one of the three engines. For
+each candidate give: the engine and exact query text (state the database dict you pass); a trace through the code
+showing that every check passes; the engine semantics that make the outcomes differ, with a small example dataset;
+and the smallest additional rule that rejects it.
+
+Look in particular at: operations still admitted in row expressions (WHERE, ON, the argument of COUNT, CASE,
+COALESCE) that can raise for some rows in each engine and that a plan may skip, including implicit conversions in
+comparisons, IN, BETWEEN, LIKE / ILIKE, LOWER / UPPER / LENGTH / TRIM / REPLACE / SUBSTR on non-string operands, and
+the DuckDB rules `families` and `float_arith` (are the type families from `p2_audit.py` precise enough: DECIMAL,
+HUGEINT, DATE vs TIMESTAMP, BLOB, UUID, ENUM, nested types; can FLOAT arithmetic or comparisons raise; what about a
+string literal compared with a number, date or boolean column, where the literal is converted once); at HAVING and at
+the one-row outputs; at name binding and the alias rules; at the three shapes and the DISTINCT, LIMIT and OFFSET rules;
+at how sqlglot 30 parses each admitted construct per dialect, where an accepted node can stand for something else in
+the engine; and at `p2_audit.py` (a column that passes the audit although two of its values compare equal and print
+differently in the engine-returned Python value; a catalog object that acts behind the query text and is not checked).
+
+Also list queries that are obviously stable but rejected only because of an implementation slip rather than by a
+stated rule.
+
+Report at most 10 counterexamples, strongest first, and say plainly for each category whether you found none. Do not
+propose a redesign; do not modify any file.

@@ -1,0 +1,29 @@
+task 33 -> yelp shard 0/1
+INFO:    Instance stats will not be available - system configuration does not support cgroup management.
+INFO:    instance started successfully
+mongo_load yelp_db 0s
+db version v7.0.43
+yelp[0/1] 0/3410 elapsed=0s
+yelp[0/1] 200/3410 elapsed=1s
+yelp[0/1] 400/3410 elapsed=3s
+yelp[0/1] 600/3410 elapsed=4s
+yelp[0/1] 800/3410 elapsed=5s
+yelp[0/1] 1000/3410 elapsed=6s
+yelp[0/1] 1200/3410 elapsed=7s
+yelp[0/1] 1400/3410 elapsed=10s
+yelp[0/1] 1600/3410 elapsed=12s
+yelp[0/1] 1800/3410 elapsed=13s
+yelp[0/1] 2000/3410 elapsed=14s
+yelp[0/1] 2200/3410 elapsed=16s
+yelp[0/1] 2400/3410 elapsed=27s
+yelp[0/1] 2600/3410 elapsed=34s
+yelp[0/1] 2800/3410 elapsed=41s
+yelp[0/1] 3000/3410 elapsed=49s
+yelp[0/1] 3200/3410 elapsed=57s
+yelp[0/1] 3400/3410 elapsed=66s
+engine  status
+duckdb  error      120
+        ok        1094
+mongo   error      142
+        ok        2054
+done yelp[0/1] n=3410 wall=66s

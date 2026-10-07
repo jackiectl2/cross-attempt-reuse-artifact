@@ -1,0 +1,11 @@
+% Table 1 -- funnel (column width)
+\begin{table}[htbp]
+  \caption{Admission funnel over all 76,213 database calls: pooled shares of calls, isolated DB-execution time (a
+  timeout counts at the 120\,s cap) and payload bytes. Gates are cumulative. The last two rows are the post-hoc E-eval
+  (assumption-based) and B-eval (certified) subsets. They hold the calls of the static E and B rules whose replay is
+  byte-identical to the recorded observation and stable across three replays. The oracle (potential) admits every call
+  whose replay is equivalent to the recorded observation.}
+  \label{tab:funnel}
+  \small\setlength{\tabcolsep}{3pt}
+  \input{figures/tab1_funnel}
+\end{table}

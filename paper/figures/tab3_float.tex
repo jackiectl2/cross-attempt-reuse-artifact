@@ -1,0 +1,17 @@
+% Table 3 -- correctness (a) and concurrency (b) (full width, stacked)
+\begin{table*}[tbp]
+  \caption{Observations under reuse on the assumption-based E-eval subset, $N=8$. (a) Live trace replay of S3 against
+  S0 on identical attempt orders. The passes cover all 270 task--model cells (one resample, unbounded budget) and a
+  one-worker rerun of the 15 PATENTS cells on the same attempt orders. They also cover the 12 calibration cells
+  (budgets $\infty$ and 1/4, two resamples) and a CoW pass on 8 of them. ``Hits $\neq$ S0'' counts cached hits whose
+  observation differs from S0. ``Value mismatches'' counts hits where S0 and S3 both returned a result and the
+  results differ. The 2 differing hits of the all-cell pass are PATENTS calls whose S0 execution failed under load
+  while S3 returned a result. ``Consumers'' counts recorded agent Python code re-run with identical successes,
+  identical failures, and differing output. The 2 differing consumers in the CoW pass are S0 timeouts at the 120\,s
+  cap. (b) The 8 attempts of each calibration cell as concurrent threads against one S3 store (2 resamples, 757 calls
+  per configuration), compared with a serial S0 run.}
+  \label{tab:e2e}
+  \small
+  \subcaptionbox{Live trace replay: S3 against S0\label{tab:e2e-a}}{\input{figures/tab3_e2e}}\\[4pt]
+  \subcaptionbox{Concurrent attempts against one S3 store\label{tab:e2e-b}}{\input{figures/tab3_concurrency}}
+\end{table*}

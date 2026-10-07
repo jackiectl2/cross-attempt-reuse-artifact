@@ -1,0 +1,55 @@
+{
+ "n_orders": 200,
+ "gated_calls": 70173,
+ "scope": "other_attempts",
+ "order_free": {
+  "queries": 18479,
+  "calls": 42013,
+  "successful_calls": 71582,
+  "B_static_and_order_free_calls": 0,
+  "share_of_successful": {
+   "calls": 0.5869212930625017,
+   "exec_s": 0.6499370796322873,
+   "payload_bytes": 0.7921565105533509
+  },
+  "calls_by_engine": {
+   "duckdb": {
+    "order_free": 11143,
+    "successful": 27388
+   },
+   "mongo": {
+    "order_free": 6943,
+    "successful": 8200
+   },
+   "postgres": {
+    "order_free": 10717,
+    "successful": 16827
+   },
+   "sqlite": {
+    "order_free": 13210,
+    "successful": 19167
+   }
+  }
+ },
+ "calls": {
+  "admitted_by_B_static": 0.0644373186746068,
+  "admitted_by_E_static": 0.9946174988547868,
+  "admitted_by_B_eval": 0.0644373186746068,
+  "admitted_by_E_eval": 0.9319438082149947,
+  "admitted_by_order_fixed": 0.33829592304168576
+ },
+ "exec_s": {
+  "admitted_by_B_static": 0.1222829139091857,
+  "admitted_by_E_static": 0.9998867233486267,
+  "admitted_by_B_eval": 0.1222829139091857,
+  "admitted_by_E_eval": 0.9984227016239146,
+  "admitted_by_order_fixed": 0.27142816772717376
+ },
+ "payload_bytes": {
+  "admitted_by_B_static": 4.521768580814651e-07,
+  "admitted_by_E_static": 0.9999995119662176,
+  "admitted_by_B_eval": 4.521768580814651e-07,
+  "admitted_by_E_eval": 0.9999913413096613,
+  "admitted_by_order_fixed": 0.17165011197305055
+ }
+}

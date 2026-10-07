@@ -1,0 +1,97 @@
+{
+ "all_E": {
+  "mismatch_classes": {
+   "S1:value_on_miss": 1,
+   "S2:value_on_miss": 1,
+   "S3:value_on_miss": 1
+  },
+  "unclassified_truncated": {
+   "S1": 0,
+   "S2": 0,
+   "S3": 0
+  },
+  "consumers_skipped_unbound": {
+   "S1": 0,
+   "S2": 0,
+   "S3": 0
+  },
+  "consumer_mismatch_classes": {},
+  "details": [
+   {
+    "cell": "PATENTS/query3/kimi-k2",
+    "budget": "inf",
+    "system": "S1",
+    "class": "value_on_miss",
+    "run": 25,
+    "i": 6,
+    "hit": false,
+    "kind": "spilled",
+    "S0_kind": "spilled",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, citation, cpc FROM publicationinfo WHERE Patents_info LIKE '%UNIV CALIFORNIA%' ORDER BY RANDOM() LIMIT 50;",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     10.39,
+     9.76,
+     8.86
+    ],
+    "replay_3run_byte_stable": false
+   },
+   {
+    "cell": "PATENTS/query3/kimi-k2",
+    "budget": "inf",
+    "system": "S2",
+    "class": "value_on_miss",
+    "run": 25,
+    "i": 6,
+    "hit": false,
+    "kind": "spilled",
+    "S0_kind": "spilled",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, citation, cpc FROM publicationinfo WHERE Patents_info LIKE '%UNIV CALIFORNIA%' ORDER BY RANDOM() LIMIT 50;",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     10.39,
+     9.76,
+     8.86
+    ],
+    "replay_3run_byte_stable": false
+   },
+   {
+    "cell": "PATENTS/query3/kimi-k2",
+    "budget": "inf",
+    "system": "S3",
+    "class": "value_on_miss",
+    "run": 25,
+    "i": 6,
+    "hit": false,
+    "kind": "spilled",
+    "S0_kind": "spilled",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, citation, cpc FROM publicationinfo WHERE Patents_info LIKE '%UNIV CALIFORNIA%' ORDER BY RANDOM() LIMIT 50;",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     10.39,
+     9.76,
+     8.86
+    ],
+    "replay_3run_byte_stable": false
+   }
+  ]
+ }
+}

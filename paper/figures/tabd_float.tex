@@ -1,0 +1,12 @@
+% Table -- the 12 datasets (full width, Section 3)
+\begin{table*}[tbp]
+  \caption{The 12 DAB datasets of the workload. Columns give the engines (S: SQLite, D: DuckDB, P: PostgreSQL, M:
+  MongoDB), the tasks, and the size on disk of the database files and dumps as shipped. They also give the
+  \texttt{query\_db} calls, the distinct (database, query) pairs, and the share of successfully replayed calls whose
+  result spills to a file. Isolated DB-execution time and payload bytes are summed over all calls. The last columns
+  give the median over the dataset's tasks of the DB-time share repeated from other attempts and within the session
+  (potential tier).}
+  \label{tab:datasets}
+  \small
+  \input{figures/tabd_datasets}
+\end{table*}

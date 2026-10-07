@@ -1,0 +1,109 @@
+{
+ "sqlite": {
+  "DEPS_DEV_V1/package_database": {
+   "objects": 1,
+   "with_collate": 0
+  },
+  "GITHUB_REPOS/metadata_database": {
+   "objects": 3,
+   "with_collate": 0
+  },
+  "PATENTS/publication_database": {
+   "objects": 1,
+   "with_collate": 0
+  },
+  "agnews/metadata_database": {
+   "objects": 2,
+   "with_collate": 0
+  },
+  "bookreview/review_database": {
+   "objects": 1,
+   "with_collate": 0
+  },
+  "crmarenapro/core_crm": {
+   "objects": 3,
+   "with_collate": 0
+  },
+  "crmarenapro/products_orders": {
+   "objects": 7,
+   "with_collate": 0
+  },
+  "crmarenapro/territory": {
+   "objects": 2,
+   "with_collate": 0
+  },
+  "googlelocal/review_database": {
+   "objects": 1,
+   "with_collate": 0
+  },
+  "music_brainz_20k/tracks_database": {
+   "objects": 1,
+   "with_collate": 0
+  },
+  "stockindex/indexinfo_database": {
+   "objects": 1,
+   "with_collate": 0
+  },
+  "stockmarket/stockinfo_database": {
+   "objects": 1,
+   "with_collate": 0
+  }
+ },
+ "duckdb": {
+  "DEPS_DEV_V1/project_database": {
+   "tables": 2,
+   "with_collate": 0,
+   "default_collation": ""
+  },
+  "GITHUB_REPOS/artifacts_database": {
+   "tables": 3,
+   "with_collate": 0,
+   "default_collation": ""
+  },
+  "PANCANCER_ATLAS/molecular_database": {
+   "tables": 2,
+   "with_collate": 0,
+   "default_collation": ""
+  },
+  "crmarenapro/sales_pipeline": {
+   "tables": 6,
+   "with_collate": 0,
+   "default_collation": ""
+  },
+  "crmarenapro/activities": {
+   "tables": 3,
+   "with_collate": 0,
+   "default_collation": ""
+  },
+  "music_brainz_20k/sales_database": {
+   "tables": 1,
+   "with_collate": 0,
+   "default_collation": ""
+  },
+  "stockindex/indextrade_database": {
+   "tables": 1,
+   "with_collate": 0,
+   "default_collation": ""
+  },
+  "stockmarket/stocktrade_database": {
+   "tables": 2753,
+   "with_collate": 0,
+   "default_collation": ""
+  },
+  "yelp/user_database": {
+   "tables": 3,
+   "with_collate": 0,
+   "default_collation": ""
+  }
+ },
+ "summary": {
+  "sqlite": {
+   "databases": 12,
+   "databases_with_collate": 0
+  },
+  "duckdb": {
+   "databases": 9,
+   "databases_with_collate": 0
+  }
+ }
+}

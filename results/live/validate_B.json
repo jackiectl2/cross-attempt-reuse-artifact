@@ -1,0 +1,23 @@
+{
+ "n": 480,
+ "fitted_miss_overhead_s": 0.00014441666599109297,
+ "fitted_hit_overhead_s": 0.002450064596604916,
+ "median_time_rel_err_uncalibrated": 0.09334122678066328,
+ "median_time_rel_err": 0.13010313513159807,
+ "p90_time_rel_err": 0.26189421621295417,
+ "median_written_rel_err": null,
+ "by_system": {
+  "time_rel_err": {
+   "S0": 0.12895957442722755,
+   "S1": 0.15152477493506544,
+   "S2": 0.12753398857084525,
+   "S3": 0.11908991833035652
+  },
+  "written_rel_err": {
+   "S0": null,
+   "S1": null,
+   "S2": null,
+   "S3": null
+  }
+ }
+}

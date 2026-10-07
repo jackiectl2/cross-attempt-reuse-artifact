@@ -1,0 +1,43 @@
+You are an adversarial reviewer of a static SQL certificate. Read `certify.py` and `p2_audit.py` in the working
+directory. The certificate under review is `certify_sql_b` (reached through `certify(text, engine, strict=True,
+schema=...)` when the environment variable ED_CONTRACT_B is unset): a default-deny whitelist whose rules and
+preconditions are in the module docstring. Ignore `certify_sql` (earlier rules, kept for old results) and
+`certify_mongo`.
+
+## What the certificate claims
+`certify(text, engine, schema=S)` returns True only for queries for which every correct execution on the same snapshot
+returns the same serialized bytes, and for which no correct execution raises an error that another one avoids,
+whatever the plan, the degree of parallelism or the physical row order. Engines: SQLite 3.x, DuckDB 1.3, PostgreSQL 16
+(database created with C collation). `S` maps every base table of the query's database to its stored columns and, per
+column, whether it passed `p2_audit.py` ("P2-safe": no two values of the column compare equal and print differently).
+Assumed and not to be attacked (preconditions P1-P3 of the docstring): the snapshot, engine versions and session
+configuration (time zone, float formatting, search path) are fixed; every call runs in a fresh read-only session with
+no temporary or attached object; no database declares a non-binary collation; results are serialized by a
+deterministic serializer that prints every value from its engine-returned Python value.
+
+## Your task
+Break it. Find concrete queries that `certify_sql_b` ADMITS although two correct executions on the same snapshot can
+return different bytes, or one can raise an error that the other avoids, in at least one of the three engines. For
+each candidate give: the engine and exact query text (state the schema dict you pass); a trace through the code
+showing that every check passes; the engine semantics that make the outcomes differ, with a small example dataset;
+and the smallest additional rule that rejects it.
+
+Look in particular at: how sqlglot 30 parses each admitted construct per dialect and whether a node the whitelist
+accepts can stand for something else in the engine (SQLite's double-quoted strings and bare `true` / `false`, keywords
+used as column names, `Div` typing, `Trim` variants with FROM, `Coalesce` vs `IFNULL`, `If` / `Case`, `Between`,
+`In` with one element, `Is` with non-null right sides, `Like` with ESCAPE, `Limit` / `Offset` / `Fetch` forms,
+`Ordered` flags, table aliases that equal column or table names, self joins, comma joins, join kinds and sides);
+at name binding (`_fold`, quoted identifiers per engine, alias rules, alias references in ORDER BY and HAVING, the
+replacement of aliases in HAVING, ordinals); at the three shapes (one row; ordered rows of stored columns; grouped),
+including the DISTINCT rules and the rule that naming every grouping column orders a grouped result; at operations
+that can raise for some rows in each engine and that a plan may skip (anything still admitted outside SQLite, and
+anything in SQLite that can raise); at implicit conversions inside comparisons, IN lists, BETWEEN and CASE branches
+(text parsed as a number or a date, numeric overflow, invalid input syntax raised at run time rather than at plan
+time); and at `p2_audit.py` (a column that passes the audit although two of its values compare equal and print
+differently in the engine-returned Python value, per engine and type).
+
+Also list queries that are obviously stable but rejected only because of an implementation slip rather than by a
+stated rule.
+
+Report at most 10 counterexamples, strongest first, and say plainly for each category whether you found none. Do not
+propose a redesign; do not modify any file.

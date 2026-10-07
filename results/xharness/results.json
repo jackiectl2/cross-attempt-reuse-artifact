@@ -1,0 +1,228 @@
+{
+ "phoenix": {
+  "model": "claude-opus-5",
+  "runs": 270,
+  "queries": 54,
+  "db_calls": 2937,
+  "scope_shares": {
+   "calls": {
+    "session": 0.017,
+    "other_attempts": 0.1335,
+    "other_queries": 0.0409,
+    "none": 0.8086
+   },
+   "result_chars": {
+    "session": 0.005,
+    "other_attempts": 0.1427,
+    "other_queries": 0.0473,
+    "none": 0.805
+   }
+  },
+  "task_median": {
+   "calls_session": 0.0,
+   "calls_other_attempts": 0.1446,
+   "bytes_session": 0.0,
+   "bytes_other_attempts": 0.0954
+  },
+  "reuse_curve": {
+   "1": {
+    "median_task_call_reuse": 0.0,
+    "median_task_byte_reuse": 0.0,
+    "tasks": 54
+   },
+   "2": {
+    "median_task_call_reuse": 0.06236744708279619,
+    "median_task_byte_reuse": 0.03610202417886958,
+    "tasks": 54
+   },
+   "3": {
+    "median_task_call_reuse": 0.09685409161091096,
+    "median_task_byte_reuse": 0.06204454781481977,
+    "tasks": 54
+   },
+   "4": {
+    "median_task_call_reuse": 0.12864245931660412,
+    "median_task_byte_reuse": 0.07877323455681119,
+    "tasks": 54
+   },
+   "5": {
+    "median_task_call_reuse": 0.1545138888888889,
+    "median_task_byte_reuse": 0.1058382826563512,
+    "tasks": 54
+   }
+  },
+  "llm_latency_s": {
+   "n": 1780,
+   "p25": 3.67575,
+   "median": 5.247,
+   "p75": 8.41
+  }
+ },
+ "qwen": {
+  "model": "qwen3.8-flash-next",
+  "runs": 270,
+  "queries": 54,
+  "db_calls": 3294,
+  "scope_shares": {
+   "calls": {
+    "session": 0.0006,
+    "other_attempts": 0.1594,
+    "other_queries": 0.0382,
+    "none": 0.8018
+   },
+   "result_chars": {
+    "session": 0.0021,
+    "other_attempts": 0.153,
+    "other_queries": 0.0474,
+    "none": 0.7976
+   }
+  },
+  "task_median": {
+   "calls_session": 0.0,
+   "calls_other_attempts": 0.1787,
+   "bytes_session": 0.0,
+   "bytes_other_attempts": 0.14975
+  },
+  "reuse_curve": {
+   "1": {
+    "median_task_call_reuse": 0.0,
+    "median_task_byte_reuse": 0.0,
+    "tasks": 54
+   },
+   "2": {
+    "median_task_call_reuse": 0.07131125691308784,
+    "median_task_byte_reuse": 0.05926107482729133,
+    "tasks": 54
+   },
+   "3": {
+    "median_task_call_reuse": 0.12054983480991521,
+    "median_task_byte_reuse": 0.09118067516741962,
+    "tasks": 54
+   },
+   "4": {
+    "median_task_call_reuse": 0.15239184682743132,
+    "median_task_byte_reuse": 0.1243663067728529,
+    "tasks": 54
+   },
+   "5": {
+    "median_task_call_reuse": 0.17873303167420815,
+    "median_task_byte_reuse": 0.14976541327155934,
+    "tasks": 54
+   }
+  },
+  "llm_latency_s": null
+ },
+ "scout": {
+  "model": "glm-5.2",
+  "runs": 249,
+  "queries": 54,
+  "db_calls": 1490,
+  "scope_shares": {
+   "calls": {
+    "session": 0.0034,
+    "other_attempts": 0.057,
+    "other_queries": 0.0128,
+    "none": 0.9268
+   },
+   "result_chars": {
+    "session": 0.007,
+    "other_attempts": 0.061,
+    "other_queries": 0.0111,
+    "none": 0.9209
+   }
+  },
+  "task_median": {
+   "calls_session": 0.0,
+   "calls_other_attempts": 0.03925,
+   "bytes_session": 0.0,
+   "bytes_other_attempts": 0.0253
+  },
+  "reuse_curve": {
+   "1": {
+    "median_task_call_reuse": 0.0,
+    "median_task_byte_reuse": 0.0,
+    "tasks": 54
+   },
+   "2": {
+    "median_task_call_reuse": 0.013072453861927546,
+    "median_task_byte_reuse": 0.00787933333441922,
+    "tasks": 54
+   },
+   "3": {
+    "median_task_call_reuse": 0.029585798816568046,
+    "median_task_byte_reuse": 0.015111760359618498,
+    "tasks": 53
+   },
+   "4": {
+    "median_task_call_reuse": 0.038461538461538464,
+    "median_task_byte_reuse": 0.04048556082528563,
+    "tasks": 51
+   },
+   "5": {
+    "median_task_call_reuse": 0.0784313725490196,
+    "median_task_byte_reuse": 0.08307644483589359,
+    "tasks": 37
+   }
+  },
+  "llm_latency_s": null
+ },
+ "stela": {
+  "model": "deepseek-v4.1-flash",
+  "runs": 264,
+  "queries": 54,
+  "db_calls": 3306,
+  "scope_shares": {
+   "calls": {
+    "session": 0.0018,
+    "other_attempts": 0.0496,
+    "other_queries": 0.0248,
+    "none": 0.9237
+   },
+   "result_chars": {
+    "session": 0.0017,
+    "other_attempts": 0.0428,
+    "other_queries": 0.0198,
+    "none": 0.9357
+   }
+  },
+  "task_median": {
+   "calls_session": 0.0,
+   "calls_other_attempts": 0.04825,
+   "bytes_session": 0.0,
+   "bytes_other_attempts": 0.0356
+  },
+  "reuse_curve": {
+   "1": {
+    "median_task_call_reuse": 0.0,
+    "median_task_byte_reuse": 0.0,
+    "tasks": 54
+   },
+   "2": {
+    "median_task_call_reuse": 0.013838592310474691,
+    "median_task_byte_reuse": 0.011132158233096068,
+    "tasks": 54
+   },
+   "3": {
+    "median_task_call_reuse": 0.026962178676780447,
+    "median_task_byte_reuse": 0.021816725029667937,
+    "tasks": 54
+   },
+   "4": {
+    "median_task_call_reuse": 0.040615430893151436,
+    "median_task_byte_reuse": 0.02998187294557222,
+    "tasks": 54
+   },
+   "5": {
+    "median_task_call_reuse": 0.048695799457994585,
+    "median_task_byte_reuse": 0.037245458330634765,
+    "tasks": 48
+   }
+  },
+  "llm_latency_s": {
+   "n": 1219,
+   "p25": 0.001,
+   "median": 0.001,
+   "p75": 0.001
+  }
+ }
+}

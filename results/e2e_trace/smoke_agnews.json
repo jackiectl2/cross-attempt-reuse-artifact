@@ -1,0 +1,878 @@
+[
+ {
+  "dataset": "agnews",
+  "query": "query1",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   29,
+   10,
+   13,
+   26,
+   17,
+   18,
+   8,
+   7
+  ],
+  "S0": {
+   "calls": 45,
+   "live_errors": 0,
+   "consumers": 55,
+   "consumer_nonzero_rc": 2,
+   "peak_retained": 143144441,
+   "peak_seq": 48188322
+  },
+  "S1": {
+   "calls": 45,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 55,
+   "consumers_identical": 54,
+   "consumer_mismatch_detail": [
+    {
+     "run": 7,
+     "j": 2,
+     "rc": 0,
+     "S0_rc": 0,
+     "tail": "elieved, Vigilant\", \"Venezuelans Rush to Vote in Referendum on Chavez\", \"Web sites agree to be accessible to blind\", \"Hearn Earns First Nationwide Tour Victory (AP)\", \"Jolts of Electricity Reviving Coral Reef (AP)\", \"Girl-next-door Gemma is all the vogue in America\", \"IMF gives Jamaica thumbs up\"]}\n",
+     "S0_tail": "ss Transceiver\", \"Track and field: Big night for Lauryn Williams\", \"US Airways Chairman: Liquidation Possible\", \"U.S. State Dept Finishes Review of Iraq Aid Plan (Reuters)\", \"The Call Is Cheap. The Wiretap Is Extra.\", \"2 Vietnamese die of unidentified virus\", \"HBOS in talks to fund 8bn Abbey bid\"]}\n"
+    }
+   ],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 143144441,
+   "peak_seq": 48188322
+  },
+  "S2": {
+   "calls": 45,
+   "hits": 2,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 55,
+   "consumers_identical": 54,
+   "consumer_mismatch_detail": [
+    {
+     "run": 7,
+     "j": 2,
+     "rc": 0,
+     "S0_rc": 0,
+     "tail": ", full &lt;b&gt;...&lt;/b&gt;\", \"FedEx Boosts Profit Forecast, Stock Jumps\", \"Gene Blocker Turns Monkeys Into Workaholics - Study (Reuters)\", \"Crude oil crosses the \\\\$47 per barrel mark\", \"Dozens dead in Chechnya\", \"Tears of joy as Holmes runs the race of her life\", \"Dollar Up Slightly Vs. Euro\"]}\n",
+     "S0_tail": "ss Transceiver\", \"Track and field: Big night for Lauryn Williams\", \"US Airways Chairman: Liquidation Possible\", \"U.S. State Dept Finishes Review of Iraq Aid Plan (Reuters)\", \"The Call Is Cheap. The Wiretap Is Extra.\", \"2 Vietnamese die of unidentified virus\", \"HBOS in talks to fund 8bn Abbey bid\"]}\n"
+    }
+   ],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 179349655,
+   "peak_seq": 84393536
+  },
+  "S3": {
+   "calls": 45,
+   "hits": 2,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 55,
+   "consumers_identical": 54,
+   "consumer_mismatch_detail": [
+    {
+     "run": 7,
+     "j": 2,
+     "rc": 0,
+     "S0_rc": 0,
+     "tail": "ducts with DRM\", \"Baseball Today (AP)\", \"Nepalese struggle to break rebel hold on capital\", \"Google #39;s IPO delayed\", \"Dollar Mired Near Lows Before U.S. Data\", \"Europe helps tackle Morocco fires\", \"Nortel Reports Preliminary Results (Reuters)\", \"3 Georgian Soldiers Slain in South Ossetia (AP)\"]}\n",
+     "S0_tail": "ss Transceiver\", \"Track and field: Big night for Lauryn Williams\", \"US Airways Chairman: Liquidation Possible\", \"U.S. State Dept Finishes Review of Iraq Aid Plan (Reuters)\", \"The Call Is Cheap. The Wiretap Is Extra.\", \"2 Vietnamese die of unidentified virus\", \"HBOS in talks to fund 8bn Abbey bid\"]}\n"
+    }
+   ],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 143144441,
+   "peak_seq": 84393536
+  }
+ },
+ {
+  "dataset": "agnews",
+  "query": "query1",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 0,
+  "budget": "1/4",
+  "order": [
+   29,
+   10,
+   13,
+   26,
+   17,
+   18,
+   8,
+   7
+  ],
+  "S0": {
+   "calls": 45,
+   "live_errors": 0,
+   "consumers": 55,
+   "consumer_nonzero_rc": 2,
+   "peak_retained": 143144441,
+   "peak_seq": 48188322
+  },
+  "S1": {
+   "calls": 45,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 55,
+   "consumers_identical": 54,
+   "consumer_mismatch_detail": [
+    {
+     "run": 7,
+     "j": 2,
+     "rc": 0,
+     "S0_rc": 0,
+     "tail": " Havana Still Short of Water\", \"Major League Approves Baseball Channel for TV (Reuters)\", \"Sex-bias suit filed against Costco\", \"Saturn in Red\", \"July Consumer Prices Drop, Energy Tumbles\", \"Sardine Migration One of Nature's Great Wonders (Reuters)\", \"More Than 300,000 Vie for 3,000 LA Port Jobs\"]}\n",
+     "S0_tail": ".S. Ryder Cup Team Roster Set\", \"Celtics Sign Gugliotta, Wait on Payton (AP)\", \"Astronomers give Milky Way an age\", \"AL Wrap: Santana Solid on Mound as Twins Beat Yankees\", \"Executive Compensation\", \"Thorpedo Sinks Phelps' Shot at Spitz Mark\", \"IMF says Czech economic outlook  #39;favorable #39;\"]}\n"
+    }
+   ],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 143144441,
+   "peak_seq": 48188322
+  },
+  "S2": {
+   "calls": 45,
+   "hits": 2,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 55,
+   "consumers_identical": 54,
+   "consumer_mismatch_detail": [
+    {
+     "run": 7,
+     "j": 2,
+     "rc": 0,
+     "S0_rc": 0,
+     "tail": " cut plans\", \"PostgreSQL 8.0 will run on Windows\", \"Els takes aim at his putting\", \"HK government set to petition release of democrat jailed in China\", \"One dream inspires El Guerrouj\", \"NetSuite relaunches, Oracle delays small business suite\", \"EDS, Siebel partner for tailored business packages\"]}\n",
+     "S0_tail": ".S. Ryder Cup Team Roster Set\", \"Celtics Sign Gugliotta, Wait on Payton (AP)\", \"Astronomers give Milky Way an age\", \"AL Wrap: Santana Solid on Mound as Twins Beat Yankees\", \"Executive Compensation\", \"Thorpedo Sinks Phelps' Shot at Spitz Mark\", \"IMF says Czech economic outlook  #39;favorable #39;\"]}\n"
+    }
+   ],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 179349655,
+   "peak_seq": 84393536
+  },
+  "S3": {
+   "calls": 45,
+   "hits": 2,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 55,
+   "consumers_identical": 54,
+   "consumer_mismatch_detail": [
+    {
+     "run": 7,
+     "j": 2,
+     "rc": 0,
+     "S0_rc": 0,
+     "tail": "osoft\", \"Metro briefs\", \"Russian shot putter stripped of gold after doping test\", \"Iraq's Sadr Snubs Peace Delegation in Najaf\", \"For Sale: The Ultimate Status Symbol\", \"Power struggle also to blame for Sudan violence\", \"Intuit 4Q Loss Widens on Charge\", \"Investors Pull Out of Homebuilder Stocks\"]}\n",
+     "S0_tail": ".S. Ryder Cup Team Roster Set\", \"Celtics Sign Gugliotta, Wait on Payton (AP)\", \"Astronomers give Milky Way an age\", \"AL Wrap: Santana Solid on Mound as Twins Beat Yankees\", \"Executive Compensation\", \"Thorpedo Sinks Phelps' Shot at Spitz Mark\", \"IMF says Czech economic outlook  #39;favorable #39;\"]}\n"
+    }
+   ],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 143144441,
+   "peak_seq": 84393536
+  }
+ },
+ {
+  "dataset": "agnews",
+  "query": "query1",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 1,
+  "budget": "inf",
+  "order": [
+   22,
+   49,
+   39,
+   26,
+   40,
+   34,
+   37,
+   43
+  ],
+  "S0": {
+   "calls": 58,
+   "live_errors": 0,
+   "consumers": 49,
+   "consumer_nonzero_rc": 2,
+   "peak_retained": 238775060,
+   "peak_seq": 51706859
+  },
+  "S1": {
+   "calls": 58,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 49,
+   "consumers_identical": 48,
+   "consumer_mismatch_detail": [
+    {
+     "run": 40,
+     "j": 1,
+     "rc": 0,
+     "S0_rc": 0,
+     "tail": "y three months before the US presidential elections.\"], [\"Oil and Economy Cloud Stocks' Outlook (Reuters)\", \"Reuters - Soaring crude prices plus worries\\\\about the economy and the outlook for earnings are expected to\\\\hang over the stock market next week during the depth of the\\\\summer doldrums.\"]]\n",
+     "S0_tail": "ics, are seeing green again.\"], [\"Iraq Halts Oil Exports from Main Southern Pipeline (Reuters)\", \"Reuters - Authorities have halted oil export\\\\flows from the main pipeline in southern Iraq after\\\\intelligence showed a rebel militia could strike\\\\infrastructure, an oil official said on Saturday.\"]]\n"
+    }
+   ],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 238775060,
+   "peak_seq": 51706859
+  },
+  "S2": {
+   "calls": 58,
+   "hits": 3,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 49,
+   "consumers_identical": 48,
+   "consumer_mismatch_detail": [
+    {
+     "run": 40,
+     "j": 1,
+     "rc": 0,
+     "S0_rc": 0,
+     "tail": "ndling\\\\band of ultra-cynics, are seeing green again.\"], [\"Oil prices soar to all-time record, posing new menace to US economy (AFP)\", \"AFP - Tearaway world oil prices, toppling records and straining wallets, present a new economic menace barely three months before the US presidential elections.\"]]\n",
+     "S0_tail": "ics, are seeing green again.\"], [\"Iraq Halts Oil Exports from Main Southern Pipeline (Reuters)\", \"Reuters - Authorities have halted oil export\\\\flows from the main pipeline in southern Iraq after\\\\intelligence showed a rebel militia could strike\\\\infrastructure, an oil official said on Saturday.\"]]\n"
+    }
+   ],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 238775060,
+   "peak_seq": 51706859
+  },
+  "S3": {
+   "calls": 58,
+   "hits": 3,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 49,
+   "consumers_identical": 48,
+   "consumer_mismatch_detail": [
+    {
+     "run": 40,
+     "j": 1,
+     "rc": 0,
+     "S0_rc": 0,
+     "tail": "ndling\\\\band of ultra-cynics, are seeing green again.\"], [\"Oil prices soar to all-time record, posing new menace to US economy (AFP)\", \"AFP - Tearaway world oil prices, toppling records and straining wallets, present a new economic menace barely three months before the US presidential elections.\"]]\n",
+     "S0_tail": "ics, are seeing green again.\"], [\"Iraq Halts Oil Exports from Main Southern Pipeline (Reuters)\", \"Reuters - Authorities have halted oil export\\\\flows from the main pipeline in southern Iraq after\\\\intelligence showed a rebel militia could strike\\\\infrastructure, an oil official said on Saturday.\"]]\n"
+    }
+   ],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 238775060,
+   "peak_seq": 51706859
+  }
+ },
+ {
+  "dataset": "agnews",
+  "query": "query1",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 1,
+  "budget": "1/4",
+  "order": [
+   22,
+   49,
+   39,
+   26,
+   40,
+   34,
+   37,
+   43
+  ],
+  "S0": {
+   "calls": 58,
+   "live_errors": 0,
+   "consumers": 49,
+   "consumer_nonzero_rc": 2,
+   "peak_retained": 238775060,
+   "peak_seq": 51706859
+  },
+  "S1": {
+   "calls": 58,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 49,
+   "consumers_identical": 48,
+   "consumer_mismatch_detail": [
+    {
+     "run": 40,
+     "j": 1,
+     "rc": 0,
+     "S0_rc": 0,
+     "tail": "etly placed\\\\its bets on another part of the market.\"], [\"Oil and Economy Cloud Stocks' Outlook (Reuters)\", \"Reuters - Soaring crude prices plus worries\\\\about the economy and the outlook for earnings are expected to\\\\hang over the stock market next week during the depth of the\\\\summer doldrums.\"]]\n",
+     "S0_tail": "etly placed\\\\its bets on another part of the market.\"], [\"Oil and Economy Cloud Stocks' Outlook (Reuters)\", \"Reuters - Soaring crude prices plus worries\\\\about the economy and the outlook for earnings are expected to\\\\hang over the stock market next week during the depth of the\\\\summer doldrums.\"]]\n"
+    }
+   ],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 238775060,
+   "peak_seq": 51706859
+  },
+  "S2": {
+   "calls": 58,
+   "hits": 3,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 49,
+   "consumers_identical": 48,
+   "consumer_mismatch_detail": [
+    {
+     "run": 40,
+     "j": 1,
+     "rc": 0,
+     "S0_rc": 0,
+     "tail": "ics, are seeing green again.\"], [\"Iraq Halts Oil Exports from Main Southern Pipeline (Reuters)\", \"Reuters - Authorities have halted oil export\\\\flows from the main pipeline in southern Iraq after\\\\intelligence showed a rebel militia could strike\\\\infrastructure, an oil official said on Saturday.\"]]\n",
+     "S0_tail": "etly placed\\\\its bets on another part of the market.\"], [\"Oil and Economy Cloud Stocks' Outlook (Reuters)\", \"Reuters - Soaring crude prices plus worries\\\\about the economy and the outlook for earnings are expected to\\\\hang over the stock market next week during the depth of the\\\\summer doldrums.\"]]\n"
+    }
+   ],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 238775060,
+   "peak_seq": 51706859
+  },
+  "S3": {
+   "calls": 58,
+   "hits": 3,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 49,
+   "consumers_identical": 48,
+   "consumer_mismatch_detail": [
+    {
+     "run": 40,
+     "j": 1,
+     "rc": 0,
+     "S0_rc": 0,
+     "tail": "dential elections.\"], [\"Carlyle Looks Toward Commercial Aerospace (Reuters)\", \"Reuters - Private investment firm Carlyle Group,\\\\which has a reputation for making well-timed and occasionally\\\\controversial plays in the defense industry, has quietly placed\\\\its bets on another part of the market.\"]]\n",
+     "S0_tail": "etly placed\\\\its bets on another part of the market.\"], [\"Oil and Economy Cloud Stocks' Outlook (Reuters)\", \"Reuters - Soaring crude prices plus worries\\\\about the economy and the outlook for earnings are expected to\\\\hang over the stock market next week during the depth of the\\\\summer doldrums.\"]]\n"
+    }
+   ],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 238775060,
+   "peak_seq": 51706859
+  }
+ },
+ {
+  "dataset": "agnews",
+  "query": "query4",
+  "model": "gpt-5-mini",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   9,
+   31,
+   20,
+   30,
+   49,
+   12,
+   19,
+   32
+  ],
+  "S0": {
+   "calls": 16,
+   "live_errors": 0,
+   "consumers": 12,
+   "consumer_nonzero_rc": 1,
+   "peak_retained": 151103167,
+   "peak_seq": 47713253
+  },
+  "S1": {
+   "calls": 16,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 151103167,
+   "peak_seq": 47713253
+  },
+  "S2": {
+   "calls": 16,
+   "hits": 5,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 174573417,
+   "peak_seq": 64958536
+  },
+  "S3": {
+   "calls": 16,
+   "hits": 5,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 147771212,
+   "peak_seq": 64292145
+  }
+ },
+ {
+  "dataset": "agnews",
+  "query": "query4",
+  "model": "gpt-5-mini",
+  "contract": "E",
+  "res": 0,
+  "budget": "1/4",
+  "order": [
+   9,
+   31,
+   20,
+   30,
+   49,
+   12,
+   19,
+   32
+  ],
+  "S0": {
+   "calls": 16,
+   "live_errors": 0,
+   "consumers": 12,
+   "consumer_nonzero_rc": 1,
+   "peak_retained": 151103167,
+   "peak_seq": 47713253
+  },
+  "S1": {
+   "calls": 16,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 151103167,
+   "peak_seq": 47713253
+  },
+  "S2": {
+   "calls": 16,
+   "hits": 5,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 174573417,
+   "peak_seq": 64958536
+  },
+  "S3": {
+   "calls": 16,
+   "hits": 5,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 147771212,
+   "peak_seq": 64292145
+  }
+ },
+ {
+  "dataset": "agnews",
+  "query": "query4",
+  "model": "gpt-5-mini",
+  "contract": "E",
+  "res": 1,
+  "budget": "inf",
+  "order": [
+   27,
+   40,
+   0,
+   30,
+   18,
+   44,
+   15,
+   37
+  ],
+  "S0": {
+   "calls": 17,
+   "live_errors": 0,
+   "consumers": 12,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 174262640,
+   "peak_seq": 55414096
+  },
+  "S1": {
+   "calls": 17,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 174262640,
+   "peak_seq": 55414096
+  },
+  "S2": {
+   "calls": 17,
+   "hits": 4,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 250430396,
+   "peak_seq": 131581852
+  },
+  "S3": {
+   "calls": 17,
+   "hits": 4,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 172517915,
+   "peak_seq": 76167756
+  }
+ },
+ {
+  "dataset": "agnews",
+  "query": "query4",
+  "model": "gpt-5-mini",
+  "contract": "E",
+  "res": 1,
+  "budget": "1/4",
+  "order": [
+   27,
+   40,
+   0,
+   30,
+   18,
+   44,
+   15,
+   37
+  ],
+  "S0": {
+   "calls": 17,
+   "live_errors": 0,
+   "consumers": 12,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 174262640,
+   "peak_seq": 55414096
+  },
+  "S1": {
+   "calls": 17,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 174262640,
+   "peak_seq": 55414096
+  },
+  "S2": {
+   "calls": 17,
+   "hits": 4,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 250430396,
+   "peak_seq": 131581852
+  },
+  "S3": {
+   "calls": 17,
+   "hits": 4,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 172517915,
+   "peak_seq": 76167756
+  }
+ }
+]

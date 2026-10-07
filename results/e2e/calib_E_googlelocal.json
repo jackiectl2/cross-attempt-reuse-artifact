@@ -1,0 +1,406 @@
+[
+ {
+  "dataset": "googlelocal",
+  "query": "query2",
+  "model": "gemini-2.5-flash",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   29,
+   10,
+   13,
+   26,
+   17,
+   18,
+   8,
+   7
+  ],
+  "S0": {
+   "calls": 36,
+   "live_errors": 0,
+   "consumers": 8,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 2,
+   "peak_retained": 39608,
+   "peak_seq": 19804
+  },
+  "S1": {
+   "calls": 36,
+   "hits": 4,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 39608,
+   "peak_seq": 19804
+  },
+  "S2": {
+   "calls": 36,
+   "hits": 11,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 59412,
+   "peak_seq": 39608
+  },
+  "S3": {
+   "calls": 36,
+   "hits": 11,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 19804,
+   "peak_seq": 19804
+  }
+ },
+ {
+  "dataset": "googlelocal",
+  "query": "query2",
+  "model": "gemini-2.5-flash",
+  "contract": "E",
+  "res": 0,
+  "budget": "1/4",
+  "order": [
+   29,
+   10,
+   13,
+   26,
+   17,
+   18,
+   8,
+   7
+  ],
+  "S0": {
+   "calls": 36,
+   "live_errors": 0,
+   "consumers": 8,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 2,
+   "peak_retained": 39608,
+   "peak_seq": 19804
+  },
+  "S1": {
+   "calls": 36,
+   "hits": 4,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 39608,
+   "peak_seq": 19804
+  },
+  "S2": {
+   "calls": 36,
+   "hits": 11,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 59412,
+   "peak_seq": 39608
+  },
+  "S3": {
+   "calls": 36,
+   "hits": 11,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 19804,
+   "peak_seq": 19804
+  }
+ },
+ {
+  "dataset": "googlelocal",
+  "query": "query2",
+  "model": "gemini-2.5-flash",
+  "contract": "E",
+  "res": 1,
+  "budget": "inf",
+  "order": [
+   22,
+   49,
+   39,
+   26,
+   40,
+   34,
+   37,
+   43
+  ],
+  "S0": {
+   "calls": 29,
+   "live_errors": 0,
+   "consumers": 8,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 2,
+   "peak_retained": 39608,
+   "peak_seq": 19804
+  },
+  "S1": {
+   "calls": 29,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 39608,
+   "peak_seq": 19804
+  },
+  "S2": {
+   "calls": 29,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 79216,
+   "peak_seq": 59412
+  },
+  "S3": {
+   "calls": 29,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 39608,
+   "peak_seq": 39608
+  }
+ },
+ {
+  "dataset": "googlelocal",
+  "query": "query2",
+  "model": "gemini-2.5-flash",
+  "contract": "E",
+  "res": 1,
+  "budget": "1/4",
+  "order": [
+   22,
+   49,
+   39,
+   26,
+   40,
+   34,
+   37,
+   43
+  ],
+  "S0": {
+   "calls": 29,
+   "live_errors": 0,
+   "consumers": 8,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 2,
+   "peak_retained": 39608,
+   "peak_seq": 19804
+  },
+  "S1": {
+   "calls": 29,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 39608,
+   "peak_seq": 19804
+  },
+  "S2": {
+   "calls": 29,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 79216,
+   "peak_seq": 59412
+  },
+  "S3": {
+   "calls": 29,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 39608,
+   "peak_seq": 39608
+  }
+ }
+]

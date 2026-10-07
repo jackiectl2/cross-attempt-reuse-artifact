@@ -1,0 +1,113 @@
+{
+ "n_query_db": 76213,
+ "B": {
+  "all_query_db": {
+   "calls": 8417,
+   "keys": 5761,
+   "time_lb_share": 0.11745477049790051,
+   "bytes_share": 0.00022937086577419757
+  },
+  "replayed": {
+   "calls": 8417,
+   "keys": 5761,
+   "time_lb_share": 0.11745477049790051,
+   "bytes_share": 0.00022937086577419757
+  },
+  "successful": {
+   "calls": 8162,
+   "keys": 5520,
+   "time_lb_share": 0.11371299921703364,
+   "bytes_share": 0.00022937086577419757
+  },
+  "fidelity_equiv": {
+   "calls": 8160,
+   "keys": 5519,
+   "time_lb_share": 0.11371292225581069,
+   "bytes_share": 0.00022937037959882458
+  },
+  "fidelity_pass": {
+   "calls": 8145,
+   "keys": 5505,
+   "time_lb_share": 0.11370885288695538,
+   "bytes_share": 0.00022936921129906892
+  },
+  "stable": {
+   "calls": 8145,
+   "keys": 5505,
+   "time_lb_share": 0.11370885288695538,
+   "bytes_share": 0.00022936921129906892
+  },
+  "outcome_class_calls": {
+   "stable": 8162,
+   "error": 254,
+   "timeout": 1
+  },
+  "fidelity_calls": {
+   "match": 8145,
+   "both_error": 254,
+   "mismatch": 15,
+   "recorded_error": 2,
+   "timeout": 1
+  }
+ },
+ "E": {
+  "all_query_db": {
+   "calls": 74894,
+   "keys": 40687,
+   "time_lb_share": 0.9942051573772704,
+   "bytes_share": 0.9988960824969044
+  },
+  "replayed": {
+   "calls": 74894,
+   "keys": 40687,
+   "time_lb_share": 0.9942051573772704,
+   "bytes_share": 0.9988960824969044
+  },
+  "successful": {
+   "calls": 71275,
+   "keys": 37542,
+   "time_lb_share": 0.943970558472909,
+   "bytes_share": 0.9988960824969044
+  },
+  "fidelity_equiv": {
+   "calls": 69880,
+   "keys": 36858,
+   "time_lb_share": 0.9389964220550018,
+   "bytes_share": 0.986721808850203
+  },
+  "fidelity_pass": {
+   "calls": 66263,
+   "keys": 35414,
+   "time_lb_share": 0.9362436655355588,
+   "bytes_share": 0.9867110130099391
+  },
+  "stable": {
+   "calls": 66263,
+   "keys": 35414,
+   "time_lb_share": 0.9362436655355588,
+   "bytes_share": 0.9867110130099391
+  },
+  "outcome_class_calls": {
+   "stable": 71275,
+   "error": 3604,
+   "timeout": 15
+  },
+  "fidelity_calls": {
+   "match": 66263,
+   "mismatch": 4965,
+   "both_error": 3589,
+   "recorded_error": 47,
+   "timeout": 15,
+   "replay_error": 15
+  }
+ },
+ "B_not_E_calls": 0,
+ "cells": {
+  "total": 270,
+  "runs_total": 13482,
+  "with_at_least_8_runs": 270,
+  "with_at_least_16_runs": 270,
+  "with_at_least_50_runs": 268
+ },
+ "tasks_with_five_cells_at_50": 53
+}

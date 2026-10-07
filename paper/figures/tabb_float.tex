@@ -1,0 +1,31 @@
+% Table -- Contract B in full (column width, Section 3)
+\begin{table}[htbp]
+  \caption{Summary of Contract B's construct whitelist. Admission also applies the schema-binding, type-family,
+  argument-form, alias and potentially-raising-expression checks of the artifact. $c$: a stored column that satisfies P2.}
+  \label{tab:contractb}
+  \footnotesize\setlength{\tabcolsep}{3pt}
+  \begin{tabular}{@{}L{1.25cm}L{6.7cm}@{}}
+  \toprule
+  Statement & one \texttt{SELECT} block; no \texttt{WITH}, subquery, set operation, window, \texttt{DISTINCT ON},
+  \texttt{VALUES} or table function \\
+  \texttt{FROM} & base tables of the audited schema, joined by \texttt{JOIN}\,\ldots\,\texttt{ON} or a comma; no
+  \texttt{USING}, \texttt{NATURAL} or \texttt{LATERAL} \\
+  Names & each column binds to exactly one stored column of the tables in scope (ASCII names, the engine's case
+  rule); an output alias does not shadow another column \\
+  Row\newline expression & in \texttt{WHERE}, \texttt{ON} and the argument of \texttt{COUNT}: columns; literals without
+  clock words; comparisons; \texttt{AND}, \texttt{OR}, \texttt{NOT}; \texttt{IS NULL}; \texttt{IN} over a list;
+  \texttt{BETWEEN}; \texttt{LIKE} with a literal pattern; searched \texttt{CASE}; \texttt{COALESCE};
+  \texttt{LOWER}, \texttt{UPPER}, \texttt{LENGTH}, \texttt{TRIM}, \texttt{REPLACE}. SQLite also: arithmetic,
+  \texttt{ROUND}, \texttt{SUBSTR}, casts. DuckDB also: \texttt{SUBSTR}, \texttt{TRY\_CAST}, and arithmetic,
+  \texttt{ABS} and \texttt{ROUND} over floating-point columns; a string meets only strings in a comparison \\
+  One row & no \texttt{GROUP BY}, \texttt{HAVING}, \texttt{ORDER BY}, \texttt{OFFSET} or \texttt{DISTINCT}; each
+  output built from \texttt{COUNT}, \texttt{MIN}($c$), \texttt{MAX}($c$), literals, arithmetic and the functions above \\
+  Ordered & no aggregate; each output is a column $c$; \texttt{ORDER BY} names every output \\
+  Grouped & \texttt{GROUP BY} columns $c$; each output is a grouping column or one \texttt{COUNT},
+  \texttt{MIN}($c$) or \texttt{MAX}($c$); \texttt{HAVING} over such aggregates; \texttt{ORDER BY} names every
+  grouping column, or every output \\
+  Limits & \texttt{LIMIT} (at least one row) and \texttt{OFFSET} take integer literals; plain \texttt{DISTINCT}
+  needs an \texttt{ORDER BY} over every output \\
+  \bottomrule
+  \end{tabular}
+\end{table}

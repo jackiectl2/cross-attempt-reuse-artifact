@@ -1,0 +1,128 @@
+{
+ "cells": 15,
+ "runs": 15,
+ "S1": {
+  "calls": 632,
+  "hits": 69,
+  "mismatches": 1,
+  "mismatches_on_hits": 0,
+  "consumers": 391,
+  "consumers_identical": 391,
+  "consumers_identical_ok": 289,
+  "consumers_identical_failed": 102,
+  "mismatch_examples": [
+   {
+    "cell": "PATENTS/query3/kimi-k2",
+    "budget": "inf",
+    "run": 25,
+    "i": 6,
+    "hit": false,
+    "fields": [
+     "content_h",
+     "file_h"
+    ],
+    "kind": "spilled",
+    "S0_kind": "spilled"
+   }
+  ],
+  "consumer_mismatch_examples": [],
+  "probes": 0,
+  "probes_refused": 0
+ },
+ "S2": {
+  "calls": 632,
+  "hits": 159,
+  "mismatches": 1,
+  "mismatches_on_hits": 0,
+  "consumers": 391,
+  "consumers_identical": 391,
+  "consumers_identical_ok": 289,
+  "consumers_identical_failed": 102,
+  "mismatch_examples": [
+   {
+    "cell": "PATENTS/query3/kimi-k2",
+    "budget": "inf",
+    "run": 25,
+    "i": 6,
+    "hit": false,
+    "fields": [
+     "content_h",
+     "file_h"
+    ],
+    "kind": "spilled",
+    "S0_kind": "spilled"
+   }
+  ],
+  "consumer_mismatch_examples": [],
+  "probes": 45,
+  "probes_refused": 0,
+  "store_object_intact": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ]
+ },
+ "S3": {
+  "calls": 632,
+  "hits": 159,
+  "mismatches": 1,
+  "mismatches_on_hits": 0,
+  "consumers": 391,
+  "consumers_identical": 391,
+  "consumers_identical_ok": 289,
+  "consumers_identical_failed": 102,
+  "mismatch_examples": [
+   {
+    "cell": "PATENTS/query3/kimi-k2",
+    "budget": "inf",
+    "run": 25,
+    "i": 6,
+    "hit": false,
+    "fields": [
+     "content_h",
+     "file_h"
+    ],
+    "kind": "spilled",
+    "S0_kind": "spilled"
+   }
+  ],
+  "consumer_mismatch_examples": [],
+  "probes": 45,
+  "probes_refused": 45,
+  "store_object_intact": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ]
+ },
+ "S0": {
+  "calls": 632,
+  "live_errors": 0,
+  "consumers": 391,
+  "consumers_nondeterministic": 0,
+  "consumer_nonzero_rc": 102
+ }
+}

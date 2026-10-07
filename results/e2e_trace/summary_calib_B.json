@@ -1,0 +1,55 @@
+{
+ "cells": 12,
+ "runs": 48,
+ "S1": {
+  "calls": 1394,
+  "hits": 0,
+  "mismatches": 0,
+  "mismatches_on_hits": 0,
+  "consumers": 818,
+  "consumers_identical": 818,
+  "consumers_identical_ok": 742,
+  "consumers_identical_failed": 76,
+  "mismatch_examples": [],
+  "consumer_mismatch_examples": [],
+  "probes": 0,
+  "probes_refused": 0
+ },
+ "S2": {
+  "calls": 1394,
+  "hits": 10,
+  "mismatches": 0,
+  "mismatches_on_hits": 0,
+  "consumers": 818,
+  "consumers_identical": 818,
+  "consumers_identical_ok": 742,
+  "consumers_identical_failed": 76,
+  "mismatch_examples": [],
+  "consumer_mismatch_examples": [],
+  "probes": 120,
+  "probes_refused": 0,
+  "store_object_intact": []
+ },
+ "S3": {
+  "calls": 1394,
+  "hits": 10,
+  "mismatches": 0,
+  "mismatches_on_hits": 0,
+  "consumers": 818,
+  "consumers_identical": 818,
+  "consumers_identical_ok": 742,
+  "consumers_identical_failed": 76,
+  "mismatch_examples": [],
+  "consumer_mismatch_examples": [],
+  "probes": 0,
+  "probes_refused": 0,
+  "store_object_intact": []
+ },
+ "S0": {
+  "calls": 1394,
+  "live_errors": 0,
+  "consumers": 822,
+  "consumers_nondeterministic": 4,
+  "consumer_nonzero_rc": 76
+ }
+}

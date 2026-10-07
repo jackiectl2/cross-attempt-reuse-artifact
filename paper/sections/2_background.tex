@@ -1,0 +1,33 @@
+\section{Preliminaries}
+\label{sec:background}
+
+
+
+\paragraph{Tool boundary.}
+DAB gives an agent a natural-language question over one or more databases of a dataset and a tool interface. The agent
+runs a reason-and-act loop \cite{yao2023react} until it returns an answer \cite{ma2026dab}. The \texttt{query\_db}
+tool executes an SQL query on SQLite, DuckDB or PostgreSQL, or a find specification on MongoDB. It serializes the
+result as JSON and stores it under a key that the agent's later Python code can read. A result of at most 10,000
+characters is returned to the LLM in full and bound to the key as a value. A longer result is written to a JSON file
+in the attempt's working directory, and the key is bound to the file path. The LLM then sees only the first 10,000
+characters as a preview. The \texttt{execute\_python} tool runs agent-written code against these bindings. A result
+thus has two consumers: the LLM reads the preview, and the agent's code reads the file. Of the successfully replayed
+calls, 25.9\% produce such a spilled file.
+
+\paragraph{Attempts and batches.}
+We call one run of one model on one task an \emph{attempt}, and the state an attempt accumulates its \emph{session}.
+Repeated attempts arise from retries, from sampling several attempts per question
+\cite{wang2023selfconsistency,brown2024monkeys}, from $k$-trial evaluation, and from users who ask the same question.
+We study \emph{batches}: $N$ attempts of one model on one task against one static database snapshot.  The data do not change within a batch, so no cached result is ever invalidated.
+
+\paragraph{Result-preserving reuse.}
+A reuse design serves a later call with the bytes that an earlier exact-text equivalent call produced, for the same
+database and query text. Reuse is \emph{result-preserving} if the later attempt sees exactly what a completed execution
+of the call in the same runtime returns. This covers the tool message, the bound value and the content of any file.
+The property belongs to the runtime: it holds for a call when re-executing it there returns the same bytes. The
+property is conditional on completion. Whether a fresh execution completes also depends on the load, which no
+admission rule controls. Where a fresh execution would time out, a hit shows the agent a result instead of a failure,
+and Section~\ref{sec:e2e} counts these cases. Exact text is a conservative equivalence, and Section~\ref{sec:keys}
+measures what stronger keys add. The three questions of Section~\ref{sec:intro} thus become concrete. Q1 asks in
+which scope an exact repeat occurs. Q2 asks for which calls reuse is result-preserving and how a system can know it.
+Q3 asks which component holds the reused bytes: the cache, the attempt or a shared store.

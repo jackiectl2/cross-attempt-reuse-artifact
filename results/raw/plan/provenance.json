@@ -1,0 +1,55 @@
+{
+ "plan": "EXPERIMENT_PLAN.md",
+ "plan_sha256": "e2bb85eca47808c6978de949be56dd6f0e21e5906a1e7f91edf290e909e87ddf",
+ "original_text": {
+  "written_utc": "2026-10-01T11:29:35Z",
+  "bytes": 12659,
+  "sha256": "220a0fc539dab4311ad6bbaa5932232ea2bc8f199911fd10903a21dd3c754d5f",
+  "identical_to_plan_text_before_amendment_A1": true
+ },
+ "amendments_first_written_utc": {
+  "Amendment A1": "2026-10-01T12:22:16Z",
+  "Amendment A2": "2026-10-01T15:25:16Z",
+  "Amendment A3": "2026-10-01T17:14:20Z"
+ },
+ "jobs": {
+  "ed-eval-01": {
+   "what": "pilot replay (SQLite and DuckDB calls)",
+   "first_start_utc": "2026-10-01T09:50:57Z",
+   "last_end_utc": "2026-10-01T10:51:40Z",
+   "job_ledger_entries": 24
+  },
+  "ed-eval-02": {
+   "what": "pilot analysis",
+   "first_start_utc": "2026-10-01T10:52:14Z",
+   "last_end_utc": "2026-10-01T10:53:15Z",
+   "job_ledger_entries": 1
+  },
+  "ed-eval-03": {
+   "what": "first full replay, newer libraries (results/analysis_m1)",
+   "first_start_utc": "2026-10-01T11:38:01Z",
+   "last_end_utc": "2026-10-01T13:08:14Z",
+   "job_ledger_entries": 34
+  },
+  "ed-eval-06": {
+   "what": "reported full replay, pinned runtime",
+   "first_start_utc": "2026-10-01T12:33:31Z",
+   "last_end_utc": "2026-10-01T13:49:47Z",
+   "job_ledger_entries": 34
+  },
+  "ed-eval-08": {
+   "what": "analysis of the full replay",
+   "first_start_utc": "2026-10-01T13:08:39Z",
+   "last_end_utc": "2026-10-01T17:52:08Z",
+   "job_ledger_entries": 8
+  }
+ },
+ "order": {
+  "pilot_analysis_ended_before_plan": true,
+  "plan_written_before_first_full_replay": true,
+  "amendment_A1_before_reported_replay": true,
+  "amendment_A2_after_analysis_of_full_replay": true
+ },
+ "cluster_timezone": "America/Detroit",
+ "sources": "write times: the authoring session's log (records used: session_log_excerpt.jsonl); job times: results/raw/job_ledger.json"
+}

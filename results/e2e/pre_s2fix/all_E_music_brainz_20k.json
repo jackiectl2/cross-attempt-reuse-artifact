@@ -1,0 +1,1365 @@
+[
+ {
+  "dataset": "music_brainz_20k",
+  "query": "query2",
+  "model": "gemini-2.5-flash",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   8,
+   29,
+   38,
+   40,
+   24,
+   11,
+   22,
+   45
+  ],
+  "S0": {
+   "calls": 16,
+   "live_errors": 0,
+   "consumers": 0,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S1": {
+   "calls": 16,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 0,
+   "consumers_identical": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S2": {
+   "calls": 16,
+   "hits": 10,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 0,
+   "consumers_identical": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S3": {
+   "calls": 16,
+   "hits": 10,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 0,
+   "consumers_identical": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  }
+ },
+ {
+  "dataset": "music_brainz_20k",
+  "query": "query2",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   47,
+   20,
+   7,
+   46,
+   38,
+   30,
+   15,
+   42
+  ],
+  "S0": {
+   "calls": 33,
+   "live_errors": 0,
+   "consumers": 0,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S1": {
+   "calls": 33,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 0,
+   "consumers_identical": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S2": {
+   "calls": 33,
+   "hits": 12,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 0,
+   "consumers_identical": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S3": {
+   "calls": 33,
+   "hits": 12,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 0,
+   "consumers_identical": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  }
+ },
+ {
+  "dataset": "music_brainz_20k",
+  "query": "query1",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   22,
+   49,
+   39,
+   26,
+   40,
+   34,
+   37,
+   43
+  ],
+  "S0": {
+   "calls": 36,
+   "live_errors": 0,
+   "consumers": 0,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S1": {
+   "calls": 36,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 0,
+   "consumers_identical": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S2": {
+   "calls": 36,
+   "hits": 6,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 0,
+   "consumers_identical": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S3": {
+   "calls": 36,
+   "hits": 6,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 0,
+   "consumers_identical": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  }
+ },
+ {
+  "dataset": "music_brainz_20k",
+  "query": "query1",
+  "model": "gemini-2.5-flash",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   29,
+   10,
+   13,
+   26,
+   17,
+   18,
+   8,
+   7
+  ],
+  "S0": {
+   "calls": 16,
+   "live_errors": 0,
+   "consumers": 8,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 8,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S1": {
+   "calls": 16,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S2": {
+   "calls": 16,
+   "hits": 12,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S3": {
+   "calls": 16,
+   "hits": 12,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  }
+ },
+ {
+  "dataset": "music_brainz_20k",
+  "query": "query1",
+  "model": "gpt-5-mini",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   9,
+   31,
+   20,
+   30,
+   49,
+   12,
+   19,
+   32
+  ],
+  "S0": {
+   "calls": 16,
+   "live_errors": 0,
+   "consumers": 7,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 1,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S1": {
+   "calls": 16,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 7,
+   "consumers_identical": 7,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S2": {
+   "calls": 16,
+   "hits": 1,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 7,
+   "consumers_identical": 7,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S3": {
+   "calls": 16,
+   "hits": 1,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 7,
+   "consumers_identical": 7,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  }
+ },
+ {
+  "dataset": "music_brainz_20k",
+  "query": "query1",
+  "model": "gpt-5.2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   27,
+   40,
+   0,
+   30,
+   18,
+   44,
+   15,
+   37
+  ],
+  "S0": {
+   "calls": 24,
+   "live_errors": 0,
+   "consumers": 0,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 2263870,
+   "peak_seq": 323410
+  },
+  "S1": {
+   "calls": 24,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 0,
+   "consumers_identical": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 2263870,
+   "peak_seq": 323410
+  },
+  "S2": {
+   "calls": 24,
+   "hits": 9,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 0,
+   "consumers_identical": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 3880920,
+   "peak_seq": 1940460
+  },
+  "S3": {
+   "calls": 24,
+   "hits": 9,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 0,
+   "consumers_identical": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 1617050,
+   "peak_seq": 1617050
+  }
+ },
+ {
+  "dataset": "music_brainz_20k",
+  "query": "query2",
+  "model": "gpt-5-mini",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   41,
+   24,
+   21,
+   25,
+   9,
+   38,
+   0,
+   23
+  ],
+  "S0": {
+   "calls": 16,
+   "live_errors": 0,
+   "consumers": 1,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S1": {
+   "calls": 16,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 1,
+   "consumers_identical": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S2": {
+   "calls": 16,
+   "hits": 2,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 1,
+   "consumers_identical": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S3": {
+   "calls": 16,
+   "hits": 2,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 1,
+   "consumers_identical": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  }
+ },
+ {
+  "dataset": "music_brainz_20k",
+  "query": "query1",
+  "model": "kimi-k2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   39,
+   43,
+   4,
+   21,
+   20,
+   5,
+   37,
+   36
+  ],
+  "S0": {
+   "calls": 36,
+   "live_errors": 0,
+   "consumers": 7,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 2,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S1": {
+   "calls": 36,
+   "hits": 1,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 7,
+   "consumers_identical": 7,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S2": {
+   "calls": 36,
+   "hits": 1,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 7,
+   "consumers_identical": 7,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S3": {
+   "calls": 36,
+   "hits": 1,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 7,
+   "consumers_identical": 7,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  }
+ },
+ {
+  "dataset": "music_brainz_20k",
+  "query": "query2",
+  "model": "gpt-5.2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   38,
+   3,
+   1,
+   22,
+   5,
+   11,
+   44,
+   12
+  ],
+  "S0": {
+   "calls": 29,
+   "live_errors": 0,
+   "consumers": 0,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S1": {
+   "calls": 29,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 0,
+   "consumers_identical": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S2": {
+   "calls": 29,
+   "hits": 4,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 0,
+   "consumers_identical": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S3": {
+   "calls": 29,
+   "hits": 4,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 0,
+   "consumers_identical": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  }
+ },
+ {
+  "dataset": "music_brainz_20k",
+  "query": "query2",
+  "model": "kimi-k2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   36,
+   16,
+   3,
+   37,
+   21,
+   6,
+   10,
+   4
+  ],
+  "S0": {
+   "calls": 34,
+   "live_errors": 0,
+   "consumers": 1,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 17313,
+   "peak_seq": 17313
+  },
+  "S1": {
+   "calls": 34,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 1,
+   "consumers_identical": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 17313,
+   "peak_seq": 17313
+  },
+  "S2": {
+   "calls": 34,
+   "hits": 1,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 1,
+   "consumers_identical": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 34626,
+   "peak_seq": 34626
+  },
+  "S3": {
+   "calls": 34,
+   "hits": 1,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 1,
+   "consumers_identical": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 17313,
+   "peak_seq": 17313
+  }
+ },
+ {
+  "dataset": "music_brainz_20k",
+  "query": "query3",
+  "model": "gemini-2.5-flash",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   5,
+   2,
+   43,
+   47,
+   4,
+   14,
+   0,
+   26
+  ],
+  "S0": {
+   "calls": 15,
+   "live_errors": 0,
+   "consumers": 0,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 53687970,
+   "peak_seq": 14749659
+  },
+  "S1": {
+   "calls": 15,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 0,
+   "consumers_identical": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 53687970,
+   "peak_seq": 14749659
+  },
+  "S2": {
+   "calls": 15,
+   "hits": 7,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 0,
+   "consumers_identical": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 83135124,
+   "peak_seq": 37679000
+  },
+  "S3": {
+   "calls": 15,
+   "hits": 7,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 0,
+   "consumers_identical": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 29447154,
+   "peak_seq": 29447154
+  }
+ },
+ {
+  "dataset": "music_brainz_20k",
+  "query": "query3",
+  "model": "gpt-5.2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   6,
+   35,
+   10,
+   37,
+   48,
+   5,
+   36,
+   12
+  ],
+  "S0": {
+   "calls": 18,
+   "live_errors": 0,
+   "consumers": 8,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 39525700,
+   "peak_seq": 5663642
+  },
+  "S1": {
+   "calls": 18,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 39525700,
+   "peak_seq": 5663642
+  },
+  "S2": {
+   "calls": 18,
+   "hits": 4,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 56137853,
+   "peak_seq": 21320698
+  },
+  "S3": {
+   "calls": 18,
+   "hits": 4,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 26130676,
+   "peak_seq": 17971942
+  }
+ },
+ {
+  "dataset": "music_brainz_20k",
+  "query": "query3",
+  "model": "kimi-k2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   41,
+   34,
+   24,
+   31,
+   2,
+   28,
+   8,
+   25
+  ],
+  "S0": {
+   "calls": 50,
+   "live_errors": 0,
+   "consumers": 45,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 22,
+   "peak_retained": 99367883,
+   "peak_seq": 18098415
+  },
+  "S1": {
+   "calls": 50,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 45,
+   "consumers_identical": 45,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 99367883,
+   "peak_seq": 18098415
+  },
+  "S2": {
+   "calls": 50,
+   "hits": 17,
+   "mismatches": 3,
+   "mismatches_on_hits": 3,
+   "mismatch_detail": [
+    {
+     "run": 31,
+     "i": 3,
+     "hit": true,
+     "fields": [
+      "file_h"
+     ],
+     "kind": "spilled",
+     "S0_kind": "spilled"
+    },
+    {
+     "run": 2,
+     "i": 0,
+     "hit": true,
+     "fields": [
+      "file_h"
+     ],
+     "kind": "spilled",
+     "S0_kind": "spilled"
+    },
+    {
+     "run": 25,
+     "i": 0,
+     "hit": true,
+     "fields": [
+      "file_h"
+     ],
+     "kind": "spilled",
+     "S0_kind": "spilled"
+    }
+   ],
+   "consumers": 45,
+   "consumers_identical": 36,
+   "consumer_mismatch_detail": [
+    {
+     "run": 2,
+     "j": 5,
+     "rc": 1,
+     "S0_rc": 0,
+     "tail": "12/site-packages/pandas/core/frame.py\", line 4107, in __getitem__\n    indexer = self.columns.get_loc(key)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/pandas/core/indexes/base.py\", line 3819, in get_loc\n    raise KeyError(key) from err\nKeyError: 'track_id'\n",
+     "S0_tail": "3394.40\n9. 005- by none: $3347.89\n10. 002- by none: $3343.61\n__RESULT__:\n{\"entity_title\": \"none\", \"entity_artist\": \"none\", \"total_revenue\": 14647.52, \"track_record_count\": 17, \"track_ids\": [2126, 2153, 3422, 4421, 5048, 7036, 7146, 7481, 9478, 9788, 10617, 12019, 12196, 14462, 15469, 16886, 18790]}\n"
+    },
+    {
+     "run": 2,
+     "j": 6,
+     "rc": 1,
+     "S0_rc": 0,
+     "tail": "n3.12/site-packages/pandas/core/frame.py\", line 4107, in __getitem__\n    indexer = self.columns.get_loc(key)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/pandas/core/indexes/base.py\", line 3819, in get_loc\n    raise KeyError(key) from err\nKeyError: 'title'\n",
+     "S0_tail": "__RESULT__:\n{\"title\": \"none\", \"artist\": \"none\", \"revenue\": 14647.52}\n"
+    },
+    {
+     "run": 25,
+     "j": 1,
+     "rc": 0,
+     "S0_rc": 0,
+     "tail": "1.1\",\"total_units\":\"1.0\"},{\"sale_track_id\":\"10910\",\"total_revenue\":\"1.09\",\"total_units\":\"1.0\"},{\"sale_track_id\":\"3165\",\"total_revenue\":\"1.06\",\"total_units\":\"1.0\"},{\"sale_track_id\":\"5745\",\"total_revenue\":\"1.06\",\"total_units\":\"1.0\"},{\"sale_track_id\":\"7266\",\"total_revenue\":\"1.01\",\"total_units\":\"1.0\"}]\n",
+     "S0_tail": "rtist\":\"None\",\"album\":\"Reconsider Baby\",\"year\":\"None\",\"length\":\"133\",\"language\":\"English\"},{\"track_id\":\"19375\",\"source_id\":\"3\",\"source_track_id\":\"22596612MB-01\",\"title\":\"Silent Tears And Roses - Midnight Sun\",\"artist\":\"Herb Alpert\",\"album\":\"None\",\"year\":\"'92\",\"length\":\"3.859\",\"language\":\"English\"}]\n"
+    },
+    {
+     "run": 25,
+     "j": 2,
+     "rc": 0,
+     "S0_rc": 0,
+     "tail": "\",\n      \"country\": \"Canada\",\n      \"store\": \"Google Play\",\n      \"units_sold\": \"349\",\n      \"revenue_usd\": \"408.0\"\n    },\n    {\n      \"sale_id\": \"2\",\n      \"track_id\": \"1\",\n      \"country\": \"Canada\",\n      \"store\": \"Apple Music\",\n      \"units_sold\": \"122\",\n      \"revenue_usd\": \"137.59\"\n    }\n  ]\n}\n",
+     "S0_tail": "\",\n      \"country\": \"Canada\",\n      \"store\": \"Google Play\",\n      \"units_sold\": \"349\",\n      \"revenue_usd\": \"408.0\"\n    },\n    {\n      \"sale_id\": \"2\",\n      \"track_id\": \"1\",\n      \"country\": \"Canada\",\n      \"store\": \"Apple Music\",\n      \"units_sold\": \"122\",\n      \"revenue_usd\": \"137.59\"\n    }\n  ]\n}\n"
+    },
+    {
+     "run": 25,
+     "j": 3,
+     "rc": 1,
+     "S0_rc": 0,
+     "tail": "n3.12/site-packages/pandas/core/frame.py\", line 4107, in __getitem__\n    indexer = self.columns.get_loc(key)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/pandas/core/indexes/base.py\", line 3819, in get_loc\n    raise KeyError(key) from err\nKeyError: 'title'\n",
+     "S0_tail": "tzenkirchen... - Count: 2\nKey: 53rd state|contempt... - Count: 2\nKey: 9 to 5 (tony senghore's gosh darn it! dub)|lady so... - Count: 2\nKey: [organ solo]|led zeppelin... - Count: 2\n__RESULT__:\n{\"total_tracks\": 19375, \"tracks_with_sales\": 19375, \"unique_match_keys\": 19039, \"potential_duplicates\": 10}\n"
+    },
+    {
+     "run": 25,
+     "j": 4,
+     "rc": 1,
+     "S0_rc": 0,
+     "tail": "n3.12/site-packages/pandas/core/frame.py\", line 4107, in __getitem__\n    indexer = self.columns.get_loc(key)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/pandas/core/indexes/base.py\", line 3819, in get_loc\n    raise KeyError(key) from err\nKeyError: 'title'\n",
+     "S0_tail": "__RESULT__:\n{\"top_track_title\": \"None\", \"top_track_artist\": \"Anathema\", \"total_revenue\": 61376.18, \"match_key\": \"\"}\n"
+    },
+    {
+     "run": 25,
+     "j": 5,
+     "rc": 1,
+     "S0_rc": 0,
+     "tail": "n3.12/site-packages/pandas/core/frame.py\", line 4107, in __getitem__\n    indexer = self.columns.get_loc(key)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/pandas/core/indexes/base.py\", line 3819, in get_loc\n    raise KeyError(key) from err\nKeyError: 'title'\n",
+     "S0_tail": "59.23}, {\"track_id\": \"9639\", \"title\": \"Traces of Paganea\", \"artist\": \"Furious\", \"revenue\": 2351.68}, {\"track_id\": \"18760\", \"title\": \"Patience - Distant Relatives\", \"artist\": \"Nas & Damian Marley\", \"revenue\": 2349.33}, {\"track_id\": \"2516\", \"title\": \"006-Osm\", \"artist\": \"Ourson\", \"revenue\": 2346.18}]\n"
+    },
+    {
+     "run": 25,
+     "j": 6,
+     "rc": 1,
+     "S0_rc": 0,
+     "tail": "n3.12/site-packages/pandas/core/frame.py\", line 4107, in __getitem__\n    indexer = self.columns.get_loc(key)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/pandas/core/indexes/base.py\", line 3819, in get_loc\n    raise KeyError(key) from err\nKeyError: 'title'\n",
+     "S0_tail": "\": 2733694254804884984933118,\n    \"match_key\": \"world down under helloween part 2 the rise of sata\"\n  },\n  {\n    \"title\": \"Chile (Re-Loaded)\",\n    \"artist\": \"Neil Biggin\",\n    \"revenue_usd\": 3529.25,\n    \"units_sold\": 4253243558735122336046439399,\n    \"match_key\": \"chile reloaded|neil biggin\"\n  }\n]\n"
+    },
+    {
+     "run": 25,
+     "j": 7,
+     "rc": 1,
+     "S0_rc": 0,
+     "tail": "n3.12/site-packages/pandas/core/frame.py\", line 4107, in __getitem__\n    indexer = self.columns.get_loc(key)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/pandas/core/indexes/base.py\", line 3819, in get_loc\n    raise KeyError(key) from err\nKeyError: 'title'\n",
+     "S0_tail": "Total tracks with sales: 18907\nTotal revenue across all tracks: $16121710.85\n__RESULT__:\n{\n  \"title\": \"003-  \",\n  \"artist\": \"n.a.\",\n  \"total_revenue_usd\": 8394.15,\n  \"total_units_sold\": 7408,\n  \"unique_track_ids\": 9\n}\n"
+    }
+   ],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 119906835,
+   "peak_seq": 45281473
+  },
+  "S3": {
+   "calls": 50,
+   "hits": 17,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 45,
+   "consumers_identical": 45,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 35788920,
+   "peak_seq": 35788920
+  }
+ },
+ {
+  "dataset": "music_brainz_20k",
+  "query": "query3",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   31,
+   43,
+   5,
+   30,
+   17,
+   42,
+   2,
+   33
+  ],
+  "S0": {
+   "calls": 21,
+   "live_errors": 0,
+   "consumers": 60,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 4,
+   "peak_retained": 38090630,
+   "peak_seq": 6748230
+  },
+  "S1": {
+   "calls": 21,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 60,
+   "consumers_identical": 60,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 38090630,
+   "peak_seq": 6748230
+  },
+  "S2": {
+   "calls": 21,
+   "hits": 4,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 60,
+   "consumers_identical": 60,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 57538549,
+   "peak_seq": 24530169
+  },
+  "S3": {
+   "calls": 21,
+   "hits": 4,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 60,
+   "consumers_identical": 60,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 27141653,
+   "peak_seq": 20730208
+  }
+ },
+ {
+  "dataset": "music_brainz_20k",
+  "query": "query3",
+  "model": "gpt-5-mini",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   41,
+   15,
+   31,
+   28,
+   23,
+   22,
+   20,
+   19
+  ],
+  "S0": {
+   "calls": 16,
+   "live_errors": 0,
+   "consumers": 10,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 108329863,
+   "peak_seq": 14749659
+  },
+  "S1": {
+   "calls": 16,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 10,
+   "consumers_identical": 10,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 108329863,
+   "peak_seq": 14749659
+  },
+  "S2": {
+   "calls": 16,
+   "hits": 10,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 10,
+   "consumers_identical": 10,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 141629142,
+   "peak_seq": 48048938
+  },
+  "S3": {
+   "calls": 16,
+   "hits": 10,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 10,
+   "consumers_identical": 10,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 34581568,
+   "peak_seq": 33299279
+  }
+ }
+]

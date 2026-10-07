@@ -1,0 +1,171 @@
+{
+ "cells": 8,
+ "runs": 32,
+ "S2": {
+  "calls": 844,
+  "hits": 162,
+  "mismatches": 0,
+  "mismatches_on_hits": 0,
+  "consumers": 482,
+  "consumers_identical": 481,
+  "consumers_identical_ok": 434,
+  "consumers_identical_failed": 47,
+  "mismatch_examples": [],
+  "consumer_mismatch_examples": [
+   {
+    "cell": "agnews/query1/gemini-3-pro",
+    "run": 34,
+    "j": 2,
+    "rc": 0,
+    "S0_rc": "timeout",
+    "tail": "f taking either house of Congress. I think everyone hasn't been paying attention. Read on for my rundown.\n2nd Candidate Title: Sprint: No comment on reported Nextel merger talks\n2nd Candidate Length: 911\n3rd Candidate Title: The Rundown\n3rd Candidate Length: 841\n__RESULT__:\n\"2004 US Senate Outlook\"\n",
+    "S0_tail": ""
+   }
+  ],
+  "probes": 78,
+  "probes_refused": 0,
+  "store_object_intact": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ]
+ },
+ "S2c": {
+  "calls": 844,
+  "hits": 162,
+  "mismatches": 0,
+  "mismatches_on_hits": 0,
+  "consumers": 482,
+  "consumers_identical": 480,
+  "consumers_identical_ok": 434,
+  "consumers_identical_failed": 46,
+  "mismatch_examples": [],
+  "consumer_mismatch_examples": [
+   {
+    "cell": "agnews/query1/gemini-3-pro",
+    "run": 34,
+    "j": 2,
+    "rc": 0,
+    "S0_rc": "timeout",
+    "tail": "f taking either house of Congress. I think everyone hasn't been paying attention. Read on for my rundown.\n2nd Candidate Title: Sprint: No comment on reported Nextel merger talks\n2nd Candidate Length: 911\n3rd Candidate Title: The Rundown\n3rd Candidate Length: 841\n__RESULT__:\n\"2004 US Senate Outlook\"\n",
+    "S0_tail": ""
+   },
+   {
+    "cell": "agnews/query1/gemini-3-pro",
+    "run": 34,
+    "j": 2,
+    "rc": 0,
+    "S0_rc": "timeout",
+    "tail": "f taking either house of Congress. I think everyone hasn't been paying attention. Read on for my rundown.\n2nd Candidate Title: Sprint: No comment on reported Nextel merger talks\n2nd Candidate Length: 911\n3rd Candidate Title: The Rundown\n3rd Candidate Length: 841\n__RESULT__:\n\"2004 US Senate Outlook\"\n",
+    "S0_tail": ""
+   }
+  ],
+  "probes": 78,
+  "probes_refused": 0,
+  "store_object_intact": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ]
+ },
+ "S3": {
+  "calls": 844,
+  "hits": 162,
+  "mismatches": 0,
+  "mismatches_on_hits": 0,
+  "consumers": 482,
+  "consumers_identical": 480,
+  "consumers_identical_ok": 434,
+  "consumers_identical_failed": 46,
+  "mismatch_examples": [],
+  "consumer_mismatch_examples": [
+   {
+    "cell": "agnews/query1/gemini-3-pro",
+    "run": 34,
+    "j": 2,
+    "rc": 0,
+    "S0_rc": "timeout",
+    "tail": "f taking either house of Congress. I think everyone hasn't been paying attention. Read on for my rundown.\n2nd Candidate Title: Sprint: No comment on reported Nextel merger talks\n2nd Candidate Length: 911\n3rd Candidate Title: The Rundown\n3rd Candidate Length: 841\n__RESULT__:\n\"2004 US Senate Outlook\"\n",
+    "S0_tail": ""
+   },
+   {
+    "cell": "agnews/query1/gemini-3-pro",
+    "run": 34,
+    "j": 2,
+    "rc": 0,
+    "S0_rc": "timeout",
+    "tail": "f taking either house of Congress. I think everyone hasn't been paying attention. Read on for my rundown.\n2nd Candidate Title: Sprint: No comment on reported Nextel merger talks\n2nd Candidate Length: 911\n3rd Candidate Title: The Rundown\n3rd Candidate Length: 841\n__RESULT__:\n\"2004 US Senate Outlook\"\n",
+    "S0_tail": ""
+   }
+  ],
+  "probes": 72,
+  "probes_refused": 72,
+  "store_object_intact": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ]
+ },
+ "S0": {
+  "calls": 844,
+  "live_errors": 0,
+  "consumers": 486,
+  "consumers_nondeterministic": 4,
+  "consumer_nonzero_rc": 48
+ }
+}

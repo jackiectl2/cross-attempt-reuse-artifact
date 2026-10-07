@@ -1,0 +1,61 @@
+\section{Related Work}
+\label{sec:related}
+
+
+
+\paragraph{Agentic data workloads.}
+The vision of agent-first data systems names \emph{agentic speculation}: agents issue many, heterogeneous and partly
+redundant queries while exploring. It proposes probes, a probe optimizer with multi-query optimization, approximate
+answers and partial-result caching, an agent memory store and branching \cite{liu2026overlords}. It supports the
+redundancy claim by counting distinct sub-plans over repeated attempts on BIRD \cite{li2023bird}, which
+Section~\ref{sec:robust} reproduces on DAB. Our study measures the claim on released multi-model, multi-engine runs
+with costs and bytes attached. It also asks which repeats a system could reuse without changing a result. DAB
+\cite{ma2026dab} supplies the tasks and trajectories, and Spider~2.0 and BIRD evaluate text-to-SQL more broadly
+\cite{lei2025spider2,li2023bird}. Other work measures the end-to-end cost of SQL agents on big-data engines
+\cite{eizaguirre2026bigsql} and argues that agentic exploration of relational systems needs moderation
+\cite{jivrajani2026sophrosyne}. Further work budgets the observations an agentic text-to-SQL system makes
+\cite{peng2026bapsql} and serves agentic workflows as query plans with LLM operators \cite{wadlom2026helium}.
+Agentic workloads have also been characterized for LLM serving \cite{chang2026agentic,yuan2026agentic,zhu2026tracelab}.
+These works establish agents as a data-system workload and target the cost of individual runs. We isolate what
+repeated runs of the same task duplicate.
+
+\paragraph{Tool-result caching for agents.}
+TVCACHE, a stateful tool-value cache, caches the values that tools return across the parallel rollouts of LLM
+post-training, including SQL generation. A hit requires the agent's whole tool-call history to match an earlier
+sequence, because a tool may change the environment \cite{kumar2026tvcache}. ToolCaching caches the responses of LLM
+tool-calling services. It decides which requests are cacheable from their semantics and freshness and combines
+bandit-based admission with value-driven eviction \cite{zhai2026toolcaching}. Cortex caches the knowledge that LLM
+agents fetch from remote sources and serves semantically similar requests from it, validated by a small LLM judge
+\cite{ruan2026cortex}. Our study addresses the database side of evaluation and inference runs. There the calls are
+read-only against a static snapshot, and a result depends on the query alone. We establish where the repeated work
+lies across four engines and which admission rule makes reuse result-preserving. We also establish who should own a
+result that reaches the LLM as a preview and the agent's code as a file.
+
+\paragraph{Result reuse in database systems.}
+Semantic caching keeps query results at the client and answers later queries from cached regions
+\cite{dar1996semantic}. View matching lets the optimizer answer queries from materialized views
+\cite{goldstein2001materialized}, and a column store can recycle the intermediates of earlier plans
+\cite{ivanova2009recycling}. Cloud warehouses return persisted results for repeated queries over unchanged data
+\cite{snowflake2026persisted,google2026bqcache,databricks2026querycache}. LLM-based canonicalization lets an OLAP
+cache recognize semantically equal queries \cite{bindschaedler2026semantic}. Nectar caches derived datasets and the
+computations that produce them across datacenter jobs \cite{gunda2010nectar}. SQLShare analyzed the reuse in years
+of human analytical SQL \cite{jain2016sqlshare}. These mechanisms reuse work inside or beside the engine. This paper
+does not propose a new cache or reuse algorithm. It contributes a measurement methodology for repeated agent
+attempts and an ownership study for the reuse that happens after the engine. There a result is serialized, spilled
+and handed to an agent's sandbox, which is the cost SD leaves on the table (Table~\ref{tab:designs}).
+
+\paragraph{Sharing work among concurrent queries.}
+Multi-query optimization shares common subexpressions among queries optimized together \cite{sellis1988mqo}. GraftDB
+folds concurrently running analytical queries so that they share partially built operator state
+\cite{kimura2026graftdb}. Both need the queries to be in flight at the same time. An agent's calls are separated by
+LLM turns, 5.2\,s at the median in the Phoenix-CLI traces (Section~\ref{sec:xharness}). We therefore reuse completed
+results across attempts, which complements concurrent sharing within one. When attempts do overlap, a request for a
+result that is still being computed is a delayed hit \cite{keren2026delayedhits}. Our single-flight policy makes
+such requests wait for the first execution (Section~\ref{sec:concurrency}).
+
+\paragraph{LLM serving caches, agent traces and agent storage.}
+Serving systems reuse prompt prefixes and attention key--value state across requests
+\cite{zheng2024sglang,kwon2023pagedattention}. That reuse is orthogonal to database execution, serialization and
+file ownership. Work on agent state stores trajectories as a data type \cite{zheng2026trajectorydb} and makes
+storage a first-class metric of agent evaluation \cite{yu2026footprint}. It also branches, versions or isolates the
+databases agents modify \cite{ang2026branchbench,gou2026git4data,zhou2026atcc,zhou2026chronos}. We isolate the database calls of read-only agent runs and the materialization of their results.

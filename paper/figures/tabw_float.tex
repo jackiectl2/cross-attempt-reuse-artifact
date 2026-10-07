@@ -1,0 +1,11 @@
+% Table -- workload, replay coverage and fidelity by engine (column width, Section 3)
+\begin{table}[htbp]
+  \caption{Replay coverage and fidelity by engine. Columns give the distinct (database, query) pairs and the share of calls
+  whose replay succeeded. They also give the share of successful calls whose replayed result is byte-identical to
+  the recorded observation. Byte mismatches differ only in row order or otherwise, and load-time object identifiers
+  explain 1,299 of the 1,757 MongoDB mismatches. For spilled results, fidelity compares the 10,000-character preview that the trace keeps.
+  The six pairs whose database is not in the task's configuration were not replayed.}
+  \label{tab:workload}
+  \small\setlength{\tabcolsep}{2.6pt}
+  \input{figures/tabw_workload}
+\end{table}

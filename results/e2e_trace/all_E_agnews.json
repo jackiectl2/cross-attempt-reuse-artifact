@@ -1,0 +1,2062 @@
+[
+ {
+  "dataset": "agnews",
+  "query": "query2",
+  "model": "gemini-2.5-flash",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   8,
+   29,
+   38,
+   40,
+   24,
+   11,
+   22,
+   45
+  ],
+  "S0": {
+   "calls": 18,
+   "live_errors": 0,
+   "consumers": 31,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 31,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S1": {
+   "calls": 18,
+   "hits": 1,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 31,
+   "consumers_identical": 31,
+   "consumers_identical_ok": 0,
+   "consumers_identical_failed": 31,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S2": {
+   "calls": 18,
+   "hits": 10,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 31,
+   "consumers_identical": 31,
+   "consumers_identical_ok": 0,
+   "consumers_identical_failed": 31,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S3": {
+   "calls": 18,
+   "hits": 10,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 31,
+   "consumers_identical": 31,
+   "consumers_identical_ok": 0,
+   "consumers_identical_failed": 31,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  }
+ },
+ {
+  "dataset": "agnews",
+  "query": "query2",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   47,
+   20,
+   7,
+   46,
+   38,
+   30,
+   15,
+   42
+  ],
+  "S0": {
+   "calls": 48,
+   "live_errors": 0,
+   "consumers": 56,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 4,
+   "peak_retained": 301199,
+   "peak_seq": 38191
+  },
+  "S1": {
+   "calls": 48,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 56,
+   "consumers_identical": 56,
+   "consumers_identical_ok": 52,
+   "consumers_identical_failed": 4,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 301199,
+   "peak_seq": 38191
+  },
+  "S2": {
+   "calls": 48,
+   "hits": 17,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 56,
+   "consumers_identical": 56,
+   "consumers_identical_ok": 52,
+   "consumers_identical_failed": 4,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 335061,
+   "peak_seq": 72053
+  },
+  "S3": {
+   "calls": 48,
+   "hits": 17,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 56,
+   "consumers_identical": 56,
+   "consumers_identical_ok": 52,
+   "consumers_identical_failed": 4,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 301199,
+   "peak_seq": 72053
+  }
+ },
+ {
+  "dataset": "agnews",
+  "query": "query2",
+  "model": "gpt-5-mini",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   41,
+   24,
+   21,
+   25,
+   9,
+   38,
+   0,
+   23
+  ],
+  "S0": {
+   "calls": 35,
+   "live_errors": 0,
+   "consumers": 10,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 148435,
+   "peak_seq": 38191
+  },
+  "S1": {
+   "calls": 35,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 10,
+   "consumers_identical": 10,
+   "consumers_identical_ok": 10,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 148435,
+   "peak_seq": 38191
+  },
+  "S2": {
+   "calls": 35,
+   "hits": 12,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 10,
+   "consumers_identical": 10,
+   "consumers_identical_ok": 10,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 182297,
+   "peak_seq": 72053
+  },
+  "S3": {
+   "calls": 35,
+   "hits": 12,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 10,
+   "consumers_identical": 10,
+   "consumers_identical_ok": 10,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 148435,
+   "peak_seq": 72053
+  }
+ },
+ {
+  "dataset": "agnews",
+  "query": "query2",
+  "model": "gpt-5.2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   38,
+   3,
+   1,
+   22,
+   5,
+   11,
+   44,
+   12
+  ],
+  "S0": {
+   "calls": 25,
+   "live_errors": 0,
+   "consumers": 9,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 101586,
+   "peak_seq": 33862
+  },
+  "S1": {
+   "calls": 25,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 9,
+   "consumers_identical": 9,
+   "consumers_identical_ok": 9,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 101586,
+   "peak_seq": 33862
+  },
+  "S2": {
+   "calls": 25,
+   "hits": 15,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 9,
+   "consumers_identical": 9,
+   "consumers_identical_ok": 9,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 169310,
+   "peak_seq": 101586
+  },
+  "S3": {
+   "calls": 25,
+   "hits": 15,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 9,
+   "consumers_identical": 9,
+   "consumers_identical_ok": 9,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 67724,
+   "peak_seq": 67724
+  }
+ },
+ {
+  "dataset": "agnews",
+  "query": "query1",
+  "model": "kimi-k2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   39,
+   43,
+   4,
+   21,
+   20,
+   5,
+   37,
+   36
+  ],
+  "S0": {
+   "calls": 56,
+   "live_errors": 0,
+   "consumers": 41,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 9,
+   "peak_retained": 139914046,
+   "peak_seq": 105033800
+  },
+  "S1": {
+   "calls": 56,
+   "hits": 1,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 41,
+   "consumers_identical": 41,
+   "consumers_identical_ok": 32,
+   "consumers_identical_failed": 9,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 139914046,
+   "peak_seq": 105033800
+  },
+  "S2": {
+   "calls": 56,
+   "hits": 3,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 41,
+   "consumers_identical": 41,
+   "consumers_identical_ok": 32,
+   "consumers_identical_failed": 9,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 171408430,
+   "peak_seq": 136528184
+  },
+  "S3": {
+   "calls": 56,
+   "hits": 3,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 41,
+   "consumers_identical": 41,
+   "consumers_identical_ok": 32,
+   "consumers_identical_failed": 9,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 139914046,
+   "peak_seq": 120780992
+  }
+ },
+ {
+  "dataset": "agnews",
+  "query": "query1",
+  "model": "gemini-2.5-flash",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   29,
+   10,
+   13,
+   26,
+   17,
+   18,
+   8,
+   7
+  ],
+  "S0": {
+   "calls": 10,
+   "live_errors": 0,
+   "consumers": 40,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 40,
+   "peak_retained": 41181614,
+   "peak_seq": 41181614
+  },
+  "S1": {
+   "calls": 10,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 40,
+   "consumers_identical": 40,
+   "consumers_identical_ok": 0,
+   "consumers_identical_failed": 40,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 41181614,
+   "peak_seq": 41181614
+  },
+  "S2": {
+   "calls": 10,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 40,
+   "consumers_identical": 40,
+   "consumers_identical_ok": 0,
+   "consumers_identical_failed": 40,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 41181614,
+   "peak_seq": 41181614
+  },
+  "S3": {
+   "calls": 10,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 40,
+   "consumers_identical": 40,
+   "consumers_identical_ok": 0,
+   "consumers_identical_failed": 40,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 41181614,
+   "peak_seq": 41181614
+  }
+ },
+ {
+  "dataset": "agnews",
+  "query": "query2",
+  "model": "kimi-k2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   36,
+   16,
+   3,
+   37,
+   21,
+   6,
+   10,
+   4
+  ],
+  "S0": {
+   "calls": 82,
+   "live_errors": 0,
+   "consumers": 56,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 10,
+   "peak_retained": 3661184,
+   "peak_seq": 3545018
+  },
+  "S1": {
+   "calls": 82,
+   "hits": 6,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 56,
+   "consumers_identical": 56,
+   "consumers_identical_ok": 46,
+   "consumers_identical_failed": 10,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 3661184,
+   "peak_seq": 3545018
+  },
+  "S2": {
+   "calls": 82,
+   "hits": 19,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 56,
+   "consumers_identical": 56,
+   "consumers_identical_ok": 46,
+   "consumers_identical_failed": 10,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 3661184,
+   "peak_seq": 3545018
+  },
+  "S3": {
+   "calls": 82,
+   "hits": 19,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 56,
+   "consumers_identical": 56,
+   "consumers_identical_ok": 46,
+   "consumers_identical_failed": 10,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 3661184,
+   "peak_seq": 3545018
+  }
+ },
+ {
+  "dataset": "agnews",
+  "query": "query3",
+  "model": "gemini-2.5-flash",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   5,
+   2,
+   43,
+   47,
+   4,
+   14,
+   0,
+   26
+  ],
+  "S0": {
+   "calls": 19,
+   "live_errors": 0,
+   "consumers": 3,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 19576243,
+   "peak_seq": 12698899
+  },
+  "S1": {
+   "calls": 19,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 3,
+   "consumers_identical": 3,
+   "consumers_identical_ok": 3,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 19576243,
+   "peak_seq": 12698899
+  },
+  "S2": {
+   "calls": 19,
+   "hits": 2,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 3,
+   "consumers_identical": 3,
+   "consumers_identical_ok": 3,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 36978918,
+   "peak_seq": 27571366
+  },
+  "S3": {
+   "calls": 19,
+   "hits": 2,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 3,
+   "consumers_identical": 3,
+   "consumers_identical_ok": 3,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 17402675,
+   "peak_seq": 17402675
+  }
+ },
+ {
+  "dataset": "agnews",
+  "query": "query3",
+  "model": "gpt-5.2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   6,
+   35,
+   10,
+   37,
+   48,
+   5,
+   36,
+   12
+  ],
+  "S0": {
+   "calls": 22,
+   "live_errors": 0,
+   "consumers": 12,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 3,
+   "peak_retained": 50666480,
+   "peak_seq": 41275792
+  },
+  "S1": {
+   "calls": 22,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumers_identical_ok": 9,
+   "consumers_identical_failed": 3,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 50666480,
+   "peak_seq": 41275792
+  },
+  "S2": {
+   "calls": 22,
+   "hits": 9,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumers_identical_ok": 9,
+   "consumers_identical_failed": 3,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 98446112,
+   "peak_seq": 82551584
+  },
+  "S3": {
+   "calls": 22,
+   "hits": 9,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumers_identical_ok": 9,
+   "consumers_identical_failed": 3,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 47779632,
+   "peak_seq": 47779632
+  }
+ },
+ {
+  "dataset": "agnews",
+  "query": "query3",
+  "model": "gpt-5-mini",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   41,
+   15,
+   31,
+   28,
+   23,
+   22,
+   20,
+   19
+  ],
+  "S0": {
+   "calls": 16,
+   "live_errors": 0,
+   "consumers": 15,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 177671328,
+   "peak_seq": 45730088
+  },
+  "S1": {
+   "calls": 16,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 15,
+   "consumers_identical": 15,
+   "consumers_identical_ok": 15,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 177671328,
+   "peak_seq": 45730088
+  },
+  "S2": {
+   "calls": 16,
+   "hits": 7,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 15,
+   "consumers_identical": 15,
+   "consumers_identical_ok": 15,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 259535344,
+   "peak_seq": 127594104
+  },
+  "S3": {
+   "calls": 16,
+   "hits": 7,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 15,
+   "consumers_identical": 15,
+   "consumers_identical_ok": 15,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 171150624,
+   "peak_seq": 126507320
+  }
+ },
+ {
+  "dataset": "agnews",
+  "query": "query4",
+  "model": "gemini-2.5-flash",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   33,
+   16,
+   49,
+   30,
+   24,
+   29,
+   6,
+   19
+  ],
+  "S0": {
+   "calls": 17,
+   "live_errors": 0,
+   "consumers": 14,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 2,
+   "peak_retained": 28123904,
+   "peak_seq": 12698899
+  },
+  "S1": {
+   "calls": 17,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 14,
+   "consumers_identical": 14,
+   "consumers_identical_ok": 12,
+   "consumers_identical_failed": 2,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 28123904,
+   "peak_seq": 12698899
+  },
+  "S2": {
+   "calls": 17,
+   "hits": 4,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 14,
+   "consumers_identical": 14,
+   "consumers_identical_ok": 12,
+   "consumers_identical_failed": 2,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 42313080,
+   "peak_seq": 26888075
+  },
+  "S3": {
+   "calls": 17,
+   "hits": 4,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 14,
+   "consumers_identical": 14,
+   "consumers_identical_ok": 12,
+   "consumers_identical_failed": 2,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 14189176,
+   "peak_seq": 14189176
+  }
+ },
+ {
+  "dataset": "agnews",
+  "query": "query1",
+  "model": "gpt-5.2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   27,
+   40,
+   0,
+   30,
+   18,
+   44,
+   15,
+   37
+  ],
+  "S0": {
+   "calls": 9,
+   "live_errors": 0,
+   "consumers": 14,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 1,
+   "peak_retained": 317352104,
+   "peak_seq": 39683776
+  },
+  "S1": {
+   "calls": 9,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 14,
+   "consumers_identical": 14,
+   "consumers_identical_ok": 13,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 317352104,
+   "peak_seq": 39683776
+  },
+  "S2": {
+   "calls": 9,
+   "hits": 6,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 14,
+   "consumers_identical": 14,
+   "consumers_identical_ok": 13,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 396702784,
+   "peak_seq": 119017584
+  },
+  "S3": {
+   "calls": 9,
+   "hits": 6,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 14,
+   "consumers_identical": 14,
+   "consumers_identical_ok": 13,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 79350680,
+   "peak_seq": 79350680
+  }
+ },
+ {
+  "dataset": "agnews",
+  "query": "query3",
+  "model": "kimi-k2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   41,
+   34,
+   24,
+   31,
+   2,
+   28,
+   8,
+   25
+  ],
+  "S0": {
+   "calls": 60,
+   "live_errors": 0,
+   "consumers": 55,
+   "consumers_nondeterministic": 1,
+   "consumer_nonzero_rc": 23,
+   "peak_retained": 151927606,
+   "peak_seq": 50183490
+  },
+  "S1": {
+   "calls": 60,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 54,
+   "consumers_identical": 54,
+   "consumers_identical_ok": 31,
+   "consumers_identical_failed": 23,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 151927606,
+   "peak_seq": 50183490
+  },
+  "S2": {
+   "calls": 60,
+   "hits": 5,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 54,
+   "consumers_identical": 54,
+   "consumers_identical_ok": 31,
+   "consumers_identical_failed": 23,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 192190044,
+   "peak_seq": 88647489
+  },
+  "S3": {
+   "calls": 60,
+   "hits": 5,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 54,
+   "consumers_identical": 54,
+   "consumers_identical_ok": 31,
+   "consumers_identical_failed": 23,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 146155535,
+   "peak_seq": 75327299
+  }
+ },
+ {
+  "dataset": "agnews",
+  "query": "query3",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   31,
+   43,
+   5,
+   30,
+   17,
+   42,
+   2,
+   33
+  ],
+  "S0": {
+   "calls": 49,
+   "live_errors": 0,
+   "consumers": 56,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 12,
+   "peak_retained": 363582936,
+   "peak_seq": 71380804
+  },
+  "S1": {
+   "calls": 49,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 56,
+   "consumers_identical": 56,
+   "consumers_identical_ok": 44,
+   "consumers_identical_failed": 12,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 363582936,
+   "peak_seq": 71380804
+  },
+  "S2": {
+   "calls": 49,
+   "hits": 6,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 56,
+   "consumers_identical": 56,
+   "consumers_identical_ok": 44,
+   "consumers_identical_failed": 12,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 457657414,
+   "peak_seq": 141111717
+  },
+  "S3": {
+   "calls": 49,
+   "hits": 6,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 56,
+   "consumers_identical": 56,
+   "consumers_identical_ok": 44,
+   "consumers_identical_failed": 12,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 357062232,
+   "peak_seq": 118418043
+  }
+ },
+ {
+  "dataset": "agnews",
+  "query": "query4",
+  "model": "gpt-5-mini",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   22,
+   28,
+   7,
+   11,
+   3,
+   4,
+   17,
+   49
+  ],
+  "S0": {
+   "calls": 16,
+   "live_errors": 0,
+   "consumers": 13,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 2,
+   "peak_retained": 173442648,
+   "peak_seq": 45309695
+  },
+  "S1": {
+   "calls": 16,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 13,
+   "consumers_identical": 13,
+   "consumers_identical_ok": 11,
+   "consumers_identical_failed": 2,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 173442648,
+   "peak_seq": 45309695
+  },
+  "S2": {
+   "calls": 16,
+   "hits": 4,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 13,
+   "consumers_identical": 13,
+   "consumers_identical_ok": 11,
+   "consumers_identical_failed": 2,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 254933124,
+   "peak_seq": 126800171
+  },
+  "S3": {
+   "calls": 16,
+   "hits": 4,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 13,
+   "consumers_identical": 13,
+   "consumers_identical_ok": 11,
+   "consumers_identical_failed": 2,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 170777084,
+   "peak_seq": 126133780
+  }
+ },
+ {
+  "dataset": "agnews",
+  "query": "query4",
+  "model": "gpt-5.2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   33,
+   37,
+   31,
+   32,
+   9,
+   28,
+   3,
+   41
+  ],
+  "S0": {
+   "calls": 14,
+   "live_errors": 0,
+   "consumers": 8,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 1,
+   "peak_retained": 123059600,
+   "peak_seq": 40333295
+  },
+  "S1": {
+   "calls": 14,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumers_identical_ok": 7,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 123059600,
+   "peak_seq": 40333295
+  },
+  "S2": {
+   "calls": 14,
+   "hits": 5,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumers_identical_ok": 7,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 205373962,
+   "peak_seq": 122393209
+  },
+  "S3": {
+   "calls": 14,
+   "hits": 5,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumers_identical_ok": 7,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 82314362,
+   "peak_seq": 82314362
+  }
+ },
+ {
+  "dataset": "agnews",
+  "query": "query4",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   44,
+   47,
+   12,
+   49,
+   15,
+   45,
+   11,
+   1
+  ],
+  "S0": {
+   "calls": 47,
+   "live_errors": 0,
+   "consumers": 45,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 8,
+   "peak_retained": 280442825,
+   "peak_seq": 90635715
+  },
+  "S1": {
+   "calls": 47,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 45,
+   "consumers_identical": 45,
+   "consumers_identical_ok": 37,
+   "consumers_identical_failed": 8,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 280442825,
+   "peak_seq": 90635715
+  },
+  "S2": {
+   "calls": 47,
+   "hits": 7,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 45,
+   "consumers_identical": 45,
+   "consumers_identical_ok": 37,
+   "consumers_identical_failed": 8,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 422161645,
+   "peak_seq": 181797671
+  },
+  "S3": {
+   "calls": 47,
+   "hits": 7,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 45,
+   "consumers_identical": 45,
+   "consumers_identical_ok": 37,
+   "consumers_identical_failed": 8,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 277971167,
+   "peak_seq": 141718820
+  }
+ },
+ {
+  "dataset": "agnews",
+  "query": "query4",
+  "model": "kimi-k2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   38,
+   39,
+   20,
+   14,
+   43,
+   4,
+   18,
+   47
+  ],
+  "S0": {
+   "calls": 93,
+   "live_errors": 0,
+   "consumers": 50,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 17,
+   "peak_retained": 113807944,
+   "peak_seq": 40212072
+  },
+  "S1": {
+   "calls": 93,
+   "hits": 6,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 50,
+   "consumers_identical": 50,
+   "consumers_identical_ok": 33,
+   "consumers_identical_failed": 17,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 111333822,
+   "peak_seq": 39385722
+  },
+  "S2": {
+   "calls": 93,
+   "hits": 8,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 50,
+   "consumers_identical": 50,
+   "consumers_identical_ok": 33,
+   "consumers_identical_failed": 17,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 131701326,
+   "peak_seq": 58929340
+  },
+  "S3": {
+   "calls": 93,
+   "hits": 8,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 50,
+   "consumers_identical": 50,
+   "consumers_identical_ok": 33,
+   "consumers_identical_failed": 17,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 110255488,
+   "peak_seq": 58102990
+  }
+ },
+ {
+  "dataset": "agnews",
+  "query": "query1",
+  "model": "gpt-5-mini",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   9,
+   31,
+   20,
+   30,
+   49,
+   12,
+   19,
+   32
+  ],
+  "S0": {
+   "calls": 9,
+   "live_errors": 0,
+   "consumers": 12,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 100057400,
+   "peak_seq": 44643304
+  },
+  "S1": {
+   "calls": 9,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumers_identical_ok": 12,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 100057400,
+   "peak_seq": 44643304
+  },
+  "S2": {
+   "calls": 9,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumers_identical_ok": 12,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 155471496,
+   "peak_seq": 79333808
+  },
+  "S3": {
+   "calls": 9,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumers_identical_ok": 12,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 100057400,
+   "peak_seq": 55414096
+  }
+ },
+ {
+  "dataset": "agnews",
+  "query": "query1",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   22,
+   49,
+   39,
+   26,
+   40,
+   34,
+   37,
+   43
+  ],
+  "S0": {
+   "calls": 58,
+   "live_errors": 0,
+   "consumers": 49,
+   "consumers_nondeterministic": 1,
+   "consumer_nonzero_rc": 2,
+   "peak_retained": 238775060,
+   "peak_seq": 51706859
+  },
+  "S1": {
+   "calls": 58,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 48,
+   "consumers_identical": 48,
+   "consumers_identical_ok": 46,
+   "consumers_identical_failed": 2,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 238775060,
+   "peak_seq": 51706859
+  },
+  "S2": {
+   "calls": 58,
+   "hits": 3,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 48,
+   "consumers_identical": 48,
+   "consumers_identical_ok": 46,
+   "consumers_identical_failed": 2,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 238775060,
+   "peak_seq": 51706859
+  },
+  "S3": {
+   "calls": 58,
+   "hits": 3,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 48,
+   "consumers_identical": 48,
+   "consumers_identical_ok": 46,
+   "consumers_identical_failed": 2,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 238775060,
+   "peak_seq": 51706859
+  }
+ }
+]

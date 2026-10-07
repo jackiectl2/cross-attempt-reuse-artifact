@@ -1,0 +1,14 @@
+\begin{tabular}{@{}lrrrrlr@{}}
+\toprule
+ & DB-time & Written & \multicolumn{2}{c}{Footprint / S0} & Measured & Modeled tool-time \\
+\cmidrule(lr){4-5}
+Design & saving \% & / S0 & retained & sequential & primitive & saving \% \\
+\midrule
+Isolated (S0) & 0.0 & 1.00 & 1.00 & 1.00 & --- & 0.0 \\
+Session memo (S1) & 3.4 & 0.98 & 0.98 & 0.96 & --- & 3.4 \\
+Execution-only cache model (SD) & 24.5 & 1.00 & 1.00 & 1.00 & --- & 11.8 \\
+Private copy (S2) & 24.5 & 1.70 & 1.70 & 2.50 & copy 0.46 ns/B & 24.9 \\
+CoW clone (S2c) & 24.5 & 0.76 & 0.76 & 1.76 & clone 0.29 ms & 24.8 \\
+Shared read-only store (S3) & 24.5 & 0.76 & 0.76 & 1.76 & alias 12.6\,\textmu s & 25.0 \\
+\bottomrule
+\end{tabular}

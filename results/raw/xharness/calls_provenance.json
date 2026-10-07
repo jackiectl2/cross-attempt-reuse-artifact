@@ -1,0 +1,58 @@
+{
+ "qwen": {
+  "pr": 99,
+  "model": "qwen3.8-flash-next",
+  "harness": "DAB scaffold (hints)",
+  "url": "https://github.com/qiboyu301-crypto/DataAgentBench/releases/download/qwen38flash-parallel-v1-traces/qwen38flash_parallel_v1-traces.tar.gz",
+  "file": "qwen38flash_dab.tar.gz",
+  "downloaded": "2026-10-01",
+  "archive_bytes": 669024657,
+  "runs": 270,
+  "db_calls": 3294,
+  "tool_counts": {
+   "query_db": 3294
+  }
+ },
+ "scout": {
+  "pr": 96,
+  "model": "glm-5.2",
+  "harness": "Scout (OceanBase Lab)",
+  "url": "https://github.com/WeiJiuQi/DataAgentBench/releases/download/scout-traces-20260908/scout_trace.tar.xz",
+  "file": "scout_glm52.tar.xz",
+  "downloaded": "2026-10-01",
+  "archive_bytes": 18618276,
+  "runs": 249,
+  "db_calls": 1490,
+  "tool_counts": {
+   "query_db": 1490
+  }
+ },
+ "stela": {
+  "pr": 103,
+  "model": "deepseek-v4.1-flash",
+  "harness": "Stela",
+  "url": "https://github.com/user-attachments/files/32157381/stela-leaderboard-submission.zip",
+  "file": "stela_dsv41.zip",
+  "downloaded": "2026-10-01",
+  "archive_bytes": 22747976,
+  "runs": 264,
+  "db_calls": 3306,
+  "tool_counts": {
+   "run_query": 3306
+  }
+ },
+ "phoenix": {
+  "pr": 94,
+  "model": "claude-opus-5",
+  "harness": "Phoenix-CLI (Claude Code)",
+  "url": "https://github.com/marc-shade/DataAgentBench/releases/download/phoenix-cli-traces-2026-09-04/traces.tar.gz",
+  "file": "phoenix_cli.tar.gz",
+  "downloaded": "2026-10-01",
+  "archive_bytes": 12811682,
+  "runs": 270,
+  "db_calls": 2937,
+  "tool_counts": {
+   "dab_db": 2937
+  }
+ }
+}

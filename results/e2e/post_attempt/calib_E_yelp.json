@@ -1,0 +1,1150 @@
+[
+ {
+  "dataset": "yelp",
+  "query": "query7",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 1,
+  "budget": "1/4",
+  "order": [
+   22,
+   49,
+   39,
+   26,
+   40,
+   34,
+   37,
+   43
+  ],
+  "S0": {
+   "calls": 43,
+   "live_errors": 0,
+   "consumers": 23,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 2,
+   "peak_retained": 191958,
+   "peak_seq": 97274
+  },
+  "S1": {
+   "calls": 43,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 23,
+   "consumers_identical": 23,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 191958,
+   "peak_seq": 97274
+  },
+  "S2": {
+   "calls": 43,
+   "hits": 17,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 23,
+   "consumers_identical": 23,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 383916,
+   "peak_seq": 289232
+  },
+  "S3": {
+   "calls": 43,
+   "hits": 17,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 23,
+   "consumers_identical": 23,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 191958,
+   "peak_seq": 191958
+  }
+ },
+ {
+  "dataset": "yelp",
+  "query": "query7",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 1,
+  "budget": "inf",
+  "order": [
+   22,
+   49,
+   39,
+   26,
+   40,
+   34,
+   37,
+   43
+  ],
+  "S0": {
+   "calls": 43,
+   "live_errors": 0,
+   "consumers": 23,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 2,
+   "peak_retained": 191958,
+   "peak_seq": 97274
+  },
+  "S1": {
+   "calls": 43,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 23,
+   "consumers_identical": 23,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 191958,
+   "peak_seq": 97274
+  },
+  "S2": {
+   "calls": 43,
+   "hits": 17,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 23,
+   "consumers_identical": 23,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 383916,
+   "peak_seq": 289232
+  },
+  "S3": {
+   "calls": 43,
+   "hits": 17,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 23,
+   "consumers_identical": 23,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 191958,
+   "peak_seq": 191958
+  }
+ },
+ {
+  "dataset": "yelp",
+  "query": "query7",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   29,
+   10,
+   13,
+   26,
+   17,
+   18,
+   8,
+   7
+  ],
+  "S0": {
+   "calls": 43,
+   "live_errors": 0,
+   "consumers": 43,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 2,
+   "peak_retained": 103192,
+   "peak_seq": 30162
+  },
+  "S1": {
+   "calls": 43,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 43,
+   "consumers_identical": 43,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 103192,
+   "peak_seq": 30162
+  },
+  "S2": {
+   "calls": 43,
+   "hits": 12,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 43,
+   "consumers_identical": 43,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 206384,
+   "peak_seq": 131212
+  },
+  "S3": {
+   "calls": 43,
+   "hits": 12,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 43,
+   "consumers_identical": 43,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 103192,
+   "peak_seq": 103192
+  }
+ },
+ {
+  "dataset": "yelp",
+  "query": "query7",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 0,
+  "budget": "1/4",
+  "order": [
+   29,
+   10,
+   13,
+   26,
+   17,
+   18,
+   8,
+   7
+  ],
+  "S0": {
+   "calls": 43,
+   "live_errors": 0,
+   "consumers": 43,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 2,
+   "peak_retained": 103192,
+   "peak_seq": 30162
+  },
+  "S1": {
+   "calls": 43,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 43,
+   "consumers_identical": 43,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 103192,
+   "peak_seq": 30162
+  },
+  "S2": {
+   "calls": 43,
+   "hits": 12,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 43,
+   "consumers_identical": 43,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 206384,
+   "peak_seq": 131212
+  },
+  "S3": {
+   "calls": 43,
+   "hits": 12,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 43,
+   "consumers_identical": 43,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 103192,
+   "peak_seq": 103192
+  }
+ },
+ {
+  "dataset": "yelp",
+  "query": "query1",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 1,
+  "budget": "inf",
+  "order": [
+   27,
+   40,
+   0,
+   30,
+   18,
+   44,
+   15,
+   37
+  ],
+  "S0": {
+   "calls": 36,
+   "live_errors": 0,
+   "consumers": 14,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 2,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S1": {
+   "calls": 36,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 14,
+   "consumers_identical": 14,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S2": {
+   "calls": 36,
+   "hits": 13,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 14,
+   "consumers_identical": 14,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S3": {
+   "calls": 36,
+   "hits": 13,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 14,
+   "consumers_identical": 14,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  }
+ },
+ {
+  "dataset": "yelp",
+  "query": "query1",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 1,
+  "budget": "1/4",
+  "order": [
+   27,
+   40,
+   0,
+   30,
+   18,
+   44,
+   15,
+   37
+  ],
+  "S0": {
+   "calls": 36,
+   "live_errors": 0,
+   "consumers": 14,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 2,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S1": {
+   "calls": 36,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 14,
+   "consumers_identical": 14,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S2": {
+   "calls": 36,
+   "hits": 13,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 14,
+   "consumers_identical": 14,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S3": {
+   "calls": 36,
+   "hits": 13,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 14,
+   "consumers_identical": 14,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  }
+ },
+ {
+  "dataset": "yelp",
+  "query": "query1",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   9,
+   31,
+   20,
+   30,
+   49,
+   12,
+   19,
+   32
+  ],
+  "S0": {
+   "calls": 38,
+   "live_errors": 0,
+   "consumers": 12,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 2,
+   "peak_retained": 129834,
+   "peak_seq": 129834
+  },
+  "S1": {
+   "calls": 38,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 129834,
+   "peak_seq": 129834
+  },
+  "S2": {
+   "calls": 38,
+   "hits": 9,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 259668,
+   "peak_seq": 259668
+  },
+  "S3": {
+   "calls": 38,
+   "hits": 9,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 129834,
+   "peak_seq": 129834
+  }
+ },
+ {
+  "dataset": "yelp",
+  "query": "query1",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 0,
+  "budget": "1/4",
+  "order": [
+   9,
+   31,
+   20,
+   30,
+   49,
+   12,
+   19,
+   32
+  ],
+  "S0": {
+   "calls": 38,
+   "live_errors": 0,
+   "consumers": 12,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 2,
+   "peak_retained": 129834,
+   "peak_seq": 129834
+  },
+  "S1": {
+   "calls": 38,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 129834,
+   "peak_seq": 129834
+  },
+  "S2": {
+   "calls": 38,
+   "hits": 9,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 259668,
+   "peak_seq": 259668
+  },
+  "S3": {
+   "calls": 38,
+   "hits": 9,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 129834,
+   "peak_seq": 129834
+  }
+ },
+ {
+  "dataset": "yelp",
+  "query": "query4",
+  "model": "gpt-5-mini",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   39,
+   43,
+   4,
+   21,
+   20,
+   5,
+   37,
+   36
+  ],
+  "S0": {
+   "calls": 23,
+   "live_errors": 0,
+   "consumers": 23,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 1,
+   "peak_retained": 1314201,
+   "peak_seq": 257956
+  },
+  "S1": {
+   "calls": 23,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 23,
+   "consumers_identical": 23,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 1314201,
+   "peak_seq": 257956
+  },
+  "S2": {
+   "calls": 23,
+   "hits": 5,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 23,
+   "consumers_identical": 23,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 1979232,
+   "peak_seq": 847992
+  },
+  "S3": {
+   "calls": 23,
+   "hits": 5,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 23,
+   "consumers_identical": 23,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 665031,
+   "peak_seq": 665031
+  }
+ },
+ {
+  "dataset": "yelp",
+  "query": "query4",
+  "model": "gpt-5-mini",
+  "contract": "E",
+  "res": 0,
+  "budget": "1/4",
+  "order": [
+   39,
+   43,
+   4,
+   21,
+   20,
+   5,
+   37,
+   36
+  ],
+  "S0": {
+   "calls": 23,
+   "live_errors": 0,
+   "consumers": 23,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 1,
+   "peak_retained": 1314201,
+   "peak_seq": 257956
+  },
+  "S1": {
+   "calls": 23,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 23,
+   "consumers_identical": 23,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 1314201,
+   "peak_seq": 257956
+  },
+  "S2": {
+   "calls": 23,
+   "hits": 5,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 23,
+   "consumers_identical": 23,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 1979232,
+   "peak_seq": 847992
+  },
+  "S3": {
+   "calls": 23,
+   "hits": 5,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 23,
+   "consumers_identical": 23,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 665031,
+   "peak_seq": 665031
+  }
+ },
+ {
+  "dataset": "yelp",
+  "query": "query4",
+  "model": "gpt-5-mini",
+  "contract": "E",
+  "res": 1,
+  "budget": "inf",
+  "order": [
+   8,
+   29,
+   38,
+   40,
+   24,
+   11,
+   22,
+   45
+  ],
+  "S0": {
+   "calls": 27,
+   "live_errors": 0,
+   "consumers": 37,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 2,
+   "peak_retained": 1739333,
+   "peak_seq": 250740
+  },
+  "S1": {
+   "calls": 27,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 37,
+   "consumers_identical": 37,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 1739333,
+   "peak_seq": 250740
+  },
+  "S2": {
+   "calls": 27,
+   "hits": 7,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 37,
+   "consumers_identical": 37,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 2569828,
+   "peak_seq": 1018033
+  },
+  "S3": {
+   "calls": 27,
+   "hits": 7,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 37,
+   "consumers_identical": 37,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 830495,
+   "peak_seq": 830495
+  }
+ },
+ {
+  "dataset": "yelp",
+  "query": "query4",
+  "model": "gpt-5-mini",
+  "contract": "E",
+  "res": 1,
+  "budget": "1/4",
+  "order": [
+   8,
+   29,
+   38,
+   40,
+   24,
+   11,
+   22,
+   45
+  ],
+  "S0": {
+   "calls": 27,
+   "live_errors": 0,
+   "consumers": 37,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 2,
+   "peak_retained": 1739333,
+   "peak_seq": 250740
+  },
+  "S1": {
+   "calls": 27,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 37,
+   "consumers_identical": 37,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 1739333,
+   "peak_seq": 250740
+  },
+  "S2": {
+   "calls": 27,
+   "hits": 7,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 37,
+   "consumers_identical": 37,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 2569828,
+   "peak_seq": 1018033
+  },
+  "S3": {
+   "calls": 27,
+   "hits": 7,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 37,
+   "consumers_identical": 37,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 830495,
+   "peak_seq": 830495
+  }
+ }
+]

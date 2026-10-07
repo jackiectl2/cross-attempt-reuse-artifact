@@ -1,0 +1,77 @@
+{
+ "results_B1.json": {
+  "leaves_r2": 2966,
+  "leaves_r3": 2966,
+  "differences": 102,
+  "differences_by_top_level_key": {
+   "B1_B_certified": 102
+  }
+ },
+ "results_B23.json": {
+  "leaves_r2": 5580,
+  "leaves_r3": 5580,
+  "differences": 1034,
+  "differences_by_top_level_key": {
+   "B3_B_certified": 1034
+  }
+ },
+ "stats.json": {
+  "leaves_r2": 259,
+  "leaves_r3": 259,
+  "differences": 0,
+  "differences_by_top_level_key": {}
+ },
+ "footprint_summary.json": {
+  "leaves_r2": 270,
+  "leaves_r3": 270,
+  "differences": 27,
+  "differences_by_top_level_key": {
+   "B": 27
+  }
+ },
+ "B0_funnel.csv": {
+  "rows_r2": 144,
+  "rows_r3": 144,
+  "same_columns": true,
+  "rows_that_differ": 16,
+  "first_field_of_differing_rows": [
+   "B_certified"
+  ]
+ },
+ "B0_fidelity.csv": {
+  "rows_r2": 5,
+  "rows_r3": 5,
+  "same_columns": true,
+  "rows_that_differ": 0,
+  "first_field_of_differing_rows": []
+ },
+ "B0_mismatch_kinds.csv": {
+  "rows_r2": 4,
+  "rows_r3": 4,
+  "same_columns": true,
+  "rows_that_differ": 0,
+  "first_field_of_differing_rows": []
+ },
+ "B0_outcome_classes.csv": {
+  "rows_r2": 5,
+  "rows_r3": 5,
+  "same_columns": true,
+  "rows_that_differ": 0,
+  "first_field_of_differing_rows": []
+ },
+ "B1_per_task.csv": {
+  "rows_r2": 162,
+  "rows_r3": 162,
+  "same_columns": true,
+  "rows_that_differ": 0,
+  "first_field_of_differing_rows": []
+ },
+ "B3_per_task_E.csv": {
+  "rows_r2": 810,
+  "rows_r3": 810,
+  "same_columns": true,
+  "rows_that_differ": 0,
+  "first_field_of_differing_rows": []
+ },
+ "note": "r2: Contract B rules 1-7 (ED_CONTRACT_B=rules7); r3: the final whitelist. JSON leaves are compared with relative tolerance 1e-9, CSV rows by column name (the column order of B3_per_task_E.csv depends on the worker schedule). Only Contract-B entries differ."
+}

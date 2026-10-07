@@ -1,0 +1,219 @@
+{
+ "DEPS_DEV_V1": {
+  "tasks": 2,
+  "runs": 482,
+  "engines": [
+   "duckdb",
+   "sqlite"
+  ],
+  "databases": 2,
+  "data_bytes": 549900288,
+  "calls": 3125,
+  "pairs": 1281,
+  "ok_calls": 2977,
+  "spilled_share_ok": 0.5710446758481693,
+  "exec_s_total": 1874.4418946416117,
+  "payload_bytes_total": 76057620577.0,
+  "task_median_other_attempts_exec": 0.2228152450323078,
+  "task_median_session_exec": 0.06916222306796224
+ },
+ "GITHUB_REPOS": {
+  "tasks": 4,
+  "runs": 1000,
+  "engines": [
+   "duckdb",
+   "sqlite"
+  ],
+  "databases": 2,
+  "data_bytes": 928468992,
+  "calls": 6061,
+  "pairs": 3159,
+  "ok_calls": 5686,
+  "spilled_share_ok": 0.35824832922968697,
+  "exec_s_total": 7261.094714962877,
+  "payload_bytes_total": 222553149181.0,
+  "task_median_other_attempts_exec": 0.5442304141831791,
+  "task_median_session_exec": 0.09773318646566576
+ },
+ "PANCANCER_ATLAS": {
+  "tasks": 3,
+  "runs": 750,
+  "engines": [
+   "duckdb",
+   "postgres"
+  ],
+  "databases": 2,
+  "data_bytes": 301431016,
+  "calls": 6716,
+  "pairs": 4045,
+  "ok_calls": 5710,
+  "spilled_share_ok": 0.4339754816112084,
+  "exec_s_total": 210.73885235656053,
+  "payload_bytes_total": 1050060801.0,
+  "task_median_other_attempts_exec": 0.3792194089026482,
+  "task_median_session_exec": 0.0356522160962195
+ },
+ "PATENTS": {
+  "tasks": 3,
+  "runs": 750,
+  "engines": [
+   "postgres",
+   "sqlite"
+  ],
+  "databases": 2,
+  "data_bytes": 5556265776,
+  "calls": 4263,
+  "pairs": 2322,
+  "ok_calls": 3960,
+  "spilled_share_ok": 0.6300505050505051,
+  "exec_s_total": 23397.714365356136,
+  "payload_bytes_total": 225078659111.0,
+  "task_median_other_attempts_exec": 0.3605723983394343,
+  "task_median_session_exec": 0.0712901214780311
+ },
+ "agnews": {
+  "tasks": 4,
+  "runs": 1000,
+  "engines": [
+   "mongo",
+   "sqlite"
+  ],
+  "databases": 2,
+  "data_bytes": 40592425,
+  "calls": 4240,
+  "pairs": 1360,
+  "ok_calls": 4085,
+  "spilled_share_ok": 0.3277845777233782,
+  "exec_s_total": 196.23686637636274,
+  "payload_bytes_total": 11067713187.0,
+  "task_median_other_attempts_exec": 0.41805849322121547,
+  "task_median_session_exec": 0.0226478675475794
+ },
+ "bookreview": {
+  "tasks": 3,
+  "runs": 750,
+  "engines": [
+   "postgres",
+   "sqlite"
+  ],
+  "databases": 2,
+  "data_bytes": 1742680,
+  "calls": 3060,
+  "pairs": 1093,
+  "ok_calls": 2978,
+  "spilled_share_ok": 0.4956346541302888,
+  "exec_s_total": 4.613963583484292,
+  "payload_bytes_total": 109409628.0,
+  "task_median_other_attempts_exec": 0.5182834278679522,
+  "task_median_session_exec": 0.0426634229436605
+ },
+ "crmarenapro": {
+  "tasks": 13,
+  "runs": 3250,
+  "engines": [
+   "duckdb",
+   "postgres",
+   "sqlite"
+  ],
+  "databases": 6,
+  "data_bytes": 32834829,
+  "calls": 16879,
+  "pairs": 10412,
+  "ok_calls": 15552,
+  "spilled_share_ok": 0.11702674897119342,
+  "exec_s_total": 73.36078683193773,
+  "payload_bytes_total": 393405365.0,
+  "task_median_other_attempts_exec": 0.3551333468138501,
+  "task_median_session_exec": 0.0184139461964173
+ },
+ "googlelocal": {
+  "tasks": 4,
+  "runs": 1000,
+  "engines": [
+   "postgres",
+   "sqlite"
+  ],
+  "databases": 2,
+  "data_bytes": 623932,
+  "calls": 3779,
+  "pairs": 1482,
+  "ok_calls": 3710,
+  "spilled_share_ok": 0.15983827493261454,
+  "exec_s_total": 4.891159002669156,
+  "payload_bytes_total": 32419930.0,
+  "task_median_other_attempts_exec": 0.5389691076530916,
+  "task_median_session_exec": 0.05024746647986865
+ },
+ "music_brainz_20k": {
+  "tasks": 3,
+  "runs": 750,
+  "engines": [
+   "duckdb",
+   "sqlite"
+  ],
+  "databases": 2,
+  "data_bytes": 3096576,
+  "calls": 2451,
+  "pairs": 1071,
+  "ok_calls": 2434,
+  "spilled_share_ok": 0.23212818405916189,
+  "exec_s_total": 32.394585718400776,
+  "payload_bytes_total": 1670395698.0,
+  "task_median_other_attempts_exec": 0.5000673391276667,
+  "task_median_session_exec": 0.0081694599533137
+ },
+ "stockindex": {
+  "tasks": 3,
+  "runs": 750,
+  "engines": [
+   "duckdb",
+   "sqlite"
+  ],
+  "databases": 2,
+  "data_bytes": 4476928,
+  "calls": 2663,
+  "pairs": 1214,
+  "ok_calls": 2492,
+  "spilled_share_ok": 0.25842696629213485,
+  "exec_s_total": 63.67117835674435,
+  "payload_bytes_total": 2697395244.0,
+  "task_median_other_attempts_exec": 0.3073028337528939,
+  "task_median_session_exec": 0.0055885778106609
+ },
+ "stockmarket": {
+  "tasks": 5,
+  "runs": 1250,
+  "engines": [
+   "duckdb",
+   "sqlite"
+  ],
+  "databases": 2,
+  "data_bytes": 965701632,
+  "calls": 14481,
+  "pairs": 10767,
+  "ok_calls": 13842,
+  "spilled_share_ok": 0.1462216442710591,
+  "exec_s_total": 5397.882659544237,
+  "payload_bytes_total": 111663219.0,
+  "task_median_other_attempts_exec": 0.1437678886818785,
+  "task_median_session_exec": 0.0152449863598872
+ },
+ "yelp": {
+  "tasks": 7,
+  "runs": 1750,
+  "engines": [
+   "duckdb",
+   "mongo"
+  ],
+  "databases": 2,
+  "data_bytes": 3749175,
+  "calls": 8495,
+  "pairs": 3410,
+  "ok_calls": 8156,
+  "spilled_share_ok": 0.17153016184404118,
+  "exec_s_total": 35.76492566335946,
+  "payload_bytes_total": 135167192.0,
+  "task_median_other_attempts_exec": 0.5237676841387853,
+  "task_median_session_exec": 0.0786541838859178
+ }
+}

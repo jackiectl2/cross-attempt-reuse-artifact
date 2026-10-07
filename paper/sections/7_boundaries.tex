@@ -1,0 +1,70 @@
+\section{Scope and Implications}
+\label{sec:boundaries}
+
+Sections~\ref{sec:locality}--\ref{sec:ownership} answered the three questions. This section delimits the scope of
+those answers and derives design implications.
+
+\subsection{Pre-specified Analyses}
+\label{sec:prereg}
+
+\input{figures/tabp_prereg_float}
+
+Six analyses and their thresholds were fixed in the experiment plan, after the pilot and before the full replay
+(Table~\ref{tab:prereg}). The other analyses are exploratory. Their outcomes delimit our claims. MongoDB's replays are
+byte-identical to the recorded observation for 78.5\% of its successful calls, against a 90\% bar.
+Table~\ref{tab:prereg} therefore evaluates B1 and B5 without MongoDB, and every engine is also reported on its own
+(Figure~\ref{fig:conditions}). The cross-attempt share exceeds the session share in each of the four engines.
+Savings are stated per $N$. The median task crosses the 20\% threshold at $N=8$, and at the pre-specified $N=4$ it
+saves 16.6\%. F3 is an exploratory result of the assumption-based tier, because Contract B admits almost no spilled
+payload. Of the 54 tasks, 8 have a B-admitted spilled result, with a median S3 write saving relative to S0 of zero.
+The tool-time comparison of S2, S2c and S3 uses the live calibration. The tool time of SD and of the budget and
+policy variants is a simulator estimate that we report descriptively. Bytes written and footprint are exact
+accounting for the configurations the calibration validated. The simulator's per-run tool-time error is 30.6\% under
+Contract B and 43.9\% on the E-eval subset, against a threshold of 10\%. It is 39.6\% on E-eval after calibrating
+per-call overheads, and it concentrates on cheap tasks. Cross-attempt dominance holds pooled, for the median task and
+in every leave-one-dataset-out fold. It reaches 3$\times$ for three of the five models
+(Figure~\ref{fig:conditions}).
+
+\subsection{Threats to Validity}
+\label{sec:threats}
+
+Contract B evolved after the experiment plan was fixed, and we report three versions. As planned, it was a rule on
+the query text alone. That rule also admitted \texttt{SUM}, \texttt{AVG} and the variance family, explicit
+collations and MongoDB lookups with further predicates, 8,417 calls in all. A first revision excluded these and admitted 5,344 calls, and adversarial review showed that it still admitted unstable grouped queries. We replaced the rule by the whitelist of Section~\ref{sec:method} and repaired it over six rounds of LLM review. Five rounds found admitted queries whose bytes can
+differ, or operations that can fail under one plan only. The sixth found no such query and one more such operation,
+which the final rule excludes. Table~\ref{tab:prereg} gives the outcomes that depend on the rule as planned and
+under the final rule. One of them changes its verdict, the simulator's tool-time error under B (8.6\% as planned,
+30.6\% with the final rule). The certificate is an argument under stated preconditions that review and tests have
+probed, not a mechanized proof. An operation that raised on some rows in a way the argument missed would let one
+plan fail where another completes. It would not change the bytes of any completing execution. Neither limit weakens
+F2. A query that the rule should not admit would only lower the certifiable share. The order-based bound of Section~\ref{sec:funnel} covers every admission rule that guarantees the serialized bytes across query plans in engine row order.
+
+All cost, certifiability and mechanism numbers come from one benchmark family: DAB's static snapshots and its
+benchmark-generated attempts, about 50 per task and model. The four leaderboard harnesses add harness and model diversity on the same tasks, not a second workload. Production agents may repeat differently. Locality and
+savings are oracle-gated potential, and the designs are measured on post-hoc subsets. E-eval is an offline
+qualification of a pinned runtime, not an online admission rule. The 7.0\% cross-runtime disagreement shows what an
+unpinned runtime would change. For a spilled result the traces keep only the preview, so fidelity to the original
+run covers its first 10,000 characters. Reproduction of the whole file is shown inside the pinned runtime and the
+live runs.  The read-only store guards against accidental writes by agent
+code. Code that changes file permissions needs a read-only mount or a separate user. The all-cell trace replay uses one batch per cell and follows the recorded trajectories without re-running the LLM. Spilled MongoDB results pass the equivalence gate for 47.2\% of their bytes. 
+
+\subsection{Design Implications}
+\label{sec:implications}
+
+For repeated attempts over a shared static snapshot, three design rules follow from the measurements.
+\begin{itemize}
+  \item \textbf{Batch-scoped reuse.} Reuse should be shared across the attempts of a batch, not only within a
+  session. A session memo recovers about 3\% of DB time at any $N$. A cache shared by the batch recovers 24.1\% of
+  the oracle-admitted DB time at eight attempts and keeps growing with $N$ (F1).
+  \item \textbf{Offline runtime qualification.} An across-plan static byte certificate alone forgoes most of the
+  measured payoff. Contract B admits almost none of the reusable bytes. A runtime with pinned engine version,
+  parallelism and snapshot reproduced every statically admissible DAB result it executed. The static E check is
+  decidable online. Its byte stability is empirical and held for every admitted DAB and additional-harness query
+  whose replay succeeded. A certificate that guarantees the tool's serialized bytes across query plans in the row
+  order the engine returns cannot cover the order-ambiguous results. Those results carry most of the measured
+  payoff (F2).
+  \item \textbf{Single read-only ownership with reference pinning.} Each reused result should have one read-only
+  owner. Aliases into a read-only store avoid writing a copy per hit, as do copy-on-write clones where the file
+  system supports reflink. Read-only objects keep one attempt's code from altering another's input by mistake.
+  Reference pinning keeps aliases valid while the store evicts (F3).
+\end{itemize}

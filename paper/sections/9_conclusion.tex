@@ -1,0 +1,14 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+Repeated runs of LLM data agents re-query the same data, and this paper measured what that repetition offers a data
+system. On the 76,213 database calls of DAB's public runs, exact repeats live across attempts rather than within a
+session. Reuse shared by a batch of attempts therefore grows with their number, while a session cache stays flat.
+An offline-qualified pinned runtime reproduced every statically admissible result it executed and thereby recovers
+this payoff. A conservative static certificate covers a small part of the reusable DB time, and its dominant
+rejection reason by distinct queries is an unordered result. The same order ambiguity bounds every certificate of
+byte stability across query plans. At the tool boundary, a read-only shared store writes 0.448$\times$ as many
+bytes as private copies for the median task with spilled results. This holds in the unbounded $N=8$ evaluation on
+the E-eval subset. In the tested live replays and concurrency tests, read-only pinned aliases preserved the cached
+values and kept eviction from invalidating live references. In this repeated-attempt, static-snapshot setting, the
+batch of attempts rather than the session is the unit of reuse.

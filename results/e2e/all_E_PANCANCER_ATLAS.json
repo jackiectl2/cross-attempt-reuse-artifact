@@ -1,0 +1,1517 @@
+[
+ {
+  "dataset": "PANCANCER_ATLAS",
+  "query": "query2",
+  "model": "gemini-2.5-flash",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   8,
+   29,
+   38,
+   40,
+   24,
+   11,
+   22,
+   45
+  ],
+  "S0": {
+   "calls": 33,
+   "live_errors": 0,
+   "consumers": 7,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 14778643,
+   "peak_seq": 2862915
+  },
+  "S1": {
+   "calls": 33,
+   "hits": 2,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 7,
+   "consumers_identical": 7,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 14778643,
+   "peak_seq": 2862915
+  },
+  "S2": {
+   "calls": 33,
+   "hits": 11,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 7,
+   "consumers_identical": 7,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 23841807,
+   "peak_seq": 11926079
+  },
+  "S3": {
+   "calls": 33,
+   "hits": 11,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 7,
+   "consumers_identical": 7,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 9063164,
+   "peak_seq": 9063164
+  }
+ },
+ {
+  "dataset": "PANCANCER_ATLAS",
+  "query": "query1",
+  "model": "gemini-2.5-flash",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   29,
+   10,
+   13,
+   26,
+   17,
+   18,
+   8,
+   7
+  ],
+  "S0": {
+   "calls": 35,
+   "live_errors": 0,
+   "consumers": 10,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 1,
+   "peak_retained": 26147629,
+   "peak_seq": 19922850
+  },
+  "S1": {
+   "calls": 35,
+   "hits": 7,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 10,
+   "consumers_identical": 10,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 9117067,
+   "peak_seq": 2892288
+  },
+  "S2": {
+   "calls": 35,
+   "hits": 12,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 10,
+   "consumers_identical": 10,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 18234134,
+   "peak_seq": 11955494
+  },
+  "S3": {
+   "calls": 35,
+   "hits": 12,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 10,
+   "consumers_identical": 10,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 9117067,
+   "peak_seq": 9117067
+  }
+ },
+ {
+  "dataset": "PANCANCER_ATLAS",
+  "query": "query1",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   22,
+   49,
+   39,
+   26,
+   40,
+   34,
+   37,
+   43
+  ],
+  "S0": {
+   "calls": 72,
+   "live_errors": 0,
+   "consumers": 12,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 1,
+   "peak_retained": 1313197,
+   "peak_seq": 189160
+  },
+  "S1": {
+   "calls": 72,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 1313197,
+   "peak_seq": 189160
+  },
+  "S2": {
+   "calls": 72,
+   "hits": 16,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 2287185,
+   "peak_seq": 1141401
+  },
+  "S3": {
+   "calls": 72,
+   "hits": 16,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 973988,
+   "peak_seq": 973988
+  }
+ },
+ {
+  "dataset": "PANCANCER_ATLAS",
+  "query": "query1",
+  "model": "gpt-5-mini",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   9,
+   31,
+   20,
+   30,
+   49,
+   12,
+   19,
+   32
+  ],
+  "S0": {
+   "calls": 44,
+   "live_errors": 0,
+   "consumers": 15,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 3292574,
+   "peak_seq": 642140
+  },
+  "S1": {
+   "calls": 44,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 15,
+   "consumers_identical": 15,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 3292574,
+   "peak_seq": 642140
+  },
+  "S2": {
+   "calls": 44,
+   "hits": 4,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 15,
+   "consumers_identical": 15,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 6509540,
+   "peak_seq": 3859106
+  },
+  "S3": {
+   "calls": 44,
+   "hits": 4,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 15,
+   "consumers_identical": 15,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 3216966,
+   "peak_seq": 3216966
+  }
+ },
+ {
+  "dataset": "PANCANCER_ATLAS",
+  "query": "query2",
+  "model": "gpt-5-mini",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   41,
+   24,
+   21,
+   25,
+   9,
+   38,
+   0,
+   23
+  ],
+  "S0": {
+   "calls": 51,
+   "live_errors": 0,
+   "consumers": 8,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 4497005,
+   "peak_seq": 1193563
+  },
+  "S1": {
+   "calls": 51,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 4497005,
+   "peak_seq": 1193563
+  },
+  "S2": {
+   "calls": 51,
+   "hits": 5,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 8767403,
+   "peak_seq": 4685304
+  },
+  "S3": {
+   "calls": 51,
+   "hits": 5,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 4472517,
+   "peak_seq": 4412309
+  }
+ },
+ {
+  "dataset": "PANCANCER_ATLAS",
+  "query": "query1",
+  "model": "gpt-5.2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   27,
+   40,
+   0,
+   30,
+   18,
+   44,
+   15,
+   37
+  ],
+  "S0": {
+   "calls": 53,
+   "live_errors": 0,
+   "consumers": 16,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 3,
+   "peak_retained": 2241492,
+   "peak_seq": 481512
+  },
+  "S1": {
+   "calls": 53,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 16,
+   "consumers_identical": 16,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 2241492,
+   "peak_seq": 481512
+  },
+  "S2": {
+   "calls": 53,
+   "hits": 10,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 16,
+   "consumers_identical": 16,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 4268239,
+   "peak_seq": 2189543
+  },
+  "S3": {
+   "calls": 53,
+   "hits": 10,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 16,
+   "consumers_identical": 16,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 2026747,
+   "peak_seq": 2026747
+  }
+ },
+ {
+  "dataset": "PANCANCER_ATLAS",
+  "query": "query1",
+  "model": "kimi-k2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   39,
+   43,
+   4,
+   21,
+   20,
+   5,
+   37,
+   36
+  ],
+  "S0": {
+   "calls": 80,
+   "live_errors": 0,
+   "consumers": 41,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 16,
+   "peak_retained": 7388518,
+   "peak_seq": 4803269
+  },
+  "S1": {
+   "calls": 80,
+   "hits": 2,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 41,
+   "consumers_identical": 41,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 5090314,
+   "peak_seq": 2629529
+  },
+  "S2": {
+   "calls": 80,
+   "hits": 5,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 41,
+   "consumers_identical": 41,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 10090585,
+   "peak_seq": 7462387
+  },
+  "S3": {
+   "calls": 80,
+   "hits": 5,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 41,
+   "consumers_identical": 41,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 5025073,
+   "peak_seq": 5000271
+  }
+ },
+ {
+  "dataset": "PANCANCER_ATLAS",
+  "query": "query2",
+  "model": "gpt-5.2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   38,
+   3,
+   1,
+   22,
+   5,
+   11,
+   44,
+   12
+  ],
+  "S0": {
+   "calls": 57,
+   "live_errors": 0,
+   "consumers": 12,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 1126452,
+   "peak_seq": 318572
+  },
+  "S1": {
+   "calls": 57,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 1126452,
+   "peak_seq": 318572
+  },
+  "S2": {
+   "calls": 57,
+   "hits": 4,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 2147239,
+   "peak_seq": 1221178
+  },
+  "S3": {
+   "calls": 57,
+   "hits": 4,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 1126452,
+   "peak_seq": 1036140
+  }
+ },
+ {
+  "dataset": "PANCANCER_ATLAS",
+  "query": "query2",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   47,
+   20,
+   7,
+   46,
+   38,
+   30,
+   15,
+   42
+  ],
+  "S0": {
+   "calls": 66,
+   "live_errors": 0,
+   "consumers": 23,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 1,
+   "peak_retained": 4689115,
+   "peak_seq": 2854329
+  },
+  "S1": {
+   "calls": 66,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 23,
+   "consumers_identical": 23,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 4689115,
+   "peak_seq": 2854329
+  },
+  "S2": {
+   "calls": 66,
+   "hits": 14,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 23,
+   "consumers_identical": 23,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 9218714,
+   "peak_seq": 7247572
+  },
+  "S3": {
+   "calls": 66,
+   "hits": 14,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 23,
+   "consumers_identical": 23,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 4544651,
+   "peak_seq": 4529599
+  }
+ },
+ {
+  "dataset": "PANCANCER_ATLAS",
+  "query": "query3",
+  "model": "gemini-2.5-flash",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   5,
+   2,
+   43,
+   47,
+   4,
+   14,
+   0,
+   26
+  ],
+  "S0": {
+   "calls": 48,
+   "live_errors": 0,
+   "consumers": 5,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 1,
+   "peak_retained": 18134820,
+   "peak_seq": 5438808
+  },
+  "S1": {
+   "calls": 48,
+   "hits": 8,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 5,
+   "consumers_identical": 5,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 15241138,
+   "peak_seq": 5438808
+  },
+  "S2": {
+   "calls": 48,
+   "hits": 17,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 5,
+   "consumers_identical": 5,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 27734494,
+   "peak_seq": 15215240
+  },
+  "S3": {
+   "calls": 48,
+   "hits": 17,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 5,
+   "consumers_identical": 5,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 12493356,
+   "peak_seq": 12493356
+  }
+ },
+ {
+  "dataset": "PANCANCER_ATLAS",
+  "query": "query3",
+  "model": "gpt-5-mini",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   41,
+   15,
+   31,
+   28,
+   23,
+   22,
+   20,
+   19
+  ],
+  "S0": {
+   "calls": 36,
+   "live_errors": 0,
+   "consumers": 23,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 7,
+   "peak_retained": 4319424,
+   "peak_seq": 1250512
+  },
+  "S1": {
+   "calls": 36,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 23,
+   "consumers_identical": 23,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 4319424,
+   "peak_seq": 1250512
+  },
+  "S2": {
+   "calls": 36,
+   "hits": 4,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 23,
+   "consumers_identical": 23,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 8617101,
+   "peak_seq": 4737894
+  },
+  "S3": {
+   "calls": 36,
+   "hits": 4,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 23,
+   "consumers_identical": 23,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 4297677,
+   "peak_seq": 4297677
+  }
+ },
+ {
+  "dataset": "PANCANCER_ATLAS",
+  "query": "query2",
+  "model": "kimi-k2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   36,
+   16,
+   3,
+   37,
+   21,
+   6,
+   10,
+   4
+  ],
+  "S0": {
+   "calls": 87,
+   "live_errors": 0,
+   "consumers": 44,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 14,
+   "peak_retained": 52532081,
+   "peak_seq": 48588711
+  },
+  "S1": {
+   "calls": 87,
+   "hits": 3,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 44,
+   "consumers_identical": 44,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 51765033,
+   "peak_seq": 48588711
+  },
+  "S2": {
+   "calls": 87,
+   "hits": 7,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 44,
+   "consumers_identical": 44,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 103418467,
+   "peak_seq": 98966097
+  },
+  "S3": {
+   "calls": 87,
+   "hits": 7,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 44,
+   "consumers_identical": 44,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 51699792,
+   "peak_seq": 51653434
+  }
+ },
+ {
+  "dataset": "PANCANCER_ATLAS",
+  "query": "query3",
+  "model": "gpt-5.2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   6,
+   35,
+   10,
+   37,
+   48,
+   5,
+   36,
+   12
+  ],
+  "S0": {
+   "calls": 49,
+   "live_errors": 0,
+   "consumers": 26,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 13,
+   "peak_retained": 2397240,
+   "peak_seq": 335234
+  },
+  "S1": {
+   "calls": 49,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 26,
+   "consumers_identical": 26,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 2397240,
+   "peak_seq": 335234
+  },
+  "S2": {
+   "calls": 49,
+   "hits": 3,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 26,
+   "consumers_identical": 26,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 4737909,
+   "peak_seq": 2634452
+  },
+  "S3": {
+   "calls": 49,
+   "hits": 3,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 26,
+   "consumers_identical": 26,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 2397240,
+   "peak_seq": 2353268
+  }
+ },
+ {
+  "dataset": "PANCANCER_ATLAS",
+  "query": "query3",
+  "model": "kimi-k2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   41,
+   34,
+   24,
+   31,
+   2,
+   28,
+   8,
+   25
+  ],
+  "S0": {
+   "calls": 114,
+   "live_errors": 0,
+   "consumers": 58,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 37,
+   "peak_retained": 130608441,
+   "peak_seq": 51124641
+  },
+  "S1": {
+   "calls": 114,
+   "hits": 11,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 58,
+   "consumers_identical": 58,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 122955113,
+   "peak_seq": 51124641
+  },
+  "S2": {
+   "calls": 114,
+   "hits": 21,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 58,
+   "consumers_identical": 58,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 245734757,
+   "peak_seq": 138607066
+  },
+  "S3": {
+   "calls": 114,
+   "hits": 21,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 58,
+   "consumers_identical": 58,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 122794696,
+   "peak_seq": 122779644
+  }
+ },
+ {
+  "dataset": "PANCANCER_ATLAS",
+  "query": "query3",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   31,
+   43,
+   5,
+   30,
+   17,
+   42,
+   2,
+   33
+  ],
+  "S0": {
+   "calls": 59,
+   "live_errors": 0,
+   "consumers": 40,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 16,
+   "peak_retained": 8856892,
+   "peak_seq": 2851479
+  },
+  "S1": {
+   "calls": 59,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 40,
+   "consumers_identical": 40,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 8856892,
+   "peak_seq": 2851479
+  },
+  "S2": {
+   "calls": 59,
+   "hits": 16,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 40,
+   "consumers_identical": 40,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 16893413,
+   "peak_seq": 9540509
+  },
+  "S3": {
+   "calls": 59,
+   "hits": 16,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 40,
+   "consumers_identical": 40,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 8539673,
+   "peak_seq": 8539673
+  }
+ }
+]

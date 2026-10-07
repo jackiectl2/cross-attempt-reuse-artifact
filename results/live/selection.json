@@ -1,0 +1,89 @@
+{
+ "rule": "per engine: min/median/max spill-fraction task; model with median calls/run",
+ "picks": [
+  {
+   "engine": "duckdb",
+   "dataset": "crmarenapro",
+   "query": "query10",
+   "model": "gpt-5-mini",
+   "spill_fraction": 0.0
+  },
+  {
+   "engine": "duckdb",
+   "dataset": "yelp",
+   "query": "query7",
+   "model": "gemini-3-pro",
+   "spill_fraction": 0.1318840579710145
+  },
+  {
+   "engine": "duckdb",
+   "dataset": "music_brainz_20k",
+   "query": "query3",
+   "model": "gpt-5-mini",
+   "spill_fraction": 0.7252124645892352
+  },
+  {
+   "engine": "mongo",
+   "dataset": "yelp",
+   "query": "query1",
+   "model": "gemini-3-pro",
+   "spill_fraction": 0.00792393026941363
+  },
+  {
+   "engine": "mongo",
+   "dataset": "yelp",
+   "query": "query4",
+   "model": "gpt-5-mini",
+   "spill_fraction": 0.2111801242236025
+  },
+  {
+   "engine": "mongo",
+   "dataset": "agnews",
+   "query": "query1",
+   "model": "gemini-3-pro",
+   "spill_fraction": 0.3125
+  },
+  {
+   "engine": "postgres",
+   "dataset": "crmarenapro",
+   "query": "query3",
+   "model": "gemini-3-pro",
+   "spill_fraction": 0.0
+  },
+  {
+   "engine": "postgres",
+   "dataset": "bookreview",
+   "query": "query3",
+   "model": "gpt-5-mini",
+   "spill_fraction": 0.2391304347826087
+  },
+  {
+   "engine": "postgres",
+   "dataset": "bookreview",
+   "query": "query1",
+   "model": "gpt-5-mini",
+   "spill_fraction": 0.6505139500734214
+  },
+  {
+   "engine": "sqlite",
+   "dataset": "crmarenapro",
+   "query": "query1",
+   "model": "kimi-k2",
+   "spill_fraction": 0.0
+  },
+  {
+   "engine": "sqlite",
+   "dataset": "googlelocal",
+   "query": "query2",
+   "model": "gemini-2.5-flash",
+   "spill_fraction": 0.16666666666666666
+  },
+  {
+   "engine": "sqlite",
+   "dataset": "agnews",
+   "query": "query4",
+   "model": "gpt-5-mini",
+   "spill_fraction": 0.877906976744186
+  }
+ ]
+}

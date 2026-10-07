@@ -1,0 +1,11 @@
+{
+ "lookup_s": 1.2246891856193542e-06,
+ "alias_s": 1.2226402759552002e-05,
+ "copy_s_per_byte": 4.4879487732136365e-10,
+ "n_samples": {
+  "lookup_s": 12272,
+  "alias_s": 282,
+  "copy_s": 258,
+  "copy_bytes": 258
+ }
+}

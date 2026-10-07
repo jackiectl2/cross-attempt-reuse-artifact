@@ -1,0 +1,1605 @@
+[
+ {
+  "dataset": "bookreview",
+  "query": "query2",
+  "model": "gemini-2.5-flash",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   8,
+   29,
+   38,
+   40,
+   24,
+   11,
+   22,
+   45
+  ],
+  "S0": {
+   "calls": 17,
+   "live_errors": 0,
+   "consumers": 3,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 962977,
+   "peak_seq": 342724
+  },
+  "S1": {
+   "calls": 17,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 3,
+   "consumers_identical": 3,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 962977,
+   "peak_seq": 342724
+  },
+  "S2": {
+   "calls": 17,
+   "hits": 2,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 3,
+   "consumers_identical": 3,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 1730328,
+   "peak_seq": 994044
+  },
+  "S3": {
+   "calls": 17,
+   "hits": 2,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 3,
+   "consumers_identical": 3,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 767351,
+   "peak_seq": 767351
+  }
+ },
+ {
+  "dataset": "bookreview",
+  "query": "query1",
+  "model": "kimi-k2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   39,
+   43,
+   4,
+   21,
+   20,
+   5,
+   37,
+   36
+  ],
+  "S0": {
+   "calls": 77,
+   "live_errors": 0,
+   "consumers": 60,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 27,
+   "peak_retained": 5418384,
+   "peak_seq": 1771498
+  },
+  "S1": {
+   "calls": 77,
+   "hits": 15,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 60,
+   "consumers_identical": 60,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 4373329,
+   "peak_seq": 1605764
+  },
+  "S2": {
+   "calls": 77,
+   "hits": 36,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 60,
+   "consumers_identical": 60,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 7755773,
+   "peak_seq": 4373056
+  },
+  "S3": {
+   "calls": 77,
+   "hits": 36,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 60,
+   "consumers_identical": 60,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 3382444,
+   "peak_seq": 3382444
+  }
+ },
+ {
+  "dataset": "bookreview",
+  "query": "query2",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   47,
+   20,
+   7,
+   46,
+   38,
+   30,
+   15,
+   42
+  ],
+  "S0": {
+   "calls": 41,
+   "live_errors": 0,
+   "consumers": 12,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 1,
+   "peak_retained": 308894,
+   "peak_seq": 156265
+  },
+  "S1": {
+   "calls": 41,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 308894,
+   "peak_seq": 156265
+  },
+  "S2": {
+   "calls": 41,
+   "hits": 12,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 597671,
+   "peak_seq": 431603
+  },
+  "S3": {
+   "calls": 41,
+   "hits": 12,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 12,
+   "consumers_identical": 12,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 288777,
+   "peak_seq": 288777
+  }
+ },
+ {
+  "dataset": "bookreview",
+  "query": "query2",
+  "model": "gpt-5-mini",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   41,
+   24,
+   21,
+   25,
+   9,
+   38,
+   0,
+   23
+  ],
+  "S0": {
+   "calls": 21,
+   "live_errors": 0,
+   "consumers": 15,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 631279,
+   "peak_seq": 176838
+  },
+  "S1": {
+   "calls": 21,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 15,
+   "consumers_identical": 15,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 631279,
+   "peak_seq": 176838
+  },
+  "S2": {
+   "calls": 21,
+   "hits": 1,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 15,
+   "consumers_identical": 15,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 1251199,
+   "peak_seq": 739089
+  },
+  "S3": {
+   "calls": 21,
+   "hits": 1,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 15,
+   "consumers_identical": 15,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 631279,
+   "peak_seq": 619920
+  }
+ },
+ {
+  "dataset": "bookreview",
+  "query": "query1",
+  "model": "gpt-5.2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   27,
+   40,
+   0,
+   30,
+   18,
+   44,
+   15,
+   37
+  ],
+  "S0": {
+   "calls": 18,
+   "live_errors": 0,
+   "consumers": 10,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 1567333,
+   "peak_seq": 369290
+  },
+  "S1": {
+   "calls": 18,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 10,
+   "consumers_identical": 10,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 1567333,
+   "peak_seq": 369290
+  },
+  "S2": {
+   "calls": 18,
+   "hits": 9,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 10,
+   "consumers_identical": 10,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 2230533,
+   "peak_seq": 874256
+  },
+  "S3": {
+   "calls": 18,
+   "hits": 9,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 10,
+   "consumers_identical": 10,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 663200,
+   "peak_seq": 663200
+  }
+ },
+ {
+  "dataset": "bookreview",
+  "query": "query3",
+  "model": "gemini-2.5-flash",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   5,
+   2,
+   43,
+   47,
+   4,
+   14,
+   0,
+   26
+  ],
+  "S0": {
+   "calls": 15,
+   "live_errors": 0,
+   "consumers": 0,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 406258,
+   "peak_seq": 193017
+  },
+  "S1": {
+   "calls": 15,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 0,
+   "consumers_identical": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 406258,
+   "peak_seq": 193017
+  },
+  "S2": {
+   "calls": 15,
+   "hits": 5,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 0,
+   "consumers_identical": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 812516,
+   "peak_seq": 522289
+  },
+  "S3": {
+   "calls": 15,
+   "hits": 5,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 0,
+   "consumers_identical": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 406258,
+   "peak_seq": 406258
+  }
+ },
+ {
+  "dataset": "bookreview",
+  "query": "query2",
+  "model": "kimi-k2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   36,
+   16,
+   3,
+   37,
+   21,
+   6,
+   10,
+   4
+  ],
+  "S0": {
+   "calls": 72,
+   "live_errors": 0,
+   "consumers": 26,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 11,
+   "peak_retained": 1413860,
+   "peak_seq": 383511
+  },
+  "S1": {
+   "calls": 72,
+   "hits": 10,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 26,
+   "consumers_identical": 26,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 1122366,
+   "peak_seq": 310509
+  },
+  "S2": {
+   "calls": 72,
+   "hits": 23,
+   "mismatches": 4,
+   "mismatches_on_hits": 4,
+   "mismatch_detail": [
+    {
+     "run": 3,
+     "i": 20,
+     "hit": true,
+     "fields": [
+      "file_h"
+     ],
+     "kind": "spilled",
+     "S0_kind": "spilled"
+    },
+    {
+     "run": 21,
+     "i": 5,
+     "hit": true,
+     "fields": [
+      "file_h"
+     ],
+     "kind": "spilled",
+     "S0_kind": "spilled"
+    },
+    {
+     "run": 6,
+     "i": 5,
+     "hit": true,
+     "fields": [
+      "file_h"
+     ],
+     "kind": "spilled",
+     "S0_kind": "spilled"
+    },
+    {
+     "run": 6,
+     "i": 9,
+     "hit": true,
+     "fields": [
+      "file_h"
+     ],
+     "kind": "spilled",
+     "S0_kind": "spilled"
+    }
+   ],
+   "consumers": 26,
+   "consumers_identical": 25,
+   "consumer_mismatch_detail": [
+    {
+     "run": 21,
+     "j": 2,
+     "rc": 1,
+     "S0_rc": 0,
+     "tail": "3.12/site-packages/pandas/core/frame.py\", line 4107, in __getitem__\n    indexer = self.columns.get_loc(key)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/pandas/core/indexes/base.py\", line 3819, in get_loc\n    raise KeyError(key) from err\nKeyError: 'rating'\n",
+     "S0_tail": "11, is written in English and features a paperback format consisting of 209 pages. It has an ISBN 10 number of 1463534795 and an ISBN 13 number of 978-1463534790. The item weighs 7.8 ounces and has dimensions of 5.25 x 0.48 x 8 inches.\"\n  }\n]\n<string>:22: SyntaxWarning: invalid escape sequence '\\d'\n"
+    }
+   ],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 1503467,
+   "peak_seq": 774080
+  },
+  "S3": {
+   "calls": 72,
+   "hits": 23,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 26,
+   "consumers_identical": 26,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 652428,
+   "peak_seq": 652428
+  }
+ },
+ {
+  "dataset": "bookreview",
+  "query": "query2",
+  "model": "gpt-5.2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   38,
+   3,
+   1,
+   22,
+   5,
+   11,
+   44,
+   12
+  ],
+  "S0": {
+   "calls": 19,
+   "live_errors": 0,
+   "consumers": 9,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 1417109,
+   "peak_seq": 419560
+  },
+  "S1": {
+   "calls": 19,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 9,
+   "consumers_identical": 9,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 1417109,
+   "peak_seq": 419560
+  },
+  "S2": {
+   "calls": 19,
+   "hits": 2,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 9,
+   "consumers_identical": 9,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 2774480,
+   "peak_seq": 1543393
+  },
+  "S3": {
+   "calls": 19,
+   "hits": 2,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 9,
+   "consumers_identical": 9,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 1357371,
+   "peak_seq": 1357371
+  }
+ },
+ {
+  "dataset": "bookreview",
+  "query": "query1",
+  "model": "gpt-5-mini",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   9,
+   31,
+   20,
+   30,
+   49,
+   12,
+   19,
+   32
+  ],
+  "S0": {
+   "calls": 20,
+   "live_errors": 0,
+   "consumers": 18,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 2279759,
+   "peak_seq": 557574
+  },
+  "S1": {
+   "calls": 20,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 18,
+   "consumers_identical": 18,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 2279759,
+   "peak_seq": 557574
+  },
+  "S2": {
+   "calls": 20,
+   "hits": 4,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 18,
+   "consumers_identical": 18,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 4069790,
+   "peak_seq": 2347605
+  },
+  "S3": {
+   "calls": 20,
+   "hits": 4,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 18,
+   "consumers_identical": 18,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 1790031,
+   "peak_seq": 1790031
+  }
+ },
+ {
+  "dataset": "bookreview",
+  "query": "query3",
+  "model": "gpt-5-mini",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   41,
+   15,
+   31,
+   28,
+   23,
+   22,
+   20,
+   19
+  ],
+  "S0": {
+   "calls": 20,
+   "live_errors": 0,
+   "consumers": 6,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 270375,
+   "peak_seq": 118868
+  },
+  "S1": {
+   "calls": 20,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 6,
+   "consumers_identical": 6,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 270375,
+   "peak_seq": 118868
+  },
+  "S2": {
+   "calls": 20,
+   "hits": 1,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 6,
+   "consumers_identical": 6,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 540750,
+   "peak_seq": 335549
+  },
+  "S3": {
+   "calls": 20,
+   "hits": 1,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 6,
+   "consumers_identical": 6,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 270375,
+   "peak_seq": 270375
+  }
+ },
+ {
+  "dataset": "bookreview",
+  "query": "query1",
+  "model": "gemini-2.5-flash",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   29,
+   10,
+   13,
+   26,
+   17,
+   18,
+   8,
+   7
+  ],
+  "S0": {
+   "calls": 33,
+   "live_errors": 0,
+   "consumers": 17,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 2173527,
+   "peak_seq": 914951
+  },
+  "S1": {
+   "calls": 33,
+   "hits": 12,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 17,
+   "consumers_identical": 17,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 1340847,
+   "peak_seq": 221051
+  },
+  "S2": {
+   "calls": 33,
+   "hits": 21,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 17,
+   "consumers_identical": 17,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 1986651,
+   "peak_seq": 831225
+  },
+  "S3": {
+   "calls": 33,
+   "hits": 21,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 17,
+   "consumers_identical": 17,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 645804,
+   "peak_seq": 645804
+  }
+ },
+ {
+  "dataset": "bookreview",
+  "query": "query3",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   31,
+   43,
+   5,
+   30,
+   17,
+   42,
+   2,
+   33
+  ],
+  "S0": {
+   "calls": 31,
+   "live_errors": 0,
+   "consumers": 8,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 125088,
+   "peak_seq": 20848
+  },
+  "S1": {
+   "calls": 31,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 125088,
+   "peak_seq": 20848
+  },
+  "S2": {
+   "calls": 31,
+   "hits": 19,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 166784,
+   "peak_seq": 62544
+  },
+  "S3": {
+   "calls": 31,
+   "hits": 19,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 41696,
+   "peak_seq": 41696
+  }
+ },
+ {
+  "dataset": "bookreview",
+  "query": "query3",
+  "model": "gpt-5.2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   6,
+   35,
+   10,
+   37,
+   48,
+   5,
+   36,
+   12
+  ],
+  "S0": {
+   "calls": 16,
+   "live_errors": 0,
+   "consumers": 8,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 331594,
+   "peak_seq": 64310
+  },
+  "S1": {
+   "calls": 16,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 331594,
+   "peak_seq": 64310
+  },
+  "S2": {
+   "calls": 16,
+   "hits": 9,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 460214,
+   "peak_seq": 192930
+  },
+  "S3": {
+   "calls": 16,
+   "hits": 9,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 128620,
+   "peak_seq": 128620
+  }
+ },
+ {
+  "dataset": "bookreview",
+  "query": "query1",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   22,
+   49,
+   39,
+   26,
+   40,
+   34,
+   37,
+   43
+  ],
+  "S0": {
+   "calls": 49,
+   "live_errors": 0,
+   "consumers": 49,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 9,
+   "peak_retained": 1517317,
+   "peak_seq": 205832
+  },
+  "S1": {
+   "calls": 49,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 49,
+   "consumers_identical": 49,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 1517317,
+   "peak_seq": 205832
+  },
+  "S2": {
+   "calls": 49,
+   "hits": 29,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 49,
+   "consumers_identical": 49,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 1922108,
+   "peak_seq": 603750
+  },
+  "S3": {
+   "calls": 49,
+   "hits": 29,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 49,
+   "consumers_identical": 49,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 404791,
+   "peak_seq": 404791
+  }
+ },
+ {
+  "dataset": "bookreview",
+  "query": "query3",
+  "model": "kimi-k2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   41,
+   34,
+   24,
+   31,
+   2,
+   28,
+   8,
+   25
+  ],
+  "S0": {
+   "calls": 69,
+   "live_errors": 0,
+   "consumers": 36,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 17,
+   "peak_retained": 1437781,
+   "peak_seq": 395461
+  },
+  "S1": {
+   "calls": 69,
+   "hits": 13,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 36,
+   "consumers_identical": 36,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 1229080,
+   "peak_seq": 376783
+  },
+  "S2": {
+   "calls": 69,
+   "hits": 28,
+   "mismatches": 2,
+   "mismatches_on_hits": 2,
+   "mismatch_detail": [
+    {
+     "run": 28,
+     "i": 0,
+     "hit": true,
+     "fields": [
+      "file_h"
+     ],
+     "kind": "spilled",
+     "S0_kind": "spilled"
+    },
+    {
+     "run": 8,
+     "i": 0,
+     "hit": true,
+     "fields": [
+      "file_h"
+     ],
+     "kind": "spilled",
+     "S0_kind": "spilled"
+    }
+   ],
+   "consumers": 36,
+   "consumers_identical": 34,
+   "consumer_mismatch_detail": [
+    {
+     "run": 28,
+     "j": 1,
+     "rc": 0,
+     "S0_rc": 0,
+     "tail": "__RESULT__:\n{\"books_count\": 200, \"categories_sample\": \"[\\\"Books\\\", \\\"Literature & Fiction\\\", \\\"History & Criticism\\\"]\", \"categories_type\": \"<class 'str'>\"}\n",
+     "S0_tail": "__RESULT__:\n{\"books_count\": 5, \"categories_sample\": \"[\\\"Books\\\", \\\"Literature & Fiction\\\", \\\"History & Criticism\\\"]\", \"categories_type\": \"<class 'str'>\"}\n"
+    },
+    {
+     "run": 8,
+     "j": 6,
+     "rc": 0,
+     "S0_rc": 0,
+     "tail": "Book ID range: 1 to 200\nPurchase ID range: 1 to 200\nChildren's books found: 25\nMatching reviews found: 196\n__RESULT__:\n[]\n",
+     "S0_tail": "Book ID range: 1 to 5\nPurchase ID range: 1 to 200\nChildren's books found: 25\nMatching reviews found: 196\n__RESULT__:\n[]\n"
+    }
+   ],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 2187711,
+   "peak_seq": 1126561
+  },
+  "S3": {
+   "calls": 69,
+   "hits": 28,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 36,
+   "consumers_identical": 36,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 908457,
+   "peak_seq": 908457
+  }
+ }
+]

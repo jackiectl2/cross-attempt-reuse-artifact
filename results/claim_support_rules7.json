@@ -1,0 +1,167 @@
+{
+ "b_share": {
+  "n_orders": 200,
+  "gated_calls": 70173,
+  "other_attempts": {
+   "calls": {
+    "share_of_gated": 0.37330597238254026,
+    "admitted_by_B": 0.06161245991754468,
+    "admitted_by_E_eval": 0.9319438082149947
+   },
+   "exec_s": {
+    "share_of_gated": 0.33543159910127845,
+    "admitted_by_B": 0.11904633753676365,
+    "admitted_by_E_eval": 0.9984227016239146
+   },
+   "payload_bytes": {
+    "share_of_gated": 0.6083231658204918,
+    "admitted_by_B": 4.6711826866117955e-07,
+    "admitted_by_E_eval": 0.9999913413096613
+   }
+  },
+  "any_repeat": {
+   "calls": {
+    "share_of_gated": 0.4729454348538613,
+    "admitted_by_B": 0.057008557309871054,
+    "admitted_by_E_eval": 0.9298284018319876
+   },
+   "exec_s": {
+    "share_of_gated": 0.45091299125703244,
+    "admitted_by_B": 0.10180025099361963,
+    "admitted_by_E_eval": 0.9985843106058019
+   },
+   "payload_bytes": {
+    "share_of_gated": 0.8059818002131541,
+    "admitted_by_B": 4.874567450038169e-07,
+    "admitted_by_E_eval": 0.9999909863772133
+   }
+  }
+ },
+ "e_diff": {
+  "n_calls": 71275,
+  "not_byte_identical": {
+   "calls": 0.07031918625043844,
+   "time": 0.008185523232684504,
+   "bytes": 0.012198535663996918
+  },
+  "equivalent_after_normalization": {
+   "calls": 0.05074710627849877,
+   "time": 0.0029161465839528805,
+   "bytes": 1.080777115159013e-05
+  },
+  "by_kind": {
+   "order_only": {
+    "calls": 0.032129077516660824,
+    "time": 0.0025157058416704838,
+    "bytes": 7.1900340722353885e-06
+   },
+   "prefix_mismatch": {
+    "calls": 0.015054366888810943,
+    "time": 0.0033983053828397264,
+    "bytes": 0.01027317403240996
+   },
+   "recorded_error": {
+    "calls": 0.0006594177481585409,
+    "time": 0.0014199366555587112,
+    "bytes": 0.0019138342474344133
+   },
+   "value_mismatch": {
+    "calls": 0.022476324096808137,
+    "time": 0.0008515753526155825,
+    "bytes": 4.337350080309833e-06
+   }
+  },
+  "by_engine": {
+   "duckdb": {
+    "calls": 0.0318204138898632,
+    "time": 0.0034475128794752255,
+    "bytes": 0.0007563985349520984
+   },
+   "mongo": {
+    "calls": 0.024721150473518062,
+    "time": 0.0026054255317748084,
+    "bytes": 0.009768818241996205
+   },
+   "postgres": {
+    "calls": 0.013539109084531743,
+    "time": 0.0007420265035806616,
+    "bytes": 2.2289076754281214e-05
+   },
+   "sqlite": {
+    "calls": 0.00023851280252542968,
+    "time": 0.0013905583178538087,
+    "bytes": 0.0016510298102943345
+   }
+  }
+ },
+ "retained": {
+  "du_equals_accounting": {
+   "live2": "180/180",
+   "live3": "120/120"
+  },
+  "live2": {
+   "cells_with_admitted_bytes": 9,
+   "S2_over_S0_live": {
+    "median": 1.5510341907199259,
+    "min": 1.2123361432215016,
+    "max": 2.0,
+    "pooled": 1.3163924672335237
+   },
+   "S2_over_S0_sim": {
+    "median": 1.5510341907199259,
+    "pooled": 1.3163924672335237
+   },
+   "S2c_over_S0_live": {
+    "median": null,
+    "min": null,
+    "max": null,
+    "pooled": 0.0
+   },
+   "S3_over_S0_live": {
+    "median": 0.6788896365537873,
+    "min": 0.20956009101016065,
+    "max": 1.0,
+    "pooled": 0.3152778742509573
+   },
+   "S3_over_S0_sim": {
+    "median": 0.6788896365537873,
+    "pooled": 0.3152778742509573
+   }
+  },
+  "live3": {
+   "cells_with_admitted_bytes": 5,
+   "S2_over_S0_live": {
+    "median": 1.8357986941999833,
+    "min": 1.2123361432215016,
+    "max": 2.0,
+    "pooled": 1.3131080147818976
+   },
+   "S2c_over_S0_live": {
+    "median": 1.8357986941999833,
+    "min": 1.2123361432215016,
+    "max": 2.0,
+    "pooled": 1.3131080147818976
+   },
+   "S3_over_S0_live": {
+    "median": 0.8321039964058551,
+    "min": 0.20956009101016065,
+    "max": 1.0,
+    "pooled": 0.31082818228391906
+   }
+  }
+ },
+ "timing": {
+  "cheap": {
+   "tasks": 9,
+   "rows": 360,
+   "median_time_rel_err_uncal": 0.5167394738391502,
+   "median_time_rel_err": 0.4374497165000911
+  },
+  "heavy": {
+   "tasks": 3,
+   "rows": 120,
+   "median_time_rel_err_uncal": 0.12571449544136454,
+   "median_time_rel_err": 0.14101185177400255
+  }
+ }
+}

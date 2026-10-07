@@ -1,0 +1,751 @@
+id,location,printed,expr
+tab1/successful/calls,tab1/successful/calls,"71,582","cnt(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='successful', level='all', group='all')['calls'])"
+tab1/successful/calls_share,tab1/successful/calls_share,93.9,"pct(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='successful', level='all', group='all')['calls_share'])"
+tab1/successful/time,tab1/successful/time,94.7,"pct(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='successful', level='all', group='all')['time_lb_share'])"
+tab1/successful/bytes,tab1/successful/bytes,100.0,"pct(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='successful', level='all', group='all')['bytes_share'], 1)"
+tab1/fidelity_equiv/calls,tab1/fidelity_equiv/calls,"70,173","cnt(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='fidelity_equiv', level='all', group='all')['calls'])"
+tab1/fidelity_equiv/calls_share,tab1/fidelity_equiv/calls_share,92.1,"pct(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='fidelity_equiv', level='all', group='all')['calls_share'])"
+tab1/fidelity_equiv/time,tab1/fidelity_equiv/time,94.2,"pct(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='fidelity_equiv', level='all', group='all')['time_lb_share'])"
+tab1/fidelity_equiv/bytes,tab1/fidelity_equiv/bytes,98.8,"pct(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='fidelity_equiv', level='all', group='all')['bytes_share'], 1)"
+tab1/stable/calls,tab1/stable/calls,"66,556","cnt(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='stable', level='all', group='all')['calls'])"
+tab1/stable/calls_share,tab1/stable/calls_share,87.3,"pct(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='stable', level='all', group='all')['calls_share'])"
+tab1/stable/time,tab1/stable/time,93.9,"pct(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='stable', level='all', group='all')['time_lb_share'])"
+tab1/stable/bytes,tab1/stable/bytes,98.8,"pct(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='stable', level='all', group='all')['bytes_share'], 1)"
+tab1/E_certified/calls,tab1/E_certified/calls,"66,263","cnt(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='E_certified', level='all', group='all')['calls'])"
+tab1/E_certified/calls_share,tab1/E_certified/calls_share,86.9,"pct(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='E_certified', level='all', group='all')['calls_share'])"
+tab1/E_certified/time,tab1/E_certified/time,93.6,"pct(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='E_certified', level='all', group='all')['time_lb_share'])"
+tab1/E_certified/bytes,tab1/E_certified/bytes,98.7,"pct(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='E_certified', level='all', group='all')['bytes_share'], 1)"
+tab1/B_certified/calls,tab1/B_certified/calls,"5,695","cnt(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='B_certified', level='all', group='all')['calls'])"
+tab1/B_certified/calls_share,tab1/B_certified/calls_share,7.5,"pct(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='B_certified', level='all', group='all')['calls_share'])"
+tab1/B_certified/time,tab1/B_certified/time,9.4,"pct(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='B_certified', level='all', group='all')['time_lb_share'])"
+tab1/B_certified/bytes,tab1/B_certified/bytes,0.023,"pct(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='B_certified', level='all', group='all')['bytes_share'], 3)"
+tab2/copy_ns_per_byte,tab2/copy_ns_per_byte,0.46,fx(J('results/ablate/base_E.json')['costs']['copy_s_per_byte'] * 1e9)
+tab2/copy_n,tab2/copy_n,258,cnt(J('results/live/costs.json')['n_samples']['copy_s'])
+tab2/clone_n,tab2/clone_n,482,cnt(J('results/live3/costs.json')['n_samples']['clone_s'])
+tab2/alias_n,tab2/alias_n,282,cnt(J('results/live/costs.json')['n_samples']['alias_s'])
+tab2/clone_ms,tab2/clone_ms,0.29,fx(J('results/ablate/base_E.json')['opts']['clone_s'] * 1e3)
+tab2/alias_us,tab2/alias_us,12.6,"fx(J('results/ablate/base_E.json')['costs']['alias_s'] * 1e6, 1)"
+tab2/S1/exec_saving,tab2/S1/exec_saving,3.4,pct(J('results/ablate/base_E.json')['summary']['N=8|B=inf']['S1_exec_saving']['median'])
+tab2/S1/time_saving,tab2/S1/time_saving,3.4,pct(J('results/ablate/base_E.json')['summary']['N=8|B=inf']['S1_time_saving']['median'])
+tab2/S1/written_vs_S0,tab2/S1/written_vs_S0,0.98,fx(1 - J('results/ablate/base_E.json')['summary']['N=8|B=inf']['S1_written_saving']['median'])
+tab2/S1/foot_retained,tab2/S1/foot_retained,0.98,fx(J('results/ablate/batchhold_E.json')['summary']['N=8|B=inf']['S1_over_S0_peak_foot'])
+tab2/S1/foot_seq,tab2/S1/foot_seq,0.96,fx(J('results/ablate/base_E.json')['summary']['N=8|B=inf']['S1_over_S0_peak_foot_seq'])
+tab2/SD/exec_saving,tab2/SD/exec_saving,24.5,pct(J('results/ablate/base_E.json')['summary']['N=8|B=inf']['SD_exec_saving']['median'])
+tab2/SD/time_saving,tab2/SD/time_saving,11.8,pct(J('results/ablate/base_E.json')['summary']['N=8|B=inf']['SD_time_saving']['median'])
+tab2/SD/written_vs_S0,tab2/SD/written_vs_S0,1.00,fx(1 - J('results/ablate/base_E.json')['summary']['N=8|B=inf']['SD_written_saving']['median'])
+tab2/SD/foot_retained,tab2/SD/foot_retained,1.00,fx(J('results/ablate/batchhold_E.json')['summary']['N=8|B=inf']['SD_over_S0_peak_foot'])
+tab2/SD/foot_seq,tab2/SD/foot_seq,1.00,fx(J('results/ablate/base_E.json')['summary']['N=8|B=inf']['SD_over_S0_peak_foot_seq'])
+tab2/S2/exec_saving,tab2/S2/exec_saving,24.5,pct(J('results/ablate/base_E.json')['summary']['N=8|B=inf']['S2_exec_saving']['median'])
+tab2/S2/time_saving,tab2/S2/time_saving,24.9,pct(J('results/ablate/base_E.json')['summary']['N=8|B=inf']['S2_time_saving']['median'])
+tab2/S2/written_vs_S0,tab2/S2/written_vs_S0,1.70,fx(1 - J('results/ablate/base_E.json')['summary']['N=8|B=inf']['S2_written_saving']['median'])
+tab2/S2/foot_retained,tab2/S2/foot_retained,1.70,fx(J('results/ablate/batchhold_E.json')['summary']['N=8|B=inf']['S2_over_S0_peak_foot'])
+tab2/S2/foot_seq,tab2/S2/foot_seq,2.50,fx(J('results/ablate/base_E.json')['summary']['N=8|B=inf']['S2_over_S0_peak_foot_seq'])
+tab2/S2c/exec_saving,tab2/S2c/exec_saving,24.5,pct(J('results/ablate/base_E.json')['summary']['N=8|B=inf']['S2c_exec_saving']['median'])
+tab2/S2c/time_saving,tab2/S2c/time_saving,24.8,pct(J('results/ablate/base_E.json')['summary']['N=8|B=inf']['S2c_time_saving']['median'])
+tab2/S2c/written_vs_S0,tab2/S2c/written_vs_S0,0.76,fx(1 - J('results/ablate/base_E.json')['summary']['N=8|B=inf']['S2c_written_saving']['median'])
+tab2/S2c/foot_retained,tab2/S2c/foot_retained,0.76,fx(J('results/ablate/batchhold_E.json')['summary']['N=8|B=inf']['S2c_over_S0_peak_foot'])
+tab2/S2c/foot_seq,tab2/S2c/foot_seq,1.76,fx(J('results/ablate/base_E.json')['summary']['N=8|B=inf']['S2c_over_S0_peak_foot_seq'])
+tab2/S3/exec_saving,tab2/S3/exec_saving,24.5,pct(J('results/ablate/base_E.json')['summary']['N=8|B=inf']['S3_exec_saving']['median'])
+tab2/S3/time_saving,tab2/S3/time_saving,25.0,pct(J('results/ablate/base_E.json')['summary']['N=8|B=inf']['S3_time_saving']['median'])
+tab2/S3/written_vs_S0,tab2/S3/written_vs_S0,0.76,fx(1 - J('results/ablate/base_E.json')['summary']['N=8|B=inf']['S3_written_saving']['median'])
+tab2/S3/foot_retained,tab2/S3/foot_retained,0.76,fx(J('results/ablate/batchhold_E.json')['summary']['N=8|B=inf']['S3_over_S0_peak_foot'])
+tab2/S3/foot_seq,tab2/S3/foot_seq,1.76,fx(J('results/ablate/base_E.json')['summary']['N=8|B=inf']['S3_over_S0_peak_foot_seq'])
+tab3/all/cells,tab3/all/cells,270,cnt(J('results/e2e_trace/summary_all_E.json')['cells'])
+tab3/all/calls,tab3/all/calls,"11,309",cnt(J('results/e2e_trace/summary_all_E.json')['S3']['calls'])
+tab3/all/hits,tab3/all/hits,"2,443",cnt(J('results/e2e_trace/summary_all_E.json')['S3']['hits'])
+tab3/all/mismatched_hits,tab3/all/mismatched_hits,2,cnt(J('results/e2e_trace/summary_all_E.json')['S3']['mismatches_on_hits'])
+tab3/all/value_on_hit,tab3/all/value_on_hit,0,cnt(sum(1 for d in J('results/e2e_trace/mismatch_diag.json')['all_E']['details'] if d['system'] == 'S3' and d['class'] == 'value_on_hit'))
+tab3/all/cons_ok,tab3/all/cons_ok,"3,381",cnt(J('results/e2e_trace/summary_all_E.json')['S3']['consumers_identical_ok'])
+tab3/all/cons_fail,tab3/all/cons_fail,"1,274",cnt(J('results/e2e_trace/summary_all_E.json')['S3']['consumers_identical_failed'])
+tab3/all/cons_diff,tab3/all/cons_diff,0,cnt(J('results/e2e_trace/summary_all_E.json')['S3']['consumers'] - J('results/e2e_trace/summary_all_E.json')['S3']['consumers_identical'])
+tab3/all/probes_refused,tab3/all/probes_refused,630,cnt(J('results/e2e_trace/summary_all_E.json')['S3']['probes_refused'])
+tab3/all/probes,tab3/all/probes,630,cnt(J('results/e2e_trace/summary_all_E.json')['S3']['probes'])
+tab3/rerun/cells,tab3/rerun/cells,15,cnt(J('results/e2e_trace/rerun_PATENTS/summary_all_E.json')['cells'])
+tab3/rerun/calls,tab3/rerun/calls,632,cnt(J('results/e2e_trace/rerun_PATENTS/summary_all_E.json')['S3']['calls'])
+tab3/rerun/hits,tab3/rerun/hits,159,cnt(J('results/e2e_trace/rerun_PATENTS/summary_all_E.json')['S3']['hits'])
+tab3/rerun/mismatched_hits,tab3/rerun/mismatched_hits,0,cnt(J('results/e2e_trace/rerun_PATENTS/summary_all_E.json')['S3']['mismatches_on_hits'])
+tab3/rerun/value_on_hit,tab3/rerun/value_on_hit,0,cnt(sum(1 for d in J('results/e2e_trace/rerun_PATENTS/mismatch_diag.json')['all_E']['details'] if d['system'] == 'S3' and d['class'] == 'value_on_hit'))
+tab3/rerun/cons_ok,tab3/rerun/cons_ok,289,cnt(J('results/e2e_trace/rerun_PATENTS/summary_all_E.json')['S3']['consumers_identical_ok'])
+tab3/rerun/cons_fail,tab3/rerun/cons_fail,102,cnt(J('results/e2e_trace/rerun_PATENTS/summary_all_E.json')['S3']['consumers_identical_failed'])
+tab3/rerun/cons_diff,tab3/rerun/cons_diff,0,cnt(J('results/e2e_trace/rerun_PATENTS/summary_all_E.json')['S3']['consumers'] - J('results/e2e_trace/rerun_PATENTS/summary_all_E.json')['S3']['consumers_identical'])
+tab3/rerun/probes_refused,tab3/rerun/probes_refused,45,cnt(J('results/e2e_trace/rerun_PATENTS/summary_all_E.json')['S3']['probes_refused'])
+tab3/rerun/probes,tab3/rerun/probes,45,cnt(J('results/e2e_trace/rerun_PATENTS/summary_all_E.json')['S3']['probes'])
+tab3/calib/cells,tab3/calib/cells,12,cnt(J('results/e2e_trace/summary_calib_E.json')['cells'])
+tab3/calib/calls,tab3/calib/calls,"1,394",cnt(J('results/e2e_trace/summary_calib_E.json')['S3']['calls'])
+tab3/calib/hits,tab3/calib/hits,310,cnt(J('results/e2e_trace/summary_calib_E.json')['S3']['hits'])
+tab3/calib/mismatched_hits,tab3/calib/mismatched_hits,0,cnt(J('results/e2e_trace/summary_calib_E.json')['S3']['mismatches_on_hits'])
+tab3/calib/value_on_hit,tab3/calib/value_on_hit,0,cnt(sum(1 for d in J('results/e2e_trace/mismatch_diag.json')['calib_E']['details'] if d['system'] == 'S3' and d['class'] == 'value_on_hit'))
+tab3/calib/cons_ok,tab3/calib/cons_ok,742,cnt(J('results/e2e_trace/summary_calib_E.json')['S3']['consumers_identical_ok'])
+tab3/calib/cons_fail,tab3/calib/cons_fail,76,cnt(J('results/e2e_trace/summary_calib_E.json')['S3']['consumers_identical_failed'])
+tab3/calib/cons_diff,tab3/calib/cons_diff,0,cnt(J('results/e2e_trace/summary_calib_E.json')['S3']['consumers'] - J('results/e2e_trace/summary_calib_E.json')['S3']['consumers_identical'])
+tab3/calib/probes_refused,tab3/calib/probes_refused,114,cnt(J('results/e2e_trace/summary_calib_E.json')['S3']['probes_refused'])
+tab3/calib/probes,tab3/calib/probes,114,cnt(J('results/e2e_trace/summary_calib_E.json')['S3']['probes'])
+tab3/cow/cells,tab3/cow/cells,8,cnt(J('results/e2e_trace/summary_cow_calib_E.json')['cells'])
+tab3/cow/calls,tab3/cow/calls,844,cnt(J('results/e2e_trace/summary_cow_calib_E.json')['S3']['calls'])
+tab3/cow/hits,tab3/cow/hits,162,cnt(J('results/e2e_trace/summary_cow_calib_E.json')['S3']['hits'])
+tab3/cow/mismatched_hits,tab3/cow/mismatched_hits,0,cnt(J('results/e2e_trace/summary_cow_calib_E.json')['S3']['mismatches_on_hits'])
+tab3/cow/value_on_hit,tab3/cow/value_on_hit,0,cnt(sum(1 for d in J('results/e2e_trace/mismatch_diag.json')['cow_calib_E']['details'] if d['system'] == 'S3' and d['class'] == 'value_on_hit'))
+tab3/cow/cons_ok,tab3/cow/cons_ok,434,cnt(J('results/e2e_trace/summary_cow_calib_E.json')['S3']['consumers_identical_ok'])
+tab3/cow/cons_fail,tab3/cow/cons_fail,46,cnt(J('results/e2e_trace/summary_cow_calib_E.json')['S3']['consumers_identical_failed'])
+tab3/cow/cons_diff,tab3/cow/cons_diff,2,cnt(J('results/e2e_trace/summary_cow_calib_E.json')['S3']['consumers'] - J('results/e2e_trace/summary_cow_calib_E.json')['S3']['consumers_identical'])
+tab3/cow/probes_refused,tab3/cow/probes_refused,72,cnt(J('results/e2e_trace/summary_cow_calib_E.json')['S3']['probes_refused'])
+tab3/cow/probes,tab3/cow/probes,72,cnt(J('results/e2e_trace/summary_cow_calib_E.json')['S3']['probes'])
+tab3c/inf/optimistic/pin/mismatch,tab3c/inf/optimistic/pin/mismatch,0,"cnt(sum(r['mismatches_vs_S0'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == 'inf' and r['policy'] == 'optimistic' and r['pinning'] == True]))"
+tab3c/inf/optimistic/pin/execs,tab3c/inf/optimistic/pin/execs,663,"cnt(sum(r['execs'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == 'inf' and r['policy'] == 'optimistic' and r['pinning'] == True]))"
+tab3c/inf/optimistic/pin/dup,tab3c/inf/optimistic/pin/dup,107,"cnt(sum(r['dup_exec'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == 'inf' and r['policy'] == 'optimistic' and r['pinning'] == True]))"
+tab3c/inf/optimistic/pin/wait_s,tab3c/inf/optimistic/pin/wait_s,0,"fx(sum(r['wait_s'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == 'inf' and r['policy'] == 'optimistic' and r['pinning'] == True]), 0)"
+tab3c/inf/optimistic/pin/dangling,tab3c/inf/optimistic/pin/dangling,0,"cnt(sum(r['dangling'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == 'inf' and r['policy'] == 'optimistic' and r['pinning'] == True]))"
+tab3c/inf/singleflight/pin/mismatch,tab3c/inf/singleflight/pin/mismatch,0,"cnt(sum(r['mismatches_vs_S0'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == 'inf' and r['policy'] == 'singleflight' and r['pinning'] == True]))"
+tab3c/inf/singleflight/pin/execs,tab3c/inf/singleflight/pin/execs,556,"cnt(sum(r['execs'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == 'inf' and r['policy'] == 'singleflight' and r['pinning'] == True]))"
+tab3c/inf/singleflight/pin/dup,tab3c/inf/singleflight/pin/dup,0,"cnt(sum(r['dup_exec'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == 'inf' and r['policy'] == 'singleflight' and r['pinning'] == True]))"
+tab3c/inf/singleflight/pin/wait_s,tab3c/inf/singleflight/pin/wait_s,59,"fx(sum(r['wait_s'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == 'inf' and r['policy'] == 'singleflight' and r['pinning'] == True]), 0)"
+tab3c/inf/singleflight/pin/dangling,tab3c/inf/singleflight/pin/dangling,0,"cnt(sum(r['dangling'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == 'inf' and r['policy'] == 'singleflight' and r['pinning'] == True]))"
+tab3c/inf/optimistic/nopin/mismatch,tab3c/inf/optimistic/nopin/mismatch,0,"cnt(sum(r['mismatches_vs_S0'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == 'inf' and r['policy'] == 'optimistic' and r['pinning'] == False]))"
+tab3c/inf/optimistic/nopin/execs,tab3c/inf/optimistic/nopin/execs,664,"cnt(sum(r['execs'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == 'inf' and r['policy'] == 'optimistic' and r['pinning'] == False]))"
+tab3c/inf/optimistic/nopin/dup,tab3c/inf/optimistic/nopin/dup,108,"cnt(sum(r['dup_exec'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == 'inf' and r['policy'] == 'optimistic' and r['pinning'] == False]))"
+tab3c/inf/optimistic/nopin/wait_s,tab3c/inf/optimistic/nopin/wait_s,0,"fx(sum(r['wait_s'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == 'inf' and r['policy'] == 'optimistic' and r['pinning'] == False]), 0)"
+tab3c/inf/optimistic/nopin/dangling,tab3c/inf/optimistic/nopin/dangling,0,"cnt(sum(r['dangling'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == 'inf' and r['policy'] == 'optimistic' and r['pinning'] == False]))"
+tab3c/1/16/optimistic/pin/mismatch,tab3c/1/16/optimistic/pin/mismatch,0,"cnt(sum(r['mismatches_vs_S0'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == '1/16' and r['policy'] == 'optimistic' and r['pinning'] == True]))"
+tab3c/1/16/optimistic/pin/execs,tab3c/1/16/optimistic/pin/execs,675,"cnt(sum(r['execs'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == '1/16' and r['policy'] == 'optimistic' and r['pinning'] == True]))"
+tab3c/1/16/optimistic/pin/dup,tab3c/1/16/optimistic/pin/dup,103,"cnt(sum(r['dup_exec'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == '1/16' and r['policy'] == 'optimistic' and r['pinning'] == True]))"
+tab3c/1/16/optimistic/pin/wait_s,tab3c/1/16/optimistic/pin/wait_s,0,"fx(sum(r['wait_s'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == '1/16' and r['policy'] == 'optimistic' and r['pinning'] == True]), 0)"
+tab3c/1/16/optimistic/pin/dangling,tab3c/1/16/optimistic/pin/dangling,0,"cnt(sum(r['dangling'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == '1/16' and r['policy'] == 'optimistic' and r['pinning'] == True]))"
+tab3c/1/16/singleflight/pin/mismatch,tab3c/1/16/singleflight/pin/mismatch,0,"cnt(sum(r['mismatches_vs_S0'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == '1/16' and r['policy'] == 'singleflight' and r['pinning'] == True]))"
+tab3c/1/16/singleflight/pin/execs,tab3c/1/16/singleflight/pin/execs,567,"cnt(sum(r['execs'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == '1/16' and r['policy'] == 'singleflight' and r['pinning'] == True]))"
+tab3c/1/16/singleflight/pin/dup,tab3c/1/16/singleflight/pin/dup,0,"cnt(sum(r['dup_exec'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == '1/16' and r['policy'] == 'singleflight' and r['pinning'] == True]))"
+tab3c/1/16/singleflight/pin/wait_s,tab3c/1/16/singleflight/pin/wait_s,86,"fx(sum(r['wait_s'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == '1/16' and r['policy'] == 'singleflight' and r['pinning'] == True]), 0)"
+tab3c/1/16/singleflight/pin/dangling,tab3c/1/16/singleflight/pin/dangling,0,"cnt(sum(r['dangling'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == '1/16' and r['policy'] == 'singleflight' and r['pinning'] == True]))"
+tab3c/1/16/optimistic/nopin/mismatch,tab3c/1/16/optimistic/nopin/mismatch,0,"cnt(sum(r['mismatches_vs_S0'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == '1/16' and r['policy'] == 'optimistic' and r['pinning'] == False]))"
+tab3c/1/16/optimistic/nopin/execs,tab3c/1/16/optimistic/nopin/execs,681,"cnt(sum(r['execs'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == '1/16' and r['policy'] == 'optimistic' and r['pinning'] == False]))"
+tab3c/1/16/optimistic/nopin/dup,tab3c/1/16/optimistic/nopin/dup,106,"cnt(sum(r['dup_exec'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == '1/16' and r['policy'] == 'optimistic' and r['pinning'] == False]))"
+tab3c/1/16/optimistic/nopin/wait_s,tab3c/1/16/optimistic/nopin/wait_s,0,"fx(sum(r['wait_s'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == '1/16' and r['policy'] == 'optimistic' and r['pinning'] == False]), 0)"
+tab3c/1/16/optimistic/nopin/dangling,tab3c/1/16/optimistic/nopin/dangling,21,"cnt(sum(r['dangling'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == '1/16' and r['policy'] == 'optimistic' and r['pinning'] == False]))"
+tab4/phoenix/runs,tab4/phoenix/runs,270,cnt(J('results/xharness/results.json')['phoenix']['runs'])
+tab4/phoenix/calls,tab4/phoenix/calls,"2,937",cnt(J('results/xharness/results.json')['phoenix']['db_calls'])
+tab4/phoenix/session,tab4/phoenix/session,1.7,pct(J('results/xharness/results.json')['phoenix']['scope_shares']['calls']['session'])
+tab4/phoenix/other,tab4/phoenix/other,13.4,pct(J('results/xharness/results.json')['phoenix']['scope_shares']['calls']['other_attempts'])
+tab4/phoenix/n5,tab4/phoenix/n5,15.5,pct(J('results/xharness/results.json')['phoenix']['reuse_curve']['5']['median_task_call_reuse'])
+tab4/phoenix/n5_tasks,tab4/phoenix/n5_tasks,54,cnt(J('results/xharness/results.json')['phoenix']['reuse_curve']['5']['tasks'])
+tab4/qwen/runs,tab4/qwen/runs,270,cnt(J('results/xharness/results.json')['qwen']['runs'])
+tab4/qwen/calls,tab4/qwen/calls,"3,294",cnt(J('results/xharness/results.json')['qwen']['db_calls'])
+tab4/qwen/session,tab4/qwen/session,0.1,pct(J('results/xharness/results.json')['qwen']['scope_shares']['calls']['session'])
+tab4/qwen/other,tab4/qwen/other,15.9,pct(J('results/xharness/results.json')['qwen']['scope_shares']['calls']['other_attempts'])
+tab4/qwen/n5,tab4/qwen/n5,17.9,pct(J('results/xharness/results.json')['qwen']['reuse_curve']['5']['median_task_call_reuse'])
+tab4/qwen/n5_tasks,tab4/qwen/n5_tasks,54,cnt(J('results/xharness/results.json')['qwen']['reuse_curve']['5']['tasks'])
+tab4/scout/runs,tab4/scout/runs,249,cnt(J('results/xharness/results.json')['scout']['runs'])
+tab4/scout/calls,tab4/scout/calls,"1,490",cnt(J('results/xharness/results.json')['scout']['db_calls'])
+tab4/scout/session,tab4/scout/session,0.3,pct(J('results/xharness/results.json')['scout']['scope_shares']['calls']['session'])
+tab4/scout/other,tab4/scout/other,5.7,pct(J('results/xharness/results.json')['scout']['scope_shares']['calls']['other_attempts'])
+tab4/scout/n5,tab4/scout/n5,7.8,pct(J('results/xharness/results.json')['scout']['reuse_curve']['5']['median_task_call_reuse'])
+tab4/scout/n5_tasks,tab4/scout/n5_tasks,37,cnt(J('results/xharness/results.json')['scout']['reuse_curve']['5']['tasks'])
+tab4/stela/runs,tab4/stela/runs,264,cnt(J('results/xharness/results.json')['stela']['runs'])
+tab4/stela/calls,tab4/stela/calls,"3,306",cnt(J('results/xharness/results.json')['stela']['db_calls'])
+tab4/stela/session,tab4/stela/session,0.2,pct(J('results/xharness/results.json')['stela']['scope_shares']['calls']['session'])
+tab4/stela/other,tab4/stela/other,5.0,pct(J('results/xharness/results.json')['stela']['scope_shares']['calls']['other_attempts'])
+tab4/stela/n5,tab4/stela/n5,4.9,pct(J('results/xharness/results.json')['stela']['reuse_curve']['5']['median_task_call_reuse'])
+tab4/stela/n5_tasks,tab4/stela/n5_tasks,48,cnt(J('results/xharness/results.json')['stela']['reuse_curve']['5']['tasks'])
+tab4/dab:gemini-2.5-flash/runs,tab4/dab:gemini-2.5-flash/runs,269,cnt(J('results/xharness/results_dab_main5.json')['dab:gemini-2.5-flash']['runs'])
+tab4/dab:gemini-2.5-flash/calls,tab4/dab:gemini-2.5-flash/calls,958,cnt(J('results/xharness/results_dab_main5.json')['dab:gemini-2.5-flash']['db_calls'])
+tab4/dab:gemini-2.5-flash/session,tab4/dab:gemini-2.5-flash/session,18.7,pct(J('results/xharness/results_dab_main5.json')['dab:gemini-2.5-flash']['scope_shares']['calls']['session'])
+tab4/dab:gemini-2.5-flash/other,tab4/dab:gemini-2.5-flash/other,14.7,pct(J('results/xharness/results_dab_main5.json')['dab:gemini-2.5-flash']['scope_shares']['calls']['other_attempts'])
+tab4/dab:gemini-2.5-flash/n5,tab4/dab:gemini-2.5-flash/n5,30.0,pct(J('results/xharness/results_dab_main5.json')['dab:gemini-2.5-flash']['reuse_curve']['5']['median_task_call_reuse'])
+tab4/dab:gemini-2.5-flash/n5_tasks,tab4/dab:gemini-2.5-flash/n5_tasks,53,cnt(J('results/xharness/results_dab_main5.json')['dab:gemini-2.5-flash']['reuse_curve']['5']['tasks'])
+tab4/dab:gemini-3-pro/runs,tab4/dab:gemini-3-pro/runs,270,cnt(J('results/xharness/results_dab_main5.json')['dab:gemini-3-pro']['runs'])
+tab4/dab:gemini-3-pro/calls,tab4/dab:gemini-3-pro/calls,"1,708",cnt(J('results/xharness/results_dab_main5.json')['dab:gemini-3-pro']['db_calls'])
+tab4/dab:gemini-3-pro/session,tab4/dab:gemini-3-pro/session,0.1,pct(J('results/xharness/results_dab_main5.json')['dab:gemini-3-pro']['scope_shares']['calls']['session'])
+tab4/dab:gemini-3-pro/other,tab4/dab:gemini-3-pro/other,23.2,pct(J('results/xharness/results_dab_main5.json')['dab:gemini-3-pro']['scope_shares']['calls']['other_attempts'])
+tab4/dab:gemini-3-pro/n5,tab4/dab:gemini-3-pro/n5,24.6,pct(J('results/xharness/results_dab_main5.json')['dab:gemini-3-pro']['reuse_curve']['5']['median_task_call_reuse'])
+tab4/dab:gemini-3-pro/n5_tasks,tab4/dab:gemini-3-pro/n5_tasks,54,cnt(J('results/xharness/results_dab_main5.json')['dab:gemini-3-pro']['reuse_curve']['5']['tasks'])
+tab4/dab:gpt-5-mini/runs,tab4/dab:gpt-5-mini/runs,270,cnt(J('results/xharness/results_dab_main5.json')['dab:gpt-5-mini']['runs'])
+tab4/dab:gpt-5-mini/calls,tab4/dab:gpt-5-mini/calls,"1,388",cnt(J('results/xharness/results_dab_main5.json')['dab:gpt-5-mini']['db_calls'])
+tab4/dab:gpt-5-mini/session,tab4/dab:gpt-5-mini/session,0.5,pct(J('results/xharness/results_dab_main5.json')['dab:gpt-5-mini']['scope_shares']['calls']['session'])
+tab4/dab:gpt-5-mini/other,tab4/dab:gpt-5-mini/other,8.6,pct(J('results/xharness/results_dab_main5.json')['dab:gpt-5-mini']['scope_shares']['calls']['other_attempts'])
+tab4/dab:gpt-5-mini/n5,tab4/dab:gpt-5-mini/n5,11.2,pct(J('results/xharness/results_dab_main5.json')['dab:gpt-5-mini']['reuse_curve']['5']['median_task_call_reuse'])
+tab4/dab:gpt-5-mini/n5_tasks,tab4/dab:gpt-5-mini/n5_tasks,54,cnt(J('results/xharness/results_dab_main5.json')['dab:gpt-5-mini']['reuse_curve']['5']['tasks'])
+tab4/dab:gpt-5.2/runs,tab4/dab:gpt-5.2/runs,270,cnt(J('results/xharness/results_dab_main5.json')['dab:gpt-5.2']['runs'])
+tab4/dab:gpt-5.2/calls,tab4/dab:gpt-5.2/calls,"1,093",cnt(J('results/xharness/results_dab_main5.json')['dab:gpt-5.2']['db_calls'])
+tab4/dab:gpt-5.2/session,tab4/dab:gpt-5.2/session,0.1,pct(J('results/xharness/results_dab_main5.json')['dab:gpt-5.2']['scope_shares']['calls']['session'])
+tab4/dab:gpt-5.2/other,tab4/dab:gpt-5.2/other,13.5,pct(J('results/xharness/results_dab_main5.json')['dab:gpt-5.2']['scope_shares']['calls']['other_attempts'])
+tab4/dab:gpt-5.2/n5,tab4/dab:gpt-5.2/n5,13.2,pct(J('results/xharness/results_dab_main5.json')['dab:gpt-5.2']['reuse_curve']['5']['median_task_call_reuse'])
+tab4/dab:gpt-5.2/n5_tasks,tab4/dab:gpt-5.2/n5_tasks,54,cnt(J('results/xharness/results_dab_main5.json')['dab:gpt-5.2']['reuse_curve']['5']['tasks'])
+tab4/dab:kimi-k2/runs,tab4/dab:kimi-k2/runs,266,cnt(J('results/xharness/results_dab_main5.json')['dab:kimi-k2']['runs'])
+tab4/dab:kimi-k2/calls,tab4/dab:kimi-k2/calls,"2,287",cnt(J('results/xharness/results_dab_main5.json')['dab:kimi-k2']['db_calls'])
+tab4/dab:kimi-k2/session,tab4/dab:kimi-k2/session,11.6,pct(J('results/xharness/results_dab_main5.json')['dab:kimi-k2']['scope_shares']['calls']['session'])
+tab4/dab:kimi-k2/other,tab4/dab:kimi-k2/other,8.3,pct(J('results/xharness/results_dab_main5.json')['dab:kimi-k2']['scope_shares']['calls']['other_attempts'])
+tab4/dab:kimi-k2/n5,tab4/dab:kimi-k2/n5,13.3,pct(J('results/xharness/results_dab_main5.json')['dab:kimi-k2']['reuse_curve']['5']['median_task_call_reuse'])
+tab4/dab:kimi-k2/n5_tasks,tab4/dab:kimi-k2/n5_tasks,51,cnt(J('results/xharness/results_dab_main5.json')['dab:kimi-k2']['reuse_curve']['5']['tasks'])
+tabw/duckdb/calls,tabw/duckdb/calls,"29,145","cnt(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='all_query_db', level='engine', group='duckdb')['calls'])"
+tabw/duckdb/pairs,tabw/duckdb/pairs,"18,569","cnt(sum(int(v) for k, v in ROW('results/analysis_dab_r3/B0_outcome_classes.csv', engine='duckdb').items() if k != 'engine'))"
+tabw/duckdb/ok,tabw/duckdb/ok,94.0,"pct(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='successful', level='engine', group='duckdb')['calls_share'])"
+tabw/duckdb/identical,tabw/duckdb/identical,91.7,"pct(int(ROW('results/analysis_dab_r3/B0_fidelity.csv', engine='duckdb')['match']) / int(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='successful', level='engine', group='duckdb')['calls']))"
+tabw/duckdb/order,tabw/duckdb/order,"1,743","cnt(ROW('results/analysis_dab_r3/B0_mismatch_kinds.csv', engine='duckdb')['order_only'])"
+tabw/duckdb/other,tabw/duckdb/other,520,"cnt(int(ROW('results/analysis_dab_r3/B0_mismatch_kinds.csv', engine='duckdb')['prefix_mismatch']) + int(ROW('results/analysis_dab_r3/B0_mismatch_kinds.csv', engine='duckdb')['value_mismatch']))"
+tabw/mongo/calls,tabw/mongo/calls,"8,508","cnt(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='all_query_db', level='engine', group='mongo')['calls'])"
+tabw/mongo/pairs,tabw/mongo/pairs,"3,292","cnt(sum(int(v) for k, v in ROW('results/analysis_dab_r3/B0_outcome_classes.csv', engine='mongo').items() if k != 'engine'))"
+tabw/mongo/ok,tabw/mongo/ok,96.4,"pct(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='successful', level='engine', group='mongo')['calls_share'])"
+tabw/mongo/identical,tabw/mongo/identical,78.5,"pct(int(ROW('results/analysis_dab_r3/B0_fidelity.csv', engine='mongo')['match']) / int(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='successful', level='engine', group='mongo')['calls']))"
+tabw/mongo/order,tabw/mongo/order,0,"cnt(ROW('results/analysis_dab_r3/B0_mismatch_kinds.csv', engine='mongo')['order_only'])"
+tabw/mongo/other,tabw/mongo/other,"1,757","cnt(int(ROW('results/analysis_dab_r3/B0_mismatch_kinds.csv', engine='mongo')['prefix_mismatch']) + int(ROW('results/analysis_dab_r3/B0_mismatch_kinds.csv', engine='mongo')['value_mismatch']))"
+tabw/postgres/calls,tabw/postgres/calls,"19,033","cnt(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='all_query_db', level='engine', group='postgres')['calls'])"
+tabw/postgres/pairs,tabw/postgres/pairs,"11,712","cnt(sum(int(v) for k, v in ROW('results/analysis_dab_r3/B0_outcome_classes.csv', engine='postgres').items() if k != 'engine'))"
+tabw/postgres/ok,tabw/postgres/ok,88.4,"pct(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='successful', level='engine', group='postgres')['calls_share'])"
+tabw/postgres/identical,tabw/postgres/identical,94.3,"pct(int(ROW('results/analysis_dab_r3/B0_fidelity.csv', engine='postgres')['match']) / int(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='successful', level='engine', group='postgres')['calls']))"
+tabw/postgres/order,tabw/postgres/order,547,"cnt(ROW('results/analysis_dab_r3/B0_mismatch_kinds.csv', engine='postgres')['order_only'])"
+tabw/postgres/other,tabw/postgres/other,406,"cnt(int(ROW('results/analysis_dab_r3/B0_mismatch_kinds.csv', engine='postgres')['prefix_mismatch']) + int(ROW('results/analysis_dab_r3/B0_mismatch_kinds.csv', engine='postgres')['value_mismatch']))"
+tabw/sqlite/calls,tabw/sqlite/calls,"19,455","cnt(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='all_query_db', level='engine', group='sqlite')['calls'])"
+tabw/sqlite/pairs,tabw/sqlite/pairs,"8,037","cnt(sum(int(v) for k, v in ROW('results/analysis_dab_r3/B0_outcome_classes.csv', engine='sqlite').items() if k != 'engine'))"
+tabw/sqlite/ok,tabw/sqlite/ok,98.5,"pct(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='successful', level='engine', group='sqlite')['calls_share'])"
+tabw/sqlite/identical,tabw/sqlite/identical,99.9,"pct(int(ROW('results/analysis_dab_r3/B0_fidelity.csv', engine='sqlite')['match']) / int(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='successful', level='engine', group='sqlite')['calls']))"
+tabw/sqlite/order,tabw/sqlite/order,0,"cnt(ROW('results/analysis_dab_r3/B0_mismatch_kinds.csv', engine='sqlite')['order_only'])"
+tabw/sqlite/other,tabw/sqlite/other,4,"cnt(int(ROW('results/analysis_dab_r3/B0_mismatch_kinds.csv', engine='sqlite')['prefix_mismatch']) + int(ROW('results/analysis_dab_r3/B0_mismatch_kinds.csv', engine='sqlite')['value_mismatch']))"
+tabw/all/calls,tabw/all/calls,"76,213","cnt(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='all_query_db', level='all', group='all')['calls'])"
+tabw/all/pairs,tabw/all/pairs,"41,616","cnt(sum(sum(int(v) for k, v in ROW('results/analysis_dab_r3/B0_outcome_classes.csv', engine=e).items() if k != 'engine') for e in ['duckdb', 'mongo', 'postgres', 'sqlite']) + int(ROW('results/analysis_dab_r3/B0_outcome_classes.csv', engine='unknown')['not_replayed']))"
+tabw/all/ok,tabw/all/ok,93.9,"pct(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='successful', level='all', group='all')['calls_share'])"
+tabw/all/identical,tabw/all/identical,93.0,"pct(sum(int(ROW('results/analysis_dab_r3/B0_fidelity.csv', engine=e)['match']) for e in ['duckdb', 'mongo', 'postgres', 'sqlite']) / int(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='successful', level='all', group='all')['calls']))"
+tabw/all/order,tabw/all/order,"2,290","cnt(sum(int(ROW('results/analysis_dab_r3/B0_mismatch_kinds.csv', engine=e)['order_only']) for e in ['duckdb', 'mongo', 'postgres', 'sqlite']))"
+tabw/all/other,tabw/all/other,"2,687","cnt(sum(int(ROW('results/analysis_dab_r3/B0_mismatch_kinds.csv', engine=e)['prefix_mismatch']) + int(ROW('results/analysis_dab_r3/B0_mismatch_kinds.csv', engine=e)['value_mismatch']) for e in ['duckdb', 'mongo', 'postgres', 'sqlite']))"
+tabd/agnews/tasks,tabd/agnews/tasks,4,cnt(J('results/dataset_table.json')['agnews']['tasks'])
+tabd/agnews/data_MB,tabd/agnews/data_MB,40.6,"f""{J('results/dataset_table.json')['agnews']['data_bytes'] / 1e6:,.1f}"""
+tabd/agnews/calls,tabd/agnews/calls,"4,240",cnt(J('results/dataset_table.json')['agnews']['calls'])
+tabd/agnews/pairs,tabd/agnews/pairs,"1,360",cnt(J('results/dataset_table.json')['agnews']['pairs'])
+tabd/agnews/spilled,tabd/agnews/spilled,32.8,pct(J('results/dataset_table.json')['agnews']['spilled_share_ok'])
+tabd/agnews/exec_s,tabd/agnews/exec_s,196,cnt(J('results/dataset_table.json')['agnews']['exec_s_total'])
+tabd/agnews/bytes_GB,tabd/agnews/bytes_GB,11.07,fx(J('results/dataset_table.json')['agnews']['payload_bytes_total'] / 1e9)
+tabd/agnews/other,tabd/agnews/other,41.8,pct(J('results/dataset_table.json')['agnews']['task_median_other_attempts_exec'])
+tabd/agnews/session,tabd/agnews/session,2.3,pct(J('results/dataset_table.json')['agnews']['task_median_session_exec'])
+tabd/bookreview/tasks,tabd/bookreview/tasks,3,cnt(J('results/dataset_table.json')['bookreview']['tasks'])
+tabd/bookreview/data_MB,tabd/bookreview/data_MB,1.7,"f""{J('results/dataset_table.json')['bookreview']['data_bytes'] / 1e6:,.1f}"""
+tabd/bookreview/calls,tabd/bookreview/calls,"3,060",cnt(J('results/dataset_table.json')['bookreview']['calls'])
+tabd/bookreview/pairs,tabd/bookreview/pairs,"1,093",cnt(J('results/dataset_table.json')['bookreview']['pairs'])
+tabd/bookreview/spilled,tabd/bookreview/spilled,49.6,pct(J('results/dataset_table.json')['bookreview']['spilled_share_ok'])
+tabd/bookreview/exec_s,tabd/bookreview/exec_s,5,cnt(J('results/dataset_table.json')['bookreview']['exec_s_total'])
+tabd/bookreview/bytes_GB,tabd/bookreview/bytes_GB,0.11,fx(J('results/dataset_table.json')['bookreview']['payload_bytes_total'] / 1e9)
+tabd/bookreview/other,tabd/bookreview/other,51.8,pct(J('results/dataset_table.json')['bookreview']['task_median_other_attempts_exec'])
+tabd/bookreview/session,tabd/bookreview/session,4.3,pct(J('results/dataset_table.json')['bookreview']['task_median_session_exec'])
+tabd/crmarenapro/tasks,tabd/crmarenapro/tasks,13,cnt(J('results/dataset_table.json')['crmarenapro']['tasks'])
+tabd/crmarenapro/data_MB,tabd/crmarenapro/data_MB,32.8,"f""{J('results/dataset_table.json')['crmarenapro']['data_bytes'] / 1e6:,.1f}"""
+tabd/crmarenapro/calls,tabd/crmarenapro/calls,"16,879",cnt(J('results/dataset_table.json')['crmarenapro']['calls'])
+tabd/crmarenapro/pairs,tabd/crmarenapro/pairs,"10,412",cnt(J('results/dataset_table.json')['crmarenapro']['pairs'])
+tabd/crmarenapro/spilled,tabd/crmarenapro/spilled,11.7,pct(J('results/dataset_table.json')['crmarenapro']['spilled_share_ok'])
+tabd/crmarenapro/exec_s,tabd/crmarenapro/exec_s,73,cnt(J('results/dataset_table.json')['crmarenapro']['exec_s_total'])
+tabd/crmarenapro/bytes_GB,tabd/crmarenapro/bytes_GB,0.39,fx(J('results/dataset_table.json')['crmarenapro']['payload_bytes_total'] / 1e9)
+tabd/crmarenapro/other,tabd/crmarenapro/other,35.5,pct(J('results/dataset_table.json')['crmarenapro']['task_median_other_attempts_exec'])
+tabd/crmarenapro/session,tabd/crmarenapro/session,1.8,pct(J('results/dataset_table.json')['crmarenapro']['task_median_session_exec'])
+tabd/DEPS_DEV_V1/tasks,tabd/DEPS_DEV_V1/tasks,2,cnt(J('results/dataset_table.json')['DEPS_DEV_V1']['tasks'])
+tabd/DEPS_DEV_V1/data_MB,tabd/DEPS_DEV_V1/data_MB,549.9,"f""{J('results/dataset_table.json')['DEPS_DEV_V1']['data_bytes'] / 1e6:,.1f}"""
+tabd/DEPS_DEV_V1/calls,tabd/DEPS_DEV_V1/calls,"3,125",cnt(J('results/dataset_table.json')['DEPS_DEV_V1']['calls'])
+tabd/DEPS_DEV_V1/pairs,tabd/DEPS_DEV_V1/pairs,"1,281",cnt(J('results/dataset_table.json')['DEPS_DEV_V1']['pairs'])
+tabd/DEPS_DEV_V1/spilled,tabd/DEPS_DEV_V1/spilled,57.1,pct(J('results/dataset_table.json')['DEPS_DEV_V1']['spilled_share_ok'])
+tabd/DEPS_DEV_V1/exec_s,tabd/DEPS_DEV_V1/exec_s,"1,874",cnt(J('results/dataset_table.json')['DEPS_DEV_V1']['exec_s_total'])
+tabd/DEPS_DEV_V1/bytes_GB,tabd/DEPS_DEV_V1/bytes_GB,76.06,fx(J('results/dataset_table.json')['DEPS_DEV_V1']['payload_bytes_total'] / 1e9)
+tabd/DEPS_DEV_V1/other,tabd/DEPS_DEV_V1/other,22.3,pct(J('results/dataset_table.json')['DEPS_DEV_V1']['task_median_other_attempts_exec'])
+tabd/DEPS_DEV_V1/session,tabd/DEPS_DEV_V1/session,6.9,pct(J('results/dataset_table.json')['DEPS_DEV_V1']['task_median_session_exec'])
+tabd/GITHUB_REPOS/tasks,tabd/GITHUB_REPOS/tasks,4,cnt(J('results/dataset_table.json')['GITHUB_REPOS']['tasks'])
+tabd/GITHUB_REPOS/data_MB,tabd/GITHUB_REPOS/data_MB,928.5,"f""{J('results/dataset_table.json')['GITHUB_REPOS']['data_bytes'] / 1e6:,.1f}"""
+tabd/GITHUB_REPOS/calls,tabd/GITHUB_REPOS/calls,"6,061",cnt(J('results/dataset_table.json')['GITHUB_REPOS']['calls'])
+tabd/GITHUB_REPOS/pairs,tabd/GITHUB_REPOS/pairs,"3,159",cnt(J('results/dataset_table.json')['GITHUB_REPOS']['pairs'])
+tabd/GITHUB_REPOS/spilled,tabd/GITHUB_REPOS/spilled,35.8,pct(J('results/dataset_table.json')['GITHUB_REPOS']['spilled_share_ok'])
+tabd/GITHUB_REPOS/exec_s,tabd/GITHUB_REPOS/exec_s,"7,261",cnt(J('results/dataset_table.json')['GITHUB_REPOS']['exec_s_total'])
+tabd/GITHUB_REPOS/bytes_GB,tabd/GITHUB_REPOS/bytes_GB,222.55,fx(J('results/dataset_table.json')['GITHUB_REPOS']['payload_bytes_total'] / 1e9)
+tabd/GITHUB_REPOS/other,tabd/GITHUB_REPOS/other,54.4,pct(J('results/dataset_table.json')['GITHUB_REPOS']['task_median_other_attempts_exec'])
+tabd/GITHUB_REPOS/session,tabd/GITHUB_REPOS/session,9.8,pct(J('results/dataset_table.json')['GITHUB_REPOS']['task_median_session_exec'])
+tabd/googlelocal/tasks,tabd/googlelocal/tasks,4,cnt(J('results/dataset_table.json')['googlelocal']['tasks'])
+tabd/googlelocal/data_MB,tabd/googlelocal/data_MB,0.6,"f""{J('results/dataset_table.json')['googlelocal']['data_bytes'] / 1e6:,.1f}"""
+tabd/googlelocal/calls,tabd/googlelocal/calls,"3,779",cnt(J('results/dataset_table.json')['googlelocal']['calls'])
+tabd/googlelocal/pairs,tabd/googlelocal/pairs,"1,482",cnt(J('results/dataset_table.json')['googlelocal']['pairs'])
+tabd/googlelocal/spilled,tabd/googlelocal/spilled,16.0,pct(J('results/dataset_table.json')['googlelocal']['spilled_share_ok'])
+tabd/googlelocal/exec_s,tabd/googlelocal/exec_s,5,cnt(J('results/dataset_table.json')['googlelocal']['exec_s_total'])
+tabd/googlelocal/bytes_GB,tabd/googlelocal/bytes_GB,0.03,fx(J('results/dataset_table.json')['googlelocal']['payload_bytes_total'] / 1e9)
+tabd/googlelocal/other,tabd/googlelocal/other,53.9,pct(J('results/dataset_table.json')['googlelocal']['task_median_other_attempts_exec'])
+tabd/googlelocal/session,tabd/googlelocal/session,5.0,pct(J('results/dataset_table.json')['googlelocal']['task_median_session_exec'])
+tabd/music_brainz_20k/tasks,tabd/music_brainz_20k/tasks,3,cnt(J('results/dataset_table.json')['music_brainz_20k']['tasks'])
+tabd/music_brainz_20k/data_MB,tabd/music_brainz_20k/data_MB,3.1,"f""{J('results/dataset_table.json')['music_brainz_20k']['data_bytes'] / 1e6:,.1f}"""
+tabd/music_brainz_20k/calls,tabd/music_brainz_20k/calls,"2,451",cnt(J('results/dataset_table.json')['music_brainz_20k']['calls'])
+tabd/music_brainz_20k/pairs,tabd/music_brainz_20k/pairs,"1,071",cnt(J('results/dataset_table.json')['music_brainz_20k']['pairs'])
+tabd/music_brainz_20k/spilled,tabd/music_brainz_20k/spilled,23.2,pct(J('results/dataset_table.json')['music_brainz_20k']['spilled_share_ok'])
+tabd/music_brainz_20k/exec_s,tabd/music_brainz_20k/exec_s,32,cnt(J('results/dataset_table.json')['music_brainz_20k']['exec_s_total'])
+tabd/music_brainz_20k/bytes_GB,tabd/music_brainz_20k/bytes_GB,1.67,fx(J('results/dataset_table.json')['music_brainz_20k']['payload_bytes_total'] / 1e9)
+tabd/music_brainz_20k/other,tabd/music_brainz_20k/other,50.0,pct(J('results/dataset_table.json')['music_brainz_20k']['task_median_other_attempts_exec'])
+tabd/music_brainz_20k/session,tabd/music_brainz_20k/session,0.8,pct(J('results/dataset_table.json')['music_brainz_20k']['task_median_session_exec'])
+tabd/PANCANCER_ATLAS/tasks,tabd/PANCANCER_ATLAS/tasks,3,cnt(J('results/dataset_table.json')['PANCANCER_ATLAS']['tasks'])
+tabd/PANCANCER_ATLAS/data_MB,tabd/PANCANCER_ATLAS/data_MB,301.4,"f""{J('results/dataset_table.json')['PANCANCER_ATLAS']['data_bytes'] / 1e6:,.1f}"""
+tabd/PANCANCER_ATLAS/calls,tabd/PANCANCER_ATLAS/calls,"6,716",cnt(J('results/dataset_table.json')['PANCANCER_ATLAS']['calls'])
+tabd/PANCANCER_ATLAS/pairs,tabd/PANCANCER_ATLAS/pairs,"4,045",cnt(J('results/dataset_table.json')['PANCANCER_ATLAS']['pairs'])
+tabd/PANCANCER_ATLAS/spilled,tabd/PANCANCER_ATLAS/spilled,43.4,pct(J('results/dataset_table.json')['PANCANCER_ATLAS']['spilled_share_ok'])
+tabd/PANCANCER_ATLAS/exec_s,tabd/PANCANCER_ATLAS/exec_s,211,cnt(J('results/dataset_table.json')['PANCANCER_ATLAS']['exec_s_total'])
+tabd/PANCANCER_ATLAS/bytes_GB,tabd/PANCANCER_ATLAS/bytes_GB,1.05,fx(J('results/dataset_table.json')['PANCANCER_ATLAS']['payload_bytes_total'] / 1e9)
+tabd/PANCANCER_ATLAS/other,tabd/PANCANCER_ATLAS/other,37.9,pct(J('results/dataset_table.json')['PANCANCER_ATLAS']['task_median_other_attempts_exec'])
+tabd/PANCANCER_ATLAS/session,tabd/PANCANCER_ATLAS/session,3.6,pct(J('results/dataset_table.json')['PANCANCER_ATLAS']['task_median_session_exec'])
+tabd/PATENTS/tasks,tabd/PATENTS/tasks,3,cnt(J('results/dataset_table.json')['PATENTS']['tasks'])
+tabd/PATENTS/data_MB,tabd/PATENTS/data_MB,"5,556.3","f""{J('results/dataset_table.json')['PATENTS']['data_bytes'] / 1e6:,.1f}"""
+tabd/PATENTS/calls,tabd/PATENTS/calls,"4,263",cnt(J('results/dataset_table.json')['PATENTS']['calls'])
+tabd/PATENTS/pairs,tabd/PATENTS/pairs,"2,322",cnt(J('results/dataset_table.json')['PATENTS']['pairs'])
+tabd/PATENTS/spilled,tabd/PATENTS/spilled,63.0,pct(J('results/dataset_table.json')['PATENTS']['spilled_share_ok'])
+tabd/PATENTS/exec_s,tabd/PATENTS/exec_s,"23,398",cnt(J('results/dataset_table.json')['PATENTS']['exec_s_total'])
+tabd/PATENTS/bytes_GB,tabd/PATENTS/bytes_GB,225.08,fx(J('results/dataset_table.json')['PATENTS']['payload_bytes_total'] / 1e9)
+tabd/PATENTS/other,tabd/PATENTS/other,36.1,pct(J('results/dataset_table.json')['PATENTS']['task_median_other_attempts_exec'])
+tabd/PATENTS/session,tabd/PATENTS/session,7.1,pct(J('results/dataset_table.json')['PATENTS']['task_median_session_exec'])
+tabd/stockindex/tasks,tabd/stockindex/tasks,3,cnt(J('results/dataset_table.json')['stockindex']['tasks'])
+tabd/stockindex/data_MB,tabd/stockindex/data_MB,4.5,"f""{J('results/dataset_table.json')['stockindex']['data_bytes'] / 1e6:,.1f}"""
+tabd/stockindex/calls,tabd/stockindex/calls,"2,663",cnt(J('results/dataset_table.json')['stockindex']['calls'])
+tabd/stockindex/pairs,tabd/stockindex/pairs,"1,214",cnt(J('results/dataset_table.json')['stockindex']['pairs'])
+tabd/stockindex/spilled,tabd/stockindex/spilled,25.8,pct(J('results/dataset_table.json')['stockindex']['spilled_share_ok'])
+tabd/stockindex/exec_s,tabd/stockindex/exec_s,64,cnt(J('results/dataset_table.json')['stockindex']['exec_s_total'])
+tabd/stockindex/bytes_GB,tabd/stockindex/bytes_GB,2.70,fx(J('results/dataset_table.json')['stockindex']['payload_bytes_total'] / 1e9)
+tabd/stockindex/other,tabd/stockindex/other,30.7,pct(J('results/dataset_table.json')['stockindex']['task_median_other_attempts_exec'])
+tabd/stockindex/session,tabd/stockindex/session,0.6,pct(J('results/dataset_table.json')['stockindex']['task_median_session_exec'])
+tabd/stockmarket/tasks,tabd/stockmarket/tasks,5,cnt(J('results/dataset_table.json')['stockmarket']['tasks'])
+tabd/stockmarket/data_MB,tabd/stockmarket/data_MB,965.7,"f""{J('results/dataset_table.json')['stockmarket']['data_bytes'] / 1e6:,.1f}"""
+tabd/stockmarket/calls,tabd/stockmarket/calls,"14,481",cnt(J('results/dataset_table.json')['stockmarket']['calls'])
+tabd/stockmarket/pairs,tabd/stockmarket/pairs,"10,767",cnt(J('results/dataset_table.json')['stockmarket']['pairs'])
+tabd/stockmarket/spilled,tabd/stockmarket/spilled,14.6,pct(J('results/dataset_table.json')['stockmarket']['spilled_share_ok'])
+tabd/stockmarket/exec_s,tabd/stockmarket/exec_s,"5,398",cnt(J('results/dataset_table.json')['stockmarket']['exec_s_total'])
+tabd/stockmarket/bytes_GB,tabd/stockmarket/bytes_GB,0.11,fx(J('results/dataset_table.json')['stockmarket']['payload_bytes_total'] / 1e9)
+tabd/stockmarket/other,tabd/stockmarket/other,14.4,pct(J('results/dataset_table.json')['stockmarket']['task_median_other_attempts_exec'])
+tabd/stockmarket/session,tabd/stockmarket/session,1.5,pct(J('results/dataset_table.json')['stockmarket']['task_median_session_exec'])
+tabd/yelp/tasks,tabd/yelp/tasks,7,cnt(J('results/dataset_table.json')['yelp']['tasks'])
+tabd/yelp/data_MB,tabd/yelp/data_MB,3.7,"f""{J('results/dataset_table.json')['yelp']['data_bytes'] / 1e6:,.1f}"""
+tabd/yelp/calls,tabd/yelp/calls,"8,495",cnt(J('results/dataset_table.json')['yelp']['calls'])
+tabd/yelp/pairs,tabd/yelp/pairs,"3,410",cnt(J('results/dataset_table.json')['yelp']['pairs'])
+tabd/yelp/spilled,tabd/yelp/spilled,17.2,pct(J('results/dataset_table.json')['yelp']['spilled_share_ok'])
+tabd/yelp/exec_s,tabd/yelp/exec_s,36,cnt(J('results/dataset_table.json')['yelp']['exec_s_total'])
+tabd/yelp/bytes_GB,tabd/yelp/bytes_GB,0.14,fx(J('results/dataset_table.json')['yelp']['payload_bytes_total'] / 1e9)
+tabd/yelp/other,tabd/yelp/other,52.4,pct(J('results/dataset_table.json')['yelp']['task_median_other_attempts_exec'])
+tabd/yelp/session,tabd/yelp/session,7.9,pct(J('results/dataset_table.json')['yelp']['task_median_session_exec'])
+tabd/all/tasks,tabd/all/tasks,54,cnt(sum(v['tasks'] for v in J('results/dataset_table.json').values()))
+tabd/all/data_MB,tabd/all/data_MB,"8,388.9","f""{sum(v['data_bytes'] for v in J('results/dataset_table.json').values()) / 1e6:,.1f}"""
+tabd/all/calls,tabd/all/calls,"76,213",cnt(sum(v['calls'] for v in J('results/dataset_table.json').values()))
+tabd/all/pairs,tabd/all/pairs,"41,616",cnt(sum(v['pairs'] for v in J('results/dataset_table.json').values()))
+tabd/all/spilled,tabd/all/spilled,25.9,pct(J('results/paper_stats.json')['magnitudes']['spilled_share_of_successful_calls'])
+tabd/all/exec_s,tabd/all/exec_s,"38,553",cnt(sum(v['exec_s_total'] for v in J('results/dataset_table.json').values()))
+tabd/all/bytes_GB,tabd/all/bytes_GB,540.96,fx(sum(v['payload_bytes_total'] for v in J('results/dataset_table.json').values()) / 1e9)
+tabd/all/other,tabd/all/other,41.2,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['task_macro']['exec_s']['trials']['median'])
+tabd/all/session,tabd/all/session,3.2,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['task_macro']['exec_s']['session']['median'])
+tabt/B/static_calls,tabt/B/static_calls,"5,697",cnt(J('results/static_tiers.json')['B']['all_query_db']['calls'])
+tabt/B/calls,tabt/B/calls,"5,695","cnt(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='B_certified', level='all', group='all')['calls'])"
+tabt/E/static_calls,tabt/E/static_calls,"74,894",cnt(J('results/static_tiers.json')['E']['all_query_db']['calls'])
+tabt/E/eval_calls,tabt/E/eval_calls,"66,263","cnt(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='E_certified', level='all', group='all')['calls'])"
+tabt/F/calls,tabt/F/calls,"70,173","cnt(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='fidelity_equiv', level='all', group='all')['calls'])"
+fig2/all/other,fig2/all/other,33.5,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['overall']['exec_s']['trials']['mean'])
+fig2/all/session,fig2/all/session,9.3,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['overall']['exec_s']['session']['mean'])
+fig2/strict/other,fig2/strict/other,33.6,pct(J('results/analysis_dab_r3/results_B1.json')['B1_strict_fidelity']['exec_s']['trials']['mean'])
+fig2/strict/session,fig2/strict/session,9.3,pct(J('results/analysis_dab_r3/results_B1.json')['B1_strict_fidelity']['exec_s']['session']['mean'])
+fig2/allrep/other,fig2/allrep/other,33.3,pct(J('results/analysis_dab_r3/results_B1.json')['B1_all_replayed']['exec_s']['trials']['mean'])
+fig2/allrep/session,fig2/allrep/session,9.1,pct(J('results/analysis_dab_r3/results_B1.json')['B1_all_replayed']['exec_s']['session']['mean'])
+fig2/gemini-2.5-flash/other,fig2/gemini-2.5-flash/other,47.2,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['by_model']['gemini-2.5-flash']['exec_s']['trials']['mean'])
+fig2/gemini-2.5-flash/session,fig2/gemini-2.5-flash/session,20.0,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['by_model']['gemini-2.5-flash']['exec_s']['session']['mean'])
+fig2/gemini-3-pro/other,fig2/gemini-3-pro/other,45.1,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['by_model']['gemini-3-pro']['exec_s']['trials']['mean'])
+fig2/gemini-3-pro/session,fig2/gemini-3-pro/session,0.1,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['by_model']['gemini-3-pro']['exec_s']['session']['mean'])
+fig2/gpt-5-mini/other,fig2/gpt-5-mini/other,31.8,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['by_model']['gpt-5-mini']['exec_s']['trials']['mean'])
+fig2/gpt-5-mini/session,fig2/gpt-5-mini/session,1.5,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['by_model']['gpt-5-mini']['exec_s']['session']['mean'])
+fig2/gpt-5.2/other,fig2/gpt-5.2/other,44.8,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['by_model']['gpt-5.2']['exec_s']['trials']['mean'])
+fig2/gpt-5.2/session,fig2/gpt-5.2/session,0.0,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['by_model']['gpt-5.2']['exec_s']['session']['mean'])
+fig2/kimi-k2/other,fig2/kimi-k2/other,20.5,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['by_model']['kimi-k2']['exec_s']['trials']['mean'])
+fig2/kimi-k2/session,fig2/kimi-k2/session,16.4,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['by_model']['kimi-k2']['exec_s']['session']['mean'])
+fig2/duckdb/other,fig2/duckdb/other,15.6,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['by_engine']['duckdb']['exec_s']['trials']['mean'])
+fig2/duckdb/session,fig2/duckdb/session,2.8,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['by_engine']['duckdb']['exec_s']['session']['mean'])
+fig2/mongo/other,fig2/mongo/other,41.5,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['by_engine']['mongo']['exec_s']['trials']['mean'])
+fig2/mongo/session,fig2/mongo/session,2.4,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['by_engine']['mongo']['exec_s']['session']['mean'])
+fig2/postgres/other,fig2/postgres/other,26.5,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['by_engine']['postgres']['exec_s']['trials']['mean'])
+fig2/postgres/session,fig2/postgres/session,4.4,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['by_engine']['postgres']['exec_s']['session']['mean'])
+fig2/sqlite/other,fig2/sqlite/other,37.3,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['by_engine']['sqlite']['exec_s']['trials']['mean'])
+fig2/sqlite/session,fig2/sqlite/session,10.6,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['by_engine']['sqlite']['exec_s']['session']['mean'])
+fig2/pass/other,fig2/pass/other,29.9,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['by_validation']['pass']['exec_s']['trials']['mean'])
+fig2/pass/session,fig2/pass/session,3.6,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['by_validation']['pass']['exec_s']['session']['mean'])
+fig2/fail/other,fig2/fail/other,34.0,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['by_validation']['fail']['exec_s']['trials']['mean'])
+fig2/fail/session,fig2/fail/session,10.0,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['by_validation']['fail']['exec_s']['session']['mean'])
+fig2/first/other,fig2/first/other,32.0,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['overall']['exec_s_first']['trials']['mean'])
+fig2/first/session,fig2/first/session,9.3,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['overall']['exec_s_first']['session']['mean'])
+fig2/top1/other,fig2/top1/other,14.6,pct(J('results/extra_analyses.json')['sensitivity']['drop_top1pct']['exec_s_shares']['trials'])
+fig2/top1/session,fig2/top1/session,4.9,pct(J('results/extra_analyses.json')['sensitivity']['drop_top1pct']['exec_s_shares']['session'])
+fig2/m1/other,fig2/m1/other,34.7,pct(J('results/analysis_m1/results_B1.json')['B1_fidelity_gate']['overall']['exec_s']['trials']['mean'])
+fig2/m1/session,fig2/m1/session,9.6,pct(J('results/analysis_m1/results_B1.json')['B1_fidelity_gate']['overall']['exec_s']['session']['mean'])
+fig2/lodo/other_min,fig2/lodo/other_min,31.0,pct(min(v['exec_s']['trials']['mean'] for v in J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['lodo'].values()))
+fig2/lodo/other_max,fig2/lodo/other_max,36.5,pct(max(v['exec_s']['trials']['mean'] for v in J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['lodo'].values()))
+fig2/lodo/session_min,fig2/lodo/session_min,6.9,pct(min(v['exec_s']['session']['mean'] for v in J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['lodo'].values()))
+fig2/lodo/session_max,fig2/lodo/session_max,10.2,pct(max(v['exec_s']['session']['mean'] for v in J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['lodo'].values()))
+tabp/B1/time_ratio,tabp/B1/time_ratio,3.6,"fx(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['overall']['exec_s']['trials']['mean'] / J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['overall']['exec_s']['session']['mean'], 1)"
+tabp/B1/bytes_ratio,tabp/B1/bytes_ratio,4.4,"fx(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['overall']['payload_bytes']['trials']['mean'] / J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['overall']['payload_bytes']['session']['mean'], 1)"
+tabp/B1/time_ratio_task_median,tabp/B1/time_ratio_task_median,13.0,"fx(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['task_macro']['exec_s']['trials']['median'] / J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['task_macro']['exec_s']['session']['median'], 1)"
+tabp/B1/bytes_ratio_task_median,tabp/B1/bytes_ratio_task_median,13.4,"fx(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['task_macro']['payload_bytes']['trials']['median'] / J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['task_macro']['payload_bytes']['session']['median'], 1)"
+tabp/B1/planned_time_ratio,tabp/B1/planned_time_ratio,3.6,"fx(J('results/b1_planned.json')['byte_identical_engines_meeting_B0']['overall']['exec_s']['trials']['mean'] / J('results/b1_planned.json')['byte_identical_engines_meeting_B0']['overall']['exec_s']['session']['mean'], 1)"
+tabp/B1/planned_bytes_ratio,tabp/B1/planned_bytes_ratio,4.4,"fx(J('results/b1_planned.json')['byte_identical_engines_meeting_B0']['overall']['payload_bytes']['trials']['mean'] / J('results/b1_planned.json')['byte_identical_engines_meeting_B0']['overall']['payload_bytes']['session']['mean'], 1)"
+tabp/B1/planned_time_ratio_task_median,tabp/B1/planned_time_ratio_task_median,14.9,"fx(J('results/b1_planned.json')['byte_identical_engines_meeting_B0']['task_macro']['exec_s']['trials']['median'] / J('results/b1_planned.json')['byte_identical_engines_meeting_B0']['task_macro']['exec_s']['session']['median'], 1)"
+tabp/B1/planned_bytes_ratio_task_median,tabp/B1/planned_bytes_ratio_task_median,12.6,"fx(J('results/b1_planned.json')['byte_identical_engines_meeting_B0']['task_macro']['payload_bytes']['trials']['median'] / J('results/b1_planned.json')['byte_identical_engines_meeting_B0']['task_macro']['payload_bytes']['session']['median'], 1)"
+tabp/B1/planned_engines,tabp/B1/planned_engines,three,word(len(J('results/b1_planned.json')['engines_meeting_B0']))
+tabp/B5/planned_lodo_min_time_ratio,tabp/B5/planned_lodo_min_time_ratio,3.4,"fx(min(v['exec_s']['trials']['mean'] / v['exec_s']['session']['mean'] for v in J('results/b1_planned.json')['byte_identical_engines_meeting_B0']['lodo'].values()), 1)"
+tabp/B5/planned_lodo_min_bytes_ratio,tabp/B5/planned_lodo_min_bytes_ratio,4.0,"fx(min(v['payload_bytes']['trials']['mean'] / v['payload_bytes']['session']['mean'] for v in J('results/b1_planned.json')['byte_identical_engines_meeting_B0']['lodo'].values()), 1)"
+tabp/B5/planned_lodo_folds_met,tabp/B5/planned_lodo_folds_met,12,"cnt(sum(1 for v in J('results/b1_planned.json')['byte_identical_engines_meeting_B0']['lodo'].values() if min(v[w]['trials']['mean'] / v[w]['session']['mean'] for w in ('exec_s', 'payload_bytes')) >= 3))"
+tabp/B5/planned_models_ge3,tabp/B5/planned_models_ge3,3,"cnt(sum(1 for v in J('results/b1_planned.json')['byte_identical_engines_meeting_B0']['by_model'].values() if min(v[w]['trials']['mean'] / v[w]['session']['mean'] for w in ('exec_s', 'payload_bytes')) >= 3))"
+tabp/B2/time_N4,tabp/B2/time_N4,16.6,pct(J('results/analysis_dab_r3/results_B23.json')['B2_fidelity_gate']['N=4|B=inf']['S2_exec_saving']['median'])
+tabp/B2/bytes_N4,tabp/B2/bytes_N4,15.9,pct(J('results/analysis_dab_r3/results_B23.json')['B2_fidelity_gate']['N=4|B=inf']['S2_payload_saving']['median'])
+tabp/B2/time_N8,tabp/B2/time_N8,24.1,pct(J('results/analysis_dab_r3/results_B23.json')['B2_fidelity_gate']['N=8|B=inf']['S2_exec_saving']['median'])
+tabp/B3/E_written_N8,tabp/B3/E_written_N8,0.448,"fx(J('results/analysis_dab_r3/results_B23.json')['B3_E_certified_exploratory']['N=8|B=inf']['S3_over_S2_written']['median'], 3)"
+tabp/B3/E_written_N2,tabp/B3/E_written_N2,0.489,"fx(J('results/analysis_dab_r3/results_B23.json')['B3_E_certified_exploratory']['N=2|B=inf']['S3_over_S2_written']['median'], 3)"
+tabp/B3/E_foot_min,tabp/B3/E_foot_min,0.448,"fx(min(J('results/analysis_dab_r3/results_B23.json')['B3_E_certified_exploratory']['N=%d|B=inf' % n][k]['median'] for n in (2, 4, 8) for k in ('S3_over_S2_peak_foot', 'S3_over_S2_peak_foot_seq')), 3)"
+tabp/B3/E_foot_max,tabp/B3/E_foot_max,0.696,"fx(max(J('results/analysis_dab_r3/results_B23.json')['B3_E_certified_exploratory']['N=%d|B=inf' % n][k]['median'] for n in (2, 4, 8) for k in ('S3_over_S2_peak_foot', 'S3_over_S2_peak_foot_seq')), 3)"
+tabp/B3/E_time_min,tabp/B3/E_time_min,0.998,"fx(min(J('results/analysis_dab_r3/results_B23.json')['B3_E_certified_exploratory']['N=%d|B=inf' % n]['S3_over_S2_time']['median'] for n in (2, 4, 8)), 3)"
+tabp/B3/E_time_max,tabp/B3/E_time_max,0.999,"fx(max(J('results/analysis_dab_r3/results_B23.json')['B3_E_certified_exploratory']['N=%d|B=inf' % n]['S3_over_S2_time']['median'] for n in (2, 4, 8)), 3)"
+tabp/B3/E_engine_max_written,tabp/B3/E_engine_max_written,0.63,"fx(max(d['S3_over_S2_written'] for k, v in J('results/analysis_dab_r3/results_B23.json')['B3_E_certified_exploratory'].items() if k.split('|')[0] in ('N=2', 'N=4', 'N=8') for d in v['by_engine'].values() if d.get('S3_over_S2_written') is not None), 2)"
+tabp/B3/E_engine_max_time,tabp/B3/E_engine_max_time,1.03,"fx(max(d['S3_over_S2_time'] for k, v in J('results/analysis_dab_r3/results_B23.json')['B3_E_certified_exploratory'].items() if k.split('|')[0] in ('N=2', 'N=4', 'N=8') for d in v['by_engine'].values() if d.get('S3_over_S2_time') is not None), 2)"
+tabp/B3/B_tasks,tabp/B3/B_tasks,8,cnt(J('results/analysis_dab_r3/results_B23.json')['B3_B_certified']['N=8|B=inf']['S3_written_saving']['n'])
+tabp/B3/B_S3_saving,tabp/B3/B_S3_saving,0,"pct(J('results/analysis_dab_r3/results_B23.json')['B3_B_certified']['N=8|B=inf']['S3_written_saving']['median'], 0)"
+tabp/B3/B_tasks_planned,tabp/B3/B_tasks_planned,11,cnt(J('results/analysis_dab_r1/results_B23.json')['B3_B_certified']['N=8|B=inf']['S3_written_saving']['n'])
+tabp/B3/B_S3_saving_planned,tabp/B3/B_S3_saving_planned,0,"pct(J('results/analysis_dab_r1/results_B23.json')['B3_B_certified']['N=8|B=inf']['S3_written_saving']['median'], 0)"
+tabp/B4/B_time_planned,tabp/B4/B_time_planned,8.6,pct(J('results/live2/validate_B.json')['median_time_rel_err_uncalibrated'])
+tabp/B4/B_time,tabp/B4/B_time,30.6,pct(J('results/live2_certv3/validate_B.json')['median_time_rel_err_uncalibrated'])
+tabp/B4/E_time,tabp/B4/E_time,43.9,pct(J('results/live2/validate_E.json')['median_time_rel_err_uncalibrated'])
+tabp/B4/E_written_max,tabp/B4/E_written_max,0,"pct(J('results/live2/validate_E.json')['max_written_rel_err'], 0)"
+tabp/B4/consumer_cases,tabp/B4/consumer_cases,238,cnt(J('results/live/consumer_summary_seed0.json')['valid'])
+tabp/B4/calibration_cells,tabp/B4/calibration_cells,12,cnt(len(J('results/live/selection.json')['picks']))
+tabp/B4/consumers_identical_seed_fixed,tabp/B4/consumers_identical_seed_fixed,238,cnt(J('results/live/consumer_summary_seed0.json')['identical_S2_S3'])
+tabp/B4/consumers_identical_random_seed,tabp/B4/consumers_identical_random_seed,233,cnt(J('results/live/consumer_summary.json')['identical_S2_S3'])
+tabp/B4/probes,tabp/B4/probes,36,cnt(len(J('results/live/consumer_summary.json')['probes']))
+tabp/B4/probes_refused,tabp/B4/probes_refused,36,cnt(sum(1 for p in J('results/live/consumer_summary.json')['probes'] if p['S3_refused']))
+tabp/B0/duckdb_identical,tabp/B0/duckdb_identical,91.7,"pct(int(ROW('results/analysis_dab_r3/B0_fidelity.csv', engine='duckdb')['match']) / int(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='successful', level='engine', group='duckdb')['calls']))"
+tabp/B0/postgres_identical,tabp/B0/postgres_identical,94.3,"pct(int(ROW('results/analysis_dab_r3/B0_fidelity.csv', engine='postgres')['match']) / int(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='successful', level='engine', group='postgres')['calls']))"
+tabp/B0/sqlite_identical,tabp/B0/sqlite_identical,99.9,"pct(int(ROW('results/analysis_dab_r3/B0_fidelity.csv', engine='sqlite')['match']) / int(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='successful', level='engine', group='sqlite')['calls']))"
+tabp/B0/mongo_identical,tabp/B0/mongo_identical,78.5,"pct(int(ROW('results/analysis_dab_r3/B0_fidelity.csv', engine='mongo')['match']) / int(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='successful', level='engine', group='mongo')['calls']))"
+tabp/B0/mongo_equivalent,tabp/B0/mongo_equivalent,94.4,"pct(int(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='fidelity_equiv', level='engine', group='mongo')['calls']) / int(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='successful', level='engine', group='mongo')['calls']))"
+work/runs,text/work/runs,"13,482",cnt(J('results/analysis_dab_r3/results_B1.json')['summary']['runs'])
+work/query_db,text/work/query_db,"76,213",cnt(J('results/analysis_dab_r3/results_B1.json')['summary']['query_db'])
+work/tool_calls,text/work/tool_calls,"151,293",cnt(J('results/analysis_dab_r3/results_B1.json')['summary']['tool_calls'])
+work/pass,text/work/pass,"4,543",cnt(J('results/analysis_dab_r3/results_B1.json')['summary']['validation']['pass'])
+work/fail,text/work/fail,"8,939",cnt(J('results/analysis_dab_r3/results_B1.json')['summary']['validation']['fail'])
+work/pairs,text/work/pairs,"41,616",cnt(J('results/analysis_dab_r3/results_B1.json')['summary']['distinct_replayed'])
+work/pairs_replayed,text/work/pairs_replayed,"41,610",cnt(J('results/analysis_dab_r3/results_B1.json')['summary']['distinct_replayed'] - J('results/analysis_dab_r3/results_B1.json')['summary']['outcome_classes']['not_replayed'])
+work/calls_replayed,text/work/calls_replayed,"76,141","cnt(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='replayed', level='all', group='all')['calls'])"
+work/no_args,text/work/no_args,66,"cnt(int(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='all_query_db', level='all', group='all')['calls']) - sum(int(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='all_query_db', level='engine', group=e)['calls']) for e in ['duckdb', 'mongo', 'postgres', 'sqlite', 'unknown']))"
+work/stable,text/work/stable,"37,675",cnt(J('results/analysis_dab_r3/results_B1.json')['summary']['outcome_classes']['stable'])
+work/error,text/work/error,"3,917",cnt(J('results/analysis_dab_r3/results_B1.json')['summary']['outcome_classes']['error'])
+work/timeout,text/work/timeout,15,cnt(J('results/analysis_dab_r3/results_B1.json')['summary']['outcome_classes']['timeout'])
+work/calls_per_run,text/work/calls_per_run,5.7,"fx(J('results/analysis_dab_r3/results_B1.json')['summary']['query_db'] / J('results/analysis_dab_r3/results_B1.json')['summary']['runs'], 1)"
+work/tasks,text/work/tasks,54,cnt(J('results/analysis_dab_r3/results_B23.json')['B2_fidelity_gate']['N=8|B=inf']['S2_exec_saving']['n'])
+work/attempt_median_ms,text/work/attempt_median_ms,28.5,"fx(J('results/paper_stats.json')['magnitudes']['exec_s_per_attempt']['median'] * 1e3, 1)"
+work/attempt_p95_s,text/work/attempt_p95_s,14.4,"fx(J('results/paper_stats.json')['magnitudes']['exec_s_per_attempt']['p95'], 1)"
+work/spill_max_MB,text/work/spill_max_MB,771,"fx(J('results/paper_stats.json')['magnitudes']['spill_file_bytes']['max'] / 1e6, 0)"
+work/spilled_share,text/work/spilled_share,25.9,pct(J('results/paper_stats.json')['magnitudes']['spilled_share_of_successful_calls'])
+work/budget_base_median_MB,text/work/budget_base_median_MB,17.4,"fx(J('results/paper_stats.json')['magnitudes']['task_budget_base_bytes_E_eval']['median'] / 1e6, 1)"
+work/budget_base_p95_GB,text/work/budget_base_p95_GB,13.7,"fx(J('results/paper_stats.json')['magnitudes']['task_budget_base_bytes_E_eval']['p95'] / 1e9, 1)"
+work/data_min_MB,text/work/data_min_MB,0.6,"fx(min(v['data_bytes'] for v in J('results/dataset_table.json').values()) / 1e6, 1)"
+work/data_max_GB,text/work/data_max_GB,5.6,"fx(max(v['data_bytes'] for v in J('results/dataset_table.json').values()) / 1e9, 1)"
+work/oracle_calls,text/work/oracle_calls,"70,173","cnt(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='fidelity_equiv', level='all', group='all')['calls'])"
+const/runs_planned,text/const/runs_planned,"13,500",cnt(J('results/static_tiers.json')['cells']['total'] * 50)
+const/trials_per_task_model,text/const/trials_per_task_model,50,'50'
+const/preview_chars,text/const/preview_chars,"10,000","cnt(RE('code/replay2.py', r'^PREVIEW = (\d+)'))"
+const/replay_cap_s,text/const/replay_cap_s,120,"RE('results/raw/logs/m1b.sbatch', r'replay2\.py .* 3 (\d+)\s*$')"
+const/orders,text/const/orders,200,cnt(J('results/analysis_dab_r3/results_B1.json')['summary']['n_orders'])
+const/orders_gate_variants,text/const/orders_gate_variants,20,"cnt(max(20, J('results/analysis_dab_r3/results_B1.json')['summary']['n_orders'] // 10))"
+const/orders_top1,text/const/orders_top1,50,"RE('results/raw/logs/extra.sbatch', r'extra_analyses\.py \S+ \S+ \S+ (\d+) \d+ \d+')"
+const/orders_xharness,text/const/orders_xharness,50,"RE('code/xharness.py', r'def cmd_analyze\(calls_path, out, n_orders=(\d+), n_res=\d+\)')"
+const/resamples_xharness,text/const/resamples_xharness,50,"RE('code/xharness.py', r'def cmd_analyze\(calls_path, out, n_orders=\d+, n_res=(\d+)\)')"
+const/resamples_designs,text/const/resamples_designs,50,cnt(J('results/ablate/base_E.json')['n_res'])
+const/batch_trace_replay,text/const/batch_trace_replay,8,"RE('code/live.py', r'order = \[int\(x\) for x in rng\.permutation\(run_ids\)\[:(\d+)\]\]')"
+const/batch_concurrent_sim,text/const/batch_concurrent_sim,8,"RE('code/concurrent_sim.py', r'order = \[int\(x\) for x in rng\.permutation\(runs_all\)\[:(\d+)\]\]')"
+const/N_grid,text/const/N_grid,"1,2,4,8,16,50","','.join(str(n) for n in sorted({int(k.split('|')[0][2:]) for k in J('results/analysis_dab_r3/results_B23.json')['B2_fidelity_gate']}))"
+const/N16,text/const/N16,16,'16'
+const/ci,text/const/ci,95,'95'
+const/tests,text/const/tests,29,cnt(len(J('results/analysis_dab_r3/stats.json')))
+const/cert_cases,text/const/cert_cases,181,"RE('results/raw/logs/ed-eval-73_63146231_0.out', r'unit tests: (\d+) assertions')"
+const/python,text/const/python,3.12,"RE('envs/build_env3.sbatch', r'docker://python:(3\.\d+)')"
+const/duckdb,text/const/duckdb,1.3.1,"RE('envs/ed-dab.freeze.txt', r'^duckdb==(.+)$')"
+const/pandas,text/const/pandas,2.3.0,"RE('envs/ed-dab.freeze.txt', r'^pandas==(.+)$')"
+const/postgres,text/const/postgres,16.15,"RE('results/raw/logs/ed-eval-06-62968329_0.out', r'postgres \(PostgreSQL\) (\d+\.\d+)')"
+const/mongo,text/const/mongo,7.0.43,"RE('results/raw/logs/ed-eval-06-62968329_33.out', r'^db version v(\S+)')"
+const/duckdb_new,text/const/duckdb_new,1.5.6,"RE('envs/ed-py312-v2.freeze.txt', r'^duckdb==(.+)$')"
+const/pandas_new,text/const/pandas_new,3.0.6,"RE('envs/ed-py312-v2.freeze.txt', r'^pandas==(.+)$')"
+const/threshold_pct,text/const/threshold_pct,20,"RE('results/raw/plan/EXPERIMENT_PLAN.md', r'the median task saves . (\d+)% of isolated DB time')"
+const/threshold_bytes_pct,text/const/threshold_bytes_pct,30,"RE('results/raw/plan/EXPERIMENT_PLAN.md', r'of isolated DB time or . (\d+)% of payload bytes')"
+const/threshold_fidelity_pct,text/const/threshold_fidelity_pct,90,"RE('results/raw/plan/EXPERIMENT_PLAN.md', r'fidelity-pass . (\d+)% of successful calls per engine')"
+const/threshold_sim_time_pct,text/const/threshold_sim_time_pct,10,"RE('results/raw/plan/EXPERIMENT_PLAN.md', r'simulator relative error . (\d+)% on time')"
+const/threshold_consumers_pct,text/const/threshold_consumers_pct,99,"RE('results/raw/plan/EXPERIMENT_PLAN.md', r'identical outputs . (\d+)%')"
+const/threshold_lodo_folds,text/const/threshold_lodo_folds,10,"RE('results/raw/plan/EXPERIMENT_PLAN.md', r'holds in . (\d+) of \d+ leave-one-dataset-out folds')"
+const/lodo_folds,text/const/lodo_folds,12,"RE('results/raw/plan/EXPERIMENT_PLAN.md', r'holds in . \d+ of (\d+) leave-one-dataset-out folds')"
+const/tau_s,text/const/tau_s,2,cnt(sorted(J('results/ablate/concurrent.json')['taus'])[1])
+const/heavy_threshold_s,text/const/heavy_threshold_s,5,'5'
+const/pow10,text/const/pow10,10,'10'
+const/reproduce_tolerance_exponent,text/const/reproduce_tolerance_exponent,9,"RE('code/reproduce.py', r'abs\(v - w\) <= 1e-(\d+) \* max')"
+const/patents_parallel_cells,text/const/patents_parallel_cells,six,"word(RE('results/raw/logs/e2e_all_E_PATENTS.sbatch', r'ED_E2E_WORKERS=(\d+)'))"
+const/pilot_calls_pct,text/const/pilot_calls_pct,64,"pct(sum(int(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='replayed', level='engine', group=e)['calls']) for e in ('sqlite', 'duckdb')) / J('results/analysis_dab_r3/results_B1.json')['summary']['query_db'], 0)"
+const/replay_jobs,text/const/replay_jobs,34,cnt(sum(1 for x in J('results/raw/job_ledger.json')['jobs'] if x['name'] == 'ed-eval-06' and x.get('state') == 'COMPLETED'))
+const/replay_job_hours,text/const/replay_job_hours,24.1,"fx(sum((lambda e: (int(e.split('-')[0]) * 86400 if '-' in e else 0) + sum(int(a) * b for a, b in zip(e.split('-')[-1].split(':'), (3600, 60, 1))))(x['elapsed']) for x in J('results/raw/job_ledger.json')['jobs'] if x['name'] == 'ed-eval-06' and x.get('state') == 'COMPLETED') / 3600, 1)"
+const/cleanroom_values,text/const/cleanroom_values,"8,546",cnt(sum(v['leaves'] - v['differences'] for v in J('results/reproduce/reproduce_results.json').values()))
+const/live_runs,text/const/live_runs,480,cnt(J('results/live2/validate_E.json')['n'])
+const/calib_cells,text/const/calib_cells,12,cnt(len(J('results/live/selection.json')['picks']))
+const/cells,text/const/cells,270,cnt(J('results/e2e_trace/summary_all_E.json')['cells'])
+const/cells_N50,text/const/cells_N50,268,cnt(J('results/static_tiers.json')['cells']['with_at_least_50_runs'])
+const/node_cores_max,text/const/node_cores_max,36,cnt(max(int(k) for k in J('results/raw/cluster_nodes.json')['cpu_tot']))
+const/node_cores_min,text/const/node_cores_min,28,cnt(min(int(k) for k in J('results/raw/cluster_nodes.json')['cpu_tot']))
+const/node_mem_GB,text/const/node_mem_GB,180,cnt(int(next(iter(J('results/raw/cluster_nodes.json')['real_memory_mb']))) / 1024)
+const/seed_shift_N4,text/const/seed_shift_N4,0.6,"fx(max(abs(J('results/analysis_seed%d/results_B23.json' % s)['B2_fidelity_gate']['N=4|B=inf']['S2_exec_saving']['median'] - J('results/analysis_dab_r3/results_B23.json')['B2_fidelity_gate']['N=4|B=inf']['S2_exec_saving']['median']) for s in (1000, 2000, 3000, 4000)) * 100, 1)"
+f1/time_other,text/f1/time_other,33.5,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['overall']['exec_s']['trials']['mean'])
+f1/time_session,text/f1/time_session,9.3,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['overall']['exec_s']['session']['mean'])
+f1/bytes_other,text/f1/bytes_other,60.8,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['overall']['payload_bytes']['trials']['mean'])
+f1/bytes_session,text/f1/bytes_session,13.7,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['overall']['payload_bytes']['session']['mean'])
+f1/calls_other,text/f1/calls_other,37.3,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['overall']['calls']['trials']['mean'])
+f1/calls_session,text/f1/calls_session,6.0,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['overall']['calls']['session']['mean'])
+f1/calls_modeltask,text/f1/calls_modeltask,4.0,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['overall']['calls']['models']['mean'] + J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['overall']['calls']['tasks']['mean'])
+f1/time_modeltask,text/f1/time_modeltask,2.3,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['overall']['exec_s']['models']['mean'] + J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['overall']['exec_s']['tasks']['mean'])
+f1/bytes_modeltask,text/f1/bytes_modeltask,6.1,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['overall']['payload_bytes']['models']['mean'] + J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['overall']['payload_bytes']['tasks']['mean'])
+f1/task_other,text/f1/task_other,41.2,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['task_macro']['exec_s']['trials']['median'])
+f1/task_other_lo,text/f1/task_other_lo,36.1,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['task_macro']['exec_s']['trials']['median_ci'][0])
+f1/task_other_hi,text/f1/task_other_hi,49.3,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['task_macro']['exec_s']['trials']['median_ci'][1])
+f1/task_session,text/f1/task_session,3.2,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['task_macro']['exec_s']['session']['median'])
+f1/task_session_lo,text/f1/task_session_lo,2.2,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['task_macro']['exec_s']['session']['median_ci'][0])
+f1/task_session_hi,text/f1/task_session_hi,4.6,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['task_macro']['exec_s']['session']['median_ci'][1])
+f1/task_bytes_other,text/f1/task_bytes_other,46.4,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['task_macro']['payload_bytes']['trials']['median'])
+f1/task_bytes_session,text/f1/task_bytes_session,3.5,pct(J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']['task_macro']['payload_bytes']['session']['median'])
+f1/p_mant,text/f1/p_mant,2.6,mant(ST('B1 exec_s: other attempts > session')['p_holm'])
+f1/r,text/f1/r,0.997,"fx(ST('B1 exec_s: other attempts > session')['rank_biserial'], 3)"
+f1/clust_other_lo,text/f1/clust_other_lo,34.6,pct(J('results/paper_stats.json')['clustered']['B1_exec_s']['other_attempts']['ci95'][0])
+f1/clust_other_hi,text/f1/clust_other_hi,50.2,pct(J('results/paper_stats.json')['clustered']['B1_exec_s']['other_attempts']['ci95'][1])
+f1/clust_session_lo,text/f1/clust_session_lo,1.8,pct(J('results/paper_stats.json')['clustered']['B1_exec_s']['session']['ci95'][0])
+f1/clust_session_hi,text/f1/clust_session_hi,6.5,pct(J('results/paper_stats.json')['clustered']['B1_exec_s']['session']['ci95'][1])
+f1/datasets,text/f1/datasets,12,J('results/paper_stats.json')['clustered']['B1_exec_s']['datasets_other_gt_session'].split('/')[1]
+f1/sign_p,text/f1/sign_p,0.0005,"fx(J('results/paper_stats.json')['clustered']['B1_exec_s']['sign_test_p'], 4)"
+f1/S2_N2,text/f1/S2_N2,9.6,pct(J('results/analysis_dab_r3/results_B23.json')['B2_fidelity_gate']['N=2|B=inf']['S2_exec_saving']['median'])
+f1/S2_N4,text/f1/S2_N4,16.6,pct(J('results/analysis_dab_r3/results_B23.json')['B2_fidelity_gate']['N=4|B=inf']['S2_exec_saving']['median'])
+f1/S2_N8,text/f1/S2_N8,24.1,pct(J('results/analysis_dab_r3/results_B23.json')['B2_fidelity_gate']['N=8|B=inf']['S2_exec_saving']['median'])
+f1/S2_N16,text/f1/S2_N16,32.2,pct(J('results/analysis_dab_r3/results_B23.json')['B2_fidelity_gate']['N=16|B=inf']['S2_exec_saving']['median'])
+f1/S2_N50,text/f1/S2_N50,47.0,pct(J('results/analysis_dab_r3/results_B23.json')['B2_fidelity_gate']['N=50|B=inf']['S2_exec_saving']['median'])
+f1/S1_min,text/f1/S1_min,3.0,"pct(min(J('results/analysis_dab_r3/results_B23.json')['B2_fidelity_gate']['N=%d|B=inf' % n]['S1_exec_saving']['median'] for n in (1, 2, 4, 8, 16, 50)))"
+f1/S1_max,text/f1/S1_max,3.4,"pct(max(J('results/analysis_dab_r3/results_B23.json')['B2_fidelity_gate']['N=%d|B=inf' % n]['S1_exec_saving']['median'] for n in (1, 2, 4, 8, 16, 50)))"
+f1/S1_near,text/f1/S1_near,3,"fx(J('results/analysis_dab_r3/results_B23.json')['B2_fidelity_gate']['N=8|B=inf']['S1_exec_saving']['median'] * 100, 0)"
+f1/tasks_ge20_N8,text/f1/tasks_ge20_N8,64.8,pct(J('results/extra_analyses.json')['thresholds']['N=8']['tasks_ge_20pct'])
+f1/tasks_ge20_N4,text/f1/tasks_ge20_N4,35.2,pct(J('results/extra_analyses.json')['thresholds']['N=4']['tasks_ge_20pct'])
+f1/tasks_ge10_N4,text/f1/tasks_ge10_N4,79.6,pct(J('results/extra_analyses.json')['thresholds']['N=4']['tasks_ge_10pct'])
+f1/ratio_N2,text/f1/ratio_N2,0.943,"fx(ST('B2 N=2: S2 vs S1 DB execution')['median_ratio'], 3)"
+f1/ratio_N8,text/f1/ratio_N8,0.801,"fx(ST('B2 N=8: S2 vs S1 DB execution')['median_ratio'], 3)"
+f1/ratio_p_mant,text/f1/ratio_p_mant,4.6,mant(ST('B2 N=8: S2 vs S1 DB execution')['p_holm'])
+f1/payload_N8,text/f1/payload_N8,23.9,pct(J('results/analysis_dab_r3/results_B23.json')['B2_fidelity_gate']['N=8|B=inf']['S2_payload_saving']['median'])
+f1/clust_N8_lo,text/f1/clust_N8_lo,18.4,pct(J('results/paper_stats.json')['clustered']['B2_N8']['S2_exec_saving']['ci95'][0])
+f1/N8_ci_lo,text/f1/N8_ci_lo,21.1,pct(J('results/n_weights.json')['N=8']['median_completed']['median_ci'][0])
+f1/N8_ci_hi,text/f1/N8_ci_hi,28.8,pct(J('results/n_weights.json')['N=8']['median_completed']['median_ci'][1])
+f1/N8_cold,text/f1/N8_cold,23.3,pct(J('results/n_weights.json')['N=8']['first_cold']['median'])
+f1/N8_cold_lo,text/f1/N8_cold_lo,20.9,pct(J('results/n_weights.json')['N=8']['first_cold']['median_ci'][0])
+f1/N8_cold_hi,text/f1/N8_cold_hi,28.1,pct(J('results/n_weights.json')['N=8']['first_cold']['median_ci'][1])
+f1/N8_steady,text/f1/N8_steady,24.1,pct(J('results/n_weights.json')['N=8']['steady_state']['median'])
+f1/N8_steady_lo,text/f1/N8_steady_lo,21.1,pct(J('results/n_weights.json')['N=8']['steady_state']['median_ci'][0])
+f1/N8_steady_hi,text/f1/N8_steady_hi,28.9,pct(J('results/n_weights.json')['N=8']['steady_state']['median_ci'][1])
+f1/tasks_time_gt,text/f1/tasks_time_gt,53,"cnt(sum(float(r['trials']) > float(r['session']) for r in ROWS('results/analysis_dab_r3/B1_per_task.csv', weight='exec_s')))"
+f1/tasks_time_ge3,text/f1/tasks_time_ge3,51,"cnt(sum(float(r['trials']) >= 3 * float(r['session']) for r in ROWS('results/analysis_dab_r3/B1_per_task.csv', weight='exec_s')))"
+f1/tasks_bytes_gt,text/f1/tasks_bytes_gt,52,"cnt(sum(float(r['trials']) > float(r['session']) for r in ROWS('results/analysis_dab_r3/B1_per_task.csv', weight='payload_bytes')))"
+f1/tasks_bytes_ge3,text/f1/tasks_bytes_ge3,43,"cnt(sum(float(r['trials']) >= 3 * float(r['session']) for r in ROWS('results/analysis_dab_r3/B1_per_task.csv', weight='payload_bytes')))"
+f1/clust_N8_hi,text/f1/clust_N8_hi,30.3,pct(J('results/paper_stats.json')['clustered']['B2_N8']['S2_exec_saving']['ci95'][1])
+f1/model_N4_min,text/f1/model_N4_min,9.0,pct(min(J('results/extra_analyses.json')['thresholds']['N=4']['by_model_median_cell_saving'].values()))
+f1/model_N4_max,text/f1/model_N4_max,23.5,pct(max(J('results/extra_analyses.json')['thresholds']['N=4']['by_model_median_cell_saving'].values()))
+f1/conc_keys,text/f1/conc_keys,"6,641",cnt(J('results/extra_analyses.json')['concentration_keys']['n_reusable_keys'])
+f1/conc_top,text/f1/conc_top,67,cnt(J('results/extra_analyses.json')['concentration_keys']['top1pct_n'])
+f1/conc_share,text/f1/conc_share,68.7,pct(J('results/extra_analyses.json')['concentration_keys']['top1pct_share'])
+f1/drop_task_other,text/f1/drop_task_other,39.3,pct(J('results/extra_analyses.json')['sensitivity']['drop_top1pct']['task_macro_exec']['trials_median'])
+f1/drop_task_session,text/f1/drop_task_session,2.6,pct(J('results/extra_analyses.json')['sensitivity']['drop_top1pct']['task_macro_exec']['session_median'])
+f1/drop_N8,text/f1/drop_N8,22.3,pct(J('results/extra_analyses.json')['sensitivity']['drop_top1pct']['S2_exec_saving_median']['8'])
+f1/cidr_cells,text/f1/cidr_cells,179,cnt(J('results/cidr_subplans.json')['summary']['cells'])
+f1/cidr_calls,text/f1/cidr_calls,"27,388",cnt(J('results/cidr_subplans.json')['summary']['duckdb_calls'])
+f1/cidr_size1,text/f1/cidr_size1,21.7,pct(J('results/cidr_subplans.json')['summary']['size1_distinct_frac'])
+f1/cidr_size6,text/f1/cidr_size6,77.8,pct(J('results/cidr_subplans.json')['summary']['size6_distinct_frac'])
+f1/cidr_text,text/f1/cidr_text,54.8,pct(J('results/cidr_subplans.json')['summary']['median_text_distinct_frac'])
+f1/xh_n5_min,text/f1/xh_n5_min,4.9,"pct(min(J('results/xharness/results.json')[h]['reuse_curve']['5']['median_task_call_reuse'] for h in ['phoenix', 'qwen', 'scout', 'stela']))"
+f1/xh_n5_max,text/f1/xh_n5_max,17.9,"pct(max(J('results/xharness/results.json')[h]['reuse_curve']['5']['median_task_call_reuse'] for h in ['phoenix', 'qwen', 'scout', 'stela']))"
+f1/xh_latency,text/f1/xh_latency,5.2,"fx(J('results/xharness/results.json')['phoenix']['llm_latency_s']['median'], 1)"
+xc/phoenix/other_exec,text/xc/phoenix/other_exec,6.9,pct(J('results/xharness/costs.json')['phoenix']['scope_shares']['exec_s']['other_attempts'])
+xc/phoenix/session_exec,text/xc/phoenix/session_exec,4.8,"pct(J('results/xharness/costs.json')['phoenix']['scope_shares']['exec_s']['session'], 1)"
+xc/phoenix/S2_N5,text/xc/phoenix/S2_N5,13.1,pct(J('results/xharness/costs.json')['phoenix']['S2_curve']['5']['median_task_S2_exec_saving'])
+xc/phoenix/tasks_N5,text/xc/phoenix/tasks_N5,54,cnt(J('results/xharness/costs.json')['phoenix']['S2_curve']['5']['tasks'])
+xc/qwen/other_exec,text/xc/qwen/other_exec,12.3,pct(J('results/xharness/costs.json')['qwen']['scope_shares']['exec_s']['other_attempts'])
+xc/qwen/session_exec,text/xc/qwen/session_exec,0.0,"pct(J('results/xharness/costs.json')['qwen']['scope_shares']['exec_s']['session'], 1)"
+xc/qwen/S2_N5,text/xc/qwen/S2_N5,14.4,pct(J('results/xharness/costs.json')['qwen']['S2_curve']['5']['median_task_S2_exec_saving'])
+xc/qwen/tasks_N5,text/xc/qwen/tasks_N5,54,cnt(J('results/xharness/costs.json')['qwen']['S2_curve']['5']['tasks'])
+xc/scout/other_exec,text/xc/scout/other_exec,9.4,pct(J('results/xharness/costs.json')['scout']['scope_shares']['exec_s']['other_attempts'])
+xc/scout/session_exec,text/xc/scout/session_exec,0.05,"pct(J('results/xharness/costs.json')['scout']['scope_shares']['exec_s']['session'], 2)"
+xc/scout/S2_N5,text/xc/scout/S2_N5,2.9,pct(J('results/xharness/costs.json')['scout']['S2_curve']['5']['median_task_S2_exec_saving'])
+xc/scout/tasks_N5,text/xc/scout/tasks_N5,37,cnt(J('results/xharness/costs.json')['scout']['S2_curve']['5']['tasks'])
+xc/stela/other_exec,text/xc/stela/other_exec,4.0,pct(J('results/xharness/costs.json')['stela']['scope_shares']['exec_s']['other_attempts'])
+xc/stela/session_exec,text/xc/stela/session_exec,0.03,"pct(J('results/xharness/costs.json')['stela']['scope_shares']['exec_s']['session'], 2)"
+xc/stela/S2_N5,text/xc/stela/S2_N5,2.4,pct(J('results/xharness/costs.json')['stela']['S2_curve']['5']['median_task_S2_exec_saving'])
+xc/stela/tasks_N5,text/xc/stela/tasks_N5,48,cnt(J('results/xharness/costs.json')['stela']['S2_curve']['5']['tasks'])
+xc/phoenix/other_bytes,text/xc/phoenix/other_bytes,0.2,pct(J('results/xharness/costs.json')['phoenix']['scope_shares']['payload_bytes']['other_attempts'])
+xc/phoenix/session_bytes,text/xc/phoenix/session_bytes,3.4,pct(J('results/xharness/costs.json')['phoenix']['scope_shares']['payload_bytes']['session'])
+f2/mismatch_total,text/f2/mismatch_total,"4,977","cnt(sum(int(ROW('results/analysis_dab_r3/B0_fidelity.csv', engine=e)['mismatch']) for e in ['duckdb', 'mongo', 'postgres', 'sqlite']))"
+f2/mismatch_order,text/f2/mismatch_order,"2,290","cnt(sum(int(ROW('results/analysis_dab_r3/B0_mismatch_kinds.csv', engine=e)['order_only']) for e in ['duckdb', 'mongo', 'postgres', 'sqlite']))"
+f3/rerun_cells,text/f3/rerun_cells,15,cnt(J('results/e2e_trace/rerun_PATENTS/summary_all_E.json')['cells'])
+f3/rerun_hits,text/f3/rerun_hits,159,cnt(J('results/e2e_trace/rerun_PATENTS/summary_all_E.json')['S3']['hits'])
+f2/B_bytes_rejected,text/f2/B_bytes_rejected,99.98,"pct(1 - J('results/static_tiers.json')['B']['all_query_db']['bytes_share'], 2)"
+f2/B_static_calls_pct,text/f2/B_static_calls_pct,7.5,pct(J('results/static_tiers.json')['B']['all_query_db']['calls'] / J('results/static_tiers.json')['n_query_db'])
+f2/B_static_time,text/f2/B_static_time,9.4,pct(J('results/static_tiers.json')['B']['all_query_db']['time_lb_share'])
+f2/B_static_bytes,text/f2/B_static_bytes,0.023,"pct(J('results/static_tiers.json')['B']['all_query_db']['bytes_share'], 3)"
+f2/rej_output,text/f2/rej_output,"6,831","cnt(ROW('results/analysis_dab_r3/B0_cert_reasons.csv', cert_reason='output_not_a_stored_column')['count'])"
+f2/rej_block,text/f2/rej_block,"3,791","cnt(sum(int(ROW('results/analysis_dab_r3/B0_cert_reasons.csv', cert_reason=r)['count']) for r in ('nested_block', 'not_one_select_block', 'clause_not_allowed')))"
+f2/rej_predicate,text/f2/rej_predicate,"2,287","cnt(ROW('results/analysis_dab_r3/B0_cert_reasons.csv', cert_reason='predicate_not_allowed')['count'])"
+cap/fig2_m1_identical_calls,text/cap/fig2_m1_identical_calls,"62,419","cnt(ROW('results/analysis_m1/B0_funnel.csv', gate='fidelity_pass', level='all', group='all')['calls'])"
+fig3/other_rejections,text/fig3/other_rejections,"4,112","cnt(sum(int(r['count']) for r in ROWS('results/analysis_dab_r3/B0_cert_reasons.csv') if r['cert_reason'] not in ('unordered_result', 'output_not_a_stored_column', 'nested_block', 'not_one_select_block', 'clause_not_allowed', 'mongo_no_sort', 'predicate_not_allowed', 'one_row', 'total_order', 'id_lookup')))"
+fig3/admitted,text/fig3/admitted,"3,737","cnt(sum(int(ROW('results/analysis_dab_r3/B0_cert_reasons.csv', cert_reason=r)['count']) for r in ('one_row', 'total_order', 'id_lookup')))"
+f2/B_eval_mongo_calls,text/f2/B_eval_mongo_calls,two,"word(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='B_certified', level='engine', group='mongo')['calls'])"
+f2/B_completed_every_replay,text/f2/B_completed_every_replay,"5,697",cnt(J('results/static_tiers.json')['B']['outcome_class_calls']['stable'])
+f2/B_recorded_error,text/f2/B_recorded_error,2,cnt(J('results/static_tiers.json')['B']['fidelity_calls']['recorded_error'])
+f2/B_mismatch,text/f2/B_mismatch,0,"cnt(J('results/static_tiers.json')['B']['fidelity_calls'].get('mismatch', 0))"
+f2/free_calls,text/f2/free_calls,58.7,pct(J('results/static_share.json')['order_free']['share_of_successful']['calls'])
+f2/free_time,text/f2/free_time,65.0,pct(J('results/static_share.json')['order_free']['share_of_successful']['exec_s'])
+f2/free_bytes,text/f2/free_bytes,79.2,pct(J('results/static_share.json')['order_free']['share_of_successful']['payload_bytes'])
+f2/fixed_share_time,text/f2/fixed_share_time,27.1,pct(J('results/static_share.json')['exec_s']['admitted_by_order_fixed'])
+f2/fixed_share_bytes,text/f2/fixed_share_bytes,17.2,pct(J('results/static_share.json')['payload_bytes']['admitted_by_order_fixed'])
+f2/rules7_static_calls,text/f2/rules7_static_calls,"5,344",cnt(J('results/static_tiers_rules7.json')['B']['all_query_db']['calls'])
+const/review_rounds,text/const/review_rounds,six,word(len(FILES('review-stage/contract_b_review/round*_response.md')))
+const/review_rounds_with_findings,text/const/review_rounds_with_findings,five,word(len(FILES('review-stage/contract_b_review/round*_response.md')) - 1)
+const/p2_columns,text/const/p2_columns,"19,772","cnt(sum(J('results/p2_audit.json')['summary'][e]['columns'] for e in ('sqlite', 'duckdb', 'postgres')))"
+const/p2_example_real,text/const/p2_example_real,1.0,'1.0'
+const/p2_unsafe,text/const/p2_unsafe,0,"cnt(sum(J('results/p2_audit.json')['summary'][e]['unsafe'] for e in ('sqlite', 'duckdb', 'postgres')))"
+const/p2_databases,text/const/p2_databases,26,"cnt(sum(J('results/p2_audit.json')['summary'][e]['catalog_ok'] for e in ('sqlite', 'duckdb', 'postgres')))"
+f2/B_forgone_time,text/f2/B_forgone_time,87.8,pct(1 - J('results/static_share.json')['exec_s']['admitted_by_B_static'])
+f2/certv1_static_calls,text/f2/certv1_static_calls,"8,417",cnt(J('results/static_tiers_certv1.json')['B']['all_query_db']['calls'])
+f2/certv1_B_time_err,text/f2/certv1_B_time_err,8.6,pct(J('results/live2/validate_B.json')['median_time_rel_err_uncalibrated'])
+f2/acc_id_lookup,text/f2/acc_id_lookup,2,"cnt(ROW('results/analysis_dab_r3/B0_cert_reasons.csv', cert_reason='id_lookup')['count'])"
+f2/B_share_calls,text/f2/B_share_calls,6.4,pct(J('results/claim_support.json')['b_share']['other_attempts']['calls']['admitted_by_B'])
+f2/B_share_time,text/f2/B_share_time,12.2,pct(J('results/claim_support.json')['b_share']['other_attempts']['exec_s']['admitted_by_B'])
+f2/B_share_bytes,text/f2/B_share_bytes,0.00005,"f""{J('results/claim_support.json')['b_share']['other_attempts']['payload_bytes']['admitted_by_B'] * 100:.5f}"""
+f2/Bstatic_share_calls,text/f2/Bstatic_share_calls,6.4,pct(J('results/static_share.json')['calls']['admitted_by_B_static'])
+f2/Bstatic_share_time,text/f2/Bstatic_share_time,12.2,pct(J('results/static_share.json')['exec_s']['admitted_by_B_static'])
+f2/Bstatic_share_bytes,text/f2/Bstatic_share_bytes,0.00005,"f""{J('results/static_share.json')['payload_bytes']['admitted_by_B_static'] * 100:.5f}"""
+f2/Estatic_share_calls,text/f2/Estatic_share_calls,99.5,pct(J('results/static_share.json')['calls']['admitted_by_E_static'])
+f2/E_share_calls,text/f2/E_share_calls,93.2,pct(J('results/claim_support.json')['b_share']['other_attempts']['calls']['admitted_by_E_eval'])
+f2/E_share_time,text/f2/E_share_time,99.8,pct(J('results/claim_support.json')['b_share']['other_attempts']['exec_s']['admitted_by_E_eval'])
+f2/frontier_B,text/f2/frontier_B,6.4,pct(J('results/ablate/base_B.json')['summary']['N=8|B=inf']['S2_exec_saving']['median'])
+f2/frontier_E_static_online,text/f2/frontier_E_static_online,23.8,pct(J('results/ablate/base_Es.json')['summary']['N=8|B=inf']['S2_exec_saving']['median'])
+f2/S3_S2_written_E_static_online,text/f2/S3_S2_written_E_static_online,0.45,"fx(J('results/ablate/base_Es.json')['summary']['N=8|B=inf']['S3_over_S2_written']['median'], 2)"
+f2/S3_S2_written_E_eval_same_resamples,text/f2/S3_S2_written_E_eval_same_resamples,0.45,"fx(J('results/ablate/base_E.json')['summary']['N=8|B=inf']['S3_over_S2_written']['median'], 2)"
+f2/heldout_ok_queries,text/f2/heldout_ok_queries,"8,811",cnt(J('results/xharness/static_e_heldout.json')['all']['ok_queries'])
+f2/heldout_new_ok_queries,text/f2/heldout_new_ok_queries,"8,382",cnt(J('results/xharness/static_e_heldout.json')['new_queries_only']['ok_queries'])
+f2/heldout_E_admitted_queries,text/f2/heldout_E_admitted_queries,"8,592",cnt(J('results/xharness/static_e_heldout.json')['all']['E_admitted_ok_queries'])
+f2/heldout_E_admitted_not_stable,text/f2/heldout_E_admitted_not_stable,0,cnt(J('results/xharness/static_e_heldout.json')['all']['E_admitted_ok_queries'] - J('results/xharness/static_e_heldout.json')['all']['E_admitted_stable_queries'])
+f2/heldout_unstable_rejected_calls,text/f2/heldout_unstable_rejected_calls,27,"cnt(sum(v for k, v in J('results/xharness/static_e_heldout.json')['all']['E_rejected_ok_classes_calls'].items() if k != 'stable'))"
+f2/heldout_frozen_rule_differences,text/f2/heldout_frozen_rule_differences,0,cnt(J('results/xharness/static_e_heldout.json')['frozen_rule']['verdicts_that_differ_from_the_current_rule'])
+f2/frontier_E,text/f2/frontier_E,24.5,pct(J('results/ablate/base_E.json')['summary']['N=8|B=inf']['S2_exec_saving']['median'])
+f2/frontier_F,text/f2/frontier_F,24.1,pct(J('results/analysis_dab_r3/results_B23.json')['B2_fidelity_gate']['N=8|B=inf']['S2_exec_saving']['median'])
+f2/duck_mismatch,text/f2/duck_mismatch,"2,263","cnt(ROW('results/analysis_dab_r3/B0_fidelity.csv', engine='duckdb')['mismatch'])"
+f2/pg_order,text/f2/pg_order,547,"cnt(ROW('results/analysis_dab_r3/B0_mismatch_kinds.csv', engine='postgres')['order_only'])"
+f2/pg_mismatch,text/f2/pg_mismatch,953,"cnt(ROW('results/analysis_dab_r3/B0_fidelity.csv', engine='postgres')['mismatch'])"
+f2/mongo_id,text/f2/mongo_id,"1,299","cnt(ROW('results/analysis_dab_r3/B0_mismatch_kinds.csv', engine='mongo')['value_mismatch'])"
+f2/mongo_mismatch,text/f2/mongo_mismatch,"1,757","cnt(ROW('results/analysis_dab_r3/B0_fidelity.csv', engine='mongo')['mismatch'])"
+f2/rej_unordered,text/f2/rej_unordered,"17,794","cnt(ROW('results/analysis_dab_r3/B0_cert_reasons.csv', cert_reason='unordered_result')['count'])"
+f2/rej_mongo,text/f2/rej_mongo,"3,064","cnt(ROW('results/analysis_dab_r3/B0_cert_reasons.csv', cert_reason='mongo_no_sort')['count'])"
+f2/acc_onerow,text/f2/acc_onerow,"3,507","cnt(ROW('results/analysis_dab_r3/B0_cert_reasons.csv', cert_reason='one_row')['count'])"
+f2/acc_order,text/f2/acc_order,228,"cnt(ROW('results/analysis_dab_r3/B0_cert_reasons.csv', cert_reason='total_order')['count'])"
+f2/staticE_successful,text/f2/staticE_successful,"71,275",cnt(J('results/extra_analyses.json')['online_E']['all_E_static_calls']['n_calls'])
+f2/staticE_keys,text/f2/staticE_keys,"37,542",cnt(J('results/extra_analyses.json')['online_E']['all_E_static_calls']['n_keys'])
+f2/staticE_diff,text/f2/staticE_diff,7.0,pct(J('results/extra_analyses.json')['online_E']['all_E_static_calls']['fidelity_not_byte_identical']['calls'])
+f2/staticE_diff_time,text/f2/staticE_diff_time,0.8,pct(J('results/extra_analyses.json')['online_E']['all_E_static_calls']['fidelity_not_byte_identical']['time'])
+f2/staticE_diff_bytes,text/f2/staticE_diff_bytes,1.2,pct(J('results/extra_analyses.json')['online_E']['all_E_static_calls']['fidelity_not_byte_identical']['bytes'])
+f2/staticE_diff_repeat,text/f2/staticE_diff_repeat,8.3,pct(J('results/extra_analyses.json')['online_E']['repeat_calls_served_from_cache']['fidelity_not_byte_identical']['calls'])
+f2/kind_order,text/f2/kind_order,3.2,pct(J('results/claim_support.json')['e_diff']['by_kind']['order_only']['calls'])
+f2/kind_value,text/f2/kind_value,2.2,pct(J('results/claim_support.json')['e_diff']['by_kind']['value_mismatch']['calls'])
+f2/kind_prefix,text/f2/kind_prefix,1.5,pct(J('results/claim_support.json')['e_diff']['by_kind']['prefix_mismatch']['calls'])
+f2/kind_error,text/f2/kind_error,0.07,"pct(J('results/claim_support.json')['e_diff']['by_kind']['recorded_error']['calls'], 2)"
+f2/equiv,text/f2/equiv,5.1,pct(J('results/claim_support.json')['e_diff']['equivalent_after_normalization']['calls'])
+f2/eng_duck,text/f2/eng_duck,3.2,pct(J('results/claim_support.json')['e_diff']['by_engine']['duckdb']['calls'])
+f2/eng_mongo,text/f2/eng_mongo,2.5,pct(J('results/claim_support.json')['e_diff']['by_engine']['mongo']['calls'])
+f2/eng_pg,text/f2/eng_pg,1.4,pct(J('results/claim_support.json')['e_diff']['by_engine']['postgres']['calls'])
+f2/eng_sqlite,text/f2/eng_sqlite,0.02,"pct(J('results/claim_support.json')['e_diff']['by_engine']['sqlite']['calls'], 2)"
+f2/key_exact_N4,text/f2/key_exact_N4,16.6,pct(J('results/ablate/base_E.json')['summary']['N=4|B=inf']['S2_exec_saving']['median'])
+f2/key_exact_N8,text/f2/key_exact_N8,24.5,pct(J('results/ablate/base_E.json')['summary']['N=8|B=inf']['S2_exec_saving']['median'])
+f2/key_ws_N4,text/f2/key_ws_N4,17.5,pct(J('results/ablate/key_ws_E.json')['summary']['N=4|B=inf']['S2_exec_saving']['median'])
+f2/key_ws_N8,text/f2/key_ws_N8,25.2,pct(J('results/ablate/key_ws_E.json')['summary']['N=8|B=inf']['S2_exec_saving']['median'])
+f2/key_ast_inc_N4,text/f2/key_ast_inc_N4,3.6,"fx((J('results/ablate/key_ast_E.json')['summary']['N=4|B=inf']['S2_exec_saving']['median'] - J('results/ablate/base_E.json')['summary']['N=4|B=inf']['S2_exec_saving']['median']) * 100, 1)"
+f2/key_ast_inc_N8,text/f2/key_ast_inc_N8,5.2,"fx((J('results/ablate/key_ast_E.json')['summary']['N=8|B=inf']['S2_exec_saving']['median'] - J('results/ablate/base_E.json')['summary']['N=8|B=inf']['S2_exec_saving']['median']) * 100, 1)"
+f2/key_ast_N4,text/f2/key_ast_N4,20.1,pct(J('results/ablate/key_ast_E.json')['summary']['N=4|B=inf']['S2_exec_saving']['median'])
+f2/key_ast_N8,text/f2/key_ast_N8,29.8,pct(J('results/ablate/key_ast_E.json')['summary']['N=8|B=inf']['S2_exec_saving']['median'])
+f2/key_res_N4,text/f2/key_res_N4,33.7,pct(J('results/ablate/key_result_E.json')['summary']['N=4|B=inf']['S2_exec_saving']['median'])
+f2/key_res_N8,text/f2/key_res_N8,48.0,pct(J('results/ablate/key_result_E.json')['summary']['N=8|B=inf']['S2_exec_saving']['median'])
+f2/key_resnt_N4,text/f2/key_resnt_N4,27.0,pct(J('results/ablate/key_result_nontrivial_E.json')['summary']['N=4|B=inf']['S2_exec_saving']['median'])
+f2/key_resnt_N8,text/f2/key_resnt_N8,37.3,pct(J('results/ablate/key_result_nontrivial_E.json')['summary']['N=8|B=inf']['S2_exec_saving']['median'])
+f3/S3_S2_written_N8,text/f3/S3_S2_written_N8,0.448,"fx(J('results/analysis_dab_r3/results_B23.json')['B3_E_certified_exploratory']['N=8|B=inf']['S3_over_S2_written']['median'], 3)"
+f3/S3_S2_written_N8_2dp,text/f3/S3_S2_written_N8_2dp,0.45,"fx(J('results/analysis_dab_r3/results_B23.json')['B3_E_certified_exploratory']['N=8|B=inf']['S3_over_S2_written']['median'], 2)"
+f3/S3_S2_written_lo,text/f3/S3_S2_written_lo,0.433,"fx(J('results/analysis_dab_r3/results_B23.json')['B3_E_certified_exploratory']['N=8|B=inf']['S3_over_S2_written']['median_ci'][0], 3)"
+f3/S3_S2_written_hi,text/f3/S3_S2_written_hi,0.459,"fx(J('results/analysis_dab_r3/results_B23.json')['B3_E_certified_exploratory']['N=8|B=inf']['S3_over_S2_written']['median_ci'][1], 3)"
+f3/tasks_spilled,text/f3/tasks_spilled,52,cnt(J('results/analysis_dab_r3/results_B23.json')['B3_E_certified_exploratory']['N=8|B=inf']['S3_over_S2_written']['n'])
+f3/S3_S2_written_N2,text/f3/S3_S2_written_N2,0.489,"fx(J('results/analysis_dab_r3/results_B23.json')['B3_E_certified_exploratory']['N=2|B=inf']['S3_over_S2_written']['median'], 3)"
+f3/S3_S2_written_N50,text/f3/S3_S2_written_N50,0.336,"fx(J('results/analysis_dab_r3/results_B23.json')['B3_E_certified_exploratory']['N=50|B=inf']['S3_over_S2_written']['median'], 3)"
+f3/S3_S2_time_N8,text/f3/S3_S2_time_N8,0.999,"fx(J('results/analysis_dab_r3/results_B23.json')['B3_E_certified_exploratory']['N=8|B=inf']['S3_over_S2_time']['median'], 3)"
+f3/engine_max_written,text/f3/engine_max_written,0.63,"fx(max(d['S3_over_S2_written'] for k, v in J('results/analysis_dab_r3/results_B23.json')['B3_E_certified_exploratory'].items() for d in v['by_engine'].values() if d.get('S3_over_S2_written') is not None), 2)"
+f3/S2_written_vs_S0,text/f3/S2_written_vs_S0,1.70,fx(1 - J('results/ablate/base_E.json')['summary']['N=8|B=inf']['S2_written_saving']['median'])
+f3/S3_foot_ret_N8,text/f3/S3_foot_ret_N8,0.76,fx(J('results/ablate/batchhold_E.json')['summary']['N=8|B=inf']['S3_over_S0_peak_foot'])
+f3/S3_foot_ret_N2,text/f3/S3_foot_ret_N2,0.91,fx(J('results/ablate/batchhold_E.json')['summary']['N=2|B=inf']['S3_over_S0_peak_foot'])
+f3/S3_foot_seq_1_16,text/f3/S3_foot_seq_1_16,1.27,fx(J('results/ablate/base_E.json')['summary']['N=8|B=1/16']['S3_over_S0_peak_foot_seq'])
+f3/seq_less_max,text/f3/seq_less_max,44,"fx((1 - min(J('results/ablate/base_E.json')['summary'][k]['S3_over_S2_peak_foot_seq']['median'] for k in [k for k in J('results/ablate/base_E.json')['summary'] if k.startswith(('N=2|', 'N=4|', 'N=8|'))])) * 100, 0)"
+f3/seq_less_min,text/f3/seq_less_min,25,"fx((1 - max(J('results/ablate/base_E.json')['summary'][k]['S3_over_S2_peak_foot_seq']['median'] for k in [k for k in J('results/ablate/base_E.json')['summary'] if k.startswith(('N=2|', 'N=4|', 'N=8|'))])) * 100, 0)"
+f3/live_cells,text/f3/live_cells,9,cnt(J('results/claim_support.json')['retained']['live2']['cells_with_admitted_bytes'])
+f3/live_S3_median,text/f3/live_S3_median,0.68,fx(J('results/claim_support.json')['retained']['live2']['S3_over_S0_live']['median'])
+f3/live_S3_min,text/f3/live_S3_min,0.21,fx(J('results/claim_support.json')['retained']['live2']['S3_over_S0_live']['min'])
+f3/live_S3_max,text/f3/live_S3_max,1.00,fx(J('results/claim_support.json')['retained']['live2']['S3_over_S0_live']['max'])
+f3/live_S2_median,text/f3/live_S2_median,1.55,fx(J('results/claim_support.json')['retained']['live2']['S2_over_S0_live']['median'])
+f3/live_du_runs,text/f3/live_du_runs,180,J('results/claim_support.json')['retained']['du_equals_accounting']['live2'].split('/')[1]
+f3/S3_S2c_unit,text/f3/S3_S2c_unit,1.000,"fx(J('results/ablate/batchhold_E.json')['summary']['N=8|B=inf']['S3_over_S2c_written']['median'], 3)"
+f3/S3_S2c_bytes,text/f3/S3_S2c_bytes,1.0029,"fx(J('results/ablate/batchhold_E.json')['summary']['N=8|B=1/16']['S3_over_S2c_written']['median'], 4)"
+f3/S3_S2c_time_min,text/f3/S3_S2c_time_min,0.997,"fx(min(v['S3_over_S2c_time']['median'] for v in J('results/ablate/batchhold_E.json')['summary'].values()), 3)"
+f3/S3_S2c_time_max,text/f3/S3_S2c_time_max,0.999,"fx(max(v['S3_over_S2c_time']['median'] for v in J('results/ablate/batchhold_E.json')['summary'].values()), 3)"
+f3/S3_S2c_bytes_other_budgets_max,text/f3/S3_S2c_bytes_other_budgets_max,1.000,"fx(max(v[x]['median'] for k, v in J('results/ablate/batchhold_E.json')['summary'].items() if not k.endswith('|B=1/16') for x in ('S3_over_S2c_written', 'S3_over_S2c_peak_foot')), 3)"
+f3/S3_S2c_bytes_other_budgets_min,text/f3/S3_S2c_bytes_other_budgets_min,1.000,"fx(min(v[x]['median'] for k, v in J('results/ablate/batchhold_E.json')['summary'].items() if not k.endswith('|B=1/16') for x in ('S3_over_S2c_written', 'S3_over_S2c_peak_foot')), 3)"
+f3/live3_S2,text/f3/live3_S2,59.1,pct(J('results/live3/validate_variants.json')['cow|inf']['S2']['live_time_saving_tw'])
+f3/live3_S2c,text/f3/live3_S2c,56.3,pct(J('results/live3/validate_variants.json')['cow|inf']['S2c']['live_time_saving_tw'])
+f3/live3_S3,text/f3/live3_S3,59.3,pct(J('results/live3/validate_variants.json')['cow|inf']['S3']['live_time_saving_tw'])
+f3/live3_written,text/f3/live3_written,0.38,fx(J('results/live3/validate_variants.json')['cow|inf']['S3']['live_written_vs_S0'])
+f3/live3_cells,text/f3/live3_cells,six,word(len(FILES('results/live3/calib_E_cow_*.json')))
+f3/live3_clone_ms,text/f3/live3_clone_ms,0.29,fx(J('results/live3/costs.json')['clone_s'] * 1e3)
+f3/live3_alias_us,text/f3/live3_alias_us,12.2,"fx(J('results/live3/costs.json')['alias_s'] * 1e6, 1)"
+f3/e2e_hits,text/f3/e2e_hits,"2,443",cnt(J('results/e2e_trace/summary_all_E.json')['S3']['hits'])
+f3/e2e_hit_mismatch,text/f3/e2e_hit_mismatch,two,"['zero', 'one', 'two', 'three'][J('results/e2e_trace/summary_all_E.json')['S3']['mismatches_on_hits']]"
+f3/e2e_records,text/f3/e2e_records,49,cnt(sum(1 for d in J('results/e2e_trace/mismatch_diag.json')['all_E']['details'] if d['class'] == 'live_error'))
+f3/e2e_queries,text/f3/e2e_queries,29,cnt(len({d['query'] for d in J('results/e2e_trace/mismatch_diag.json')['all_E']['details'] if d['class'] == 'live_error'}))
+f3/e2e_replay_min,text/f3/e2e_replay_min,8.5,"fx(min(sorted(v)[1] for v in {d['query']: d['replay_exec_s'] for d in J('results/e2e_trace/mismatch_diag.json')['all_E']['details'] if d['class'] == 'live_error'}.values()), 1)"
+f3/e2e_replay_max,text/f3/e2e_replay_max,80,"fx(max(sorted(v)[1] for v in {d['query']: d['replay_exec_s'] for d in J('results/e2e_trace/mismatch_diag.json')['all_E']['details'] if d['class'] == 'live_error'}.values()), 0)"
+f3/e2e_consumers,text/f3/e2e_consumers,"4,655",cnt(J('results/e2e_trace/summary_all_E.json')['S3']['consumers_identical'])
+f3/e2e_ok,text/f3/e2e_ok,"3,381",cnt(J('results/e2e_trace/summary_all_E.json')['S3']['consumers_identical_ok'])
+f3/e2e_fail,text/f3/e2e_fail,"1,274",cnt(J('results/e2e_trace/summary_all_E.json')['S3']['consumers_identical_failed'])
+f3/e2e_nondet,text/f3/e2e_nondet,14,cnt(J('results/e2e_trace/summary_all_E.json')['S0']['consumers_nondeterministic'])
+f3/e2e_probes,text/f3/e2e_probes,630,cnt(J('results/e2e_trace/summary_all_E.json')['S3']['probes_refused'])
+f3/conc_dup_share,text/f3/conc_dup_share,16,"fx(sum(r['dup_exec'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == 'inf' and r['policy'] == 'optimistic' and r['pinning'] == True]) / sum(r['execs'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == 'inf' and r['policy'] == 'optimistic' and r['pinning'] == True]) * 100, 0)"
+f3/conc_fewer,text/f3/conc_fewer,16,"fx((1 - sum(r['execs'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == 'inf' and r['policy'] == 'singleflight' and r['pinning'] == True]) / sum(r['execs'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == 'inf' and r['policy'] == 'optimistic' and r['pinning'] == True])) * 100, 0)"
+f3/conc_sim_c2,text/f3/conc_sim_c2,2.8,pct(next(r for r in J('results/ablate/concurrent.json')['summary'] if r['budget'] == 'inf' and r['c'] == 2 and r['tau'] == 2.0 and r['system'] == 'S3' and r['miss'] == 'optimistic' and r['overflow'] == 'bypass')['dup_exec_s_share'])
+f3/conc_sim_c4,text/f3/conc_sim_c4,8.1,pct(next(r for r in J('results/ablate/concurrent.json')['summary'] if r['budget'] == 'inf' and r['c'] == 4 and r['tau'] == 2.0 and r['system'] == 'S3' and r['miss'] == 'optimistic' and r['overflow'] == 'bypass')['dup_exec_s_share'])
+f3/conc_sim_c8,text/f3/conc_sim_c8,16.7,pct(next(r for r in J('results/ablate/concurrent.json')['summary'] if r['budget'] == 'inf' and r['c'] == 8 and r['tau'] == 2.0 and r['system'] == 'S3' and r['miss'] == 'optimistic' and r['overflow'] == 'bypass')['dup_exec_s_share'])
+f3/conc_wait_c2,text/f3/conc_wait_c2,5.3,pct(next(r for r in J('results/ablate/concurrent.json')['summary'] if r['budget'] == 'inf' and r['c'] == 2 and r['tau'] == 2.0 and r['system'] == 'S3' and r['miss'] == 'singleflight' and r['overflow'] == 'bypass')['wait_s_share_of_tool'])
+f3/conc_wait_c8,text/f3/conc_wait_c8,26.3,pct(next(r for r in J('results/ablate/concurrent.json')['summary'] if r['budget'] == 'inf' and r['c'] == 8 and r['tau'] == 2.0 and r['system'] == 'S3' and r['miss'] == 'singleflight' and r['overflow'] == 'bypass')['wait_s_share_of_tool'])
+f3/conc_makespan_c8,text/f3/conc_makespan_c8,0.24,fx(next(r for r in J('results/ablate/concurrent.json')['summary'] if r['budget'] == 'inf' and r['c'] == 8 and r['tau'] == 2.0 and r['system'] == 'S3' and r['miss'] == 'optimistic' and r['overflow'] == 'bypass')['makespan_vs_c1'])
+f3/evict_lru_1,text/f3/evict_lru_1,0.45,fx(J('results/ablate/base_E.json')['summary']['N=8|B=1']['S3_over_S2_written']['median'])
+f3/evict_lru_16,text/f3/evict_lru_16,0.52,fx(J('results/ablate/base_E.json')['summary']['N=8|B=1/16']['S3_over_S2_written']['median'])
+f3/evict_fifo_1,text/f3/evict_fifo_1,0.45,fx(J('results/ablate/fifo_E.json')['summary']['N=8|B=1']['S3_over_S2_written']['median'])
+f3/evict_fifo_16,text/f3/evict_fifo_16,0.52,fx(J('results/ablate/fifo_E.json')['summary']['N=8|B=1/16']['S3_over_S2_written']['median'])
+f3/evict_belady_1,text/f3/evict_belady_1,0.45,fx(J('results/ablate/belady_E.json')['summary']['N=8|B=1']['S3_over_S2_written']['median'])
+f3/evict_belady_16,text/f3/evict_belady_16,0.52,fx(J('results/ablate/belady_E.json')['summary']['N=8|B=1/16']['S3_over_S2_written']['median'])
+f3/evict_none_16,text/f3/evict_none_16,0.60,fx(J('results/ablate/noevict_E.json')['summary']['N=8|B=1/16']['S3_over_S2_written']['median'])
+f3/bypass_none,text/f3/bypass_none,"33,525",cnt(J('results/ablate/noevict_E.json')['summary']['N=8|B=1/16']['S3_bypass_total'])
+f3/bypass_lru,text/f3/bypass_lru,"5,822",cnt(J('results/ablate/base_E.json')['summary']['N=8|B=1/16']['S3_bypass_total'])
+f3/cap_quarter,text/f3/cap_quarter,24.5,pct(J('results/ablate/base_E.json')['summary']['N=8|B=1/4']['S2_exec_saving']['median'])
+f3/cap_16,text/f3/cap_16,22.4,pct(J('results/ablate/base_E.json')['summary']['N=8|B=1/16']['S2_exec_saving']['median'])
+f3/class_inline,text/f3/class_inline,9.6,pct(J('results/ablate/inline_only_E.json')['summary']['N=8|B=inf']['S2_exec_saving']['median'])
+f3/class_spilled,text/f3/class_spilled,3.4,pct(J('results/ablate/spilled_only_E.json')['summary']['N=8|B=inf']['S2_exec_saving']['median'])
+f3/class_inline_w,text/f3/class_inline_w,1.00,fx(J('results/ablate/inline_only_E.json')['summary']['N=8|B=inf']['S3_over_S2_written']['median'])
+f3/class_spilled_w,text/f3/class_spilled_w,0.45,fx(J('results/ablate/spilled_only_E.json')['summary']['N=8|B=inf']['S3_over_S2_written']['median'])
+f3/regen_ms,text/f3/regen_ms,82,"fx(J('results/live3/costs.json')['regen_s_median'] * 1e3, 0)"
+f3/regen_S2,text/f3/regen_S2,52.1,pct(J('results/live3/validate_variants.json')['regen|inf']['S2']['live_time_saving_tw'])
+f3/regen_S3,text/f3/regen_S3,52.7,pct(J('results/live3/validate_variants.json')['regen|inf']['S3']['live_time_saving_tw'])
+f3/base_S2_live,text/f3/base_S2_live,59.1,pct(J('results/live3/validate_variants.json')['cow|inf']['S2']['live_time_saving_tw'])
+f3/heavy_err,text/f3/heavy_err,12.6,pct(J('results/claim_support.json')['timing']['heavy']['median_time_rel_err_uncal'])
+f3/cheap_err,text/f3/cheap_err,51.7,pct(J('results/claim_support.json')['timing']['cheap']['median_time_rel_err_uncal'])
+f3/heavy_tasks,text/f3/heavy_tasks,three,"['zero', 'one', 'two', 'three', 'four'][J('results/claim_support.json')['timing']['heavy']['tasks']]"
+f3/cheap_tasks,text/f3/cheap_tasks,nine,"['', '', '', '', '', '', '', '', '', 'nine'][J('results/claim_support.json')['timing']['cheap']['tasks']]"
+f3/heavy_gap_min,text/f3/heavy_gap_min,0.1,"fx(min(abs(float(r['S2_live_saving']) - float(r['S2_pred_saving'])) for r in __import__('csv').DictReader(open(__import__('os').path.join(ROOT_, 'results/live2/pertask_agreement.csv'))) if r['contract'] == 'E' and float(r['S0_live_s']) >= 5) * 100, 1)"
+f3/heavy_gap_max,text/f3/heavy_gap_max,1.1,"fx(max(abs(float(r['S2_live_saving']) - float(r['S2_pred_saving'])) for r in __import__('csv').DictReader(open(__import__('os').path.join(ROOT_, 'results/live2/pertask_agreement.csv'))) if r['contract'] == 'E' and float(r['S0_live_s']) >= 5) * 100, 1)"
+f3/S3_ge_S2_tasks,text/f3/S3_ge_S2_tasks,12,"cnt(sum(1 for r in __import__('csv').DictReader(open(__import__('os').path.join(ROOT_, 'results/live2/pertask_agreement.csv'))) if r['contract'] == 'E' and r['budget'] == 'inf' and float(r['S3_live_saving']) >= float(r['S2_live_saving'])))"
+cap/fig1_desc_N50,text/cap/fig1_desc_N50,47,"fx(J('results/analysis_dab_r3/results_B23.json')['B2_fidelity_gate']['N=50|B=inf']['S2_exec_saving']['median'] * 100, 0)"
+cap/fig4_desc_seq_N2,text/cap/fig4_desc_seq_N2,1.14,fx(J('results/ablate/base_E.json')['summary']['N=2|B=inf']['S3_over_S0_peak_foot_seq'])
+cap/fig4_desc_seq_N8,text/cap/fig4_desc_seq_N8,1.76,fx(J('results/ablate/base_E.json')['summary']['N=8|B=inf']['S3_over_S0_peak_foot_seq'])
+cap/tab3_calls_per_config,text/cap/tab3_calls_per_config,757,"cnt(sum(r['calls'] for r in [r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == 'inf' and r['policy'] == 'optimistic' and r['pinning'] == True]))"
+work/lookup_us,text/work/lookup_us,1.27,fx(J('results/ablate/base_E.json')['costs']['lookup_s'] * 1e6)
+work/alias_us,text/work/alias_us,12.6,"fx(J('results/ablate/base_E.json')['costs']['alias_s'] * 1e6, 1)"
+work/copy_ns_per_byte,text/work/copy_ns_per_byte,0.46,fx(J('results/ablate/base_E.json')['costs']['copy_s_per_byte'] * 1e9)
+work/clone_ms,text/work/clone_ms,0.29,fx(J('results/ablate/base_E.json')['opts']['clone_s'] * 1e3)
+work/costs_remeasured_pct,text/work/costs_remeasured_pct,7.3,"pct(max(abs(J('results/%s/costs.json' % d)[k] / J('results/ablate/base_E.json')['costs'][k] - 1) for d in ('live2', 'live3') for k in ('lookup_s', 'alias_s', 'copy_s_per_byte')))"
+c4/E_err_cal,text/c4/E_err_cal,39.6,pct(J('results/live2/validate_E.json')['median_time_rel_err'])
+c4/E_err_uncal,text/c4/E_err_uncal,43.9,pct(J('results/live2/validate_E.json')['median_time_rel_err_uncalibrated'])
+c4/B_tasks,text/c4/B_tasks,8,cnt(J('results/analysis_dab_r3/results_B23.json')['B3_B_certified']['N=8|B=inf']['S3_written_saving']['n'])
+c4/mongo_bytes,text/c4/mongo_bytes,47.2,pct(J('results/extra_analyses.json')['mongo_fidelity']['spilled']['equiv_share_bytes'])

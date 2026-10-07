@@ -1,0 +1,8 @@
+{
+ "pass": "live tool-boundary trace replay of the 15 PATENTS task-model cells, rerun one cell at a time",
+ "why": "in the all-cell pass (results/e2e_trace/all_E_PATENTS.json, job 62998691) six worker processes ran multi-gigabyte PATENTS cells side by side and S0 or a cached design failed live on 49 call records; this rerun tests the load attribution",
+ "protocol": "code/live.py e2e work/v2 data/dab/repo PATENTS <out> all E with ED_E2E_WORKERS=1 and ED_E2E_SHARD=i/4 (i = 0..3); the shard option selects every fourth (cell, resample, budget) job after the attempt orders are drawn, so the orders are identical to the all-cell pass (checked: same (query, model, order) triples)",
+ "jobs": "ed-eval-36: 63131825 (shard 0, 3 h 01), 63131841 (shard 1, 4 h 11), 63133119 (shard 2, 4 h 35), 63133374 (shard 3, 1 h 43); summary and diagnosis: ed-eval-56 63143329",
+ "files": "all_E_PATENTS_s{0..3}.json, summary_all_E.json (live.py e2e-summary), mismatch_diag.json (e2e_mismatch_diag.py with e2e_dir = this directory)",
+ "result": "15 cells, 632 calls; S0 live errors 0; S3 hits 159, mismatches on hits 0; 1 mismatch per design, the non-admitted ORDER BY RANDOM() query (value_on_miss); consumers 391 identical (289 successes, 102 identical failures), 0 nondeterministic; S3 probes 45 of 45 refused"
+}

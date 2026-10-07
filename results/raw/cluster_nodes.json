@@ -1,0 +1,26 @@
+{
+ "source": "scontrol show node -o over every node that ran an ed-* job of this project since 2026-09-28 (sacct NodeList); raw output in cluster_nodes_scontrol.txt",
+ "nodes": 183,
+ "cpu_tot": {
+  "36": 179,
+  "28": 4
+ },
+ "sockets": {
+  "2": 183
+ },
+ "threads_per_core": {
+  "1": 183
+ },
+ "real_memory_mb": {
+  "184320": 183
+ },
+ "arch": {
+  "x86_64": 183
+ },
+ "cpu_model_sample": {
+  "node": "gl3224",
+  "job": "ed-eval-39 63136563",
+  "model_name": "Intel(R) Xeon(R) Gold 6154 CPU @ 3.00GHz",
+  "log": "results/raw/logs/ed-eval-39_63136563_0.out"
+ }
+}

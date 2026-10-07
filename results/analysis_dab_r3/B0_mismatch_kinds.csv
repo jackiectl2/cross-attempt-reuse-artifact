@@ -1,0 +1,5 @@
+engine,order_only,prefix_mismatch,value_mismatch
+duckdb,1743,303,217
+mongo,0,458,1299
+postgres,547,312,94
+sqlite,0,2,2

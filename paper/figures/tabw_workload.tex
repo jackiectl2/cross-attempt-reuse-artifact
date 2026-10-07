@@ -1,0 +1,13 @@
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+ & & Distinct & Replay & Byte- & \multicolumn{2}{c}{Mismatches} \\ \cmidrule(l){6-7}
+Engine & Calls & pairs & ok \% & identical \% & order & other \\
+\midrule
+DuckDB & 29,145 & 18,569 & 94.0 & 91.7 & 1,743 & 520 \\
+MongoDB & 8,508 & 3,292 & 96.4 & 78.5 & 0 & 1,757 \\
+PostgreSQL & 19,033 & 11,712 & 88.4 & 94.3 & 547 & 406 \\
+SQLite & 19,455 & 8,037 & 98.5 & 99.9 & 0 & 4 \\
+\midrule
+All & 76,213 & 41,616 & 93.9 & 93.0 & 2,290 & 2,687 \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,323 @@
+[
+ {
+  "dataset": "PATENTS",
+  "query": "query1",
+  "model": "gpt-5.2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   27,
+   40,
+   0,
+   30,
+   18,
+   44,
+   15,
+   37
+  ],
+  "S0": {
+   "calls": 17,
+   "live_errors": 0,
+   "consumers": 10,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 1,
+   "peak_retained": 2493995996,
+   "peak_seq": 311757962
+  },
+  "S1": {
+   "calls": 17,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 10,
+   "consumers_identical": 10,
+   "consumers_identical_ok": 9,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 2493995996,
+   "peak_seq": 311757962
+  },
+  "S2": {
+   "calls": 17,
+   "hits": 6,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 10,
+   "consumers_identical": 10,
+   "consumers_identical_ok": 9,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 3117444216,
+   "peak_seq": 935206182
+  },
+  "S3": {
+   "calls": 17,
+   "hits": 6,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 10,
+   "consumers_identical": 10,
+   "consumers_identical_ok": 9,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 623651336,
+   "peak_seq": 623482072
+  }
+ },
+ {
+  "dataset": "PATENTS",
+  "query": "query2",
+  "model": "gpt-5-mini",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   41,
+   24,
+   21,
+   25,
+   9,
+   38,
+   0,
+   23
+  ],
+  "S0": {
+   "calls": 23,
+   "live_errors": 0,
+   "consumers": 11,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 36827744,
+   "peak_seq": 13502450
+  },
+  "S1": {
+   "calls": 23,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 11,
+   "consumers_identical": 11,
+   "consumers_identical_ok": 11,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 36827744,
+   "peak_seq": 13502450
+  },
+  "S2": {
+   "calls": 23,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 11,
+   "consumers_identical": 11,
+   "consumers_identical_ok": 11,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 73564498,
+   "peak_seq": 50239204
+  },
+  "S3": {
+   "calls": 23,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 11,
+   "consumers_identical": 11,
+   "consumers_identical_ok": 11,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 36827744,
+   "peak_seq": 36753289
+  }
+ },
+ {
+  "dataset": "PATENTS",
+  "query": "query3",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   31,
+   43,
+   5,
+   30,
+   17,
+   42,
+   2,
+   33
+  ],
+  "S0": {
+   "calls": 55,
+   "live_errors": 0,
+   "consumers": 29,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 2,
+   "peak_retained": 1860424813,
+   "peak_seq": 699115610
+  },
+  "S1": {
+   "calls": 55,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 29,
+   "consumers_identical": 29,
+   "consumers_identical_ok": 27,
+   "consumers_identical_failed": 2,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 1860424813,
+   "peak_seq": 699115610
+  },
+  "S2": {
+   "calls": 55,
+   "hits": 21,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 29,
+   "consumers_identical": 29,
+   "consumers_identical_ok": 27,
+   "consumers_identical_failed": 2,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 3720442675,
+   "peak_seq": 2559133472
+  },
+  "S3": {
+   "calls": 55,
+   "hits": 21,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 29,
+   "consumers_identical": 29,
+   "consumers_identical_ok": 27,
+   "consumers_identical_failed": 2,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 1860017862,
+   "peak_seq": 1860017862
+  }
+ }
+]

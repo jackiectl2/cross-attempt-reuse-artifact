@@ -1,0 +1,23 @@
+{
+ "n_orders": 200,
+ "gated_calls": 70173,
+ "scope": "other_attempts",
+ "calls": {
+  "admitted_by_B_static": 0.06161245991754468,
+  "admitted_by_E_static": 0.9946174988547868,
+  "admitted_by_B_eval": 0.06161245991754468,
+  "admitted_by_E_eval": 0.9319438082149947
+ },
+ "exec_s": {
+  "admitted_by_B_static": 0.11904633753676365,
+  "admitted_by_E_static": 0.9998867233486267,
+  "admitted_by_B_eval": 0.11904633753676365,
+  "admitted_by_E_eval": 0.9984227016239146
+ },
+ "payload_bytes": {
+  "admitted_by_B_static": 4.6711826866117955e-07,
+  "admitted_by_E_static": 0.9999995119662176,
+  "admitted_by_B_eval": 4.6711826866117955e-07,
+  "admitted_by_E_eval": 0.9999913413096613
+ }
+}

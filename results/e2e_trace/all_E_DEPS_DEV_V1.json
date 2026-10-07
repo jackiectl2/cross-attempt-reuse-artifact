@@ -1,0 +1,1072 @@
+[
+ {
+  "dataset": "DEPS_DEV_V1",
+  "query": "query1",
+  "model": "gemini-2.5-flash",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   29,
+   10,
+   13,
+   26,
+   17,
+   18,
+   8,
+   7
+  ],
+  "S0": {
+   "calls": 16,
+   "live_errors": 0,
+   "consumers": 5,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 1,
+   "peak_retained": 1131174185,
+   "peak_seq": 180921521
+  },
+  "S1": {
+   "calls": 16,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 5,
+   "consumers_identical": 5,
+   "consumers_identical_ok": 4,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 1131174185,
+   "peak_seq": 180921521
+  },
+  "S2": {
+   "calls": 16,
+   "hits": 7,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 5,
+   "consumers_identical": 5,
+   "consumers_identical_ok": 4,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 1790426103,
+   "peak_seq": 840173439
+  },
+  "S3": {
+   "calls": 16,
+   "hits": 7,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 5,
+   "consumers_identical": 5,
+   "consumers_identical_ok": 4,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 659251918,
+   "peak_seq": 659251918
+  }
+ },
+ {
+  "dataset": "DEPS_DEV_V1",
+  "query": "query1",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   22,
+   49,
+   39,
+   26,
+   40,
+   34,
+   37,
+   43
+  ],
+  "S0": {
+   "calls": 98,
+   "live_errors": 0,
+   "consumers": 35,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 4,
+   "peak_retained": 681806663,
+   "peak_seq": 153911156
+  },
+  "S1": {
+   "calls": 98,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 35,
+   "consumers_identical": 35,
+   "consumers_identical_ok": 31,
+   "consumers_identical_failed": 4,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 681806663,
+   "peak_seq": 153911156
+  },
+  "S2": {
+   "calls": 98,
+   "hits": 29,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 35,
+   "consumers_identical": 35,
+   "consumers_identical_ok": 31,
+   "consumers_identical_failed": 4,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 1064420779,
+   "peak_seq": 536525272
+  },
+  "S3": {
+   "calls": 98,
+   "hits": 29,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 35,
+   "consumers_identical": 35,
+   "consumers_identical_ok": 31,
+   "consumers_identical_failed": 4,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 384495539,
+   "peak_seq": 382614116
+  }
+ },
+ {
+  "dataset": "DEPS_DEV_V1",
+  "query": "query2",
+  "model": "gemini-2.5-flash",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   3,
+   34,
+   31,
+   33,
+   32,
+   8,
+   13,
+   35
+  ],
+  "S0": {
+   "calls": 16,
+   "live_errors": 0,
+   "consumers": 4,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 1216157576,
+   "peak_seq": 219115777
+  },
+  "S1": {
+   "calls": 16,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 4,
+   "consumers_identical": 4,
+   "consumers_identical_ok": 4,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 1216157576,
+   "peak_seq": 219115777
+  },
+  "S2": {
+   "calls": 16,
+   "hits": 6,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 4,
+   "consumers_identical": 4,
+   "consumers_identical_ok": 4,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 1807763412,
+   "peak_seq": 710512686
+  },
+  "S3": {
+   "calls": 16,
+   "hits": 6,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 4,
+   "consumers_identical": 4,
+   "consumers_identical_ok": 4,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 591605836,
+   "peak_seq": 591605836
+  }
+ },
+ {
+  "dataset": "DEPS_DEV_V1",
+  "query": "query1",
+  "model": "gpt-5.2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   31,
+   23,
+   32,
+   48,
+   45,
+   9,
+   28,
+   21
+  ],
+  "S0": {
+   "calls": 24,
+   "live_errors": 0,
+   "consumers": 11,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 1448930196,
+   "peak_seq": 253761843
+  },
+  "S1": {
+   "calls": 24,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 11,
+   "consumers_identical": 11,
+   "consumers_identical_ok": 11,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 1448930196,
+   "peak_seq": 253761843
+  },
+  "S2": {
+   "calls": 24,
+   "hits": 11,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 11,
+   "consumers_identical": 11,
+   "consumers_identical_ok": 11,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 2427349640,
+   "peak_seq": 1232181287
+  },
+  "S3": {
+   "calls": 24,
+   "hits": 11,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 11,
+   "consumers_identical": 11,
+   "consumers_identical_ok": 11,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 978419444,
+   "peak_seq": 978419444
+  }
+ },
+ {
+  "dataset": "DEPS_DEV_V1",
+  "query": "query2",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   41,
+   15,
+   20,
+   40,
+   33,
+   39,
+   1,
+   7
+  ],
+  "S0": {
+   "calls": 79,
+   "live_errors": 0,
+   "consumers": 36,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 1,
+   "peak_retained": 529032741,
+   "peak_seq": 142697453
+  },
+  "S1": {
+   "calls": 79,
+   "hits": 1,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 36,
+   "consumers_identical": 36,
+   "consumers_identical_ok": 35,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 529032741,
+   "peak_seq": 142697453
+  },
+  "S2": {
+   "calls": 79,
+   "hits": 25,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 36,
+   "consumers_identical": 36,
+   "consumers_identical_ok": 35,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 901739199,
+   "peak_seq": 475346708
+  },
+  "S3": {
+   "calls": 79,
+   "hits": 25,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 36,
+   "consumers_identical": 36,
+   "consumers_identical_ok": 35,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 372949868,
+   "peak_seq": 372706458
+  }
+ },
+ {
+  "dataset": "DEPS_DEV_V1",
+  "query": "query1",
+  "model": "gpt-5-mini",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   40,
+   11,
+   39,
+   17,
+   49,
+   33,
+   21,
+   32
+  ],
+  "S0": {
+   "calls": 22,
+   "live_errors": 0,
+   "consumers": 9,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 1,
+   "peak_retained": 1636516046,
+   "peak_seq": 520314854
+  },
+  "S1": {
+   "calls": 22,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 9,
+   "consumers_identical": 9,
+   "consumers_identical_ok": 8,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 1636516046,
+   "peak_seq": 520314854
+  },
+  "S2": {
+   "calls": 22,
+   "hits": 3,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 9,
+   "consumers_identical": 9,
+   "consumers_identical_ok": 8,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 2769036019,
+   "peak_seq": 1494429284
+  },
+  "S3": {
+   "calls": 22,
+   "hits": 3,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 9,
+   "consumers_identical": 9,
+   "consumers_identical_ok": 8,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 1132519973,
+   "peak_seq": 1132519973
+  }
+ },
+ {
+  "dataset": "DEPS_DEV_V1",
+  "query": "query2",
+  "model": "gpt-5-mini",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   46,
+   47,
+   43,
+   21,
+   31,
+   0,
+   34,
+   1
+  ],
+  "S0": {
+   "calls": 23,
+   "live_errors": 0,
+   "consumers": 18,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 1,
+   "peak_retained": 1119707185,
+   "peak_seq": 292836990
+  },
+  "S1": {
+   "calls": 23,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 18,
+   "consumers_identical": 18,
+   "consumers_identical_ok": 17,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 1119707185,
+   "peak_seq": 292836990
+  },
+  "S2": {
+   "calls": 23,
+   "hits": 2,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 18,
+   "consumers_identical": 18,
+   "consumers_identical_ok": 17,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 2155337662,
+   "peak_seq": 1226571086
+  },
+  "S3": {
+   "calls": 23,
+   "hits": 2,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 18,
+   "consumers_identical": 18,
+   "consumers_identical_ok": 17,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 1035630477,
+   "peak_seq": 1035630477
+  }
+ },
+ {
+  "dataset": "DEPS_DEV_V1",
+  "query": "query1",
+  "model": "kimi-k2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   46,
+   49,
+   7,
+   23,
+   5,
+   20,
+   36,
+   0
+  ],
+  "S0": {
+   "calls": 126,
+   "live_errors": 0,
+   "consumers": 61,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 29,
+   "peak_retained": 3050100300,
+   "peak_seq": 947744273
+  },
+  "S1": {
+   "calls": 126,
+   "hits": 12,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 61,
+   "consumers_identical": 61,
+   "consumers_identical_ok": 32,
+   "consumers_identical_failed": 29,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 2393323410,
+   "peak_seq": 629793619
+  },
+  "S2": {
+   "calls": 126,
+   "hits": 23,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 61,
+   "consumers_identical": 61,
+   "consumers_identical_ok": 32,
+   "consumers_identical_failed": 29,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 4605454556,
+   "peak_seq": 2545399253
+  },
+  "S3": {
+   "calls": 126,
+   "hits": 23,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 61,
+   "consumers_identical": 61,
+   "consumers_identical_ok": 32,
+   "consumers_identical_failed": 29,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 2212131146,
+   "peak_seq": 2212131146
+  }
+ },
+ {
+  "dataset": "DEPS_DEV_V1",
+  "query": "query2",
+  "model": "gpt-5.2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   38,
+   3,
+   1,
+   22,
+   5,
+   11,
+   44,
+   12
+  ],
+  "S0": {
+   "calls": 42,
+   "live_errors": 0,
+   "consumers": 24,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 1184695415,
+   "peak_seq": 290387361
+  },
+  "S1": {
+   "calls": 42,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 24,
+   "consumers_identical": 24,
+   "consumers_identical_ok": 24,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 1184695415,
+   "peak_seq": 290387361
+  },
+  "S2": {
+   "calls": 42,
+   "hits": 9,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 24,
+   "consumers_identical": 24,
+   "consumers_identical_ok": 24,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 1763440301,
+   "peak_seq": 869132247
+  },
+  "S3": {
+   "calls": 42,
+   "hits": 9,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 24,
+   "consumers_identical": 24,
+   "consumers_identical_ok": 24,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 648269954,
+   "peak_seq": 578744886
+  }
+ },
+ {
+  "dataset": "DEPS_DEV_V1",
+  "query": "query2",
+  "model": "kimi-k2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   36,
+   16,
+   3,
+   37,
+   21,
+   6,
+   10,
+   4
+  ],
+  "S0": {
+   "calls": 104,
+   "live_errors": 0,
+   "consumers": 49,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 21,
+   "peak_retained": 3408627821,
+   "peak_seq": 925921373
+  },
+  "S1": {
+   "calls": 104,
+   "hits": 20,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 49,
+   "consumers_identical": 49,
+   "consumers_identical_ok": 28,
+   "consumers_identical_failed": 21,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 2832142777,
+   "peak_seq": 925921373
+  },
+  "S2": {
+   "calls": 104,
+   "hits": 34,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 49,
+   "consumers_identical": 49,
+   "consumers_identical_ok": 28,
+   "consumers_identical_failed": 21,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 5271608244,
+   "peak_seq": 2974354453
+  },
+  "S3": {
+   "calls": 104,
+   "hits": 34,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 49,
+   "consumers_identical": 49,
+   "consumers_identical_ok": 28,
+   "consumers_identical_failed": 21,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 2441835255,
+   "peak_seq": 2441835255
+  }
+ }
+]

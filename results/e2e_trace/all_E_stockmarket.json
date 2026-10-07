@@ -1,0 +1,2421 @@
+[
+ {
+  "dataset": "stockmarket",
+  "query": "query2",
+  "model": "gemini-2.5-flash",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   8,
+   29,
+   38,
+   40,
+   24,
+   11,
+   22,
+   45
+  ],
+  "S0": {
+   "calls": 8,
+   "live_errors": 0,
+   "consumers": 1,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 1,
+   "peak_retained": 340016,
+   "peak_seq": 42502
+  },
+  "S1": {
+   "calls": 8,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 1,
+   "consumers_identical": 1,
+   "consumers_identical_ok": 0,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 340016,
+   "peak_seq": 42502
+  },
+  "S2": {
+   "calls": 8,
+   "hits": 5,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 1,
+   "consumers_identical": 1,
+   "consumers_identical_ok": 0,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 467522,
+   "peak_seq": 170008
+  },
+  "S3": {
+   "calls": 8,
+   "hits": 5,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 1,
+   "consumers_identical": 1,
+   "consumers_identical_ok": 0,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 127506,
+   "peak_seq": 127506
+  }
+ },
+ {
+  "dataset": "stockmarket",
+  "query": "query1",
+  "model": "gemini-2.5-flash",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   29,
+   10,
+   13,
+   26,
+   17,
+   18,
+   8,
+   7
+  ],
+  "S0": {
+   "calls": 16,
+   "live_errors": 0,
+   "consumers": 0,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S1": {
+   "calls": 16,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 0,
+   "consumers_identical": 0,
+   "consumers_identical_ok": 0,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S2": {
+   "calls": 16,
+   "hits": 11,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 0,
+   "consumers_identical": 0,
+   "consumers_identical_ok": 0,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S3": {
+   "calls": 16,
+   "hits": 11,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 0,
+   "consumers_identical": 0,
+   "consumers_identical_ok": 0,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  }
+ },
+ {
+  "dataset": "stockmarket",
+  "query": "query1",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   22,
+   49,
+   39,
+   26,
+   40,
+   34,
+   37,
+   43
+  ],
+  "S0": {
+   "calls": 16,
+   "live_errors": 0,
+   "consumers": 0,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S1": {
+   "calls": 16,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 0,
+   "consumers_identical": 0,
+   "consumers_identical_ok": 0,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S2": {
+   "calls": 16,
+   "hits": 8,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 0,
+   "consumers_identical": 0,
+   "consumers_identical_ok": 0,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S3": {
+   "calls": 16,
+   "hits": 8,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 0,
+   "consumers_identical": 0,
+   "consumers_identical_ok": 0,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  }
+ },
+ {
+  "dataset": "stockmarket",
+  "query": "query1",
+  "model": "gpt-5.2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   27,
+   40,
+   0,
+   30,
+   18,
+   44,
+   15,
+   37
+  ],
+  "S0": {
+   "calls": 16,
+   "live_errors": 0,
+   "consumers": 0,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S1": {
+   "calls": 16,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 0,
+   "consumers_identical": 0,
+   "consumers_identical_ok": 0,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S2": {
+   "calls": 16,
+   "hits": 1,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 0,
+   "consumers_identical": 0,
+   "consumers_identical_ok": 0,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S3": {
+   "calls": 16,
+   "hits": 1,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 0,
+   "consumers_identical": 0,
+   "consumers_identical_ok": 0,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  }
+ },
+ {
+  "dataset": "stockmarket",
+  "query": "query1",
+  "model": "gpt-5-mini",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   9,
+   31,
+   20,
+   30,
+   49,
+   12,
+   19,
+   32
+  ],
+  "S0": {
+   "calls": 16,
+   "live_errors": 0,
+   "consumers": 1,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S1": {
+   "calls": 16,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 1,
+   "consumers_identical": 1,
+   "consumers_identical_ok": 1,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S2": {
+   "calls": 16,
+   "hits": 7,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 1,
+   "consumers_identical": 1,
+   "consumers_identical_ok": 1,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S3": {
+   "calls": 16,
+   "hits": 7,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 1,
+   "consumers_identical": 1,
+   "consumers_identical_ok": 1,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  }
+ },
+ {
+  "dataset": "stockmarket",
+  "query": "query1",
+  "model": "kimi-k2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   39,
+   43,
+   4,
+   21,
+   20,
+   5,
+   37,
+   36
+  ],
+  "S0": {
+   "calls": 17,
+   "live_errors": 0,
+   "consumers": 3,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 1,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S1": {
+   "calls": 17,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 3,
+   "consumers_identical": 3,
+   "consumers_identical_ok": 2,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S2": {
+   "calls": 17,
+   "hits": 4,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 3,
+   "consumers_identical": 3,
+   "consumers_identical_ok": 2,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S3": {
+   "calls": 17,
+   "hits": 4,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 3,
+   "consumers_identical": 3,
+   "consumers_identical_ok": 2,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  }
+ },
+ {
+  "dataset": "stockmarket",
+  "query": "query3",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   31,
+   43,
+   5,
+   30,
+   17,
+   42,
+   2,
+   33
+  ],
+  "S0": {
+   "calls": 23,
+   "live_errors": 0,
+   "consumers": 8,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S1": {
+   "calls": 23,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumers_identical_ok": 8,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S2": {
+   "calls": 23,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumers_identical_ok": 8,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S3": {
+   "calls": 23,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 8,
+   "consumers_identical": 8,
+   "consumers_identical_ok": 8,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  }
+ },
+ {
+  "dataset": "stockmarket",
+  "query": "query2",
+  "model": "gpt-5-mini",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   41,
+   24,
+   21,
+   25,
+   9,
+   38,
+   0,
+   23
+  ],
+  "S0": {
+   "calls": 39,
+   "live_errors": 0,
+   "consumers": 9,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 1,
+   "peak_retained": 1874640,
+   "peak_seq": 490322
+  },
+  "S1": {
+   "calls": 39,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 9,
+   "consumers_identical": 9,
+   "consumers_identical_ok": 8,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 1874640,
+   "peak_seq": 490322
+  },
+  "S2": {
+   "calls": 39,
+   "hits": 4,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 9,
+   "consumers_identical": 9,
+   "consumers_identical_ok": 8,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 3621774,
+   "peak_seq": 2237456
+  },
+  "S3": {
+   "calls": 39,
+   "hits": 4,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 9,
+   "consumers_identical": 9,
+   "consumers_identical_ok": 8,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 1747134,
+   "peak_seq": 1747134
+  }
+ },
+ {
+  "dataset": "stockmarket",
+  "query": "query2",
+  "model": "kimi-k2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   36,
+   16,
+   3,
+   37,
+   21,
+   6,
+   10,
+   4
+  ],
+  "S0": {
+   "calls": 72,
+   "live_errors": 0,
+   "consumers": 38,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 3,
+   "peak_retained": 646859,
+   "peak_seq": 149579
+  },
+  "S1": {
+   "calls": 72,
+   "hits": 4,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 38,
+   "consumers_identical": 38,
+   "consumers_identical_ok": 35,
+   "consumers_identical_failed": 3,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 561855,
+   "peak_seq": 149579
+  },
+  "S2": {
+   "calls": 72,
+   "hits": 8,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 38,
+   "consumers_identical": 38,
+   "consumers_identical_ok": 35,
+   "consumers_identical_failed": 3,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 996204,
+   "peak_seq": 583928
+  },
+  "S3": {
+   "calls": 72,
+   "hits": 8,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 38,
+   "consumers_identical": 38,
+   "consumers_identical_ok": 35,
+   "consumers_identical_failed": 3,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 434349,
+   "peak_seq": 434349
+  }
+ },
+ {
+  "dataset": "stockmarket",
+  "query": "query3",
+  "model": "gemini-2.5-flash",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   5,
+   2,
+   43,
+   47,
+   4,
+   14,
+   0,
+   26
+  ],
+  "S0": {
+   "calls": 119,
+   "live_errors": 0,
+   "consumers": 19,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 6,
+   "peak_retained": 806420,
+   "peak_seq": 806420
+  },
+  "S1": {
+   "calls": 119,
+   "hits": 55,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 19,
+   "consumers_identical": 19,
+   "consumers_identical_ok": 13,
+   "consumers_identical_failed": 6,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 806420,
+   "peak_seq": 806420
+  },
+  "S2": {
+   "calls": 119,
+   "hits": 56,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 19,
+   "consumers_identical": 19,
+   "consumers_identical_ok": 13,
+   "consumers_identical_failed": 6,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 1612840,
+   "peak_seq": 1612840
+  },
+  "S3": {
+   "calls": 119,
+   "hits": 56,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 19,
+   "consumers_identical": 19,
+   "consumers_identical_ok": 13,
+   "consumers_identical_failed": 6,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 806420,
+   "peak_seq": 806420
+  }
+ },
+ {
+  "dataset": "stockmarket",
+  "query": "query2",
+  "model": "gpt-5.2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   38,
+   3,
+   1,
+   22,
+   5,
+   11,
+   44,
+   12
+  ],
+  "S0": {
+   "calls": 81,
+   "live_errors": 0,
+   "consumers": 24,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 3051341,
+   "peak_seq": 540509
+  },
+  "S1": {
+   "calls": 81,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 24,
+   "consumers_identical": 24,
+   "consumers_identical_ok": 24,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 3051341,
+   "peak_seq": 540509
+  },
+  "S2": {
+   "calls": 81,
+   "hits": 2,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 24,
+   "consumers_identical": 24,
+   "consumers_identical_ok": 24,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 5260021,
+   "peak_seq": 2749189
+  },
+  "S3": {
+   "calls": 81,
+   "hits": 2,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 24,
+   "consumers_identical": 24,
+   "consumers_identical_ok": 24,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 2284851,
+   "peak_seq": 2208680
+  }
+ },
+ {
+  "dataset": "stockmarket",
+  "query": "query4",
+  "model": "gemini-2.5-flash",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   33,
+   16,
+   49,
+   30,
+   24,
+   29,
+   6,
+   19
+  ],
+  "S0": {
+   "calls": 19,
+   "live_errors": 0,
+   "consumers": 13,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 1,
+   "peak_retained": 647063,
+   "peak_seq": 229870
+  },
+  "S1": {
+   "calls": 19,
+   "hits": 1,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 13,
+   "consumers_identical": 13,
+   "consumers_identical_ok": 12,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 621955,
+   "peak_seq": 204762
+  },
+  "S2": {
+   "calls": 19,
+   "hits": 5,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 13,
+   "consumers_identical": 13,
+   "consumers_identical_ok": 12,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 1019278,
+   "peak_seq": 521840
+  },
+  "S3": {
+   "calls": 19,
+   "hits": 5,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 13,
+   "consumers_identical": 13,
+   "consumers_identical_ok": 12,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 397323,
+   "peak_seq": 397323
+  }
+ },
+ {
+  "dataset": "stockmarket",
+  "query": "query2",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   47,
+   20,
+   7,
+   46,
+   38,
+   30,
+   15,
+   42
+  ],
+  "S0": {
+   "calls": 91,
+   "live_errors": 0,
+   "consumers": 10,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 7,
+   "peak_retained": 1021502,
+   "peak_seq": 383245
+  },
+  "S1": {
+   "calls": 91,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 10,
+   "consumers_identical": 10,
+   "consumers_identical_ok": 3,
+   "consumers_identical_failed": 7,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 1021502,
+   "peak_seq": 383245
+  },
+  "S2": {
+   "calls": 91,
+   "hits": 7,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 10,
+   "consumers_identical": 10,
+   "consumers_identical_ok": 3,
+   "consumers_identical_failed": 7,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 1872996,
+   "peak_seq": 1234739
+  },
+  "S3": {
+   "calls": 91,
+   "hits": 7,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 10,
+   "consumers_identical": 10,
+   "consumers_identical_ok": 3,
+   "consumers_identical_failed": 7,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 851494,
+   "peak_seq": 851494
+  }
+ },
+ {
+  "dataset": "stockmarket",
+  "query": "query3",
+  "model": "gpt-5.2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   6,
+   35,
+   10,
+   37,
+   48,
+   5,
+   36,
+   12
+  ],
+  "S0": {
+   "calls": 90,
+   "live_errors": 0,
+   "consumers": 10,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S1": {
+   "calls": 90,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 10,
+   "consumers_identical": 10,
+   "consumers_identical_ok": 10,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S2": {
+   "calls": 90,
+   "hits": 2,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 10,
+   "consumers_identical": 10,
+   "consumers_identical_ok": 10,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S3": {
+   "calls": 90,
+   "hits": 2,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 10,
+   "consumers_identical": 10,
+   "consumers_identical_ok": 10,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  }
+ },
+ {
+  "dataset": "stockmarket",
+  "query": "query3",
+  "model": "kimi-k2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   41,
+   34,
+   24,
+   31,
+   2,
+   28,
+   8,
+   25
+  ],
+  "S0": {
+   "calls": 107,
+   "live_errors": 0,
+   "consumers": 36,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 2,
+   "peak_retained": 92689,
+   "peak_seq": 92689
+  },
+  "S1": {
+   "calls": 107,
+   "hits": 3,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 36,
+   "consumers_identical": 36,
+   "consumers_identical_ok": 34,
+   "consumers_identical_failed": 2,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 92689,
+   "peak_seq": 92689
+  },
+  "S2": {
+   "calls": 107,
+   "hits": 3,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 36,
+   "consumers_identical": 36,
+   "consumers_identical_ok": 34,
+   "consumers_identical_failed": 2,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 185378,
+   "peak_seq": 185378
+  },
+  "S3": {
+   "calls": 107,
+   "hits": 3,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 36,
+   "consumers_identical": 36,
+   "consumers_identical_ok": 34,
+   "consumers_identical_failed": 2,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 92689,
+   "peak_seq": 92689
+  }
+ },
+ {
+  "dataset": "stockmarket",
+  "query": "query4",
+  "model": "gpt-5.2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   33,
+   37,
+   31,
+   32,
+   9,
+   28,
+   3,
+   41
+  ],
+  "S0": {
+   "calls": 41,
+   "live_errors": 0,
+   "consumers": 15,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 512331,
+   "peak_seq": 130691
+  },
+  "S1": {
+   "calls": 41,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 15,
+   "consumers_identical": 15,
+   "consumers_identical_ok": 15,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 512331,
+   "peak_seq": 130691
+  },
+  "S2": {
+   "calls": 41,
+   "hits": 1,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 15,
+   "consumers_identical": 15,
+   "consumers_identical_ok": 15,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 893971,
+   "peak_seq": 436160
+  },
+  "S3": {
+   "calls": 41,
+   "hits": 1,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 15,
+   "consumers_identical": 15,
+   "consumers_identical_ok": 15,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 457811,
+   "peak_seq": 381640
+  }
+ },
+ {
+  "dataset": "stockmarket",
+  "query": "query3",
+  "model": "gpt-5-mini",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   41,
+   15,
+   31,
+   28,
+   23,
+   22,
+   20,
+   19
+  ],
+  "S0": {
+   "calls": 182,
+   "live_errors": 0,
+   "consumers": 7,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S1": {
+   "calls": 182,
+   "hits": 1,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 7,
+   "consumers_identical": 7,
+   "consumers_identical_ok": 7,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S2": {
+   "calls": 182,
+   "hits": 1,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 7,
+   "consumers_identical": 7,
+   "consumers_identical_ok": 7,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  },
+  "S3": {
+   "calls": 182,
+   "hits": 1,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 7,
+   "consumers_identical": 7,
+   "consumers_identical_ok": 7,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 0,
+   "peak_seq": 0
+  }
+ },
+ {
+  "dataset": "stockmarket",
+  "query": "query4",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   44,
+   47,
+   12,
+   49,
+   15,
+   45,
+   11,
+   1
+  ],
+  "S0": {
+   "calls": 78,
+   "live_errors": 0,
+   "consumers": 13,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 2,
+   "peak_retained": 5375487,
+   "peak_seq": 4971851
+  },
+  "S1": {
+   "calls": 78,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 13,
+   "consumers_identical": 13,
+   "consumers_identical_ok": 11,
+   "consumers_identical_failed": 2,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 5375487,
+   "peak_seq": 4971851
+  },
+  "S2": {
+   "calls": 78,
+   "hits": 6,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 13,
+   "consumers_identical": 13,
+   "consumers_identical_ok": 11,
+   "consumers_identical_failed": 2,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 10470184,
+   "peak_seq": 9943702
+  },
+  "S3": {
+   "calls": 78,
+   "hits": 6,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 13,
+   "consumers_identical": 13,
+   "consumers_identical_ok": 11,
+   "consumers_identical_failed": 2,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 5094697,
+   "peak_seq": 5094697
+  }
+ },
+ {
+  "dataset": "stockmarket",
+  "query": "query5",
+  "model": "gemini-3-pro",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   48,
+   2,
+   7,
+   5,
+   18,
+   47,
+   15,
+   36
+  ],
+  "S0": {
+   "calls": 30,
+   "live_errors": 0,
+   "consumers": 13,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 4,
+   "peak_retained": 164944,
+   "peak_seq": 20618
+  },
+  "S1": {
+   "calls": 30,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 13,
+   "consumers_identical": 13,
+   "consumers_identical_ok": 9,
+   "consumers_identical_failed": 4,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 164944,
+   "peak_seq": 20618
+  },
+  "S2": {
+   "calls": 30,
+   "hits": 7,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 13,
+   "consumers_identical": 13,
+   "consumers_identical_ok": 9,
+   "consumers_identical_failed": 4,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 185562,
+   "peak_seq": 41236
+  },
+  "S3": {
+   "calls": 30,
+   "hits": 7,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 13,
+   "consumers_identical": 13,
+   "consumers_identical_ok": 9,
+   "consumers_identical_failed": 4,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 20618,
+   "peak_seq": 20618
+  }
+ },
+ {
+  "dataset": "stockmarket",
+  "query": "query4",
+  "model": "gpt-5-mini",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   22,
+   28,
+   7,
+   11,
+   3,
+   4,
+   17,
+   49
+  ],
+  "S0": {
+   "calls": 131,
+   "live_errors": 0,
+   "consumers": 2,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 0,
+   "peak_retained": 488576,
+   "peak_seq": 66688
+  },
+  "S1": {
+   "calls": 131,
+   "hits": 6,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 2,
+   "consumers_identical": 2,
+   "consumers_identical_ok": 2,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 488576,
+   "peak_seq": 66688
+  },
+  "S2": {
+   "calls": 131,
+   "hits": 6,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 2,
+   "consumers_identical": 2,
+   "consumers_identical_ok": 2,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 977152,
+   "peak_seq": 555264
+  },
+  "S3": {
+   "calls": 131,
+   "hits": 6,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 2,
+   "consumers_identical": 2,
+   "consumers_identical_ok": 2,
+   "consumers_identical_failed": 0,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 488576,
+   "peak_seq": 488576
+  }
+ },
+ {
+  "dataset": "stockmarket",
+  "query": "query4",
+  "model": "kimi-k2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   38,
+   39,
+   20,
+   14,
+   43,
+   4,
+   18,
+   47
+  ],
+  "S0": {
+   "calls": 140,
+   "live_errors": 0,
+   "consumers": 55,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 13,
+   "peak_retained": 1846010,
+   "peak_seq": 490410
+  },
+  "S1": {
+   "calls": 140,
+   "hits": 26,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 55,
+   "consumers_identical": 55,
+   "consumers_identical_ok": 42,
+   "consumers_identical_failed": 13,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 704669,
+   "peak_seq": 132329
+  },
+  "S2": {
+   "calls": 140,
+   "hits": 31,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 55,
+   "consumers_identical": 55,
+   "consumers_identical_ok": 42,
+   "consumers_identical_failed": 13,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 1184706,
+   "peak_seq": 584679
+  },
+  "S3": {
+   "calls": 140,
+   "hits": 31,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 55,
+   "consumers_identical": 55,
+   "consumers_identical_ok": 42,
+   "consumers_identical_failed": 13,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 480037,
+   "peak_seq": 480037
+  }
+ },
+ {
+  "dataset": "stockmarket",
+  "query": "query5",
+  "model": "gpt-5.2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   3,
+   21,
+   7,
+   44,
+   0,
+   34,
+   24,
+   29
+  ],
+  "S0": {
+   "calls": 36,
+   "live_errors": 0,
+   "consumers": 26,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 1,
+   "peak_retained": 438160,
+   "peak_seq": 112705
+  },
+  "S1": {
+   "calls": 36,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 26,
+   "consumers_identical": 26,
+   "consumers_identical_ok": 25,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 438160,
+   "peak_seq": 112705
+  },
+  "S2": {
+   "calls": 36,
+   "hits": 3,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 26,
+   "consumers_identical": 26,
+   "consumers_identical_ok": 25,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 763615,
+   "peak_seq": 398128
+  },
+  "S3": {
+   "calls": 36,
+   "hits": 3,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 26,
+   "consumers_identical": 26,
+   "consumers_identical_ok": 25,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 325455,
+   "peak_seq": 325455
+  }
+ },
+ {
+  "dataset": "stockmarket",
+  "query": "query5",
+  "model": "kimi-k2",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   4,
+   32,
+   35,
+   22,
+   14,
+   29,
+   24,
+   16
+  ],
+  "S0": {
+   "calls": 111,
+   "live_errors": 0,
+   "consumers": 27,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 10,
+   "peak_retained": 972171,
+   "peak_seq": 368488
+  },
+  "S1": {
+   "calls": 111,
+   "hits": 35,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 27,
+   "consumers_identical": 27,
+   "consumers_identical_ok": 17,
+   "consumers_identical_failed": 10,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 388543,
+   "peak_seq": 126210
+  },
+  "S2": {
+   "calls": 111,
+   "hits": 42,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 27,
+   "consumers_identical": 27,
+   "consumers_identical_ok": 17,
+   "consumers_identical_failed": 10,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 694614,
+   "peak_seq": 420501
+  },
+  "S3": {
+   "calls": 111,
+   "hits": 42,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 27,
+   "consumers_identical": 27,
+   "consumers_identical_ok": 17,
+   "consumers_identical_failed": 10,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 306071,
+   "peak_seq": 306071
+  }
+ },
+ {
+  "dataset": "stockmarket",
+  "query": "query5",
+  "model": "gemini-2.5-flash",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   12,
+   29,
+   7,
+   40,
+   33,
+   48,
+   8,
+   21
+  ],
+  "S0": {
+   "calls": 135,
+   "live_errors": 0,
+   "consumers": 18,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 2,
+   "peak_retained": 2733931,
+   "peak_seq": 1762333
+  },
+  "S1": {
+   "calls": 135,
+   "hits": 2,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 18,
+   "consumers_identical": 18,
+   "consumers_identical_ok": 16,
+   "consumers_identical_failed": 2,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 2685164,
+   "peak_seq": 1738003
+  },
+  "S2": {
+   "calls": 135,
+   "hits": 6,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 18,
+   "consumers_identical": 18,
+   "consumers_identical_ok": 16,
+   "consumers_identical_failed": 2,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 5287856,
+   "peak_seq": 4340695
+  },
+  "S3": {
+   "calls": 135,
+   "hits": 6,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 18,
+   "consumers_identical": 18,
+   "consumers_identical_ok": 16,
+   "consumers_identical_failed": 2,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 2602692,
+   "peak_seq": 2602692
+  }
+ },
+ {
+  "dataset": "stockmarket",
+  "query": "query5",
+  "model": "gpt-5-mini",
+  "contract": "E",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   16,
+   10,
+   32,
+   4,
+   3,
+   7,
+   24,
+   11
+  ],
+  "S0": {
+   "calls": 457,
+   "live_errors": 0,
+   "consumers": 7,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 1,
+   "peak_retained": 168728,
+   "peak_seq": 23026
+  },
+  "S1": {
+   "calls": 457,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 7,
+   "consumers_identical": 7,
+   "consumers_identical_ok": 6,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 168728,
+   "peak_seq": 23026
+  },
+  "S2": {
+   "calls": 457,
+   "hits": 6,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 7,
+   "consumers_identical": 7,
+   "consumers_identical_ok": 6,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 234366,
+   "peak_seq": 87632
+  },
+  "S3": {
+   "calls": 457,
+   "hits": 6,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 7,
+   "consumers_identical": 7,
+   "consumers_identical_ok": 6,
+   "consumers_identical_failed": 1,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 1,
+     "rc": 1,
+     "refused": true
+    },
+    {
+     "probe": 2,
+     "rc": 1,
+     "refused": true
+    }
+   ],
+   "store_object_intact": true,
+   "peak_retained": 65638,
+   "peak_seq": 65638
+  }
+ }
+]

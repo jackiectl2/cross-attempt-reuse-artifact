@@ -1,0 +1,20 @@
+{
+ "pass": "end-to-end equivalence pass, consumers at trace position",
+ "protocol_version": "e2e-trace-v1",
+ "consumer_position": "each recorded execute_python call runs before the attempt's next query_db call, with only the bindings present at that point (code/live.py run_system -> run_consumers); calls after the last query_db call run at attempt end",
+ "comparison": "every S1/S2/S2c/S3 tool message, inline value, bound path and bound-file content compared with S0 on identical attempt orders (code/live.py _compare); S0 runs every consumer twice to detect nondeterministic agent code",
+ "admitted_set": "E-eval subset (static E certificate, successful replay, byte-identical to the recorded observation, 3-run stable) for the E passes; Contract B for calib_B",
+ "jobs": {
+  "submitted": "2026-10-01T14:59:55-04:00",
+  "account": "drjieliu99 (before the 2026-10-02 compute rules)",
+  "all_E": "62998683-62998694 (12 datasets, 270 cells)",
+  "calib_E_and_calib_B": "62998695-62998706",
+  "cow_calib_E": "62998707-62998710",
+  "summaries_and_diagnostics": "63129725 (ed-eval-28, ACCOUNT_B, 2026-10-02)"
+ },
+ "code": "results/code_snapshot/code-2026-10-02.tar.gz (per-file SHA-256 in code-2026-10-02.sha256); the e2e functions of code/live.py (run_system, run_consumers, _compare, _e2e_job, cmd_e2e, cmd_e2e_summary) are unchanged since these jobs ran; later edits to live.py only added the concurrency stress test (run_concurrent, cmd_concurrent)",
+ "superseded_passes": {
+  "results/e2e/pre_s2fix/": "first all-cell pass, before the S2 store-naming fix",
+  "results/e2e/post_attempt/": "consumers at attempt end; 255 cells (no PATENTS)"
+ }
+}

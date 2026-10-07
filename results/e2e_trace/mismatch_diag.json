@@ -1,0 +1,1377 @@
+{
+ "all_E": {
+  "mismatch_classes": {
+   "S1:live_error": 23,
+   "S1:value_on_miss": 1,
+   "S2:live_error": 16,
+   "S2:value_on_miss": 1,
+   "S3:live_error": 10,
+   "S3:value_on_miss": 1
+  },
+  "unclassified_truncated": {
+   "S1": 0,
+   "S2": 0,
+   "S3": 0
+  },
+  "consumers_skipped_unbound": {
+   "S1": 34,
+   "S2": 21,
+   "S3": 0
+  },
+  "consumer_mismatch_classes": {
+   "S1:timeout": 2,
+   "S2:timeout": 1
+  },
+  "details": [
+   {
+    "cell": "PATENTS/query3/gemini-2.5-flash",
+    "budget": "inf",
+    "system": "S3",
+    "class": "live_error",
+    "run": 4,
+    "i": 1,
+    "hit": false,
+    "kind": "error",
+    "S0_kind": "spilled",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, cpc, citation FROM publicationinfo",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     8.57,
+     13.63,
+     38.19
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/gemini-2.5-flash",
+    "budget": "inf",
+    "system": "S3",
+    "class": "live_error",
+    "run": 14,
+    "i": 0,
+    "hit": false,
+    "kind": "error",
+    "S0_kind": "inline",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, cpc, citation FROM publicationinfo WHERE Patents_info LIKE \"%assignee_harmonized: UNIV CALIFORNIA%\"",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     9.64,
+     8.54,
+     7.55
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/gemini-2.5-flash",
+    "budget": "inf",
+    "system": "S3",
+    "class": "live_error",
+    "run": 14,
+    "i": 1,
+    "hit": false,
+    "kind": "error",
+    "S0_kind": "spilled",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, cpc, citation FROM publicationinfo",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     8.57,
+     13.63,
+     38.19
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/gemini-2.5-flash",
+    "budget": "inf",
+    "system": "S3",
+    "class": "live_error",
+    "run": 0,
+    "i": 0,
+    "hit": false,
+    "kind": "error",
+    "S0_kind": "inline",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, citation FROM publicationinfo WHERE Patents_info LIKE '%\"assignee_harmonized\": \"UNIV CALIFORNIA\"%';",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     9.06,
+     9.81,
+     9.97
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/gpt-5-mini",
+    "budget": "inf",
+    "system": "S2",
+    "class": "live_error",
+    "run": 31,
+    "i": 1,
+    "hit": false,
+    "kind": "error",
+    "S0_kind": "spilled",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT rowid, Patents_info, cpc, citation FROM publicationinfo WHERE Patents_info LIKE '%UNIV CALIFORNIA%' OR Patents_info LIKE '%UNIVERSITY OF CALIFORNIA%' LIMIT 1000;",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     8.45,
+     12.57,
+     9.27
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/gpt-5-mini",
+    "budget": "inf",
+    "system": "S2",
+    "class": "live_error",
+    "run": 28,
+    "i": 0,
+    "hit": false,
+    "kind": "error",
+    "S0_kind": "spilled",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT rowid, Patents_info, family_id, cpc, citation FROM publicationinfo WHERE Patents_info LIKE '%UNIV CALIFORNIA%';",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     11.58,
+     8.62,
+     9.28
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/gpt-5-mini",
+    "budget": "inf",
+    "system": "S2",
+    "class": "live_error",
+    "run": 28,
+    "i": 2,
+    "hit": false,
+    "kind": "error",
+    "S0_kind": "inline",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT rowid, Patents_info, cpc, citation FROM publicationinfo WHERE citation LIKE '%11421276%';",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     11.68,
+     12.78,
+     11.96
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/gpt-5-mini",
+    "budget": "inf",
+    "system": "S2",
+    "class": "live_error",
+    "run": 23,
+    "i": 0,
+    "hit": false,
+    "kind": "error",
+    "S0_kind": "spilled",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT rowid, Patents_info, cpc, citation, title_localized FROM publicationinfo WHERE Patents_info LIKE '%UNIV CALIFORNIA%' LIMIT 200;",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     10.36,
+     10.75,
+     9.45
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/gpt-5-mini",
+    "budget": "inf",
+    "system": "S2",
+    "class": "live_error",
+    "run": 23,
+    "i": 1,
+    "hit": false,
+    "kind": "error",
+    "S0_kind": "spilled",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT rowid, Patents_info, cpc, citation, title_localized FROM publicationinfo WHERE citation IS NOT NULL AND citation != '[]' LIMIT 200000;",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     11.98,
+     14.78,
+     10.16
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/gpt-5-mini",
+    "budget": "inf",
+    "system": "S2",
+    "class": "live_error",
+    "run": 22,
+    "i": 0,
+    "hit": false,
+    "kind": "error",
+    "S0_kind": "spilled",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT rowid, Patents_info, cpc, citation, title_localized, publication_date FROM publicationinfo WHERE upper(Patents_info) LIKE '%UNIV CALIFORNIA%' LIMIT 1000;",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     18.43,
+     20.59,
+     18.37
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/gpt-5-mini",
+    "budget": "inf",
+    "system": "S2",
+    "class": "live_error",
+    "run": 22,
+    "i": 1,
+    "hit": false,
+    "kind": "error",
+    "S0_kind": "spilled",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT rowid, Patents_info, cpc, citation, title_localized FROM publicationinfo WHERE citation IS NOT NULL AND citation != '[]';",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     14.66,
+     15.08,
+     12.54
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/gemini-3-pro",
+    "budget": "inf",
+    "system": "S1",
+    "class": "live_error",
+    "run": 2,
+    "i": 3,
+    "hit": false,
+    "kind": "error",
+    "S0_kind": "spilled",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, cpc, citation FROM publicationinfo WHERE citation LIKE '%\"US-2022074631-A1\"%' OR citation LIKE '%\"TW-201925402-A\"%' OR citation LIKE '%\"US-11421276-B2\"%' OR citation LIKE '%\"AU-2019275518-B2\"%' OR citation LIKE '%\"US-2017194630-A1\"%' OR citation LIKE '%\"JP-S6163700-A\"%' OR citat",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     80.15,
+     80.33,
+     80.29
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/gemini-3-pro",
+    "budget": "inf",
+    "system": "S1",
+    "class": "live_error",
+    "run": 33,
+    "i": 3,
+    "hit": false,
+    "kind": "error",
+    "S0_kind": "spilled",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info FROM publicationinfo WHERE Patents_info LIKE '%UNIV CALIFORNIA%'",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     9.8,
+     8.58,
+     8.81
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/gemini-3-pro",
+    "budget": "inf",
+    "system": "S1",
+    "class": "live_error",
+    "run": 33,
+    "i": 6,
+    "hit": false,
+    "kind": "error",
+    "S0_kind": "spilled",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, cpc, citation FROM publicationinfo",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     8.57,
+     13.63,
+     38.19
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/gemini-3-pro",
+    "budget": "inf",
+    "system": "S2",
+    "class": "live_error",
+    "run": 31,
+    "i": 2,
+    "hit": false,
+    "kind": "error",
+    "S0_kind": "inline",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT count(*) FROM publicationinfo WHERE Patents_info LIKE '%UNIV CALIFORNIA%'",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     8.29,
+     13.38,
+     10.79
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/gemini-3-pro",
+    "budget": "inf",
+    "system": "S2",
+    "class": "live_error",
+    "run": 31,
+    "i": 5,
+    "hit": false,
+    "kind": "error",
+    "S0_kind": "spilled",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info FROM publicationinfo WHERE Patents_info LIKE '%UNIV CALIFORNIA%'",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     9.8,
+     8.58,
+     8.81
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/gemini-3-pro",
+    "budget": "inf",
+    "system": "S2",
+    "class": "live_error",
+    "run": 30,
+    "i": 4,
+    "hit": false,
+    "kind": "error",
+    "S0_kind": "spilled",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, cpc FROM publicationinfo WHERE citation LIKE '%CA-2278751-A1%' OR citation LIKE '%AU-2004253879-A1%' OR citation LIKE '%IL-140140-A0%' OR citation LIKE '%WO-2024112568-A1%' OR citation LIKE '%US-2022018060-A1%' OR citation LIKE '%IL-244029-A0%' OR citation LIKE '%KR-20050085437-",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     45.53,
+     36.06,
+     32.77
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/gpt-5.2",
+    "budget": "inf",
+    "system": "S1",
+    "class": "live_error",
+    "run": 35,
+    "i": 4,
+    "hit": false,
+    "kind": "error",
+    "S0_kind": "inline",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, cpc FROM publicationinfo WHERE citation LIKE '%US-2022074631-A1%' OR citation LIKE '%US-11072681-B2%' OR citation LIKE '%US-11667770-B2%' OR citation LIKE '%US-2006292670-A1%' OR citation LIKE '%US-2018243924-A1%' OR citation LIKE '%US-5304932-A%' OR citation LIKE '%AU-200834984",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     6.96,
+     8.86,
+     9.06
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/gpt-5.2",
+    "budget": "inf",
+    "system": "S1",
+    "class": "live_error",
+    "run": 10,
+    "i": 0,
+    "hit": false,
+    "kind": "error",
+    "S0_kind": "spilled",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, cpc, citation FROM publicationinfo WHERE Patents_info LIKE '%UNIV CALIFORNIA%';",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     10.87,
+     9.11,
+     9.45
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/gpt-5.2",
+    "budget": "inf",
+    "system": "S1",
+    "class": "live_error",
+    "run": 10,
+    "i": 2,
+    "hit": false,
+    "kind": "error",
+    "S0_kind": "spilled",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, cpc, citation FROM publicationinfo WHERE citation LIKE '%US-%-A%' AND citation LIKE '%US-%';",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     7.0,
+     10.93,
+     8.85
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/gpt-5.2",
+    "budget": "inf",
+    "system": "S1",
+    "class": "live_error",
+    "run": 37,
+    "i": 0,
+    "hit": false,
+    "kind": "error",
+    "S0_kind": "spilled",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, cpc, citation FROM publicationinfo WHERE Patents_info LIKE '%UNIV CALIFORNIA%';",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     10.87,
+     9.11,
+     9.45
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/gpt-5.2",
+    "budget": "inf",
+    "system": "S1",
+    "class": "live_error",
+    "run": 37,
+    "i": 1,
+    "hit": false,
+    "kind": "error",
+    "S0_kind": "spilled",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, cpc, citation FROM publicationinfo WHERE citation LIKE '%UNIV CALIFORNIA%';",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     8.46,
+     10.2,
+     10.0
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/gpt-5.2",
+    "budget": "inf",
+    "system": "S1",
+    "class": "live_error",
+    "run": 48,
+    "i": 0,
+    "hit": false,
+    "kind": "error",
+    "S0_kind": "spilled",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, cpc, citation FROM publicationinfo WHERE Patents_info LIKE '%UNIV CALIFORNIA%';",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     10.87,
+     9.11,
+     9.45
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query2/kimi-k2",
+    "budget": "inf",
+    "system": "S1",
+    "class": "live_error",
+    "run": 37,
+    "i": 3,
+    "hit": false,
+    "kind": "error",
+    "S0_kind": "spilled",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT title_localized, cpc, grant_date, Patents_info FROM publicationinfo",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     10.33,
+     11.56,
+     11.32
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query2/kimi-k2",
+    "budget": "inf",
+    "system": "S1",
+    "class": "live_error",
+    "run": 37,
+    "i": 6,
+    "hit": false,
+    "kind": "error",
+    "S0_kind": "spilled",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT title_localized, cpc, grant_date, Patents_info FROM publicationinfo WHERE Patents_info LIKE '%DE-%' OR Patents_info LIKE '%from DE,%' OR Patents_info LIKE '%Germany%'",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     20.05,
+     20.54,
+     19.8
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query2/kimi-k2",
+    "budget": "inf",
+    "system": "S1",
+    "class": "live_error",
+    "run": 21,
+    "i": 0,
+    "hit": false,
+    "kind": "error",
+    "S0_kind": "spilled",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, cpc, grant_date FROM publicationinfo WHERE grant_date LIKE '%2019' AND Patents_info LIKE '%DE%'",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     7.73,
+     10.24,
+     9.69
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query2/kimi-k2",
+    "budget": "inf",
+    "system": "S1",
+    "class": "live_error",
+    "run": 21,
+    "i": 1,
+    "hit": false,
+    "kind": "error",
+    "S0_kind": "spilled",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, cpc, grant_date FROM publicationinfo WHERE grant_date LIKE '%2019%' AND Patents_info LIKE '%DE%'",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     13.39,
+     8.38,
+     12.57
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query2/kimi-k2",
+    "budget": "inf",
+    "system": "S1",
+    "class": "live_error",
+    "run": 21,
+    "i": 3,
+    "hit": false,
+    "kind": "error",
+    "S0_kind": "spilled",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, cpc, grant_date FROM publicationinfo WHERE grant_date LIKE '%2019%' AND Patents_info LIKE '%DE%'",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     13.39,
+     8.38,
+     12.57
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query2/kimi-k2",
+    "budget": "inf",
+    "system": "S1",
+    "class": "live_error",
+    "run": 21,
+    "i": 4,
+    "hit": false,
+    "kind": "error",
+    "S0_kind": "spilled",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, cpc, grant_date FROM publicationinfo WHERE grant_date LIKE '%2019%' AND (Patents_info LIKE '%from DE%' OR Patents_info LIKE '%DE-%')",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     9.41,
+     10.72,
+     11.33
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query2/kimi-k2",
+    "budget": "inf",
+    "system": "S1",
+    "class": "live_error",
+    "run": 21,
+    "i": 5,
+    "hit": false,
+    "kind": "error",
+    "S0_kind": "spilled",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, cpc, grant_date FROM publicationinfo WHERE grant_date LIKE '%2019%' AND (Patents_info LIKE '%from DE%' OR Patents_info LIKE '%In DE,%' OR Patents_info LIKE '%DE application%' OR Patents_info LIKE '%DE patent%' OR Patents_info LIKE '%DE-%')",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     79.37,
+     18.43,
+     10.18
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query2/kimi-k2",
+    "budget": "inf",
+    "system": "S1",
+    "class": "live_error",
+    "run": 6,
+    "i": 3,
+    "hit": false,
+    "kind": "error",
+    "S0_kind": "spilled",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT grant_date, cpc FROM publicationinfo WHERE Patents_info LIKE '%DE-%' AND (grant_date LIKE '%July%' OR grant_date LIKE '%August%' OR grant_date LIKE '%September%' OR grant_date LIKE '%October%' OR grant_date LIKE '%November%' OR grant_date LIKE '%December%') AND grant_date LIKE '%2019%';",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     8.76,
+     7.74,
+     9.81
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/kimi-k2",
+    "budget": "inf",
+    "system": "S1",
+    "class": "live_error",
+    "run": 31,
+    "i": 9,
+    "hit": false,
+    "kind": "spilled",
+    "S0_kind": "error",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, citation FROM publicationinfo WHERE Patents_info LIKE '%UNIV CALIFORNIA%';",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     8.85,
+     21.68,
+     8.07
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/kimi-k2",
+    "budget": "inf",
+    "system": "S1",
+    "class": "live_error",
+    "run": 31,
+    "i": 11,
+    "hit": false,
+    "kind": "spilled",
+    "S0_kind": "error",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, cpc FROM publicationinfo WHERE citation LIKE '%UNIV CALIFORNIA%' LIMIT 5;",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     14.39,
+     11.13,
+     13.52
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/kimi-k2",
+    "budget": "inf",
+    "system": "S1",
+    "class": "live_error",
+    "run": 31,
+    "i": 12,
+    "hit": true,
+    "kind": "spilled",
+    "S0_kind": "error",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, citation FROM publicationinfo WHERE Patents_info LIKE '%UNIV CALIFORNIA%';",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     8.85,
+     21.68,
+     8.07
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/kimi-k2",
+    "budget": "inf",
+    "system": "S1",
+    "class": "live_error",
+    "run": 31,
+    "i": 13,
+    "hit": false,
+    "kind": "spilled",
+    "S0_kind": "error",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, citation FROM publicationinfo;",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     9.54,
+     11.4,
+     16.19
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/kimi-k2",
+    "budget": "inf",
+    "system": "S1",
+    "class": "live_error",
+    "run": 31,
+    "i": 14,
+    "hit": false,
+    "kind": "spilled",
+    "S0_kind": "error",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info FROM publicationinfo WHERE Patents_info LIKE '%UNIV CALIFORNIA%';",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     11.99,
+     7.66,
+     9.81
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/kimi-k2",
+    "budget": "inf",
+    "system": "S1",
+    "class": "live_error",
+    "run": 31,
+    "i": 15,
+    "hit": true,
+    "kind": "spilled",
+    "S0_kind": "error",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info FROM publicationinfo WHERE Patents_info LIKE '%UNIV CALIFORNIA%';",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     11.99,
+     7.66,
+     9.81
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/kimi-k2",
+    "budget": "inf",
+    "system": "S1",
+    "class": "value_on_miss",
+    "run": 25,
+    "i": 6,
+    "hit": false,
+    "kind": "spilled",
+    "S0_kind": "spilled",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, citation, cpc FROM publicationinfo WHERE Patents_info LIKE '%UNIV CALIFORNIA%' ORDER BY RANDOM() LIMIT 50;",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     10.39,
+     9.76,
+     8.86
+    ],
+    "replay_3run_byte_stable": false
+   },
+   {
+    "cell": "PATENTS/query3/kimi-k2",
+    "budget": "inf",
+    "system": "S2",
+    "class": "live_error",
+    "run": 31,
+    "i": 9,
+    "hit": false,
+    "kind": "spilled",
+    "S0_kind": "error",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, citation FROM publicationinfo WHERE Patents_info LIKE '%UNIV CALIFORNIA%';",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     8.85,
+     21.68,
+     8.07
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/kimi-k2",
+    "budget": "inf",
+    "system": "S2",
+    "class": "live_error",
+    "run": 31,
+    "i": 11,
+    "hit": false,
+    "kind": "spilled",
+    "S0_kind": "error",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, cpc FROM publicationinfo WHERE citation LIKE '%UNIV CALIFORNIA%' LIMIT 5;",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     14.39,
+     11.13,
+     13.52
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/kimi-k2",
+    "budget": "inf",
+    "system": "S2",
+    "class": "live_error",
+    "run": 31,
+    "i": 12,
+    "hit": true,
+    "kind": "spilled",
+    "S0_kind": "error",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, citation FROM publicationinfo WHERE Patents_info LIKE '%UNIV CALIFORNIA%';",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     8.85,
+     21.68,
+     8.07
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/kimi-k2",
+    "budget": "inf",
+    "system": "S2",
+    "class": "live_error",
+    "run": 31,
+    "i": 13,
+    "hit": false,
+    "kind": "spilled",
+    "S0_kind": "error",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, citation FROM publicationinfo;",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     9.54,
+     11.4,
+     16.19
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/kimi-k2",
+    "budget": "inf",
+    "system": "S2",
+    "class": "live_error",
+    "run": 31,
+    "i": 14,
+    "hit": false,
+    "kind": "spilled",
+    "S0_kind": "error",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info FROM publicationinfo WHERE Patents_info LIKE '%UNIV CALIFORNIA%';",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     11.99,
+     7.66,
+     9.81
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/kimi-k2",
+    "budget": "inf",
+    "system": "S2",
+    "class": "live_error",
+    "run": 31,
+    "i": 15,
+    "hit": true,
+    "kind": "spilled",
+    "S0_kind": "error",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info FROM publicationinfo WHERE Patents_info LIKE '%UNIV CALIFORNIA%';",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     11.99,
+     7.66,
+     9.81
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/kimi-k2",
+    "budget": "inf",
+    "system": "S2",
+    "class": "value_on_miss",
+    "run": 25,
+    "i": 6,
+    "hit": false,
+    "kind": "spilled",
+    "S0_kind": "spilled",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, citation, cpc FROM publicationinfo WHERE Patents_info LIKE '%UNIV CALIFORNIA%' ORDER BY RANDOM() LIMIT 50;",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     10.39,
+     9.76,
+     8.86
+    ],
+    "replay_3run_byte_stable": false
+   },
+   {
+    "cell": "PATENTS/query3/kimi-k2",
+    "budget": "inf",
+    "system": "S3",
+    "class": "live_error",
+    "run": 31,
+    "i": 9,
+    "hit": false,
+    "kind": "spilled",
+    "S0_kind": "error",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, citation FROM publicationinfo WHERE Patents_info LIKE '%UNIV CALIFORNIA%';",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     8.85,
+     21.68,
+     8.07
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/kimi-k2",
+    "budget": "inf",
+    "system": "S3",
+    "class": "live_error",
+    "run": 31,
+    "i": 11,
+    "hit": false,
+    "kind": "spilled",
+    "S0_kind": "error",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, cpc FROM publicationinfo WHERE citation LIKE '%UNIV CALIFORNIA%' LIMIT 5;",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     14.39,
+     11.13,
+     13.52
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/kimi-k2",
+    "budget": "inf",
+    "system": "S3",
+    "class": "live_error",
+    "run": 31,
+    "i": 12,
+    "hit": true,
+    "kind": "spilled",
+    "S0_kind": "error",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, citation FROM publicationinfo WHERE Patents_info LIKE '%UNIV CALIFORNIA%';",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     8.85,
+     21.68,
+     8.07
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/kimi-k2",
+    "budget": "inf",
+    "system": "S3",
+    "class": "live_error",
+    "run": 31,
+    "i": 13,
+    "hit": false,
+    "kind": "spilled",
+    "S0_kind": "error",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, citation FROM publicationinfo;",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     9.54,
+     11.4,
+     16.19
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/kimi-k2",
+    "budget": "inf",
+    "system": "S3",
+    "class": "live_error",
+    "run": 31,
+    "i": 14,
+    "hit": false,
+    "kind": "spilled",
+    "S0_kind": "error",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info FROM publicationinfo WHERE Patents_info LIKE '%UNIV CALIFORNIA%';",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     11.99,
+     7.66,
+     9.81
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/kimi-k2",
+    "budget": "inf",
+    "system": "S3",
+    "class": "live_error",
+    "run": 31,
+    "i": 15,
+    "hit": true,
+    "kind": "spilled",
+    "S0_kind": "error",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info FROM publicationinfo WHERE Patents_info LIKE '%UNIV CALIFORNIA%';",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     11.99,
+     7.66,
+     9.81
+    ],
+    "replay_3run_byte_stable": true
+   },
+   {
+    "cell": "PATENTS/query3/kimi-k2",
+    "budget": "inf",
+    "system": "S3",
+    "class": "value_on_miss",
+    "run": 25,
+    "i": 6,
+    "hit": false,
+    "kind": "spilled",
+    "S0_kind": "spilled",
+    "engine": "sqlite",
+    "db": "publication_database",
+    "query": "SELECT Patents_info, citation, cpc FROM publicationinfo WHERE Patents_info LIKE '%UNIV CALIFORNIA%' ORDER BY RANDOM() LIMIT 50;",
+    "replay_status": [
+     "ok",
+     "ok",
+     "ok"
+    ],
+    "replay_exec_s": [
+     10.39,
+     9.76,
+     8.86
+    ],
+    "replay_3run_byte_stable": false
+   }
+  ]
+ },
+ "calib_E": {
+  "mismatch_classes": {},
+  "unclassified_truncated": {
+   "S1": 0,
+   "S2": 0,
+   "S3": 0
+  },
+  "consumers_skipped_unbound": {
+   "S1": 0,
+   "S2": 0,
+   "S3": 0
+  },
+  "consumer_mismatch_classes": {},
+  "details": []
+ },
+ "calib_B": {
+  "mismatch_classes": {},
+  "unclassified_truncated": {
+   "S1": 0,
+   "S2": 0,
+   "S3": 0
+  },
+  "consumers_skipped_unbound": {
+   "S1": 0,
+   "S2": 0,
+   "S3": 0
+  },
+  "consumer_mismatch_classes": {},
+  "details": []
+ },
+ "cow_calib_E": {
+  "mismatch_classes": {},
+  "unclassified_truncated": {
+   "S2": 0,
+   "S2c": 0,
+   "S3": 0
+  },
+  "consumers_skipped_unbound": {
+   "S2": 0,
+   "S2c": 0,
+   "S3": 0
+  },
+  "consumer_mismatch_classes": {
+   "S2:timeout": 1,
+   "S2c:timeout": 2,
+   "S3:timeout": 2
+  },
+  "details": []
+ }
+}

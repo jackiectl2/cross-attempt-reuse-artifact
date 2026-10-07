@@ -1,0 +1,11 @@
+% Table 4 -- cross-harness (column width)
+\begin{table}[htbp]
+  \caption{Exact-call repetition in four public leaderboard harnesses on DAB's tasks and in the first five runs of the
+  released DAB traces. The analysis is at trace level, without replay, on the exact database and query text. Qwen3.8
+  denotes Qwen3.8-Flash-Next, and DeepSeek-v4.1 denotes DeepSeek-v4.1-flash. Session and other-attempt columns are
+  pooled call shares averaged over 50 random attempt orders. $N{=}5$ is the median share of calls that repeat an
+  earlier call among five attempts (50 resamples), over the listed number of tasks with five available runs.}
+  \label{tab:xharness}
+  \footnotesize\setlength{\tabcolsep}{2.5pt}
+  \input{figures/tab4_xharness}
+\end{table}

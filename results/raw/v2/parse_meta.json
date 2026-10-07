@@ -1,0 +1,12 @@
+{
+ "runs": 13482,
+ "tool_calls": 151293,
+ "query_db": 76213,
+ "runs_without_tool_calls": 30,
+ "validation": {
+  "pass": 4543,
+  "fail": 8939,
+  "validator_error": 0
+ },
+ "dab_revision": "f6b1ad07a61da2077ae7e074416900dbb452d1bc"
+}

@@ -1,0 +1,1072 @@
+{
+ "queries": 41616,
+ "calls": 76147,
+ "B": {
+  "unordered_result": 17794,
+  "output_not_a_stored_column": 6831,
+  "one_row": 3507,
+  "mongo_no_sort": 3064,
+  "predicate_not_allowed": 2287,
+  "nested_block": 1442,
+  "not_one_select_block": 1330,
+  "clause_not_allowed": 1019,
+  "one_row_output_not_allowed": 928,
+  "grouped_output_not_allowed": 842,
+  "parse_error": 566,
+  "alias_shadows_column": 506,
+  "from_not_a_table": 413,
+  "unbound_table": 383,
+  "total_order": 228,
+  "group_key_not_a_stored_column": 189,
+  "order_term_not_allowed": 90,
+  "one_row_clause_not_allowed": 42,
+  "aggregate_not_allowed": 35,
+  "not_single_statement": 29,
+  "having_without_group": 27,
+  "join_not_allowed": 20,
+  "no_table": 19,
+  "distinct_on": 7,
+  "unknown": 6,
+  "having_not_allowed": 4,
+  "limit_not_literal": 3,
+  "id_lookup": 2,
+  "not_find_spec": 2,
+  "id_lookup_not_plain": 1
+ },
+ "B_calls": {
+  "unordered_result": 35388,
+  "output_not_a_stored_column": 14018,
+  "mongo_no_sort": 8227,
+  "one_row": 5360,
+  "predicate_not_allowed": 2632,
+  "grouped_output_not_allowed": 1871,
+  "not_one_select_block": 1582,
+  "nested_block": 1511,
+  "one_row_output_not_allowed": 1073,
+  "clause_not_allowed": 1028,
+  "from_not_a_table": 845,
+  "parse_error": 702,
+  "alias_shadows_column": 605,
+  "unbound_table": 443,
+  "total_order": 335,
+  "group_key_not_a_stored_column": 191,
+  "order_term_not_allowed": 101,
+  "one_row_clause_not_allowed": 42,
+  "aggregate_not_allowed": 35,
+  "not_single_statement": 34,
+  "having_without_group": 27,
+  "having_not_allowed": 22,
+  "no_table": 22,
+  "join_not_allowed": 20,
+  "limit_not_literal": 14,
+  "distinct_on": 7,
+  "unknown": 6,
+  "id_lookup": 2,
+  "id_lookup_not_plain": 2,
+  "not_find_spec": 2
+ },
+ "B_admitted": {
+  "queries": 3737,
+  "calls": 5697,
+  "by_engine": {
+   "duckdb": 3028,
+   "postgres": 381,
+   "sqlite": 326,
+   "mongo": 2
+  }
+ },
+ "examples_B": {
+  "from_not_a_table": [
+   {
+    "engine": "sqlite",
+    "query": "SELECT pi.System, pi.Name, pi.Version, pi.Licenses, pi.VersionInfo, ppv.ProjectName FROM packageinfo pi LEFT JOIN project_database.project_packageversion ppv ON pi.System = ppv.System AND pi.Name = ppv.Name AND pi.Version = ppv.Version WHERE pi.System = 'NPM' AND json_extract(pi.Licenses, '$[0]') = "
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT pp.ProjectName FROM project_packageversion pp JOIN package_database.packageinfo p ON pp.System = p.System AND pp.Name = p.Name AND pp.Version = p.Version WHERE pp.System = 'NPM' AND p.Licenses LIKE '%\"MIT\"%' AND p.VersionInfo LIKE '%\"IsRelease\": true%' LIMIT 10"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT p.Name as package_name, p.Version as package_version, json_extract(p.VersionInfo, '$.Ordinal') as ordinal, pp.ProjectName as github_project FROM packageinfo p JOIN project_database.project_packageversion pp ON p.Name = pp.Name AND p.Version = pp.Version AND p.System = pp.System WHERE p.System"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT DISTINCT p.Name, p.Version, p.VersionInfo, pp.ProjectName FROM packageinfo p, project_database.project_packageversion pp WHERE p.System = 'NPM' AND p.Name = pp.Name AND p.Version = pp.Version AND p.System = pp.System LIMIT 50000;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT column_name FROM information_schema.columns WHERE table_name='project_info';"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT table_name FROM information_schema.tables;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT DISTINCT ppv.ProjectName FROM project_packageversion ppv JOIN package_database.packageinfo p ON 1=0;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT T1.Name, T1.Version, T2.ProjectName FROM project_packageversion AS T2 INNER JOIN read_json_auto('var_function-call-9646753308636010247') AS T1 ON T1.Name = T2.Name AND T1.Version = T2.Version WHERE T2.System = 'NPM';"
+   }
+  ],
+  "unordered_result": [
+   {
+    "engine": "sqlite",
+    "query": "SELECT p.System, p.Name, p.Version, p.Licenses, p.VersionInfo FROM packageinfo p WHERE p.System = 'NPM' AND p.Licenses LIKE '%MIT%' AND p.VersionInfo LIKE '%\"IsRelease\": true%'"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT System, Name, Version, Licenses, VersionInfo FROM packageinfo WHERE System = 'NPM' AND Licenses LIKE '%MIT%' AND VersionInfo LIKE '%\"IsRelease\": true%' LIMIT 10"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT System, Name, Version, Licenses, VersionInfo FROM packageinfo WHERE System = 'NPM' AND Licenses LIKE '%MIT%' AND VersionInfo LIKE '%IsRelease%true%';"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT \"Name\", \"Version\" FROM packageinfo WHERE \"System\" = 'NPM' AND \"Licenses\" LIKE '%MIT%' AND \"VersionInfo\" LIKE '%IsRelease%true%';"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT \"Name\", \"Version\", \"VersionInfo\" FROM packageinfo WHERE \"System\" = 'NPM';"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT \"System\", \"Name\", \"Version\" FROM packageinfo WHERE \"System\" = 'NPM' AND \"Licenses\" LIKE '%MIT%' AND \"VersionInfo\" LIKE '%IsRelease%true%';"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT \"System\", \"Name\", \"Version\", \"VersionInfo\" FROM packageinfo WHERE \"System\" = 'NPM' LIMIT 5;"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT DISTINCT \"System\", \"Name\", \"Version\", \"Links\", \"Licenses\", \"VersionInfo\" FROM packageinfo WHERE \"System\"='NPM' AND \"Licenses\" LIKE '%MIT%' AND \"VersionInfo\" LIKE '%IsRelease%true%';"
+   }
+  ],
+  "not_one_select_block": [
+   {
+    "engine": "sqlite",
+    "query": "PRAGMA table_info(packageinfo);"
+   },
+   {
+    "engine": "duckdb",
+    "query": "DESCRIBE project_packageversion;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "PRAGMA table_info('project_info')"
+   },
+   {
+    "engine": "duckdb",
+    "query": "CREATE TEMP TABLE latest_npm_releases AS SELECT Name, MAX(json_extract(VersionInfo, '$.Ordinal')) as MaxOrdinal FROM package_database.packageinfo WHERE System = 'NPM' AND json_extract(VersionInfo, '$.IsRelease') = 1 GROUP BY Name"
+   },
+   {
+    "engine": "duckdb",
+    "query": "PRAGMA table_info(project_info)"
+   },
+   {
+    "engine": "duckdb",
+    "query": "DESCRIBE project_info"
+   },
+   {
+    "engine": "duckdb",
+    "query": "DESCRIBE project_info;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "ATTACH '$HOME/DataAgentBench/query_GITHUB_REPOS/query_dataset/metadata_database.db' AS meta (TYPE SQLITE);"
+   }
+  ],
+  "predicate_not_allowed": [
+   {
+    "engine": "sqlite",
+    "query": "SELECT System, Name, Version, CAST(json_extract(VersionInfo, '$.Ordinal') AS INTEGER) as Ordinal FROM packageinfo WHERE System = 'NPM' AND json_extract(VersionInfo, '$.IsRelease') = 1 ORDER BY Name, Ordinal DESC"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT System, Name, Version, Licenses FROM packageinfo WHERE System = 'NPM' AND Licenses LIKE '%MIT%' AND json_extract(VersionInfo, '$.IsRelease') = 1"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT \"Name\", \"Version\", json_extract(\"VersionInfo\", '$.Ordinal') as Ordinal FROM packageinfo WHERE \"System\" = 'NPM' AND json_extract(\"VersionInfo\", '$.IsRelease') = 1 ORDER BY \"Name\", Ordinal DESC LIMIT 10;"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT \"Name\", \"Version\", json_extract(\"VersionInfo\", '$.Ordinal') as Ordinal FROM packageinfo WHERE \"System\" = 'NPM' AND json_extract(\"VersionInfo\", '$.IsRelease') = 1 ORDER BY \"Name\", Ordinal DESC;"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT \"Name\", \"Version\", json_extract(\"VersionInfo\", '$.Ordinal') as Ordinal, json_extract(\"VersionInfo\", '$.IsRelease') as IsRelease FROM packageinfo WHERE \"System\" = 'NPM' AND json_extract(\"VersionInfo\", '$.IsRelease') = 1;"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT Name, MAX(json_extract(VersionInfo, '$.Ordinal')) as max_ordinal FROM packageinfo WHERE System = 'NPM' AND json_extract(VersionInfo, '$.IsRelease') = true GROUP BY Name;"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT Name, Version FROM packageinfo WHERE System = 'NPM' AND json_each.value = 'MIT' AND json_extract(VersionInfo, '$.IsRelease') = true;"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT Name, Version FROM packageinfo WHERE System='NPM' AND Licenses LIKE '%\"MIT\"%' AND json_extract(VersionInfo, '$.IsRelease') = 1"
+   }
+  ],
+  "output_not_a_stored_column": [
+   {
+    "engine": "sqlite",
+    "query": "SELECT System, Name, Version, VersionInfo, json_extract(VersionInfo, '$.Ordinal') as Ordinal FROM packageinfo WHERE System = 'NPM' AND VersionInfo LIKE '%\"IsRelease\": true%' ORDER BY Name, json_extract(VersionInfo, '$.Ordinal') DESC LIMIT 100"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT * FROM packageinfo LIMIT 5"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT * FROM packageinfo WHERE Name = '@dollarshaveclub/cli>1.5.0>qs'"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT * FROM packageinfo WHERE Name = '@dssd1001/wallet-adapter-coinhub' LIMIT 1"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT * FROM packageinfo WHERE Name = '@dwarvesf/react-scripts>0.7.0>lodash._root' LIMIT 1"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT * FROM packageinfo WHERE Name = 'lodash' AND System = 'NPM'"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT * FROM packageinfo WHERE Name = 'material-ui' AND System = 'NPM' LIMIT 1"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT * FROM packageinfo WHERE Name = 'svelte' LIMIT 1"
+   }
+  ],
+  "one_row": [
+   {
+    "engine": "sqlite",
+    "query": "SELECT COUNT(*) FROM packageinfo WHERE System = 'NPM' AND Licenses LIKE '%MIT%' AND VersionInfo LIKE '%\"IsRelease\": true%'"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT COUNT(*) FROM packageinfo WHERE System='NPM' AND Licenses LIKE '%MIT%' AND VersionInfo LIKE '%\"IsRelease\": true%'"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT COUNT(*) as cnt FROM packageinfo WHERE System = 'NPM' AND VersionInfo LIKE '%\"IsRelease\": true%';"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT COUNT(*) as count FROM packageinfo WHERE System = 'NPM'"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT COUNT(*) as count FROM packageinfo;"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT COUNT(*) as total FROM packageinfo WHERE System = 'NPM';"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT COUNT(*) as total_npm_packages FROM packageinfo WHERE System = 'NPM';"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT COUNT(*) as total_packages FROM packageinfo WHERE System = 'NPM';"
+   }
+  ],
+  "nested_block": [
+   {
+    "engine": "sqlite",
+    "query": "SELECT DISTINCT Name, Version, json_extract(VersionInfo, '$.Ordinal') as Ordinal FROM packageinfo p WHERE System = 'NPM' AND json_extract(VersionInfo, '$.IsRelease') = 1 AND CAST(json_extract(VersionInfo, '$.Ordinal') AS INTEGER) = (SELECT MAX(CAST(json_extract(VersionInfo, '$.Ordinal') AS INTEGER))"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT Name, Version FROM (SELECT Name, Version, RANK() OVER (PARTITION BY Name ORDER BY UpstreamPublishedAt DESC) as rnk FROM packageinfo WHERE System = 'NPM') WHERE rnk = 1"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT Name, Version FROM (SELECT Name, Version, ROW_NUMBER() OVER (PARTITION BY Name ORDER BY UpstreamPublishedAt DESC) as rn FROM packageinfo WHERE System = 'NPM' AND json_extract(VersionInfo, '$.IsRelease') = 1) WHERE rn = 1"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT Name, Version FROM (SELECT Name, Version, ROW_NUMBER() OVER (PARTITION BY Name ORDER BY UpstreamPublishedAt DESC) as rn FROM packageinfo WHERE System = 'NPM') WHERE rn = 1"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT Name, Version, json_extract(VersionInfo, '$.Ordinal') as ordinal FROM (SELECT Name, Version, VersionInfo, ROW_NUMBER() OVER (PARTITION BY Name ORDER BY json_extract(VersionInfo, '$.Ordinal') DESC) as rn FROM packageinfo WHERE System = 'NPM' AND json_extract(VersionInfo, '$.IsRelease') = true)"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT System, Name, Version, CAST(json_extract(VersionInfo, '$.Ordinal') AS INTEGER) as Ordinal FROM ( SELECT System, Name, Version, VersionInfo, ROW_NUMBER() OVER (PARTITION BY Name ORDER BY CAST(json_extract(VersionInfo, '$.Ordinal') AS INTEGER) DESC) as rn FROM packageinfo WHERE System = 'NPM' A"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT System, Name, Version, Licenses, VersionInfo FROM packageinfo WHERE System='NPM' AND json_valid(Licenses) AND EXISTS ( SELECT 1 FROM json_each(Licenses) WHERE lower(value)='mit' ) AND json_valid(VersionInfo) AND COALESCE(json_extract(VersionInfo,'$.IsRelease'), 0)=1;"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT System, Name, Version, Licenses, VersionInfo FROM packageinfo WHERE System='NPM' AND json_valid(Licenses)=1 AND EXISTS (SELECT 1 FROM json_each(Licenses) WHERE value='MIT') AND json_valid(VersionInfo)=1 AND COALESCE(json_extract(VersionInfo,'$.IsRelease'),0)=1;"
+   }
+  ],
+  "grouped_output_not_allowed": [
+   {
+    "engine": "sqlite",
+    "query": "SELECT Name, Version, MAX(UpstreamPublishedAt) as LatestPublished FROM packageinfo WHERE System = 'NPM' AND VersionInfo LIKE '%\"IsRelease\": true%' GROUP BY Name LIMIT 100000;"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT \"System\",\"Name\",\"Version\" FROM packageinfo WHERE \"System\"='NPM' AND (\"Name\"='@docly/web' OR \"Name\"='@dylanvann/svelte' OR \"Name\"='@edgarai/strapi-provider-upload-local' OR \"Name\"='@dumc11/tailwindcss' OR \"Name\"='@dman777/shadow-dom-quill-temp') GROUP BY \"Name\" HAVING \"UpstreamPublishedAt\"=MAX"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT \"Name\", \"Version\", json_extract(\"VersionInfo\", '$.Ordinal') as Ordinal FROM packageinfo WHERE \"System\" = 'NPM' GROUP BY \"Name\" HAVING Ordinal = max(Ordinal) LIMIT 5;"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT Name, Version FROM packageinfo WHERE System='NPM' GROUP BY Name HAVING UpstreamPublishedAt = MAX(UpstreamPublishedAt)"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT c.id, c.sample_repo_name, c.sample_path, c.repo_data_description, COUNT(*) as copy_count FROM contents c WHERE c.sample_path LIKE '%.swift' AND (c.repo_data_description NOT LIKE '%binary%' OR c.repo_data_description IS NULL) GROUP BY c.id ORDER BY copy_count DESC LIMIT 100;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT id, any_value(sample_repo_name) AS repo_name, max(try_cast(regexp_extract(repo_data_description, 'copies\\s*:\\s*([0-9]+)', 1) AS BIGINT)) AS copies FROM contents WHERE lower(sample_path) LIKE '%.swift' AND lower(coalesce(repo_data_description,'')) NOT LIKE '%binary%: true%' AND lower(coalesce("
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT id, ANY_VALUE(sample_repo_name) as repo_name, ANY_VALUE(sample_path) as path, MAX(repo_data_description) as description, COUNT(*) as occurrence_count FROM contents WHERE sample_path LIKE '%.swift' AND repo_data_description LIKE '%non-binary%' GROUP BY id ORDER BY occurrence_count DESC LIMIT 2"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT c.id, c.sample_repo_name, c.sample_path, c.repo_data_description, COUNT(*) as copy_count FROM contents c WHERE c.sample_path LIKE '%.swift' GROUP BY c.id ORDER BY copy_count DESC LIMIT 10"
+   }
+  ],
+  "order_term_not_allowed": [
+   {
+    "engine": "sqlite",
+    "query": "SELECT Name, Version, VersionInfo FROM packageinfo WHERE System = 'NPM' AND (Name = 'lodash' OR Name = 'commander' OR Name = 'react' OR Name = 'vue' OR Name = 'express' OR Name = 'axios' OR Name = 'webpack' OR Name = 'leaflet') ORDER BY Name, CAST(json_extract(VersionInfo, '$.Ordinal') AS INTEGER) D"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT pp.System, pp.Name, pp.Version, pp.ProjectName, pi.Project_Information, pi.Licenses FROM project_packageversion pp CROSS JOIN project_info pi WHERE pp.System = 'NPM' AND pi.Project_Information LIKE '%forks%' AND pi.Licenses LIKE '%MIT%' ORDER BY CAST(REGEXP_EXTRACT(pi.Project_Information, '(\\"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT Name, Version FROM packageinfo WHERE System = 'NPM' AND Name = 'commander' ORDER BY CAST(json_extract(VersionInfo, '$.Ordinal') AS INTEGER) DESC LIMIT 5"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT System, Name, Version, VersionInfo FROM packageinfo WHERE System = 'NPM' AND VersionInfo LIKE '%IsRelease\": true%' ORDER BY Name, CAST(json_extract(VersionInfo, '$.Ordinal') AS INTEGER) DESC;"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT System, Name, Version, VersionInfo FROM packageinfo WHERE System = 'NPM' AND VersionInfo LIKE '%\"IsRelease\": true%' ORDER BY Name, Ordinal DESC"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT Project_Information FROM project_info WHERE Project_Information LIKE '%stars%' ORDER BY LENGTH(Project_Information) DESC LIMIT 200;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT Project_Information FROM project_info WHERE Project_Information LIKE '%stars%' ORDER BY LENGTH(Project_Information) DESC LIMIT 500;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT id, sample_repo_name, sample_path, repo_data_description FROM contents WHERE sample_path LIKE '%.swift' AND repo_data_description LIKE '%copied%' ORDER BY CAST(regexp_extract(repo_data_description, '(\\d+) copied', 1) AS INTEGER) DESC LIMIT 50;"
+   }
+  ],
+  "parse_error": [
+   {
+    "engine": "sqlite",
+    "query": "SELECT System, Name, Version, Licenses, VersionInfo FROM packageinfo WHERE System = 'NPM' AND Licenses LIKE '%MIT%' AND VersionInfo LIKE '%'IsRelease': true%' LIMIT 1000"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT \"System\", \"Name\", \"Version\", \"ProjectName\" FROM project_packageversion WHERE (\"System\",\"Name\",\"Version\") IN (('NPM','@discue/ui-components','0.13.0'),('NPM','@dvcol/web-extension-utils','1.1.1'),('NPM','@eclipsejs/cli','1.0.0'),('NPM','@ebot7/edem-react','0.18.8'),('NPM','@e4a/irmaseal-wasm-b"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT \"Name\",\"Version\",\"UpstreamPublishedAt\" FROM packageinfo p1 WHERE \"System\"='NPM' AND \"UpstreamPublishedAt\" = (SELECT max(\"UpstreamPublishedAt\") FROM packageinfo p2 WHERE p2.\"System\"='NPM' AND p2.\"Name\"=p1.\"Name');"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT ProjectName, Project_Information FROM project_info WHERE Project_Information LIKE '%fork%;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT System, Name, Version, ProjectName FROM project_packageversion WHERE"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT \"System\",\"Name\",\"Version\",\"ProjectName\" FROM project_packageversion WHERE (\"System\",\"Name\",\"Version\") IN (('NPM','@discue/ui-components','0.13.0'),('NPM','@dvcol/web-extension-utils','1.1.1'),('NPM','@eclipsejs/cli','1.0.0'),('NPM','@ebot7/edem-react','0.18.8'),('NPM','@e4a/irmaseal-wasm-bind"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT ProjectName, Project_Information FROM project_info WHERE ProjectName IN (SELECT json_each.value FROM json_each('"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT System, Name, Version, ProjectName FROM project_packageversion WHERE System = 'NPM' AND Name IN ('@discordx/utilities','@discoteam/vueify','@discourse/moment-timezone-names-translations','@discovery-dao/ui','@discovery-solutions/json-connection','@discovery-solutions/react-flatlist','@discove"
+   }
+  ],
+  "clause_not_allowed": [
+   {
+    "engine": "sqlite",
+    "query": "WITH latest_releases AS ( SELECT Name, MAX(UpstreamPublishedAt) as max_published FROM packageinfo WHERE System = 'NPM' AND VersionInfo LIKE '%\"IsRelease\": true%' GROUP BY Name HAVING COUNT(DISTINCT Version) >= 1 ) SELECT DISTINCT p.Name, p.Version, p.UpstreamPublishedAt FROM packageinfo p INNER JOIN"
+   },
+   {
+    "engine": "sqlite",
+    "query": "WITH latest_versions AS ( SELECT Name, Version, VersionInfo, ROW_NUMBER() OVER (PARTITION BY Name ORDER BY json_extract(VersionInfo, '$.Ordinal') DESC) as rn FROM packageinfo WHERE System = 'NPM' AND json_extract(VersionInfo, '$.IsRelease') = 1 ) SELECT Name, Version, VersionInfo FROM latest_version"
+   },
+   {
+    "engine": "sqlite",
+    "query": "WITH latest_versions AS ( SELECT Name, Version, VersionInfo, ROW_NUMBER() OVER (PARTITION BY Name ORDER BY json_extract(VersionInfo, '$.Ordinal') DESC) as rn FROM packageinfo WHERE System = 'NPM' AND json_extract(VersionInfo, '$.IsRelease') = 1 ) SELECT Name, Version, json_extract(VersionInfo, '$.Or"
+   },
+   {
+    "engine": "sqlite",
+    "query": "WITH mit_packages AS ( SELECT System, Name, Version, json_extract(Licenses, '$') as licenses_array, json_extract(VersionInfo, '$.IsRelease') as is_release FROM packageinfo WHERE System = 'NPM' ) SELECT System, Name, Version FROM mit_packages WHERE json_valid(licenses_array) AND '\"MIT\"' IN (SELECT va"
+   },
+   {
+    "engine": "sqlite",
+    "query": "WITH rel AS ( SELECT Name, Version, CAST(json_extract(VersionInfo, '$.Ordinal') AS INTEGER) AS Ordinal FROM packageinfo WHERE System='NPM' AND CAST(json_extract(VersionInfo, '$.IsRelease') AS INTEGER)=1), mx AS ( SELECT Name, MAX(Ordinal) AS max_ord FROM rel GROUP BY Name) SELECT r.Name, r.Version F"
+   },
+   {
+    "engine": "sqlite",
+    "query": "WITH rel AS ( SELECT Name, Version, CAST(json_extract(VersionInfo, '$.Ordinal') AS INTEGER) AS Ordinal FROM packageinfo WHERE System='NPM' AND CAST(json_extract(VersionInfo, '$.IsRelease') AS INTEGER)=1), mx AS ( SELECT Name, MAX(Ordinal) AS max_ord FROM rel GROUP BY Name) SELECT r.Name, r.Version F"
+   },
+   {
+    "engine": "duckdb",
+    "query": "WITH project_forks AS ( SELECT Project_Information, CAST(SUBSTRING(Project_Information FROM '(\\d+) forks') AS INTEGER) as fork_count, SUBSTRING(Project_Information FROM 'project\\s+([\\w-]+/[\\w-]+)') as repo_name FROM project_info WHERE Project_Information ~ '\\d+ forks' ) SELECT repo_name, fork_count,"
+   },
+   {
+    "engine": "sqlite",
+    "query": "WITH latest_versions AS ( SELECT Name, Version, ROW_NUMBER() OVER ( PARTITION BY Name ORDER BY CAST(json_extract(VersionInfo, '$.Ordinal') AS INTEGER) DESC ) as rn FROM packageinfo WHERE System = 'NPM' AND json_extract(VersionInfo, '$.IsRelease') = 'true' ) SELECT Name, Version FROM latest_versions "
+   }
+  ],
+  "unbound_table": [
+   {
+    "engine": "sqlite",
+    "query": "SELECT name FROM sqlite_master WHERE type='table';"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT ppv.System, ppv.Name, ppv.Version, ppv.ProjectName, CAST(COALESCE( REGEXP_EXTRACT(pi.Project_Information, 'forks count of (\\d+)', 1), REGEXP_EXTRACT(pi.Project_Information, 'and (\\d+) forks', 1), REGEXP_EXTRACT(pi.Project_Information, 'forks count of (\\d+)', 1), '0' ) AS INTEGER) as fork_coun"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT name FROM sqlite_master WHERE type='table'"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT language_description FROM languages WHERE repo_name = 'apple/swift'"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT repo_name, watch_count FROM repos WHERE repo_name = 'uacaps/PageMenu';"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT COUNT(*) AS commits_in_scope FROM commits c JOIN languages l ON l.repo_name = c.repo_name JOIN licenses li ON li.repo_name = c.repo_name WHERE lower(li.license)='apache-2.0' AND lower(l.language_description) LIKE '%shell%';"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT name FROM sqlite_master WHERE type='table' ORDER BY name;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT f.id, f.repo_name, COUNT(*) as actual_copy_count FROM files f JOIN languages l ON f.repo_name = l.repo_name WHERE l.language_description LIKE '%Swift%' AND f.path LIKE '%.swift' GROUP BY f.id, f.repo_name ORDER BY actual_copy_count DESC LIMIT 10;"
+   }
+  ],
+  "unknown": [
+   {
+    "engine": "unknown",
+    "query": "SELECT System, Name, Version, Licenses, VersionInfo FROM packageinfo WHERE System = 'NPM' AND json_extract(Licenses, '$[0]') = 'MIT' AND json_extract(VersionInfo, '$.IsRelease') = true"
+   },
+   {
+    "engine": "unknown",
+    "query": "SELECT * FROM commits LIMIT 1;"
+   },
+   {
+    "engine": "unknown",
+    "query": "# First, let me check the structure of the Quote table more carefully import duckdb import json # For now, let me just analyze the opportunity data and tasks to determine the stage analysis = { \"opportunity_details\": { \"stage\": \"Discovery\", \"amount\": 61666.225, \"probability\": 85, \"close_date\": \"2022"
+   },
+   {
+    "engine": "unknown",
+    "query": "SELECT id FROM knowledge__kav WHERE title = 'Volume-Based Discounts'"
+   },
+   {
+    "engine": "unknown",
+    "query": "SELECT gmap_id, name, hours, state FROM business_description WHERE hours IS NOT NULL AND hours != 'None' LIMIT 30;"
+   },
+   {
+    "engine": "unknown",
+    "query": "SELECT COUNT(*) FROM sqlite_master;"
+   }
+  ],
+  "not_single_statement": [
+   {
+    "engine": "duckdb",
+    "query": "CREATE TEMPORARY TABLE high_star_projects AS SELECT CAST(regexp_replace(regexp_extract(Project_Information, '(\\d{1,3}(?:,\\d{3})*) stars'), ',', '', 'g') AS INTEGER) as Stars, regexp_extract(Project_Information, '([a-zA-Z0-9_-]+/[a-zA-Z0-9_-]+)') as ProjectName FROM project_info WHERE Project_Informa"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT id FROM contents LIMIT 1; SELECT id FROM files LIMIT 1"
+   },
+   {
+    "engine": "duckdb",
+    "query": ""
+   },
+   {
+    "engine": "duckdb",
+    "query": "ATTACH 'metadata_database' AS md (TYPE SQLITE); SELECT COUNT(*) as commit_count FROM commits c WHERE c.repo_name IN ( SELECT l.repo_name FROM md.languages l JOIN md.licenses lic ON l.repo_name = lic.repo_name WHERE lic.license = 'apache-2.0' AND l.language_description LIKE '%shell%' ) AND c.message "
+   },
+   {
+    "engine": "duckdb",
+    "query": "CREATE OR REPLACE TEMP TABLE shell_apache_repos AS SELECT * FROM (VALUES ('0--key/lib'), ('0-complexity/G8VDC'), ('0-complexity/whmcs-oauth2-addon'), ('001szymon/phonegap-app-desktop'), ('007slm/nutz')) AS t(repo_name); SELECT COUNT(*) as commit_count FROM commits c WHERE c.repo_name IN (SELECT repo"
+   },
+   {
+    "engine": "duckdb",
+    "query": "INSTALL sqlite; LOAD sqlite;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "INSTALL sqlite_scanner; LOAD sqlite_scanner;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "ATTACH 'metadata_database' AS meta (TYPE SQLITE); SELECT COUNT(*) AS cnt FROM commits c JOIN meta.languages l ON l.repo_name = c.repo_name JOIN meta.licenses li ON li.repo_name = c.repo_name WHERE lower(li.license) = 'apache-2.0' AND lower(l.language_description) LIKE '%shell%' AND c.message IS NOT "
+   }
+  ],
+  "total_order": [
+   {
+    "engine": "duckdb",
+    "query": "SELECT DISTINCT ProjectName FROM project_packageversion WHERE System = 'NPM' AND ProjectName IS NOT NULL AND ProjectName LIKE '%discordx%' ORDER BY ProjectName LIMIT 10"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT DISTINCT ProjectName FROM project_packageversion ORDER BY ProjectName LIMIT 50"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT Project_Information FROM project_info WHERE Project_Information LIKE '%stars%' ORDER BY Project_Information DESC LIMIT 100"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT \"Project_Information\" FROM project_info WHERE \"Project_Information\" LIKE '%forks%' ORDER BY \"Project_Information\" DESC LIMIT 50;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT Project_Information FROM project_info WHERE Project_Information LIKE '%forks%' ORDER BY 1 LIMIT 50;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT Project_Information FROM project_info WHERE Project_Information LIKE '%stars%' ORDER BY Project_Information DESC LIMIT 50"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT DISTINCT repo_name FROM commits ORDER BY repo_name;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT DISTINCT repo_name FROM commits WHERE repo_name LIKE '%/%' ORDER BY repo_name LIMIT 1000"
+   }
+  ],
+  "aggregate_not_allowed": [
+   {
+    "engine": "sqlite",
+    "query": "SELECT Name, MAX(CASE WHEN VersionInfo LIKE '%IsRelease\": true%' THEN 1 ELSE 0 END) as has_release FROM packageinfo WHERE System = 'NPM' GROUP BY Name LIMIT 10;"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT Name, MAX(Ordinal) as max_ordinal FROM packageinfo WHERE System = 'NPM' AND VersionInfo LIKE '%\"IsRelease\": true%' GROUP BY Name LIMIT 10;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT ProjectName, MAX(1) as count FROM project_packageversion WHERE System = 'NPM' GROUP BY ProjectName ORDER BY ProjectName LIMIT 1000;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT f.id, MAX(CASE WHEN lower(c.repo_data_description) LIKE '%non-binary%' THEN 1 ELSE 0 END) AS is_non_binary, SUM(CASE WHEN lower(c.repo_data_description) LIKE '%seen %times%' OR lower(c.repo_data_description) LIKE '%appearing %times%' OR lower(c.repo_data_description) LIKE '%appears %times%' T"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT c.id, COUNT(DISTINCT c.sample_repo_name || '|' || c.sample_ref || '|' || c.sample_path) AS occurrences, ANY_VALUE(c.sample_repo_name) AS example_repo FROM contents c WHERE lower(c.sample_path) LIKE '%.swift' AND lower(c.repo_data_description) NOT LIKE '%binary%' GROUP BY c.id ORDER BY occurre"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT f.repo_name, MAX(CASE WHEN c.content ILIKE '%copyright%' THEN 1 ELSE 0 END) as has_copyright FROM files f JOIN contents c ON f.id = c.id WHERE lower(f.path) = 'readme.md' GROUP BY f.repo_name"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT id, sample_repo_name, MAX(TRY_CAST(regexp_extract(repo_data_description, '(\\d+)\\s+times') AS INTEGER)) as max_copies FROM contents WHERE sample_path LIKE '%.swift' AND repo_data_description NOT LIKE '%binary%' GROUP BY id, sample_repo_name ORDER BY max_copies DESC LIMIT 10;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT sample_repo_name, MAX(CASE WHEN lower(content) LIKE '%copyright%' THEN 1 ELSE 0 END) as has_copyright FROM contents WHERE sample_path = 'README.md' GROUP BY sample_repo_name"
+   }
+  ],
+  "alias_shadows_column": [
+   {
+    "engine": "sqlite",
+    "query": "SELECT Name, MAX(Version) as Version FROM packageinfo WHERE System = 'NPM' GROUP BY Name LIMIT 100"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT c.id, ANY_VALUE(c.sample_repo_name) as sample_repo_name, ANY_VALUE(c.sample_path) as sample_path, ANY_VALUE(c.repo_data_description) as repo_data_description, COUNT(*) as copy_count FROM contents c WHERE c.sample_path LIKE '%.swift' AND (c.repo_data_description NOT LIKE '%binary%' OR c.repo_d"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT id, ANY_VALUE(sample_repo_name) as sample_repo_name, ANY_VALUE(sample_path) as sample_path, ANY_VALUE(repo_data_description) as repo_data_description, COUNT(*) as copy_count FROM contents WHERE sample_path LIKE '%.swift' AND (repo_data_description NOT LIKE '%binary%' OR repo_data_description "
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT id, any_value(sample_repo_name) AS sample_repo_name, max(CAST(regexp_extract(lower(repo_data_description), 'cop(?:ied|ies)?\\s+(\\d+)\\s+times|duplicated\\s+(\\d+)\\s+times|appears\\s+(\\d+)\\s+times|appearing\\s+(\\d+)\\s+times|seen\\s+(\\d+)\\s+times|repeated\\s+(\\d+)\\s+times', 1) AS INTEGER)) AS copies1, "
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT c.id, COUNT(*) AS file_rows, COUNT(DISTINCT f.repo_name) AS distinct_repos, MIN(c.sample_repo_name) AS sample_repo, MIN(c.sample_path) AS sample_path, MIN(c.repo_data_description) AS repo_data_description FROM contents c JOIN files f ON c.id = f.id WHERE lower(f.path) LIKE '%.swift' AND lower"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT c.id, count(*) as copies, min(c.sample_repo_name) as sample_repo_name, min(c.sample_path) as sample_path, min(c.repo_data_description) as repo_data_description FROM contents c JOIN files f ON c.id = f.id WHERE lower(f.path) LIKE '%.swift' AND c.repo_data_description IS NOT NULL AND lower(c.re"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT f.id, COUNT(*) AS copies, min(c.sample_path) AS sample_path, min(c.repo_data_description) AS repo_data_description, group_concat(DISTINCT f.repo_name) AS repo_list FROM files f JOIN contents c ON f.id = c.id WHERE lower(c.sample_path) LIKE '%.swift' AND lower(c.repo_data_description) LIKE '%n"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT f.id, COUNT(DISTINCT f.repo_name) AS copies, ANY_VALUE(c.sample_path) AS sample_path, ANY_VALUE(c.repo_data_description) AS repo_data_description, ANY_VALUE(c.sample_repo_name) AS sample_repo_name FROM files f JOIN contents c ON f.id = c.id WHERE lower(c.sample_path) LIKE '%.swift' AND lower("
+   }
+  ],
+  "one_row_output_not_allowed": [
+   {
+    "engine": "duckdb",
+    "query": "SELECT COUNT(*) AS n, SUM(CASE WHEN Project_Information LIKE '%leaflet/%' THEN 1 ELSE 0 END) AS leaflet_like FROM project_info;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT MAX(CAST(SUBSTR(repo_data_description, INSTR(repo_data_description, 'copied') + 6, INSTR(SUBSTR(repo_data_description, INSTR(repo_data_description, 'copied') + 6), ' ') - 1) AS INTEGER)) as max_copies FROM contents WHERE sample_path LIKE '%.swift' AND repo_data_description LIKE '%copied%';"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT COUNT(*) AS n, SUM(CASE WHEN lower(sample_path) LIKE '%.swift' THEN 1 ELSE 0 END) AS swift_n FROM contents;"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT COUNT(*) as total_repos, SUM(CASE WHEN language_description LIKE '%Python%' OR language_description LIKE '%python%' THEN 1 ELSE 0 END) as python_repos, SUM(CASE WHEN language_description NOT LIKE '%Python%' AND language_description NOT LIKE '%python%' THEN 1 ELSE 0 END) as non_python_repos FR"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT MAX(CAST(regexp_extract(repo_data_description, '(duplicated|appearing|appears|copied|seen|repeated) ([0-9]+) times', 2) AS INT)) FROM contents WHERE sample_path LIKE '%.swift' AND repo_data_description LIKE '%Non-binary%'"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT COUNT(*) as total_repos, SUM(CASE WHEN language_description LIKE '%Python%' OR language_description LIKE '%python%' THEN 1 ELSE 0 END) as python_repos, SUM(CASE WHEN language_description NOT LIKE '%Python%' AND language_description NOT LIKE '%python%' THEN 1 ELSE 0 END) as non_python_repos, ("
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT COUNT(*) AS n, SUM(CASE WHEN repo_data_description ILIKE '%binary: false%' THEN 1 ELSE 0 END) AS non_binary_n FROM contents;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT COUNT(*) AS n_swift, SUM(CASE WHEN lower(repo_data_description) LIKE '%binary%' THEN 1 ELSE 0 END) AS n_binary_marked FROM contents WHERE sample_path ILIKE '%.swift';"
+   }
+  ],
+  "no_table": [
+   {
+    "engine": "duckdb",
+    "query": "SELECT 1 AS ok;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT regexp_extract('This non-binary file is duplicated 8 times.', '([0-9]+) times', 1) AS x;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT 1190 as total_valid_commits"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT date '2022-11-25' - interval '5 months' AS start_date;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT date_trunc('month', DATE '2022-11-25') - INTERVAL '5 months' AS start_date;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT date_trunc('month', DATE '2022-11-25') AS today_month, DATE '2022-11-25' AS today;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT 'SPY' AS Symbol LIMIT 1;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT 'SPY' as t;"
+   }
+  ],
+  "join_not_allowed": [
+   {
+    "engine": "duckdb",
+    "query": "SELECT c.id, c.sample_path, c.sample_repo_name, c.repo_data_description, COUNT(DISTINCT f.repo_name) AS copies FROM contents c JOIN files f USING(id) WHERE lower(c.sample_path) LIKE '%.swift' GROUP BY c.id, c.sample_path, c.sample_repo_name, c.repo_data_description ORDER BY copies DESC LIMIT 200;"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT DISTINCT repo_name FROM languages JOIN licenses USING (repo_name) WHERE lower(language_description) LIKE '%shell%' AND lower(license) = 'apache-2.0';"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT l.repo_name FROM languages l JOIN licenses lic USING (repo_name) WHERE lower(l.language_description) LIKE '%shell%' AND lower(lic.license) = 'apache-2.0';"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT repo_name FROM languages JOIN licenses USING(repo_name) WHERE license = 'apache-2.0' AND language_description LIKE '%Shell%'"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT repo_name, language_description, license FROM languages JOIN licenses USING (repo_name) WHERE repo_name IN ('tensorflow/tensorflow', 'facebook/react', 'Microsoft/vscode', 'twbs/bootstrap', 'apple/swift', 'torvalds/linux')"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT c.id, c.sample_path, COUNT(f.repo_name) AS copies FROM contents c JOIN files f USING(id) WHERE lower(c.sample_path) LIKE '%.swift' AND lower(c.repo_data_description) NOT LIKE '%binary%' GROUP BY c.id, c.sample_path ORDER BY copies DESC LIMIT 1;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT c.id, c.sample_path, COUNT(f.repo_name) AS copies, MIN(c.repo_data_description) AS repo_data_description_sample FROM contents c JOIN files f USING(id) WHERE lower(c.sample_path) LIKE '%.swift' GROUP BY c.id, c.sample_path ORDER BY copies DESC LIMIT 10;"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT l.repo_name FROM languages l JOIN licenses li USING (repo_name) WHERE lower(l.language_description) LIKE '%shell%' AND lower(li.license) = 'apache-2.0';"
+   }
+  ],
+  "group_key_not_a_stored_column": [
+   {
+    "engine": "duckdb",
+    "query": "SELECT lower(split_part(path, '.', -1)) AS ext, COUNT(*) as cnt FROM files WHERE repo_name='torvalds/linux' GROUP BY ext ORDER BY cnt DESC LIMIT 10;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT repo_name, repo_data_description, COUNT(*) AS cnt FROM contents WHERE sample_repo_name = 'torvalds/linux' GROUP BY repo_name, repo_data_description ORDER BY cnt DESC LIMIT 10;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT regexp_extract(path, '\\.([a-zA-Z0-9]+)$', 1) as ext, COUNT(*) as c FROM files WHERE repo_name = 'torvalds/linux' GROUP BY ext ORDER BY c DESC LIMIT 10"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT lower(split_part(sample_path, '.', -1)) AS ext, COUNT(*) AS cnt FROM contents WHERE sample_repo_name = 'torvalds/linux' GROUP BY ext ORDER BY cnt DESC LIMIT 10;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT regexp_extract(path, '\\.([a-zA-Z0-9]+)$', 1) as ext, COUNT(*) as cnt FROM files WHERE repo_name = 'torvalds/linux' GROUP BY ext ORDER BY cnt DESC LIMIT 5"
+   },
+   {
+    "engine": "postgres",
+    "query": "SELECT \"Cancer_Type_Acronym\", COUNT(*) AS n FROM clinical_info GROUP BY \"Cancer_Type_Acronym\" ORDER BY n DESC LIMIT 30;"
+   },
+   {
+    "engine": "postgres",
+    "query": "SELECT \"Project\" AS project, COUNT(*) AS n FROM clinical_info GROUP BY \"Project\" ORDER BY n DESC LIMIT 20;"
+   },
+   {
+    "engine": "postgres",
+    "query": "SELECT \"days_to_death\", count(*) AS n FROM clinical_info WHERE \"tumor_tissue_site\"='Breast' GROUP BY \"days_to_death\" IS NULL;"
+   }
+  ],
+  "distinct_on": [
+   {
+    "engine": "postgres",
+    "query": "SELECT DISTINCT ON (patient_description) patient_description, diagnosis, histological_type FROM clinical_info WHERE diagnosis ILIKE '%LGG%' OR diagnosis ILIKE '%brain lower grade glioma%' LIMIT 20;"
+   },
+   {
+    "engine": "postgres",
+    "query": "SELECT DISTINCT ON (tumor_tissue_site) tumor_tissue_site FROM clinical_info WHERE tumor_tissue_site IS NOT NULL LIMIT 20;"
+   },
+   {
+    "engine": "postgres",
+    "query": "SELECT DISTINCT ON (\"Patient_description\") \"Patient_description\", \"diagnosis\", \"histological_type\" FROM clinical_info WHERE \"diagnosis\" ILIKE '%LGG%' OR \"diagnosis\" ILIKE '%brain lower grade glioma%' LIMIT 20;"
+   },
+   {
+    "engine": "postgres",
+    "query": "SELECT DISTINCT ON (symbol) symbol, \"titleFull\" FROM cpc_definition WHERE symbol LIKE 'Y02T10%' OR symbol LIKE 'H01L2924%' OR symbol LIKE 'F02D41%' OR symbol LIKE 'B60W30%' OR symbol LIKE 'H01L23%' OR symbol LIKE 'H01R13%' OR symbol LIKE 'B60N2%' OR symbol LIKE 'B29C45%' OR symbol LIKE 'G01N27%' OR "
+   },
+   {
+    "engine": "postgres",
+    "query": "SELECT DISTINCT ON (symbol) symbol, \"titleFull\" FROM cpc_definition WHERE (symbol LIKE 'E04H9%' OR symbol LIKE 'Y10T428%' OR symbol LIKE 'H01M8%' OR symbol LIKE 'Y02P70%' OR symbol LIKE 'Y02E60%' OR symbol LIKE 'H01M4%' OR symbol LIKE 'H01L33%') AND level <= 3 ORDER BY symbol, \"titleFull\" LIMIT 50"
+   },
+   {
+    "engine": "postgres",
+    "query": "SELECT DISTINCT ON (LEFT(symbol, POSITION('/' IN symbol) - 1)) LEFT(symbol, POSITION('/' IN symbol) - 1) as base_symbol, symbol, \"titleFull\", level FROM cpc_definition WHERE (symbol LIKE 'Y02T10/%' OR symbol LIKE 'H01L2924/%' OR symbol LIKE 'F02D41/%' OR symbol LIKE 'B60W30/%' OR symbol LIKE 'H01L23"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT DISTINCT ON (\"Index\", YEAR(Date), MONTH(Date)) \"Index\", Date, CloseUSD FROM index_trade WHERE Date >= '2000-01-01' ORDER BY \"Index\", YEAR(Date), MONTH(Date), Date;"
+   }
+  ],
+  "limit_not_literal": [
+   {
+    "engine": "postgres",
+    "query": "SELECT * FROM clinical_info LIMIT 0"
+   },
+   {
+    "engine": "postgres",
+    "query": "SELECT * FROM clinical_info LIMIT 0;"
+   },
+   {
+    "engine": "postgres",
+    "query": "SELECT * FROM casehistory__c LIMIT 0;"
+   }
+  ],
+  "mongo_no_sort": [
+   {
+    "engine": "mongo",
+    "query": "{ \"collection\": \"articles\", \"filter\": { \"article_id\": 192 } }"
+   },
+   {
+    "engine": "mongo",
+    "query": "{ \"collection\": \"articles\", \"filter\": { \"article_id\": { \"$in\": [192, 2161, 2844, 2987, 3451, 3970, 4447, 5354, 6705, 6869, 8962, 9677, 9858, 14861, 15100, 15473, 17491, 19469, 20362, 21238, 22354, 23914, 24495, 25960, 26535, 27429, 28079, 29164, 29297, 33489, 35408, 35882, 36182, 36483, 37042, 38608"
+   },
+   {
+    "engine": "mongo",
+    "query": "{ \"collection\": \"articles\", \"filter\": { \"article_id\": { \"$in\": [192, 2161, 2844, 2987, 3451, 3970, 4447, 5354, 6705, 6869, 8962, 9677, 9858, 14861, 15100, 15473, 17491, 19469, 20362, 21238, 22354, 23914, 24495, 25960, 26535, 27429, 28079, 29164, 29297, 33489, 35408, 35882, 36182, 36483, 37042, 38608"
+   },
+   {
+    "engine": "mongo",
+    "query": "{ \"collection\": \"articles\", \"filter\": { \"article_id\": { \"$in\": [192, 2161, 2844, 2987, 3451, 3970, 4447, 5354, 6705, 6869, 8962, 9677, 9858, 14861, 15100, 15473, 17491, 19469, 20362, 21238, 22354, 23914, 24495, 25960, 26535, 27429, 28079, 29164, 29297, 33489, 35408, 35882, 36182, 36483, 37042, 38608"
+   },
+   {
+    "engine": "mongo",
+    "query": "{ \"collection\": \"articles\", \"filter\": { \"article_id\": { \"$in\": [3970, 4447, 5354] } } }"
+   },
+   {
+    "engine": "mongo",
+    "query": "{ \"collection\": \"articles\", \"filter\": {}, \"limit\": 3 }"
+   },
+   {
+    "engine": "mongo",
+    "query": "{ \"collection\": \"articles\" }"
+   },
+   {
+    "engine": "mongo",
+    "query": "{ \"collection\": \"articles\", \"filter\": { \"$or\": [ {\"title\": {\"$regex\": \".*business.*\", \"$options\": \"i\"}}, {\"description\": {\"$regex\": \".*business.*\", \"$options\": \"i\"}}, {\"title\": {\"$regex\": \".*economy.*\", \"$options\": \"i\"}}, {\"description\": {\"$regex\": \".*economy.*\", \"$options\": \"i\"}}, {\"title\": {\"$rege"
+   }
+  ],
+  "id_lookup": [
+   {
+    "engine": "mongo",
+    "query": "{\"collection\": \"articles\", \"filter\": {\"_id\": \"6944de90636c4ab819a4ae19\"}, \"projection\": {\"article_id\": 1, \"title\": 1, \"description\": 1}}"
+   },
+   {
+    "engine": "mongo",
+    "query": "{\"collection\": \"business\", \"filter\": {\"_id\": \"businessid_9\"}, \"projection\": {\"name\": 1, \"description\": 1}}"
+   }
+  ],
+  "having_not_allowed": [
+   {
+    "engine": "sqlite",
+    "query": "SELECT purchase_id FROM review GROUP BY purchase_id HAVING AVG(rating) = 5.0"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT purchase_id FROM review WHERE purchase_id IN ('bookid_1', 'bookid_9', 'bookid_13', 'bookid_30', 'bookid_36', 'bookid_37', 'bookid_38', 'bookid_39', 'bookid_44', 'bookid_49', 'bookid_55', 'bookid_69', 'bookid_70', 'bookid_74', 'bookid_77', 'bookid_82', 'bookid_84', 'bookid_89', 'bookid_92', 'b"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT purchase_id FROM review WHERE purchase_id IN ('purchaseid_1', 'purchaseid_9', 'purchaseid_13', 'purchaseid_30', 'purchaseid_36', 'purchaseid_37', 'purchaseid_38', 'purchaseid_39', 'purchaseid_44', 'purchaseid_49', 'purchaseid_55', 'purchaseid_69', 'purchaseid_70', 'purchaseid_74', 'purchaseid"
+   },
+   {
+    "engine": "sqlite",
+    "query": "SELECT purchase_id, COUNT(*) as review_count FROM review GROUP BY purchase_id HAVING AVG(rating) = 5.0;"
+   }
+  ],
+  "one_row_clause_not_allowed": [
+   {
+    "engine": "duckdb",
+    "query": "SELECT 'AAAU',MAX(\"Adj Close\")FROM \"AAAU\"WHERE Date LIKE '2018%'HAVING MAX(\"Adj Close\")>11"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT 'AGMH' as Symbol, AVG(\"Volume\") as avg_volume, COUNT(*) as days_traded FROM AGMH WHERE \"Date\" >= '2008-01-01' AND \"Date\" <= '2008-12-31' HAVING COUNT(*) > 0;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT 'IBB' AS symbol, MAX(\"Adj Close\") AS max_adj_close FROM \"IBB\" WHERE \"Date\" BETWEEN '2015-01-01' AND '2015-12-31' HAVING MAX(\"Adj Close\") > 200;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT 'SPY' as Symbol, MAX(\"Adj Close\") as MaxPrice FROM \"SPY\" WHERE Date BETWEEN '2015-01-01' AND '2015-12-31' HAVING MaxPrice > 200"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT 'SPY' s, MAX(\"Adj Close\") m FROM \"SPY\" WHERE \"Date\" LIKE '2015%' HAVING m > 200"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT AVG(Volume) as avg_volume, COUNT(*) as trading_days FROM APEX WHERE Date >= '2008-01-01' AND Date <= '2008-12-31' HAVING COUNT(*) > 0;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT AVG(Volume) as avg_volume, COUNT(*) as trading_days FROM CCCL WHERE Date >= '2008-01-01' AND Date <= '2008-12-31' HAVING COUNT(*) > 0;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT AVG(Volume) as avg_volume, COUNT(*) as trading_days FROM DZSI WHERE Date >= '2008-01-01' AND Date <= '2008-12-31' HAVING COUNT(*) > 0;"
+   }
+  ],
+  "having_without_group": [
+   {
+    "engine": "duckdb",
+    "query": "SELECT 'PEIX' AS Symbol, AVG(Volume) AS avg_daily_volume_2008 FROM \"PEIX\" WHERE Date>='2008-01-01' AND Date<'2009-01-01' AND Volume IS NOT NULL HAVING AVG(Volume) IS NOT NULL;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT 'SNSS' AS Symbol, AVG(Volume) AS avg_daily_volume_2008 FROM \"SNSS\" WHERE Date>='2008-01-01' AND Date<'2009-01-01' AND Volume IS NOT NULL HAVING AVG(Volume) IS NOT NULL;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT 'SYPR' AS Symbol, AVG(Volume) AS avg_daily_volume_2008 FROM \"SYPR\" WHERE Date>='2008-01-01' AND Date<'2009-01-01' AND Volume IS NOT NULL HAVING AVG(Volume) IS NOT NULL;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT 'BKYI' AS Symbol, AVG(Volume) AS avg_daily_volume_2008 FROM \"BKYI\" WHERE Date>='2008-01-01' AND Date<'2009-01-01' AND Volume IS NOT NULL HAVING AVG(Volume) IS NOT NULL;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT 'CPAH' AS Symbol, AVG(Volume) AS avg_daily_volume_2008 FROM \"CPAH\" WHERE Date>='2008-01-01' AND Date<'2009-01-01' AND Volume IS NOT NULL HAVING AVG(Volume) IS NOT NULL;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT 'IDEX' AS Symbol, AVG(Volume) AS avg_daily_volume_2008 FROM \"IDEX\" WHERE Date>='2008-01-01' AND Date<'2009-01-01' AND Volume IS NOT NULL HAVING AVG(Volume) IS NOT NULL;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT 'NXTD' AS Symbol, AVG(Volume) AS avg_daily_volume_2008 FROM \"NXTD\" WHERE Date>='2008-01-01' AND Date<'2009-01-01' AND Volume IS NOT NULL HAVING AVG(Volume) IS NOT NULL;"
+   },
+   {
+    "engine": "duckdb",
+    "query": "SELECT 'OPTT' AS Symbol, AVG(Volume) AS avg_daily_volume_2008 FROM \"OPTT\" WHERE Date>='2008-01-01' AND Date<'2009-01-01' AND Volume IS NOT NULL HAVING AVG(Volume) IS NOT NULL;"
+   }
+  ],
+  "not_find_spec": [
+   {
+    "engine": "mongo",
+    "query": "[{\"$match\": {\"attributes.WiFi\": {\"$exists\": true}}}, {\"$group\": {\"_id\": \"$attributes.WiFi\", \"count\": {\"$sum\": 1}}}]"
+   },
+   {
+    "engine": "mongo",
+    "query": "[{\"$match\": {\"business_id\": {\"$in\": [\"businessid_13\", \"businessid_79\", \"businessid_91\", \"businessid_46\", \"businessid_47\", \"businessid_73\", \"businessid_66\", \"businessid_25\", \"businessid_59\", \"businessid_24\", \"businessid_36\", \"businessid_17\", \"businessid_43\", \"businessid_99\", \"businessid_86\", \"busines"
+   }
+  ],
+  "id_lookup_not_plain": [
+   {
+    "engine": "mongo",
+    "query": "{\"collection\": \"business\", \"filter\": {\"business_id\": {\"$in\": [\"businessid_45\",\"businessid_74\",\"businessid_66\",\"businessid_33\",\"businessid_36\",\"businessid_60\",\"businessid_57\",\"businessid_92\",\"businessid_96\",\"businessid_13\",\"businessid_79\",\"businessid_15\",\"businessid_12\",\"businessid_31\",\"businessid_53"
+   }
+  ]
+ },
+ "E": {
+  "pinned_runtime": 40684,
+  "parse_error": 566,
+  "not_select": 112,
+  "function:sqlite_scan": 52,
+  "not_single_statement": 29,
+  "function:read_json_auto": 18,
+  "function:read_csv_auto": 17,
+  "function:json_each": 16,
+  "function:Explode": 16,
+  "function:query_table": 15,
+  "function:read_sqlite": 14,
+  "function:json_valid": 9,
+  "function:duckdb_tables": 8,
+  "function:Unnest": 7,
+  "unknown": 6,
+  "function:query": 4,
+  "function:regexp_match": 3,
+  "function:locals": 3,
+  "function:Rand": 3,
+  "id_lookup": 3,
+  "function:CurrentDate": 3,
+  "function:pg_typeof": 3,
+  "function:quote": 2,
+  "function:ReadParquet": 2,
+  "function:ExplodingGenerateSeries": 2,
+  "function:Soundex": 2,
+  "volatile_literal": 2,
+  "not_find_spec": 2,
+  "function:RegexpSubstr": 1,
+  "function:participantbarcode": 1,
+  "function:JSONArrayAgg": 1,
+  "function:days_between": 1,
+  "function:strip": 1,
+  "function:CurrentTimestamp": 1,
+  "function:datetime": 1,
+  "function:Typeof": 1,
+  "function:trimmed": 1,
+  "function:table_exists": 1,
+  "function:current_setting": 1,
+  "function:SubstringIndex": 1,
+  "function:json_exists": 1
+ },
+ "E_calls": {
+  "pinned_runtime": 74890,
+  "parse_error": 702,
+  "not_select": 293,
+  "function:sqlite_scan": 52,
+  "not_single_statement": 34,
+  "function:read_json_auto": 18,
+  "function:read_csv_auto": 17,
+  "function:json_each": 16,
+  "function:Explode": 16,
+  "function:read_sqlite": 16,
+  "function:query_table": 15,
+  "function:json_valid": 9,
+  "function:duckdb_tables": 8,
+  "function:Unnest": 7,
+  "unknown": 6,
+  "id_lookup": 4,
+  "function:query": 4,
+  "function:pg_typeof": 3,
+  "function:locals": 3,
+  "function:regexp_match": 3,
+  "function:CurrentDate": 3,
+  "function:Rand": 3,
+  "function:ReadParquet": 2,
+  "function:ExplodingGenerateSeries": 2,
+  "function:Soundex": 2,
+  "volatile_literal": 2,
+  "function:quote": 2,
+  "not_find_spec": 2,
+  "function:CurrentTimestamp": 1,
+  "function:RegexpSubstr": 1,
+  "function:JSONArrayAgg": 1,
+  "function:datetime": 1,
+  "function:Typeof": 1,
+  "function:json_exists": 1,
+  "function:participantbarcode": 1,
+  "function:days_between": 1,
+  "function:SubstringIndex": 1,
+  "function:current_setting": 1,
+  "function:trimmed": 1,
+  "function:strip": 1,
+  "function:table_exists": 1
+ },
+ "E_admitted": {
+  "queries": 40687,
+  "calls": 74894,
+  "by_engine": {
+   "duckdb": 18098,
+   "postgres": 11571,
+   "sqlite": 7951,
+   "mongo": 3067
+  }
+ }
+}

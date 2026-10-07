@@ -1,0 +1,550 @@
+{
+ "repo_remote": "https://github.com/ucbepic/DataAgentBench.git",
+ "repo_revision": "f6b1ad07a61da2077ae7e074416900dbb452d1bc",
+ "tracked_files_modified": [
+  "uery_DEPS_DEV_V1/query_dataset/package_query.db",
+  "query_DEPS_DEV_V1/query_dataset/project_query.db",
+  "query_GITHUB_REPOS/query_dataset/repo_artifacts.db",
+  "query_GITHUB_REPOS/query_dataset/repo_metadata.db",
+  "query_PANCANCER_ATLAS/query_dataset/pancancer_clinical.sql",
+  "query_PANCANCER_ATLAS/query_dataset/pancancer_molecular.db",
+  "query_PATENTS/query_dataset/patent_CPCDefinition.sql",
+  "query_agnews/query_dataset/metadata.db",
+  "query_bookreview/query_dataset/books_info.sql",
+  "query_bookreview/query_dataset/review_query.db",
+  "query_crmarenapro/query_dataset/activities.duckdb",
+  "query_crmarenapro/query_dataset/core_crm.db",
+  "query_crmarenapro/query_dataset/products_orders.db",
+  "query_crmarenapro/query_dataset/sales_pipeline.duckdb",
+  "query_crmarenapro/query_dataset/support.sql",
+  "query_crmarenapro/query_dataset/territory.db",
+  "query_googlelocal/query_dataset/business_description.sql",
+  "query_googlelocal/query_dataset/review_query.db",
+  "query_music_brainz_20k/query_dataset/tracks.db",
+  "query_stockindex/query_dataset/indexInfo_query.db",
+  "query_stockindex/query_dataset/indextrade_query.db",
+  "query_stockmarket/query_dataset/stockinfo_query.db",
+  "query_stockmarket/query_dataset/stocktrade_query.db",
+  "query_yelp/query_dataset/yelp_user.db"
+ ],
+ "tracked_files_modified_outside_query_dataset": [],
+ "untracked_python_files": [],
+ "all_trajectories.zip": {
+  "url": "https://drive.usercontent.google.com/download?id=1SjCkvwsc4m1S17l_rzu9PHAAei3jAL4i",
+  "bytes": 195551481,
+  "sha256": "d2eb2d63ee1a588ea86c22eb790fd441c500bbaf7c7ed1a56adc59dd272cfcaf"
+ },
+ "datasets": {
+  "DEPS_DEV_V1": {
+   "db_config.yaml": {
+    "git_blob": "716cd8b2c54d673f030cbb6ae0fb129f5202e6ed",
+    "on_disk_is_blob": true,
+    "sha256": "fb41b42f81a17377459e5d80415360e91641d4b3dbbf06e039eb17a01fec0c3e"
+   },
+   "validate.py": {
+    "query1": {
+     "git_blob": "4415e7c0bd0b742d0cb453d68519d6b2a0a81b57",
+     "on_disk_is_blob": true,
+     "sha256": "691a1910f0eb76e20b7d0652141584320b5bcfcaa399f07d8601f0dbc00c2d35"
+    },
+    "query2": {
+     "git_blob": "c54d86a946d09a8332ea5770ce8df944d8d30e6b",
+     "on_disk_is_blob": true,
+     "sha256": "e7c49325c40ebc7a028f27dd5d677e22485e7acfed456ba6e029f6bdb03d480d"
+    }
+   },
+   "data_files": {
+    "query_DEPS_DEV_V1/query_dataset/package_query.db": {
+     "bytes": 538877952,
+     "sha256_matches_dab_manifest": true
+    },
+    "query_DEPS_DEV_V1/query_dataset/project_query.db": {
+     "bytes": 11022336,
+     "sha256_matches_dab_manifest": true
+    }
+   }
+  },
+  "GITHUB_REPOS": {
+   "db_config.yaml": {
+    "git_blob": "55353ab2eb57701e889cb793f48c7b1bd68908f6",
+    "on_disk_is_blob": true,
+    "sha256": "528a10e2a1827882af97d47514733cddb8264e81cb4e4d6dd2bcff6d8cab6cd5"
+   },
+   "validate.py": {
+    "query1": {
+     "git_blob": "6b8f2d9b7188fe3c975da25c2c9b10040bd4764f",
+     "on_disk_is_blob": true,
+     "sha256": "c8e979be70776b67ee32372ac1e77b75f7474946809dc81d4941821bf5683bd5"
+    },
+    "query2": {
+     "git_blob": "90a373887232cfd146d563f4c945e6291cdf8005",
+     "on_disk_is_blob": true,
+     "sha256": "782a94fd3f78285d3035fcaa2b9de187c4a8a599b8203c9433f6aaa9ba1c83ef"
+    },
+    "query3": {
+     "git_blob": "32359c87f5f69882e48fd127fe383c498da9b038",
+     "on_disk_is_blob": true,
+     "sha256": "e415c60c301c0376ee0c9b922390efa20500d5e23dd24fc574d2c000603c4f7c"
+    },
+    "query4": {
+     "git_blob": "cfedd0f0a1accb8b1b5301c90a61fcfe6e6eebe3",
+     "on_disk_is_blob": true,
+     "sha256": "b6d8110867225717a23f9e217f5586f8b32639b80a57d7d4bbd3f05cbc8d8287"
+    }
+   },
+   "data_files": {
+    "query_GITHUB_REPOS/query_dataset/repo_artifacts.db": {
+     "bytes": 361246720,
+     "sha256_matches_dab_manifest": true
+    },
+    "query_GITHUB_REPOS/query_dataset/repo_metadata.db": {
+     "bytes": 567222272,
+     "sha256_matches_dab_manifest": true
+    }
+   }
+  },
+  "PANCANCER_ATLAS": {
+   "db_config.yaml": {
+    "git_blob": "da939fc8947ce20385c15b72c7ed1deb10edc779",
+    "on_disk_is_blob": true,
+    "sha256": "5711035bea1820d94eb5041faa687d5974553004dc993023970d3ed9493f5d13"
+   },
+   "validate.py": {
+    "query1": {
+     "git_blob": "14dd10b15b776b45b3ea7a095cc454da32d3ef41",
+     "on_disk_is_blob": true,
+     "sha256": "3f1b15e3c24c1ce258ba064fcc3f2523ee4b7c8079ab58c5ac215cd90d1d6d7a"
+    },
+    "query2": {
+     "git_blob": "03555bccfc4d5cf039bdfdc57688f09417ff6bf2",
+     "on_disk_is_blob": true,
+     "sha256": "e48251d37463258951299880b5784724274aa87fee40583cd3c513fc3ff02312"
+    },
+    "query3": {
+     "git_blob": "ccaa673e137785e9c912c1a72bf8cab3cc3d2a44",
+     "on_disk_is_blob": true,
+     "sha256": "14b8be8849e25f4ba71b0347589ade0e51dec3e8a51f1273b485244981427520"
+    }
+   },
+   "data_files": {
+    "query_PANCANCER_ATLAS/query_dataset/pancancer_clinical.sql": {
+     "bytes": 7555304,
+     "sha256_matches_dab_manifest": true
+    },
+    "query_PANCANCER_ATLAS/query_dataset/pancancer_molecular.db": {
+     "bytes": 293875712,
+     "sha256_matches_dab_manifest": true
+    }
+   }
+  },
+  "PATENTS": {
+   "db_config.yaml": {
+    "git_blob": "b080277221f58e3a8d0d1d6e4ff2af8d0f8a4e23",
+    "on_disk_is_blob": true,
+    "sha256": "1989d2c52cc76beae80a62d68ea46d62a5926118cbce8faf02b64de80711074c"
+   },
+   "validate.py": {
+    "query1": {
+     "git_blob": "90037e7366f5b5b066519f9d6b98c07f8fa39850",
+     "on_disk_is_blob": true,
+     "sha256": "764c9af0492c15fc12d2ce796fd312717c066af04937aa25c95a6351fe2efee8"
+    },
+    "query2": {
+     "git_blob": "e594d5eb9a242f20338608f0ff6ef1b68d0478df",
+     "on_disk_is_blob": true,
+     "sha256": "28741289c1bb9065924f97981af0b64f19b0415fb110ee8e9d8c536a9f550c28"
+    },
+    "query3": {
+     "git_blob": "81a7f9b5e09b8c82a99d63357f787a814149f776",
+     "on_disk_is_blob": true,
+     "sha256": "c34efa6c273789795d3bf52a02e11503924644a665fa81ca752914a0c5577d50"
+    }
+   },
+   "data_files": {
+    "query_PATENTS/query_dataset/patent_CPCDefinition.sql": {
+     "bytes": 135238448,
+     "sha256_matches_dab_manifest": true
+    },
+    "query_PATENTS/query_dataset/patent_publication.db": {
+     "bytes": 5421027328,
+     "sha256_matches_dab_manifest": true
+    }
+   }
+  },
+  "agnews": {
+   "db_config.yaml": {
+    "git_blob": "86782624bde973cd72537626bf2d30f257e33d8e",
+    "on_disk_is_blob": true,
+    "sha256": "97240184ab0646b66dc5015e10a5884bc673abe70c5a4d0610f5028fe7559d7d"
+   },
+   "validate.py": {
+    "query1": {
+     "git_blob": "0d1dcab707ea00f72d6a49b510d408eedb2c12c2",
+     "on_disk_is_blob": true,
+     "sha256": "f2fd963afb74ae60921613f4662aacc7be39e6fae6d1acc2c121aeec7f61d322"
+    },
+    "query2": {
+     "git_blob": "607ec3dc406c3a43e0fe9b6f3d014af195ecf1fa",
+     "on_disk_is_blob": true,
+     "sha256": "4f38f4768db4b5bc392efdc495fe5d98a20d937bed9a773ae876445dd6287145"
+    },
+    "query3": {
+     "git_blob": "f504b9644c2dea260819586b557796a19e3d0664",
+     "on_disk_is_blob": true,
+     "sha256": "809d8d3f011655336e2579577b93681b2f7170eadccf08551de74190e9a61b7f"
+    },
+    "query4": {
+     "git_blob": "53642ee46685c94c3424190f2e468d71ffbada2c",
+     "on_disk_is_blob": true,
+     "sha256": "a90e70fefb2f2b97c408d9f236d1b1f07037e5bf553162157c6df36b627a8776"
+    }
+   },
+   "data_files": {
+    "query_agnews/query_dataset/metadata.db": {
+     "bytes": 4046848,
+     "sha256_matches_dab_manifest": true
+    }
+   }
+  },
+  "bookreview": {
+   "db_config.yaml": {
+    "git_blob": "d68df98e77da90aa9049615b702ef9d9e965ecd5",
+    "on_disk_is_blob": true,
+    "sha256": "974daea2f4e2bd804ad41691207ce86a2562876518487790d4825a5438b27aab"
+   },
+   "validate.py": {
+    "query1": {
+     "git_blob": "94abf81c04f6092f4e2489017ea08fde891b6796",
+     "on_disk_is_blob": true,
+     "sha256": "acb4462bb0fe6e1e7b54faf1ec6b7e75e3e88b38b074a9ebbb3d7c4e8f23759e"
+    },
+    "query2": {
+     "git_blob": "dcf428d1aecc7159afd810b654d2da21dbab8937",
+     "on_disk_is_blob": true,
+     "sha256": "b85d464dea068a5f49587d6bc0067a50759ad7aca1c3dbf99679f8b45feb4a56"
+    },
+    "query3": {
+     "git_blob": "c914e7c3555150452cee173b5bff1a87a7814374",
+     "on_disk_is_blob": true,
+     "sha256": "7d234b73b4c2c256ea5f19b1d840e38589b0449e804a126eb9c18881a09d40aa"
+    }
+   },
+   "data_files": {
+    "query_bookreview/query_dataset/books_info.sql": {
+     "bytes": 649048,
+     "sha256_matches_dab_manifest": true
+    },
+    "query_bookreview/query_dataset/review_query.db": {
+     "bytes": 1093632,
+     "sha256_matches_dab_manifest": true
+    }
+   }
+  },
+  "crmarenapro": {
+   "db_config.yaml": {
+    "git_blob": "9e7bc1b95f8d50cc7fe499d496c3db5a0b2a6431",
+    "on_disk_is_blob": true,
+    "sha256": "8440fe2fba1ca42ea5106bb0113c7f3eb4b248f2ea38d63bc432d9e4553b6390"
+   },
+   "validate.py": {
+    "query1": {
+     "git_blob": "04af034c6b244fdb46e45b66631d58dbb04bed80",
+     "on_disk_is_blob": true,
+     "sha256": "579be6cfae68087cc8efd8e2e9c1ae0a5283e722d2a1d033705d52f28b9f9835"
+    },
+    "query10": {
+     "git_blob": "13cf1d875f37a45f34f364f46ff296d0eda0abbc",
+     "on_disk_is_blob": true,
+     "sha256": "33e391562f728b4a5d80b7a1a8b046746a8d40a48817db1f379271ed99329193"
+    },
+    "query11": {
+     "git_blob": "568e8dc38889ba2d9c2000445638bd1ad3d5277c",
+     "on_disk_is_blob": true,
+     "sha256": "0a0b8e676ad86e4e90c8c06e0034a04d2b1fb28ef5bf63d097ecbd440d4bb8a7"
+    },
+    "query12": {
+     "git_blob": "68afc842f7ae01bb145ef88fdf47dd784e72ccc7",
+     "on_disk_is_blob": true,
+     "sha256": "99476c2b08ba7f07bfbe1fb4fd32938a5a78c7942e88fb57c35da748e6c7d2cc"
+    },
+    "query13": {
+     "git_blob": "e2df5fe661648193fd81430dae368c5fece87503",
+     "on_disk_is_blob": true,
+     "sha256": "cf707902d5ccb87233fbba008ebc70d6e7001d2f77e10ddebeb082575ded4486"
+    },
+    "query2": {
+     "git_blob": "94776d55a8baf517741247057a579a3228ae3b6a",
+     "on_disk_is_blob": true,
+     "sha256": "a9e852fda1bbda63d3d1940e129e32d5af4a428c75a78424b4495db02a984d1d"
+    },
+    "query3": {
+     "git_blob": "00b4df0d8bee22fd04da9b10dffc337f8f7999bf",
+     "on_disk_is_blob": true,
+     "sha256": "0b8dda4ccc5958a7ae292ff782329785ac450ac1ccec890484a6ff5a9f774767"
+    },
+    "query4": {
+     "git_blob": "62d4c80db54985fe6be01760077e35547677dba1",
+     "on_disk_is_blob": true,
+     "sha256": "44a9efc64699eb0f99703ef0cb1e37d7c11af5bcfb62974a9f3c5d890af27c14"
+    },
+    "query5": {
+     "git_blob": "68cdd8944449d5a036a0b9fc0da755a7a1ce3162",
+     "on_disk_is_blob": true,
+     "sha256": "2c9fd2b1cef51e8e00b5cbefb15dfe4cb8261d726519f394ab4b2dc1f2c05797"
+    },
+    "query6": {
+     "git_blob": "efe06888ec6f475255944cb8037f92cfd10f306a",
+     "on_disk_is_blob": true,
+     "sha256": "62d23cae1947acf29b02fdc186e25b10b2d11e223965c6f384fbbab6ccf6a7df"
+    },
+    "query7": {
+     "git_blob": "c50f40f39b9ee990d6b00fc615ed91cfe8dccbd5",
+     "on_disk_is_blob": true,
+     "sha256": "6a3a4ce64de4fe3abbb7c38f50f0bd5c54ef09506445b384fa9f2f537bb0704e"
+    },
+    "query8": {
+     "git_blob": "f4889c774144308aad2cc3f063315578176f10be",
+     "on_disk_is_blob": true,
+     "sha256": "f5286f8dadbe0c2d0895b6f0fe4085691fdd2e6ae916e79f2f9293a960c30334"
+    },
+    "query9": {
+     "git_blob": "2a343c00623c1b1f04bb0281685f96ac96de3b8b",
+     "on_disk_is_blob": true,
+     "sha256": "fd1b20664e106209005d1d3f8321d935616927f4529d9a9388098481e6799b78"
+    }
+   },
+   "data_files": {
+    "query_crmarenapro/query_dataset/activities.duckdb": {
+     "bytes": 21245952,
+     "sha256_matches_dab_manifest": true
+    },
+    "query_crmarenapro/query_dataset/core_crm.db": {
+     "bytes": 188416,
+     "sha256_matches_dab_manifest": true
+    },
+    "query_crmarenapro/query_dataset/products_orders.db": {
+     "bytes": 143360,
+     "sha256_matches_dab_manifest": true
+    },
+    "query_crmarenapro/query_dataset/sales_pipeline.duckdb": {
+     "bytes": 2371584,
+     "sha256_matches_dab_manifest": true
+    },
+    "query_crmarenapro/query_dataset/support.sql": {
+     "bytes": 8860941,
+     "sha256_matches_dab_manifest": true
+    },
+    "query_crmarenapro/query_dataset/territory.db": {
+     "bytes": 24576,
+     "sha256_matches_dab_manifest": true
+    }
+   }
+  },
+  "googlelocal": {
+   "db_config.yaml": {
+    "git_blob": "00f321c6e4774c017e405552d24f43116cec0c58",
+    "on_disk_is_blob": true,
+    "sha256": "e4c808ba9f5d0fa01c4497d1ad3f79d0607a18374efa41397c8bc22def0e8eb0"
+   },
+   "validate.py": {
+    "query1": {
+     "git_blob": "80072b3e153b895338fa9fcfd211453a51f98292",
+     "on_disk_is_blob": true,
+     "sha256": "380e9dd0d57319d8c887ebfb5161c38add6bb8d19283265bf9f84e0e4c6323d3"
+    },
+    "query2": {
+     "git_blob": "7a3804d7868507ac676a6ec71ce74fd1f0567150",
+     "on_disk_is_blob": true,
+     "sha256": "0a2db3d2e36578165b3135c309b9e6d7b4f67665b2e3cf025524efcb711e2ad4"
+    },
+    "query3": {
+     "git_blob": "c066c673ad4f5758910c909796bc38e25be1e5d8",
+     "on_disk_is_blob": true,
+     "sha256": "37b5175ce2fe38edf5cf813d1b293ae4b42d22b8b8afe1348e4d56db898096fa"
+    },
+    "query4": {
+     "git_blob": "e04cf0e07420ab63282f852f7aece14c27425b75",
+     "on_disk_is_blob": true,
+     "sha256": "4b9c7096546d5f581c5212e8617caa41b19820f56025ee309abcf7a97ba5f6d9"
+    }
+   },
+   "data_files": {
+    "query_googlelocal/query_dataset/business_description.sql": {
+     "bytes": 38204,
+     "sha256_matches_dab_manifest": true
+    },
+    "query_googlelocal/query_dataset/review_query.db": {
+     "bytes": 585728,
+     "sha256_matches_dab_manifest": true
+    }
+   }
+  },
+  "music_brainz_20k": {
+   "db_config.yaml": {
+    "git_blob": "683892085b60a67fcdd03e8acb4a3a7b43c06f15",
+    "on_disk_is_blob": true,
+    "sha256": "31c3180aea769887628cf51e91998f9d5e72df98449608fb887d92203f212c6e"
+   },
+   "validate.py": {
+    "query1": {
+     "git_blob": "a43a8fb5650909bdf4851249f9b3c062497cbe37",
+     "on_disk_is_blob": true,
+     "sha256": "95e75de5b663e836372faeab70420527c7b42bcf3767e8431beca1ebde17637b"
+    },
+    "query2": {
+     "git_blob": "d3528a1068f50eee6f0f2156c9aaa89bf350387c",
+     "on_disk_is_blob": true,
+     "sha256": "2ef8b4f76ade27acfeed410e59fd52c608a04b86a6bed8626b71c8b589bfcff3"
+    },
+    "query3": {
+     "git_blob": "01789e5cf85716ea6bb51f0cb9cc102a5e71c599",
+     "on_disk_is_blob": true,
+     "sha256": "cdc581cea003b72d490ab83e3e005bac94531a990a737aa96a39b8cceee33d2e"
+    }
+   },
+   "data_files": {
+    "query_music_brainz_20k/query_dataset/tracks.db": {
+     "bytes": 2035712,
+     "sha256_matches_dab_manifest": true
+    }
+   }
+  },
+  "stockindex": {
+   "db_config.yaml": {
+    "git_blob": "0572ff9cdb8dc21a8e5d6a1164926264429cc871",
+    "on_disk_is_blob": true,
+    "sha256": "d5a8fb635912bbb6aed71bad8e8ca4b93289d5fefbe4dd009287aa501129aa34"
+   },
+   "validate.py": {
+    "query1": {
+     "git_blob": "a5814b285f2576bcfb5d65c9ff9df4ef9697c866",
+     "on_disk_is_blob": true,
+     "sha256": "827c71dc7ab3b6624437a4af3c21bedbe64a7b3614d86241e547e70c7e1a7c15"
+    },
+    "query2": {
+     "git_blob": "12a7ecee3b7d0af33d8cf6d023228edcf09327ef",
+     "on_disk_is_blob": true,
+     "sha256": "834e41dd6de60ef5c824b229560738c7fca33672e8978bb9eb8ca0f71d052355"
+    },
+    "query3": {
+     "git_blob": "3a40e54eb9e0f1d8c03693ba1505ed5cd8418f83",
+     "on_disk_is_blob": true,
+     "sha256": "eff4734185a8d3c7ebd1ec94b13feb50d7e6bd2ee431c01018cf88d3556444cd"
+    }
+   },
+   "data_files": {
+    "query_stockindex/query_dataset/indexInfo_query.db": {
+     "bytes": 8192,
+     "sha256_matches_dab_manifest": true
+    },
+    "query_stockindex/query_dataset/indextrade_query.db": {
+     "bytes": 4468736,
+     "sha256_matches_dab_manifest": true
+    }
+   }
+  },
+  "stockmarket": {
+   "db_config.yaml": {
+    "git_blob": "85ff4515fe1c2adb02da2ea9ca077604fbbc8d2f",
+    "on_disk_is_blob": true,
+    "sha256": "2a5a60ca2ad14195da7f6d98eab8efe7c665ebfb9f149bbb42befa63fab5efd2"
+   },
+   "validate.py": {
+    "query1": {
+     "git_blob": "7ff15a10fd1dc82a733954c3f9faebe7a3b20dc9",
+     "on_disk_is_blob": true,
+     "sha256": "58282597518b0432ab5d15c0f7845ae97d93a9d8dd66549c840f0c98fa9c815e"
+    },
+    "query2": {
+     "git_blob": "638d4af65090a6d7d4f558585a0908459ff30cb1",
+     "on_disk_is_blob": true,
+     "sha256": "be6ef9996c48d357291d87b8e572d20311d8cb6b05a3a6e9702f8d93dad8d63d"
+    },
+    "query3": {
+     "git_blob": "024b1a820f1fb3fdf36ee4c1b32cd84012fe1582",
+     "on_disk_is_blob": true,
+     "sha256": "948ed2b64b2ea8de48c11034c8c4e2772b5ca7dbdf898f8ff816bea407b227cb"
+    },
+    "query4": {
+     "git_blob": "6cd971c6617bb0feea6245aca067c5dae32558f9",
+     "on_disk_is_blob": true,
+     "sha256": "09538392d54f1c68d9aac70e5d7d1c692cebe3a743078067b211bbf0909d7f8d"
+    },
+    "query5": {
+     "git_blob": "96e934b4d31b84d2fee17fd565dabe6f6e47b9b8",
+     "on_disk_is_blob": true,
+     "sha256": "8f0e5b28bad6e209a6509662e7fab27d2a0a8114228dd04b49a2851dbefc95c4"
+    }
+   },
+   "data_files": {
+    "query_stockmarket/query_dataset/stockinfo_query.db": {
+     "bytes": 737280,
+     "sha256_matches_dab_manifest": true
+    },
+    "query_stockmarket/query_dataset/stocktrade_query.db": {
+     "bytes": 964964352,
+     "sha256_matches_dab_manifest": true
+    }
+   }
+  },
+  "yelp": {
+   "db_config.yaml": {
+    "git_blob": "b80fd5637ee245f6fc41aec4a57711a8b1e94da1",
+    "on_disk_is_blob": true,
+    "sha256": "c782c74ef5df85627e3993ab194cb6d0ee7350789546cfed80eea97566e59f41"
+   },
+   "validate.py": {
+    "query1": {
+     "git_blob": "9ad2eff34efde67f350e65ed89c705b1b2680a9c",
+     "on_disk_is_blob": true,
+     "sha256": "30d1f2535c4fea561260aa3e5e59fa3af25a98b0528557b11ba5af09f9a27475"
+    },
+    "query2": {
+     "git_blob": "8985253eb2d4828ccda4f9cfc476ed4812198e42",
+     "on_disk_is_blob": true,
+     "sha256": "aa1e9fe46484d1319fe7da725441e34d6c2008672a990ccc8424b75fa19a582b"
+    },
+    "query3": {
+     "git_blob": "0acdf4daf477da13d0043b282ec3cfd42d60df9b",
+     "on_disk_is_blob": true,
+     "sha256": "c79185af0b0bc5d163d2c617fc853f724ecf30142e903978363e7ad82a4fb4ee"
+    },
+    "query4": {
+     "git_blob": "013f1de546867f9e263514e26c154f4ccb14d59b",
+     "on_disk_is_blob": true,
+     "sha256": "fb27e15bd68c5671fd1e152790d220bdd78c88270e398c0ccc4a91ee28b31ed2"
+    },
+    "query5": {
+     "git_blob": "7fc869d90f9299dd027f8a7e8ee8dcd1fb356bae",
+     "on_disk_is_blob": true,
+     "sha256": "b9e2d3c797b7e51b13cdfdc62896a4dd074bb3135168e57e7faad5b8de52859b"
+    },
+    "query6": {
+     "git_blob": "a52c9f18f709761d5417886a3e1ffb8ba76fa300",
+     "on_disk_is_blob": true,
+     "sha256": "14b3488f8a0b35c69167d93fee30db11f02d2552c2003fd24e2061eb6f7d38b0"
+    },
+    "query7": {
+     "git_blob": "22a1790d793d3c3dd3b38e87406cc972786f4f00",
+     "on_disk_is_blob": true,
+     "sha256": "b35b9f67c8c915c9e06d02b1abacfe853655b45cb34aef30e5ee972d84a21caf"
+    }
+   },
+   "data_files": {
+    "query_yelp/query_dataset/yelp_user.db": {
+     "bytes": 3420160,
+     "sha256_matches_dab_manifest": true
+    }
+   }
+  }
+ },
+ "summary": {
+  "validators": 54,
+  "validators_equal_revision_blob": 54,
+  "db_configs": 12,
+  "db_configs_equal_revision_blob": 12,
+  "data_files": 25,
+  "data_files_matching_dab_manifest": 25,
+  "data_bytes": 8350948793
+ }
+}

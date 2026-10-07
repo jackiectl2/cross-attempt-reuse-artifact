@@ -1,0 +1,12 @@
+\begin{tabular}{@{}L{3.3cm}L{6.1cm}L{6.7cm}@{}}
+\toprule
+Analysis & Threshold & Outcome \\
+\midrule
+B0 replay fidelity & replayed result byte-identical to the recorded observation for $\geq$90\% of the successful calls of every engine & met for DuckDB, PostgreSQL and SQLite (91.7\%, 94.3\%, 99.9\%); MongoDB 78.5\%, and 94.4\% equivalent after the normalization of Section~\ref{sec:method} \\
+B1 cross-attempt dominance & other attempts $\geq 3\times$ session in time and bytes, pooled and for the median task, on byte-identical replays of the engines that meet B0 & met on that population (three engines): 3.6$\times$ (time), 4.4$\times$ (bytes) pooled; 14.9$\times$, 12.6$\times$ for the median task. On all oracle-admitted calls (Section~\ref{sec:locality}): 3.6$\times$, 4.4$\times$; 13.0$\times$, 13.4$\times$ \\
+B2 practical savings & under S2, the median task saves $\geq$20\% of DB time or $\geq$30\% of bytes at $N=4$ & not met at $N=4$ on the oracle-admitted calls with an unbounded budget (16.6\%, 15.9\%); 24.1\% of DB time at $N=8$ \\
+B3 ownership & on the calls that Contract B admits, at $N=2$--8: S3 below S2 in median-task bytes written and peak footprint, tool time within 5\%, same direction in every engine & not met on Contract B, which admits a spilled result in only 11 tasks as planned and 8 under the final rule, with a median S3 write saving of 0\% and 0\%; met on E-eval (exploratory, unbounded budget): S3/S2 writes 0.448--0.489, footprint 0.448--0.696 under both lifetimes, tool time 0.998--0.999; in every engine, writes at most 0.63 and tool time at most 1.03 (footprint was not computed per engine) \\
+B4 simulator validity and consumer test & on 12 calibration cells at $N=8$ with an unbounded and a 1/4 budget: simulated tool time within 10\%, bytes within 1\%; consumer outputs identical in $\geq$99\% of cases; writes to shared objects refused & bytes and footprint met (max error 0\%); tool time 8.6\% under B as planned (met), 30.6\% under the final B and 43.9\% on E-eval (not met); consumer test, planned on inputs that Contract B admits and run on E-eval inputs, on 238 recorded Python calls: 238 outputs identical under S2 and S3 with the hash seed fixed (233 with random seeds), 36 of 36 write probes refused by a read-only mount (met) \\
+B5 heterogeneity & B1 holds in $\geq 10$ of 12 leave-one-dataset-out folds and for every model & on the B1 population, met in 12 of 12 folds (smallest ratio 3.4$\times$ in time, 4.0$\times$ in bytes) and for 3 of 5 models \\
+\bottomrule
+\end{tabular}

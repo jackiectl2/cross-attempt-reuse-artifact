@@ -1,0 +1,229 @@
+{
+ "cases": 239,
+ "infra_failures": 1,
+ "valid": 238,
+ "identical_S2_S3": 238,
+ "identical_rate": 1.0,
+ "spilled_input_cases": 124,
+ "S2_error_class_agrees_with_recorded": 0.8445378151260504,
+ "divergent": [],
+ "probes": [
+  {
+   "dir": "DEPS_DEV_V1/probe0",
+   "S2_rc": "0",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "DEPS_DEV_V1/probe1",
+   "S2_rc": "1",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "DEPS_DEV_V1/probe2",
+   "S2_rc": "0",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "GITHUB_REPOS/probe0",
+   "S2_rc": "0",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "GITHUB_REPOS/probe1",
+   "S2_rc": "1",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "GITHUB_REPOS/probe2",
+   "S2_rc": "0",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "PANCANCER_ATLAS/probe0",
+   "S2_rc": "0",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "PANCANCER_ATLAS/probe1",
+   "S2_rc": "1",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "PANCANCER_ATLAS/probe2",
+   "S2_rc": "0",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "PATENTS/probe0",
+   "S2_rc": "0",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "PATENTS/probe1",
+   "S2_rc": "1",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "PATENTS/probe2",
+   "S2_rc": "0",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "agnews/probe0",
+   "S2_rc": "0",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "agnews/probe1",
+   "S2_rc": "1",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "agnews/probe2",
+   "S2_rc": "0",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "bookreview/probe0",
+   "S2_rc": "0",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "bookreview/probe1",
+   "S2_rc": "1",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "bookreview/probe2",
+   "S2_rc": "0",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "crmarenapro/probe0",
+   "S2_rc": "0",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "crmarenapro/probe1",
+   "S2_rc": "1",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "crmarenapro/probe2",
+   "S2_rc": "0",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "googlelocal/probe0",
+   "S2_rc": "0",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "googlelocal/probe1",
+   "S2_rc": "1",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "googlelocal/probe2",
+   "S2_rc": "0",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "music_brainz_20k/probe0",
+   "S2_rc": "0",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "music_brainz_20k/probe1",
+   "S2_rc": "1",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "music_brainz_20k/probe2",
+   "S2_rc": "0",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "stockindex/probe0",
+   "S2_rc": "0",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "stockindex/probe1",
+   "S2_rc": "1",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "stockindex/probe2",
+   "S2_rc": "0",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "stockmarket/probe0",
+   "S2_rc": "0",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "stockmarket/probe1",
+   "S2_rc": "1",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "stockmarket/probe2",
+   "S2_rc": "0",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "yelp/probe0",
+   "S2_rc": "0",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "yelp/probe1",
+   "S2_rc": "1",
+   "S3_rc": "1",
+   "S3_refused": true
+  },
+  {
+   "dir": "yelp/probe2",
+   "S2_rc": "0",
+   "S3_rc": "1",
+   "S3_refused": true
+  }
+ ],
+ "all_S3_probes_refused": true
+}

@@ -1,0 +1,13 @@
+% Table 2 -- designs (full width)
+\begin{table*}[tbp]
+  \caption{Reuse designs at $N=8$ with an unbounded budget on the assumption-based E-eval subset (simulation, 50
+  resamples). DB-execution saving relative to S0 is the median over 54 tasks. Bytes written and peak footprint
+  relative to S0 are medians over the 52 tasks with nonzero S0 writes, under the retained and sequential lifetimes of
+  Section~\ref{sec:designs}. Both are exact accounting. Modeled tool-time saving is the simulator's estimate (median
+  over 54 tasks), with a per-run error of 43.9\% on this subset. The live calibration
+  compares S2, S2c and S3, and SD's tool time is modeled only. Measured primitives are the live copy rate per byte
+  (258 copies) and the clone (482) and alias (282) times.}
+  \label{tab:designs}
+  \small
+  \input{figures/tab2_designs}
+\end{table*}

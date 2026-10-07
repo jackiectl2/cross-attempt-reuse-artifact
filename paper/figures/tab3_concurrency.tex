@@ -1,0 +1,12 @@
+\begin{tabular}{@{}llrrrrr@{}}
+\toprule
+Budget & Policy & Mismatches & Executions & Duplicates & Wait (s) & Dangling aliases \\
+\midrule
+$\infty$ & optimistic & 0 & 663 & 107 & 0 & 0 \\
+$\infty$ & single-flight & 0 & 556 & 0 & 59 & 0 \\
+$\infty$ & optimistic, unpinned & 0 & 664 & 108 & 0 & 0 \\
+1/16 & optimistic & 0 & 675 & 103 & 0 & 0 \\
+1/16 & single-flight & 0 & 567 & 0 & 86 & 0 \\
+1/16 & optimistic, unpinned & 0 & 681 & 106 & 0 & 21 \\
+\bottomrule
+\end{tabular}

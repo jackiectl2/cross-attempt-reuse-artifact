@@ -1,0 +1,28 @@
+{
+ "n": 480,
+ "fitted_miss_overhead_s": 0.0035635450288228803,
+ "fitted_hit_overhead_s": 0.0,
+ "median_time_rel_err_uncalibrated": 0.28774819240649846,
+ "median_time_rel_err": 0.28579586371462173,
+ "p90_time_rel_err": 2.80216707215702,
+ "median_written_rel_err": null,
+ "max_written_rel_err": null,
+ "peak_retained_rel_err_median": null,
+ "peak_retained_rel_err_max": null,
+ "peak_seq_rel_err_median": null,
+ "peak_seq_rel_err_max": null,
+ "by_system": {
+  "time_rel_err": {
+   "S0": 0.2865787524244876,
+   "S1": 0.2656291916670434,
+   "S2": 0.31031150079036773,
+   "S3": 0.2838609672958159
+  },
+  "written_rel_err": {
+   "S0": null,
+   "S1": null,
+   "S2": null,
+   "S3": null
+  }
+ }
+}

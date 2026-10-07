@@ -1,0 +1,36 @@
+You are an adversarial reviewer of a static SQL certificate. Read `certify.py` (the certificate; rules are listed in its
+docstring) and `p2_audit.py` (an audit of stored columns that the certificate relies on) in the working directory.
+
+## What the certificate claims
+`certify(text, engine, strict=True, p2=audited_columns)` returns True only for queries whose serialized result is
+byte-identical in every correct execution on the same snapshot, whatever the plan, the degree of parallelism or the
+physical row order. Engines: SQLite 3.x, DuckDB 1.3, PostgreSQL 16 (database created with C collation), and a MongoDB
+find interface. Assumed (not to be attacked): the snapshot, engine versions and session configuration (time zone,
+float formatting) are fixed; allow-listed functions are deterministic; the result is serialized by a deterministic
+serializer; `p2` contains exactly the stored column names that pass `p2_audit.py` (equal values of such a column always
+print the same) and no database declares a non-binary collation.
+
+## Your task
+Break it. Find concrete queries that `certify` (strict mode) ADMITS but whose result bytes can legitimately differ
+between two correct executions on the same snapshot in at least one of the three SQL engines. For each candidate:
+1. the engine and the exact query text (use tables t(a, b, c, x, y, d) or state the schema);
+2. trace through the code to show that every check passes (name the functions and conditions);
+3. explain the engine semantics that make the bytes differ, with a small example dataset;
+4. state the smallest additional rule that would reject it.
+
+Look in particular at: how sqlglot parses each construct in each dialect (functions that parse as `exp.Anonymous`,
+SQLite's two-argument MIN/MAX, `GROUP BY` aliases and ordinals, `QUALIFY`, `USING` / `NATURAL` joins, `LATERAL`,
+CTEs including recursive ones, `VALUES`, `UNNEST` / table functions, window frames, `FILTER` clauses, `ORDER BY` inside
+aggregates, `NULLS FIRST/LAST`, `ORDER BY` on expressions that are not outputs, `LIMIT` in subqueries and in
+`IN (...)`, scalar subqueries, `SELECT *` under derived tables, quoted identifiers and case folding); at value domains
+(integer vs real storage classes in SQLite, negative zero, NaN, numeric scale in PostgreSQL, `char(n)` padding,
+implicit casts in comparisons, type affinity of expressions, integer overflow to real in SQLite, string functions that
+return numbers, date functions that return reals); at the alias resolution in `_value_safe` and `_bare_column`; at
+`_at_most_one_row`; and at the audit itself (cases where a column passes `p2_audit.py` but two of its values compare
+equal and print differently, or where the name-level lookup of a column is wrong).
+
+Also list queries that are obviously byte-stable but that the certificate rejects only because of an implementation
+slip (not because the rule is conservative by design), if you see any.
+
+Report at most 12 counterexamples, strongest first, and say plainly if you find none for a category. Do not propose
+rewrites of the whole design; do not modify any file.

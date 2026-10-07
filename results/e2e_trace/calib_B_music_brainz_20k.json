@@ -1,0 +1,366 @@
+[
+ {
+  "dataset": "music_brainz_20k",
+  "query": "query3",
+  "model": "gpt-5-mini",
+  "contract": "B",
+  "res": 1,
+  "budget": "1/4",
+  "order": [
+   22,
+   49,
+   39,
+   26,
+   40,
+   34,
+   37,
+   43
+  ],
+  "S0": {
+   "calls": 18,
+   "live_errors": 0,
+   "consumers": 10,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 2,
+   "peak_retained": 91380202,
+   "peak_seq": 14749659
+  },
+  "S1": {
+   "calls": 18,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 10,
+   "consumers_identical": 10,
+   "consumers_identical_ok": 8,
+   "consumers_identical_failed": 2,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 91380202,
+   "peak_seq": 14749659
+  },
+  "S2": {
+   "calls": 18,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 10,
+   "consumers_identical": 10,
+   "consumers_identical_ok": 8,
+   "consumers_identical_failed": 2,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 91380202,
+   "peak_seq": 14749659
+  },
+  "S3": {
+   "calls": 18,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 10,
+   "consumers_identical": 10,
+   "consumers_identical_ok": 8,
+   "consumers_identical_failed": 2,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 91380202,
+   "peak_seq": 14749659
+  }
+ },
+ {
+  "dataset": "music_brainz_20k",
+  "query": "query3",
+  "model": "gpt-5-mini",
+  "contract": "B",
+  "res": 1,
+  "budget": "inf",
+  "order": [
+   22,
+   49,
+   39,
+   26,
+   40,
+   34,
+   37,
+   43
+  ],
+  "S0": {
+   "calls": 18,
+   "live_errors": 0,
+   "consumers": 10,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 2,
+   "peak_retained": 91380202,
+   "peak_seq": 14749659
+  },
+  "S1": {
+   "calls": 18,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 10,
+   "consumers_identical": 10,
+   "consumers_identical_ok": 8,
+   "consumers_identical_failed": 2,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 91380202,
+   "peak_seq": 14749659
+  },
+  "S2": {
+   "calls": 18,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 10,
+   "consumers_identical": 10,
+   "consumers_identical_ok": 8,
+   "consumers_identical_failed": 2,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 91380202,
+   "peak_seq": 14749659
+  },
+  "S3": {
+   "calls": 18,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 10,
+   "consumers_identical": 10,
+   "consumers_identical_ok": 8,
+   "consumers_identical_failed": 2,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 91380202,
+   "peak_seq": 14749659
+  }
+ },
+ {
+  "dataset": "music_brainz_20k",
+  "query": "query3",
+  "model": "gpt-5-mini",
+  "contract": "B",
+  "res": 0,
+  "budget": "1/4",
+  "order": [
+   29,
+   10,
+   13,
+   26,
+   17,
+   18,
+   8,
+   7
+  ],
+  "S0": {
+   "calls": 16,
+   "live_errors": 0,
+   "consumers": 13,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 5,
+   "peak_retained": 102221077,
+   "peak_seq": 14749659
+  },
+  "S1": {
+   "calls": 16,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 13,
+   "consumers_identical": 13,
+   "consumers_identical_ok": 8,
+   "consumers_identical_failed": 5,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 102221077,
+   "peak_seq": 14749659
+  },
+  "S2": {
+   "calls": 16,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 13,
+   "consumers_identical": 13,
+   "consumers_identical_ok": 8,
+   "consumers_identical_failed": 5,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 102221077,
+   "peak_seq": 14749659
+  },
+  "S3": {
+   "calls": 16,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 13,
+   "consumers_identical": 13,
+   "consumers_identical_ok": 8,
+   "consumers_identical_failed": 5,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 102221077,
+   "peak_seq": 14749659
+  }
+ },
+ {
+  "dataset": "music_brainz_20k",
+  "query": "query3",
+  "model": "gpt-5-mini",
+  "contract": "B",
+  "res": 0,
+  "budget": "inf",
+  "order": [
+   29,
+   10,
+   13,
+   26,
+   17,
+   18,
+   8,
+   7
+  ],
+  "S0": {
+   "calls": 16,
+   "live_errors": 0,
+   "consumers": 13,
+   "consumers_nondeterministic": 0,
+   "consumer_nonzero_rc": 5,
+   "peak_retained": 102221077,
+   "peak_seq": 14749659
+  },
+  "S1": {
+   "calls": 16,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 13,
+   "consumers_identical": 13,
+   "consumers_identical_ok": 8,
+   "consumers_identical_failed": 5,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 102221077,
+   "peak_seq": 14749659
+  },
+  "S2": {
+   "calls": 16,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 13,
+   "consumers_identical": 13,
+   "consumers_identical_ok": 8,
+   "consumers_identical_failed": 5,
+   "consumer_mismatch_detail": [],
+   "probes": [
+    {
+     "probe": 0,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 1,
+     "rc": 0,
+     "refused": false
+    },
+    {
+     "probe": 2,
+     "rc": 0,
+     "refused": false
+    }
+   ],
+   "store_object_intact": null,
+   "peak_retained": 102221077,
+   "peak_seq": 14749659
+  },
+  "S3": {
+   "calls": 16,
+   "hits": 0,
+   "mismatches": 0,
+   "mismatches_on_hits": 0,
+   "mismatch_detail": [],
+   "consumers": 13,
+   "consumers_identical": 13,
+   "consumers_identical_ok": 8,
+   "consumers_identical_failed": 5,
+   "consumer_mismatch_detail": [],
+   "probes": [],
+   "store_object_intact": null,
+   "peak_retained": 102221077,
+   "peak_seq": 14749659
+  }
+ }
+]

@@ -1,0 +1,38 @@
+You are an adversarial reviewer of a static SQL certificate. Read `certify.py` and `p2_audit.py` in the working
+directory. The certificate under review is `certify_sql_b` (reached through `certify(text, engine, strict=True,
+schema=...)` when the environment variable ED_CONTRACT_B is unset): a default-deny whitelist whose rules, guarantee
+and preconditions are in the module docstring. Ignore `certify_sql` (earlier rules, kept for old results) and
+`certify_mongo`.
+
+## What the certificate claims
+Main guarantee (G1): for a query that `certify(text, engine, schema=D)` admits, any two correct executions on the same
+snapshot that both complete return the same serialized bytes, whatever the plan, the degree of parallelism or the
+physical row order.
+Secondary, best-effort property (G2): the whitelist excludes the operations the authors know to raise an error for
+some rows, so that one plan does not raise where another completes. The authors do not claim G2 complete.
+
+Engines: SQLite 3.x, DuckDB 1.3, PostgreSQL 16 (database created with C collation). `D` is the audited database of the
+query as produced by `p2_audit.py`: `catalog_ok` and, for every base table, its stored columns with `safe` (no two
+values of the column compare equal and print differently) and a type `family`.
+
+Assumed and not to be attacked (preconditions P1-P3 of the docstring): the snapshot, engine versions and session
+configuration (time zone, float formatting, search path, default settings and limits) are fixed; every call runs in a
+fresh read-only session with no temporary or attached object and no extension or user function loaded by the session;
+the catalog checks of `p2_audit.py` hold when `catalog_ok` is true; no database declares a non-binary collation;
+results are serialized by a deterministic serializer that prints every value from its engine-returned Python value.
+Resource failures (out of memory, time-outs) are out of scope.
+
+## Your task
+1. Attack G1 first. Find concrete queries that `certify_sql_b` ADMITS although two correct executions that both
+   complete can return different bytes in at least one of the three engines. For each: the engine and exact query text
+   (state the database dict you pass); a trace through the code showing that every check passes; the engine semantics
+   that make the bytes differ, with a small example dataset; and the smallest additional rule that rejects it. Look at
+   the three shapes (one row; ordered rows of stored columns; grouped), the DISTINCT / LIMIT / OFFSET rules, name
+   binding and the alias rules, the value domains (P2-safe columns as outputs, grouping columns and arguments of
+   MIN / MAX), anything an engine may pick between equal-comparing representations, floating-point results of one-row
+   arithmetic whose value could depend on evaluation order or parallelism (for example COUNT-based ratios, MIN / MAX
+   of a FLOAT column, ROUND), how sqlglot 30 parses each admitted construct per dialect, and at `p2_audit.py`.
+2. Then attack G2: at most five admitted queries where one correct plan raises and another completes, strongest first.
+3. List queries that are obviously stable but rejected only because of an implementation slip.
+
+Say plainly for G1 whether you found a counterexample or none. Do not propose a redesign; do not modify any file.

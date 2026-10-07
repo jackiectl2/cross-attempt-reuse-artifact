@@ -1,0 +1,144 @@
+{
+ "cow|1/4": {
+  "S2": {
+   "live_time_saving_tw": 0.5913956710022552,
+   "pred_time_saving_tw": 0.6183544242235371,
+   "live_written_vs_S0": 1.3817200621900378,
+   "pred_written_vs_S0": 1.3817200621900378,
+   "max_written_rel_err": 0.0
+  },
+  "S2c": {
+   "live_time_saving_tw": 0.5877663447491596,
+   "pred_time_saving_tw": 0.6210355657129206,
+   "live_written_vs_S0": 0.38172006219003796,
+   "pred_written_vs_S0": 0.38172006219003796,
+   "max_written_rel_err": 0.0
+  },
+  "S3": {
+   "live_time_saving_tw": 0.5959157263708121,
+   "pred_time_saving_tw": 0.6217229693032291,
+   "live_written_vs_S0": 0.38172006219003796,
+   "pred_written_vs_S0": 0.38172006219003796,
+   "max_written_rel_err": 0.0
+  }
+ },
+ "cow|inf": {
+  "S2": {
+   "live_time_saving_tw": 0.5906713638943462,
+   "pred_time_saving_tw": 0.6183544242235371,
+   "live_written_vs_S0": 1.3817200621900378,
+   "pred_written_vs_S0": 1.3817200621900378,
+   "max_written_rel_err": 0.0
+  },
+  "S2c": {
+   "live_time_saving_tw": 0.5629571308755555,
+   "pred_time_saving_tw": 0.6210355657129206,
+   "live_written_vs_S0": 0.38172006219003796,
+   "pred_written_vs_S0": 0.38172006219003796,
+   "max_written_rel_err": 0.0
+  },
+  "S3": {
+   "live_time_saving_tw": 0.5929830533003161,
+   "pred_time_saving_tw": 0.6217229693032291,
+   "live_written_vs_S0": 0.38172006219003796,
+   "pred_written_vs_S0": 0.38172006219003796,
+   "max_written_rel_err": 0.0
+  }
+ },
+ "inline_only|1/4": {
+  "S2": {
+   "live_time_saving_tw": 0.019812632692946197,
+   "pred_time_saving_tw": 0.013944903828853938,
+   "live_written_vs_S0": 1.0,
+   "pred_written_vs_S0": 1.0,
+   "max_written_rel_err": 0.0
+  },
+  "S3": {
+   "live_time_saving_tw": 0.01876232288787716,
+   "pred_time_saving_tw": 0.013934169494944526,
+   "live_written_vs_S0": 1.0,
+   "pred_written_vs_S0": 1.0,
+   "max_written_rel_err": 0.0
+  }
+ },
+ "inline_only|inf": {
+  "S2": {
+   "live_time_saving_tw": 0.028660651641710944,
+   "pred_time_saving_tw": 0.013944903828853938,
+   "live_written_vs_S0": 1.0,
+   "pred_written_vs_S0": 1.0,
+   "max_written_rel_err": 0.0
+  },
+  "S3": {
+   "live_time_saving_tw": 0.033801682353675644,
+   "pred_time_saving_tw": 0.013934169494944526,
+   "live_written_vs_S0": 1.0,
+   "pred_written_vs_S0": 1.0,
+   "max_written_rel_err": 0.0
+  }
+ },
+ "regen|1/4": {
+  "S2": {
+   "live_time_saving_tw": 0.5124013134341742,
+   "pred_time_saving_tw": 0.13739390745143398,
+   "live_written_vs_S0": 1.38462387501663,
+   "pred_written_vs_S0": 1.38462387501663,
+   "max_written_rel_err": 0.0
+  },
+  "S3": {
+   "live_time_saving_tw": 0.5164981972381946,
+   "pred_time_saving_tw": 0.1406871443536274,
+   "live_written_vs_S0": 0.38462387501663003,
+   "pred_written_vs_S0": 0.38462387501663003,
+   "max_written_rel_err": 0.0
+  }
+ },
+ "regen|inf": {
+  "S2": {
+   "live_time_saving_tw": 0.5209165390438952,
+   "pred_time_saving_tw": 0.13739390745143398,
+   "live_written_vs_S0": 1.38462387501663,
+   "pred_written_vs_S0": 1.38462387501663,
+   "max_written_rel_err": 0.0
+  },
+  "S3": {
+   "live_time_saving_tw": 0.5266643896433256,
+   "pred_time_saving_tw": 0.1406871443536274,
+   "live_written_vs_S0": 0.38462387501663003,
+   "pred_written_vs_S0": 0.38462387501663003,
+   "max_written_rel_err": 0.0
+  }
+ },
+ "spilled_only|1/4": {
+  "S2": {
+   "live_time_saving_tw": 0.5843264256533942,
+   "pred_time_saving_tw": 0.6164119147228859,
+   "live_written_vs_S0": 1.38462387501663,
+   "pred_written_vs_S0": 1.38462387501663,
+   "max_written_rel_err": 0.0
+  },
+  "S3": {
+   "live_time_saving_tw": 0.5837729765335384,
+   "pred_time_saving_tw": 0.6197158859589889,
+   "live_written_vs_S0": 0.38462387501663003,
+   "pred_written_vs_S0": 0.38462387501663003,
+   "max_written_rel_err": 0.0
+  }
+ },
+ "spilled_only|inf": {
+  "S2": {
+   "live_time_saving_tw": 0.5934104391660158,
+   "pred_time_saving_tw": 0.6164119147228859,
+   "live_written_vs_S0": 1.38462387501663,
+   "pred_written_vs_S0": 1.38462387501663,
+   "max_written_rel_err": 0.0
+  },
+  "S3": {
+   "live_time_saving_tw": 0.5985971905917147,
+   "pred_time_saving_tw": 0.6197158859589889,
+   "live_written_vs_S0": 0.38462387501663003,
+   "pred_written_vs_S0": 0.38462387501663003,
+   "max_written_rel_err": 0.0
+  }
+ }
+}

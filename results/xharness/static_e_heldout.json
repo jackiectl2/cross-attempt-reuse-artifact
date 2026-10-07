@@ -1,0 +1,105 @@
+{
+ "frozen_rule": {
+  "file": "../work/code_snapshot_2026-10-02/code/certify.py",
+  "queries": 9375,
+  "verdicts_that_differ_from_the_current_rule": 0
+ },
+ "all": {
+  "calls": 11027,
+  "ok_calls": 10411,
+  "ok_queries": 8811,
+  "E_admitted_ok_calls": 10182,
+  "E_admitted_ok_queries": 8592,
+  "E_admitted_stable_calls": 10182,
+  "E_admitted_stable_queries": 8592,
+  "E_admitted_classes_calls": {
+   "stable": 10182
+  },
+  "E_rejected_ok_classes_calls": {
+   "stable": 202,
+   "value_unstable": 27
+  }
+ },
+ "new_queries_only": {
+  "calls": 10017,
+  "ok_calls": 9406,
+  "ok_queries": 8382,
+  "E_admitted_ok_calls": 9181,
+  "E_admitted_ok_queries": 8167,
+  "E_admitted_stable_calls": 9181,
+  "E_admitted_stable_queries": 8167,
+  "E_admitted_classes_calls": {
+   "stable": 9181
+  },
+  "E_rejected_ok_classes_calls": {
+   "stable": 198,
+   "value_unstable": 27
+  }
+ },
+ "by_harness": {
+  "phoenix": {
+   "calls": 2937,
+   "ok_calls": 2615,
+   "ok_queries": 2102,
+   "E_admitted_ok_calls": 2552,
+   "E_admitted_ok_queries": 2045,
+   "E_admitted_stable_calls": 2552,
+   "E_admitted_stable_queries": 2045,
+   "E_admitted_classes_calls": {
+    "stable": 2552
+   },
+   "E_rejected_ok_classes_calls": {
+    "stable": 43,
+    "value_unstable": 20
+   }
+  },
+  "qwen": {
+   "calls": 3294,
+   "ok_calls": 3206,
+   "ok_queries": 2554,
+   "E_admitted_ok_calls": 3120,
+   "E_admitted_ok_queries": 2472,
+   "E_admitted_stable_calls": 3120,
+   "E_admitted_stable_queries": 2472,
+   "E_admitted_classes_calls": {
+    "stable": 3120
+   },
+   "E_rejected_ok_classes_calls": {
+    "stable": 85,
+    "value_unstable": 1
+   }
+  },
+  "scout": {
+   "calls": 1490,
+   "ok_calls": 1364,
+   "ok_queries": 1257,
+   "E_admitted_ok_calls": 1352,
+   "E_admitted_ok_queries": 1245,
+   "E_admitted_stable_calls": 1352,
+   "E_admitted_stable_queries": 1245,
+   "E_admitted_classes_calls": {
+    "stable": 1352
+   },
+   "E_rejected_ok_classes_calls": {
+    "stable": 12
+   }
+  },
+  "stela": {
+   "calls": 3306,
+   "ok_calls": 3226,
+   "ok_queries": 2974,
+   "E_admitted_ok_calls": 3158,
+   "E_admitted_ok_queries": 2906,
+   "E_admitted_stable_calls": 3158,
+   "E_admitted_stable_queries": 2906,
+   "E_admitted_classes_calls": {
+    "stable": 3158
+   },
+   "E_rejected_ok_classes_calls": {
+    "stable": 62,
+    "value_unstable": 6
+   }
+  }
+ },
+ "E_admitted_not_stable": []
+}

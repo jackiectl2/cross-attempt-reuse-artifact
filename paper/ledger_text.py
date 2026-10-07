@@ -1,0 +1,426 @@
+"""Ledger rows for the numbers in the paper's text and captions (tables are ledgered by figures/gen_tables.py).
+Each row: (location, printed form, expression over results/). Rows whose location starts with "const/" are fixed
+parameters of the study (preview size, replay cap, versions, counts of resamples and orders); their expressions read
+the code, the package lists in envs/ and the job scripts and logs in results/raw/logs/ where one of them fixes the value.
+Running this script rewrites the text rows of paper/NUMBERS_LEDGER.csv and keeps the table rows."""
+import csv
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from ledger import ROOT, ev  # noqa: E402
+
+LEDGER = os.path.join(ROOT, "paper", "NUMBERS_LEDGER.csv")
+TABLE_PREFIXES = ("tab1/", "tab2/", "tab3/", "tab3c/", "tab4/", "tabw/", "tabd/", "tabt/", "fig2/", "tabp/")
+
+B1 = "J('results/analysis_dab_r3/results_B1.json')['B1_fidelity_equiv_gate']"
+SUM = "J('results/analysis_dab_r3/results_B1.json')['summary']"
+B2 = "J('results/analysis_dab_r3/results_B23.json')['B2_fidelity_gate']"
+B3E = "J('results/analysis_dab_r3/results_B23.json')['B3_E_certified_exploratory']"
+B3B = "J('results/analysis_dab_r3/results_B23.json')['B3_B_certified']"
+F = "results/analysis_dab_r3/B0_funnel.csv"
+CS = "J('results/claim_support.json')"
+PS = "J('results/paper_stats.json')"
+EX = "J('results/extra_analyses.json')"
+BE, BH = "J('results/ablate/base_E.json')['summary']", "J('results/ablate/batchhold_E.json')['summary']"
+E2E = "J('results/e2e_trace/summary_all_E.json')"
+DIAG = "J('results/e2e_trace/mismatch_diag.json')['all_E']['details']"
+XH = "J('results/xharness/results.json')"
+LV3 = "J('results/live3/validate_variants.json')"
+CONC = "next(r for r in J('results/ablate/concurrent.json')['summary'] if r['budget'] == 'inf' and r['c'] == %d and r['tau'] == 2.0 and r['system'] == 'S3' and r['miss'] == '%s' and r['overflow'] == 'bypass')"
+CIDR = "J('results/cidr_subplans.json')['summary']"
+STT = "J('results/static_tiers.json')"
+SSH = "J('results/static_share.json')"
+HO = "J('results/xharness/static_e_heldout.json')"          # held-out check of the static E rule on the harness queries
+XC = "J('results/xharness/costs.json')"
+NW = "J('results/n_weights.json')"
+B1T = "results/analysis_dab_r3/B1_per_task.csv"
+NODES = "J('results/raw/cluster_nodes.json')"
+SIMCOST = "J('results/ablate/base_E.json')['costs']"          # the per-operation costs the simulations charged
+REPLAY_LOG = "results/raw/logs/ed-eval-06-62968329_%d.out"     # logs of the reported replay (job array ed-eval-06)
+PLAN = "results/raw/plan/EXPERIMENT_PLAN.md"                   # the experiment plan; thresholds are read from its text
+AB = "J('results/ablate/%s.json')['summary']['N=%d|B=%s']"
+HARN = "['phoenix', 'qwen', 'scout', 'stela']"
+_CL = "[r for f in sorted(__import__('glob').glob(__import__('os').path.join(ROOT_, 'results/concurrent_live/*.json'))) for r in J(__import__('os').path.relpath(f, ROOT_)) if r['budget'] == 'inf' and r['policy'] == '%s' and r['pinning'] == True]"
+CLO, CLS = _CL % "optimistic", _CL % "singleflight"
+
+ROWS = [
+    # ---- workload and replay ---------------------------------------------------------------------------------------
+    ("work/runs", "13,482", "cnt(%s['runs'])" % SUM),
+    ("work/query_db", "76,213", "cnt(%s['query_db'])" % SUM),
+    ("work/tool_calls", "151,293", "cnt(%s['tool_calls'])" % SUM),
+    ("work/pass", "4,543", "cnt(%s['validation']['pass'])" % SUM),
+    ("work/fail", "8,939", "cnt(%s['validation']['fail'])" % SUM),
+    ("work/pairs", "41,616", "cnt(%s['distinct_replayed'])" % SUM),
+    ("work/pairs_replayed", "41,610", "cnt(%s['distinct_replayed'] - %s['outcome_classes']['not_replayed'])" % (SUM, SUM)),
+    ("work/calls_replayed", "76,141", "cnt(ROW('%s', gate='replayed', level='all', group='all')['calls'])" % F),
+    ("work/no_args", "66", "cnt(int(ROW('%s', gate='all_query_db', level='all', group='all')['calls']) - sum(int(ROW('%s', gate='all_query_db', level='engine', group=e)['calls']) for e in ['duckdb', 'mongo', 'postgres', 'sqlite', 'unknown']))" % (F, F)),
+    ("work/stable", "37,675", "cnt(%s['outcome_classes']['stable'])" % SUM),
+    ("work/error", "3,917", "cnt(%s['outcome_classes']['error'])" % SUM),
+    ("work/timeout", "15", "cnt(%s['outcome_classes']['timeout'])" % SUM),
+    ("work/calls_per_run", "5.7", "fx(%s['query_db'] / %s['runs'], 1)" % (SUM, SUM)),
+    ("work/tasks", "54", "cnt(%s['N=8|B=inf']['S2_exec_saving']['n'])" % B2),
+    ("work/attempt_median_ms", "28.5", "fx(%s['magnitudes']['exec_s_per_attempt']['median'] * 1e3, 1)" % PS),
+    ("work/attempt_p95_s", "14.4", "fx(%s['magnitudes']['exec_s_per_attempt']['p95'], 1)" % PS),
+    ("work/spill_max_MB", "771", "fx(%s['magnitudes']['spill_file_bytes']['max'] / 1e6, 0)" % PS),
+    ("work/spilled_share", "25.9", "pct(%s['magnitudes']['spilled_share_of_successful_calls'])" % PS),
+    ("work/budget_base_median_MB", "17.4", "fx(%s['magnitudes']['task_budget_base_bytes_E_eval']['median'] / 1e6, 1)" % PS),
+    ("work/budget_base_p95_GB", "13.7", "fx(%s['magnitudes']['task_budget_base_bytes_E_eval']['p95'] / 1e9, 1)" % PS),
+    ("work/data_min_MB", "0.6", "fx(min(v['data_bytes'] for v in J('results/dataset_table.json').values()) / 1e6, 1)"),
+    ("work/data_max_GB", "5.6", "fx(max(v['data_bytes'] for v in J('results/dataset_table.json').values()) / 1e9, 1)"),
+    ("work/oracle_calls", "70,173", "cnt(ROW('%s', gate='fidelity_equiv', level='all', group='all')['calls'])" % F),
+    ("const/runs_planned", "13,500", "cnt(%s['cells']['total'] * 50)" % STT),
+    ("const/trials_per_task_model", "50", "'50'"),
+    ("const/preview_chars", "10,000", "cnt(RE('code/replay2.py', r'^PREVIEW = (\\d+)'))"),
+    ("const/replay_cap_s", "120", "RE('results/raw/logs/m1b.sbatch', r'replay2\\.py .* 3 (\\d+)\\s*$')"),
+    ("const/orders", "200", "cnt(%s['n_orders'])" % SUM),
+    ("const/orders_gate_variants", "20", "cnt(max(20, %s['n_orders'] // 10))" % SUM),
+    ("const/orders_top1", "50", "RE('results/raw/logs/extra.sbatch', r'extra_analyses\\.py \\S+ \\S+ \\S+ (\\d+) \\d+ \\d+')"),
+    ("const/orders_xharness", "50", "RE('code/xharness.py', r'def cmd_analyze\\(calls_path, out, n_orders=(\\d+), n_res=\\d+\\)')"),
+    ("const/resamples_xharness", "50", "RE('code/xharness.py', r'def cmd_analyze\\(calls_path, out, n_orders=\\d+, n_res=(\\d+)\\)')"),
+    ("const/resamples_designs", "50", "cnt(J('results/ablate/base_E.json')['n_res'])"),
+    ("const/batch_trace_replay", "8", "RE('code/live.py', r'order = \\[int\\(x\\) for x in rng\\.permutation\\(run_ids\\)\\[:(\\d+)\\]\\]')"),
+    ("const/batch_concurrent_sim", "8", "RE('code/concurrent_sim.py', r'order = \\[int\\(x\\) for x in rng\\.permutation\\(runs_all\\)\\[:(\\d+)\\]\\]')"),
+    ("const/N_grid", "1,2,4,8,16,50", "','.join(str(n) for n in sorted({int(k.split('|')[0][2:]) for k in %s}))" % B2),
+    ("const/N16", "16", "'16'"),
+    ("const/ci", "95", "'95'"),
+    ("const/tests", "29", "cnt(len(J('results/analysis_dab_r3/stats.json')))"),
+    ("const/cert_cases", "181", "RE('results/raw/logs/ed-eval-73_63146231_0.out', r'unit tests: (\\d+) assertions')"),
+    ("const/python", "3.12", "RE('envs/build_env3.sbatch', r'docker://python:(3\\.\\d+)')"),
+    ("const/duckdb", "1.3.1", "RE('envs/ed-dab.freeze.txt', r'^duckdb==(.+)$')"),
+    ("const/pandas", "2.3.0", "RE('envs/ed-dab.freeze.txt', r'^pandas==(.+)$')"),
+    ("const/postgres", "16.15", "RE('%s', r'postgres \\(PostgreSQL\\) (\\d+\\.\\d+)')" % (REPLAY_LOG % 0)),
+    ("const/mongo", "7.0.43", "RE('%s', r'^db version v(\\S+)')" % (REPLAY_LOG % 33)),
+    ("const/duckdb_new", "1.5.6", "RE('envs/ed-py312-v2.freeze.txt', r'^duckdb==(.+)$')"),
+    ("const/pandas_new", "3.0.6", "RE('envs/ed-py312-v2.freeze.txt', r'^pandas==(.+)$')"),
+    ("const/threshold_pct", "20", "RE('%s', r'the median task saves . (\\d+)%% of isolated DB time')" % PLAN),
+    ("const/threshold_bytes_pct", "30", "RE('%s', r'of isolated DB time or . (\\d+)%% of payload bytes')" % PLAN),
+    ("const/threshold_fidelity_pct", "90", "RE('%s', r'fidelity-pass . (\\d+)%% of successful calls per engine')" % PLAN),
+    ("const/threshold_sim_time_pct", "10", "RE('%s', r'simulator relative error . (\\d+)%% on time')" % PLAN),
+    ("const/threshold_consumers_pct", "99", "RE('%s', r'identical outputs . (\\d+)%%')" % PLAN),
+    ("const/threshold_lodo_folds", "10", "RE('%s', r'holds in . (\\d+) of \\d+ leave-one-dataset-out folds')" % PLAN),
+    ("const/lodo_folds", "12", "RE('%s', r'holds in . \\d+ of (\\d+) leave-one-dataset-out folds')" % PLAN),
+    ("const/tau_s", "2", "cnt(sorted(J('results/ablate/concurrent.json')['taus'])[1])"),
+    ("const/heavy_threshold_s", "5", "'5'"),
+    ("const/pow10", "10", "'10'"),
+    ("const/reproduce_tolerance_exponent", "9", "RE('code/reproduce.py', r'abs\\(v - w\\) <= 1e-(\\d+) \\* max')"),
+    ("const/patents_parallel_cells", "six", "word(RE('results/raw/logs/e2e_all_E_PATENTS.sbatch', r'ED_E2E_WORKERS=(\\d+)'))"),
+    ("const/pilot_calls_pct", "64", "pct(sum(int(ROW('%s', gate='replayed', level='engine', group=e)['calls']) for e in ('sqlite', 'duckdb')) / %s['query_db'], 0)" % (F, SUM)),
+    ("const/replay_jobs", "34", "cnt(sum(1 for x in J('results/raw/job_ledger.json')['jobs'] if x['name'] == 'ed-eval-06' and x.get('state') == 'COMPLETED'))"),
+    ("const/replay_job_hours", "24.1", "fx(sum((lambda e: (int(e.split('-')[0]) * 86400 if '-' in e else 0) + sum(int(a) * b for a, b in zip(e.split('-')[-1].split(':'), (3600, 60, 1))))(x['elapsed']) for x in J('results/raw/job_ledger.json')['jobs'] if x['name'] == 'ed-eval-06' and x.get('state') == 'COMPLETED') / 3600, 1)"),
+    ("const/cleanroom_values", "8,546", "cnt(sum(v['leaves'] - v['differences'] for v in J('results/reproduce/reproduce_results.json').values()))"),
+    ("const/live_runs", "480", "cnt(J('results/live2/validate_E.json')['n'])"),
+    ("const/calib_cells", "12", "cnt(len(J('results/live/selection.json')['picks']))"),
+    ("const/cells", "270", "cnt(%s['cells'])" % E2E),
+    ("const/cells_N50", "268", "cnt(%s['cells']['with_at_least_50_runs'])" % STT),
+    ("const/node_cores_max", "36", "cnt(max(int(k) for k in %s['cpu_tot']))" % NODES),
+    ("const/node_cores_min", "28", "cnt(min(int(k) for k in %s['cpu_tot']))" % NODES),
+    ("const/node_mem_GB", "180", "cnt(int(next(iter(%s['real_memory_mb']))) / 1024)" % NODES),
+    ("const/seed_shift_N4", "0.6", "fx(max(abs(J('results/analysis_seed%%d/results_B23.json' %% s)['B2_fidelity_gate']['N=4|B=inf']['S2_exec_saving']['median'] - %s['N=4|B=inf']['S2_exec_saving']['median']) for s in (1000, 2000, 3000, 4000)) * 100, 1)" % B2),
+    # ---- F1: scope -------------------------------------------------------------------------------------------------
+    ("f1/time_other", "33.5", "pct(%s['overall']['exec_s']['trials']['mean'])" % B1),
+    ("f1/time_session", "9.3", "pct(%s['overall']['exec_s']['session']['mean'])" % B1),
+    ("f1/bytes_other", "60.8", "pct(%s['overall']['payload_bytes']['trials']['mean'])" % B1),
+    ("f1/bytes_session", "13.7", "pct(%s['overall']['payload_bytes']['session']['mean'])" % B1),
+    ("f1/calls_other", "37.3", "pct(%s['overall']['calls']['trials']['mean'])" % B1),
+    ("f1/calls_session", "6.0", "pct(%s['overall']['calls']['session']['mean'])" % B1),
+    ("f1/calls_modeltask", "4.0", "pct(%s['overall']['calls']['models']['mean'] + %s['overall']['calls']['tasks']['mean'])" % (B1, B1)),
+    ("f1/time_modeltask", "2.3", "pct(%s['overall']['exec_s']['models']['mean'] + %s['overall']['exec_s']['tasks']['mean'])" % (B1, B1)),
+    ("f1/bytes_modeltask", "6.1", "pct(%s['overall']['payload_bytes']['models']['mean'] + %s['overall']['payload_bytes']['tasks']['mean'])" % (B1, B1)),
+    ("f1/task_other", "41.2", "pct(%s['task_macro']['exec_s']['trials']['median'])" % B1),
+    ("f1/task_other_lo", "36.1", "pct(%s['task_macro']['exec_s']['trials']['median_ci'][0])" % B1),
+    ("f1/task_other_hi", "49.3", "pct(%s['task_macro']['exec_s']['trials']['median_ci'][1])" % B1),
+    ("f1/task_session", "3.2", "pct(%s['task_macro']['exec_s']['session']['median'])" % B1),
+    ("f1/task_session_lo", "2.2", "pct(%s['task_macro']['exec_s']['session']['median_ci'][0])" % B1),
+    ("f1/task_session_hi", "4.6", "pct(%s['task_macro']['exec_s']['session']['median_ci'][1])" % B1),
+    ("f1/task_bytes_other", "46.4", "pct(%s['task_macro']['payload_bytes']['trials']['median'])" % B1),
+    ("f1/task_bytes_session", "3.5", "pct(%s['task_macro']['payload_bytes']['session']['median'])" % B1),
+    ("f1/p_mant", "2.6", "mant(ST('B1 exec_s: other attempts > session')['p_holm'])"),
+    ("f1/r", "0.997", "fx(ST('B1 exec_s: other attempts > session')['rank_biserial'], 3)"),
+    ("f1/clust_other_lo", "34.6", "pct(%s['clustered']['B1_exec_s']['other_attempts']['ci95'][0])" % PS),
+    ("f1/clust_other_hi", "50.2", "pct(%s['clustered']['B1_exec_s']['other_attempts']['ci95'][1])" % PS),
+    ("f1/clust_session_lo", "1.8", "pct(%s['clustered']['B1_exec_s']['session']['ci95'][0])" % PS),
+    ("f1/clust_session_hi", "6.5", "pct(%s['clustered']['B1_exec_s']['session']['ci95'][1])" % PS),
+    ("f1/datasets", "12", "%s['clustered']['B1_exec_s']['datasets_other_gt_session'].split('/')[1]" % PS),
+    ("f1/sign_p", "0.0005", "fx(%s['clustered']['B1_exec_s']['sign_test_p'], 4)" % PS),
+    # ---- F1: growth ------------------------------------------------------------------------------------------------
+    ("f1/S2_N2", "9.6", "pct(%s['N=2|B=inf']['S2_exec_saving']['median'])" % B2),
+    ("f1/S2_N4", "16.6", "pct(%s['N=4|B=inf']['S2_exec_saving']['median'])" % B2),
+    ("f1/S2_N8", "24.1", "pct(%s['N=8|B=inf']['S2_exec_saving']['median'])" % B2),
+    ("f1/S2_N16", "32.2", "pct(%s['N=16|B=inf']['S2_exec_saving']['median'])" % B2),
+    ("f1/S2_N50", "47.0", "pct(%s['N=50|B=inf']['S2_exec_saving']['median'])" % B2),
+    ("f1/S1_min", "3.0", "pct(min(%s['N=%%d|B=inf' %% n]['S1_exec_saving']['median'] for n in (1, 2, 4, 8, 16, 50)))" % B2),
+    ("f1/S1_max", "3.4", "pct(max(%s['N=%%d|B=inf' %% n]['S1_exec_saving']['median'] for n in (1, 2, 4, 8, 16, 50)))" % B2),
+    ("f1/S1_near", "3", "fx(%s['N=8|B=inf']['S1_exec_saving']['median'] * 100, 0)" % B2),
+    ("f1/tasks_ge20_N8", "64.8", "pct(%s['thresholds']['N=8']['tasks_ge_20pct'])" % EX),
+    ("f1/tasks_ge20_N4", "35.2", "pct(%s['thresholds']['N=4']['tasks_ge_20pct'])" % EX),
+    ("f1/tasks_ge10_N4", "79.6", "pct(%s['thresholds']['N=4']['tasks_ge_10pct'])" % EX),
+    ("f1/ratio_N2", "0.943", "fx(ST('B2 N=2: S2 vs S1 DB execution')['median_ratio'], 3)"),
+    ("f1/ratio_N8", "0.801", "fx(ST('B2 N=8: S2 vs S1 DB execution')['median_ratio'], 3)"),
+    ("f1/ratio_p_mant", "4.6", "mant(ST('B2 N=8: S2 vs S1 DB execution')['p_holm'])"),
+    ("f1/payload_N8", "23.9", "pct(%s['N=8|B=inf']['S2_payload_saving']['median'])" % B2),
+    ("f1/clust_N8_lo", "18.4", "pct(%s['clustered']['B2_N8']['S2_exec_saving']['ci95'][0])" % PS),
+    ("f1/N8_ci_lo", "21.1", "pct(%s['N=8']['median_completed']['median_ci'][0])" % NW),
+    ("f1/N8_ci_hi", "28.8", "pct(%s['N=8']['median_completed']['median_ci'][1])" % NW),
+    ("f1/N8_cold", "23.3", "pct(%s['N=8']['first_cold']['median'])" % NW),
+    ("f1/N8_cold_lo", "20.9", "pct(%s['N=8']['first_cold']['median_ci'][0])" % NW),
+    ("f1/N8_cold_hi", "28.1", "pct(%s['N=8']['first_cold']['median_ci'][1])" % NW),
+    ("f1/N8_steady", "24.1", "pct(%s['N=8']['steady_state']['median'])" % NW),
+    ("f1/N8_steady_lo", "21.1", "pct(%s['N=8']['steady_state']['median_ci'][0])" % NW),
+    ("f1/N8_steady_hi", "28.9", "pct(%s['N=8']['steady_state']['median_ci'][1])" % NW),
+    ("f1/tasks_time_gt", "53", "cnt(sum(float(r['trials']) > float(r['session']) for r in ROWS('%s', weight='exec_s')))" % B1T),
+    ("f1/tasks_time_ge3", "51", "cnt(sum(float(r['trials']) >= 3 * float(r['session']) for r in ROWS('%s', weight='exec_s')))" % B1T),
+    ("f1/tasks_bytes_gt", "52", "cnt(sum(float(r['trials']) > float(r['session']) for r in ROWS('%s', weight='payload_bytes')))" % B1T),
+    ("f1/tasks_bytes_ge3", "43", "cnt(sum(float(r['trials']) >= 3 * float(r['session']) for r in ROWS('%s', weight='payload_bytes')))" % B1T),
+    ("f1/clust_N8_hi", "30.3", "pct(%s['clustered']['B2_N8']['S2_exec_saving']['ci95'][1])" % PS),
+    # ---- F1: robustness (text values not in Table robust) ----------------------------------------------------------
+    ("f1/model_N4_min", "9.0", "pct(min(%s['thresholds']['N=4']['by_model_median_cell_saving'].values()))" % EX),
+    ("f1/model_N4_max", "23.5", "pct(max(%s['thresholds']['N=4']['by_model_median_cell_saving'].values()))" % EX),
+    ("f1/conc_keys", "6,641", "cnt(%s['concentration_keys']['n_reusable_keys'])" % EX),
+    ("f1/conc_top", "67", "cnt(%s['concentration_keys']['top1pct_n'])" % EX),
+    ("f1/conc_share", "68.7", "pct(%s['concentration_keys']['top1pct_share'])" % EX),
+    ("f1/drop_task_other", "39.3", "pct(%s['sensitivity']['drop_top1pct']['task_macro_exec']['trials_median'])" % EX),
+    ("f1/drop_task_session", "2.6", "pct(%s['sensitivity']['drop_top1pct']['task_macro_exec']['session_median'])" % EX),
+    ("f1/drop_N8", "22.3", "pct(%s['sensitivity']['drop_top1pct']['S2_exec_saving_median']['8'])" % EX),
+    ("f1/cidr_cells", "179", "cnt(%s['cells'])" % CIDR),
+    ("f1/cidr_calls", "27,388", "cnt(%s['duckdb_calls'])" % CIDR),
+    ("f1/cidr_size1", "21.7", "pct(%s['size1_distinct_frac'])" % CIDR),
+    ("f1/cidr_size6", "77.8", "pct(%s['size6_distinct_frac'])" % CIDR),
+    ("f1/cidr_text", "54.8", "pct(%s['median_text_distinct_frac'])" % CIDR),
+    ("f1/xh_n5_min", "4.9", "pct(min(%s[h]['reuse_curve']['5']['median_task_call_reuse'] for h in %s))" % (XH, HARN)),
+    ("f1/xh_n5_max", "17.9", "pct(max(%s[h]['reuse_curve']['5']['median_task_call_reuse'] for h in %s))" % (XH, HARN)),
+    ("f1/xh_latency", "5.2", "fx(%s['phoenix']['llm_latency_s']['median'], 1)" % XH),
+    # ---- cross-harness cost replay (R036) and PATENTS rerun (R038) ------------------------------------------------
+    ("xc/phoenix/other_exec", "6.9", "pct(%s['phoenix']['scope_shares']['exec_s']['other_attempts'])" % XC),
+    ("xc/phoenix/session_exec", "4.8", "pct(%s['phoenix']['scope_shares']['exec_s']['session'], 1)" % XC),
+    ("xc/phoenix/S2_N5", "13.1", "pct(%s['phoenix']['S2_curve']['5']['median_task_S2_exec_saving'])" % XC),
+    ("xc/phoenix/tasks_N5", "54", "cnt(%s['phoenix']['S2_curve']['5']['tasks'])" % XC),
+    ("xc/qwen/other_exec", "12.3", "pct(%s['qwen']['scope_shares']['exec_s']['other_attempts'])" % XC),
+    ("xc/qwen/session_exec", "0.0", "pct(%s['qwen']['scope_shares']['exec_s']['session'], 1)" % XC),
+    ("xc/qwen/S2_N5", "14.4", "pct(%s['qwen']['S2_curve']['5']['median_task_S2_exec_saving'])" % XC),
+    ("xc/qwen/tasks_N5", "54", "cnt(%s['qwen']['S2_curve']['5']['tasks'])" % XC),
+    ("xc/scout/other_exec", "9.4", "pct(%s['scout']['scope_shares']['exec_s']['other_attempts'])" % XC),
+    ("xc/scout/session_exec", "0.05", "pct(%s['scout']['scope_shares']['exec_s']['session'], 2)" % XC),
+    ("xc/scout/S2_N5", "2.9", "pct(%s['scout']['S2_curve']['5']['median_task_S2_exec_saving'])" % XC),
+    ("xc/scout/tasks_N5", "37", "cnt(%s['scout']['S2_curve']['5']['tasks'])" % XC),
+    ("xc/stela/other_exec", "4.0", "pct(%s['stela']['scope_shares']['exec_s']['other_attempts'])" % XC),
+    ("xc/stela/session_exec", "0.03", "pct(%s['stela']['scope_shares']['exec_s']['session'], 2)" % XC),
+    ("xc/stela/S2_N5", "2.4", "pct(%s['stela']['S2_curve']['5']['median_task_S2_exec_saving'])" % XC),
+    ("xc/stela/tasks_N5", "48", "cnt(%s['stela']['S2_curve']['5']['tasks'])" % XC),
+    ("xc/phoenix/other_bytes", "0.2", "pct(%s['phoenix']['scope_shares']['payload_bytes']['other_attempts'])" % XC),
+    ("xc/phoenix/session_bytes", "3.4", "pct(%s['phoenix']['scope_shares']['payload_bytes']['session'])" % XC),
+    ("f2/mismatch_total", "4,977", "cnt(sum(int(ROW('results/analysis_dab_r3/B0_fidelity.csv', engine=e)['mismatch']) for e in ['duckdb', 'mongo', 'postgres', 'sqlite']))"),
+    ("f2/mismatch_order", "2,290", "cnt(sum(int(ROW('results/analysis_dab_r3/B0_mismatch_kinds.csv', engine=e)['order_only']) for e in ['duckdb', 'mongo', 'postgres', 'sqlite']))"),
+    ("f3/rerun_cells", "15", "cnt(J('results/e2e_trace/rerun_PATENTS/summary_all_E.json')['cells'])"),
+    ("f3/rerun_hits", "159", "cnt(J('results/e2e_trace/rerun_PATENTS/summary_all_E.json')['S3']['hits'])"),
+    # ---- F2 ----------------------------------------------------------------------------------------------------------
+    ("f2/B_bytes_rejected", "99.98", "pct(1 - %s['B']['all_query_db']['bytes_share'], 2)" % STT),
+    ("f2/B_static_calls_pct", "7.5", "pct(%s['B']['all_query_db']['calls'] / %s['n_query_db'])" % (STT, STT)),
+    ("f2/B_static_time", "9.4", "pct(%s['B']['all_query_db']['time_lb_share'])" % STT),
+    ("f2/B_static_bytes", "0.023", "pct(%s['B']['all_query_db']['bytes_share'], 3)" % STT),
+    ("f2/rej_output", "6,831", "cnt(ROW('results/analysis_dab_r3/B0_cert_reasons.csv', cert_reason='output_not_a_stored_column')['count'])"),
+    ("f2/rej_block", "3,791", "cnt(sum(int(ROW('results/analysis_dab_r3/B0_cert_reasons.csv', cert_reason=r)['count']) for r in ('nested_block', 'not_one_select_block', 'clause_not_allowed')))"),
+    ("f2/rej_predicate", "2,287", "cnt(ROW('results/analysis_dab_r3/B0_cert_reasons.csv', cert_reason='predicate_not_allowed')['count'])"),
+    ("cap/fig2_m1_identical_calls", "62,419", "cnt(ROW('results/analysis_m1/B0_funnel.csv', gate='fidelity_pass', level='all', group='all')['calls'])"),
+    ("fig3/other_rejections", "4,112", "cnt(sum(int(r['count']) for r in ROWS('results/analysis_dab_r3/B0_cert_reasons.csv') if r['cert_reason'] not in ('unordered_result', 'output_not_a_stored_column', 'nested_block', 'not_one_select_block', 'clause_not_allowed', 'mongo_no_sort', 'predicate_not_allowed', 'one_row', 'total_order', 'id_lookup')))"),
+    ("fig3/admitted", "3,737", "cnt(sum(int(ROW('results/analysis_dab_r3/B0_cert_reasons.csv', cert_reason=r)['count']) for r in ('one_row', 'total_order', 'id_lookup')))"),
+    ("f2/B_eval_mongo_calls", "two", "word(ROW('results/analysis_dab_r3/B0_funnel.csv', gate='B_certified', level='engine', group='mongo')['calls'])"),
+    ("f2/B_completed_every_replay", "5,697", "cnt(%s['B']['outcome_class_calls']['stable'])" % STT),
+    ("f2/B_recorded_error", "2", "cnt(%s['B']['fidelity_calls']['recorded_error'])" % STT),
+    ("f2/B_mismatch", "0", "cnt(%s['B']['fidelity_calls'].get('mismatch', 0))" % STT),
+    ("f2/free_calls", "58.7", "pct(%s['order_free']['share_of_successful']['calls'])" % SSH),
+    ("f2/free_time", "65.0", "pct(%s['order_free']['share_of_successful']['exec_s'])" % SSH),
+    ("f2/free_bytes", "79.2", "pct(%s['order_free']['share_of_successful']['payload_bytes'])" % SSH),
+    ("f2/fixed_share_time", "27.1", "pct(%s['exec_s']['admitted_by_order_fixed'])" % SSH),
+    ("f2/fixed_share_bytes", "17.2", "pct(%s['payload_bytes']['admitted_by_order_fixed'])" % SSH),
+    ("f2/rules7_static_calls", "5,344", "cnt(J('results/static_tiers_rules7.json')['B']['all_query_db']['calls'])"),
+    ("const/review_rounds", "six", "word(len(FILES('review-stage/contract_b_review/round*_response.md')))"),
+    ("const/review_rounds_with_findings", "five", "word(len(FILES('review-stage/contract_b_review/round*_response.md')) - 1)"),
+    ("const/p2_columns", "19,772", "cnt(sum(J('results/p2_audit.json')['summary'][e]['columns'] for e in ('sqlite', 'duckdb', 'postgres')))"),
+    ("const/p2_example_real", "1.0", "'1.0'"),
+    ("const/p2_unsafe", "0", "cnt(sum(J('results/p2_audit.json')['summary'][e]['unsafe'] for e in ('sqlite', 'duckdb', 'postgres')))"),
+    ("const/p2_databases", "26", "cnt(sum(J('results/p2_audit.json')['summary'][e]['catalog_ok'] for e in ('sqlite', 'duckdb', 'postgres')))"),
+    ("f2/B_forgone_time", "87.8", "pct(1 - %s['exec_s']['admitted_by_B_static'])" % SSH),
+    ("f2/certv1_static_calls", "8,417", "cnt(J('results/static_tiers_certv1.json')['B']['all_query_db']['calls'])"),
+    ("f2/certv1_B_time_err", "8.6", "pct(J('results/live2/validate_B.json')['median_time_rel_err_uncalibrated'])"),
+    ("f2/acc_id_lookup", "2", "cnt(ROW('results/analysis_dab_r3/B0_cert_reasons.csv', cert_reason='id_lookup')['count'])"),
+    ("f2/B_share_calls", "6.4", "pct(%s['b_share']['other_attempts']['calls']['admitted_by_B'])" % CS),
+    ("f2/B_share_time", "12.2", "pct(%s['b_share']['other_attempts']['exec_s']['admitted_by_B'])" % CS),
+    ("f2/B_share_bytes", "0.00005", "f\"{%s['b_share']['other_attempts']['payload_bytes']['admitted_by_B'] * 100:.5f}\"" % CS),
+    ("f2/Bstatic_share_calls", "6.4", "pct(%s['calls']['admitted_by_B_static'])" % SSH),
+    ("f2/Bstatic_share_time", "12.2", "pct(%s['exec_s']['admitted_by_B_static'])" % SSH),
+    ("f2/Bstatic_share_bytes", "0.00005", "f\"{%s['payload_bytes']['admitted_by_B_static'] * 100:.5f}\"" % SSH),
+    ("f2/Estatic_share_calls", "99.5", "pct(%s['calls']['admitted_by_E_static'])" % SSH),
+    ("f2/E_share_calls", "93.2", "pct(%s['b_share']['other_attempts']['calls']['admitted_by_E_eval'])" % CS),
+    ("f2/E_share_time", "99.8", "pct(%s['b_share']['other_attempts']['exec_s']['admitted_by_E_eval'])" % CS),
+    ("f2/frontier_B", "6.4", "pct(J('results/ablate/base_B.json')['summary']['N=8|B=inf']['S2_exec_saving']['median'])"),
+    ("f2/frontier_E_static_online", "23.8", "pct(J('results/ablate/base_Es.json')['summary']['N=8|B=inf']['S2_exec_saving']['median'])"),
+    ("f2/S3_S2_written_E_static_online", "0.45", "fx(J('results/ablate/base_Es.json')['summary']['N=8|B=inf']['S3_over_S2_written']['median'], 2)"),
+    ("f2/S3_S2_written_E_eval_same_resamples", "0.45", "fx(%s['N=8|B=inf']['S3_over_S2_written']['median'], 2)" % BE),
+    ("f2/heldout_ok_queries", "8,811", "cnt(%s['all']['ok_queries'])" % HO),
+    ("f2/heldout_new_ok_queries", "8,382", "cnt(%s['new_queries_only']['ok_queries'])" % HO),
+    ("f2/heldout_E_admitted_queries", "8,592", "cnt(%s['all']['E_admitted_ok_queries'])" % HO),
+    ("f2/heldout_E_admitted_not_stable", "0", "cnt(%s['all']['E_admitted_ok_queries'] - %s['all']['E_admitted_stable_queries'])" % (HO, HO)),
+    ("f2/heldout_unstable_rejected_calls", "27", "cnt(sum(v for k, v in %s['all']['E_rejected_ok_classes_calls'].items() if k != 'stable'))" % HO),
+    ("f2/heldout_frozen_rule_differences", "0", "cnt(%s['frozen_rule']['verdicts_that_differ_from_the_current_rule'])" % HO),
+    ("f2/frontier_E", "24.5", "pct(%s['N=8|B=inf']['S2_exec_saving']['median'])" % BE),
+    ("f2/frontier_F", "24.1", "pct(%s['N=8|B=inf']['S2_exec_saving']['median'])" % B2),
+    ("f2/duck_mismatch", "2,263", "cnt(ROW('results/analysis_dab_r3/B0_fidelity.csv', engine='duckdb')['mismatch'])"),
+    ("f2/pg_order", "547", "cnt(ROW('results/analysis_dab_r3/B0_mismatch_kinds.csv', engine='postgres')['order_only'])"),
+    ("f2/pg_mismatch", "953", "cnt(ROW('results/analysis_dab_r3/B0_fidelity.csv', engine='postgres')['mismatch'])"),
+    ("f2/mongo_id", "1,299", "cnt(ROW('results/analysis_dab_r3/B0_mismatch_kinds.csv', engine='mongo')['value_mismatch'])"),
+    ("f2/mongo_mismatch", "1,757", "cnt(ROW('results/analysis_dab_r3/B0_fidelity.csv', engine='mongo')['mismatch'])"),
+    ("f2/rej_unordered", "17,794", "cnt(ROW('results/analysis_dab_r3/B0_cert_reasons.csv', cert_reason='unordered_result')['count'])"),
+    ("f2/rej_mongo", "3,064", "cnt(ROW('results/analysis_dab_r3/B0_cert_reasons.csv', cert_reason='mongo_no_sort')['count'])"),
+    ("f2/acc_onerow", "3,507", "cnt(ROW('results/analysis_dab_r3/B0_cert_reasons.csv', cert_reason='one_row')['count'])"),
+    ("f2/acc_order", "228", "cnt(ROW('results/analysis_dab_r3/B0_cert_reasons.csv', cert_reason='total_order')['count'])"),
+    ("f2/staticE_successful", "71,275", "cnt(%s['online_E']['all_E_static_calls']['n_calls'])" % EX),
+    ("f2/staticE_keys", "37,542", "cnt(%s['online_E']['all_E_static_calls']['n_keys'])" % EX),
+    ("f2/staticE_diff", "7.0", "pct(%s['online_E']['all_E_static_calls']['fidelity_not_byte_identical']['calls'])" % EX),
+    ("f2/staticE_diff_time", "0.8", "pct(%s['online_E']['all_E_static_calls']['fidelity_not_byte_identical']['time'])" % EX),
+    ("f2/staticE_diff_bytes", "1.2", "pct(%s['online_E']['all_E_static_calls']['fidelity_not_byte_identical']['bytes'])" % EX),
+    ("f2/staticE_diff_repeat", "8.3", "pct(%s['online_E']['repeat_calls_served_from_cache']['fidelity_not_byte_identical']['calls'])" % EX),
+    ("f2/kind_order", "3.2", "pct(%s['e_diff']['by_kind']['order_only']['calls'])" % CS),
+    ("f2/kind_value", "2.2", "pct(%s['e_diff']['by_kind']['value_mismatch']['calls'])" % CS),
+    ("f2/kind_prefix", "1.5", "pct(%s['e_diff']['by_kind']['prefix_mismatch']['calls'])" % CS),
+    ("f2/kind_error", "0.07", "pct(%s['e_diff']['by_kind']['recorded_error']['calls'], 2)" % CS),
+    ("f2/equiv", "5.1", "pct(%s['e_diff']['equivalent_after_normalization']['calls'])" % CS),
+    ("f2/eng_duck", "3.2", "pct(%s['e_diff']['by_engine']['duckdb']['calls'])" % CS),
+    ("f2/eng_mongo", "2.5", "pct(%s['e_diff']['by_engine']['mongo']['calls'])" % CS),
+    ("f2/eng_pg", "1.4", "pct(%s['e_diff']['by_engine']['postgres']['calls'])" % CS),
+    ("f2/eng_sqlite", "0.02", "pct(%s['e_diff']['by_engine']['sqlite']['calls'], 2)" % CS),
+    ("f2/key_exact_N4", "16.6", "pct(%s['N=4|B=inf']['S2_exec_saving']['median'])" % BE),
+    ("f2/key_exact_N8", "24.5", "pct(%s['N=8|B=inf']['S2_exec_saving']['median'])" % BE),
+    ("f2/key_ws_N4", "17.5", "pct(%s['S2_exec_saving']['median'])" % (AB % ("key_ws_E", 4, "inf"))),
+    ("f2/key_ws_N8", "25.2", "pct(%s['S2_exec_saving']['median'])" % (AB % ("key_ws_E", 8, "inf"))),
+    ("f2/key_ast_inc_N4", "3.6", "fx((%s['S2_exec_saving']['median'] - %s['N=4|B=inf']['S2_exec_saving']['median']) * 100, 1)" % (AB % ("key_ast_E", 4, "inf"), BE)),
+    ("f2/key_ast_inc_N8", "5.2", "fx((%s['S2_exec_saving']['median'] - %s['N=8|B=inf']['S2_exec_saving']['median']) * 100, 1)" % (AB % ("key_ast_E", 8, "inf"), BE)),
+    ("f2/key_ast_N4", "20.1", "pct(%s['S2_exec_saving']['median'])" % (AB % ("key_ast_E", 4, "inf"))),
+    ("f2/key_ast_N8", "29.8", "pct(%s['S2_exec_saving']['median'])" % (AB % ("key_ast_E", 8, "inf"))),
+    ("f2/key_res_N4", "33.7", "pct(%s['S2_exec_saving']['median'])" % (AB % ("key_result_E", 4, "inf"))),
+    ("f2/key_res_N8", "48.0", "pct(%s['S2_exec_saving']['median'])" % (AB % ("key_result_E", 8, "inf"))),
+    ("f2/key_resnt_N4", "27.0", "pct(%s['S2_exec_saving']['median'])" % (AB % ("key_result_nontrivial_E", 4, "inf"))),
+    ("f2/key_resnt_N8", "37.3", "pct(%s['S2_exec_saving']['median'])" % (AB % ("key_result_nontrivial_E", 8, "inf"))),
+    # ---- F3: storage -------------------------------------------------------------------------------------------------
+    ("f3/S3_S2_written_N8", "0.448", "fx(%s['N=8|B=inf']['S3_over_S2_written']['median'], 3)" % B3E),
+    ("f3/S3_S2_written_N8_2dp", "0.45", "fx(%s['N=8|B=inf']['S3_over_S2_written']['median'], 2)" % B3E),
+    ("f3/S3_S2_written_lo", "0.433", "fx(%s['N=8|B=inf']['S3_over_S2_written']['median_ci'][0], 3)" % B3E),
+    ("f3/S3_S2_written_hi", "0.459", "fx(%s['N=8|B=inf']['S3_over_S2_written']['median_ci'][1], 3)" % B3E),
+    ("f3/tasks_spilled", "52", "cnt(%s['N=8|B=inf']['S3_over_S2_written']['n'])" % B3E),
+    ("f3/S3_S2_written_N2", "0.489", "fx(%s['N=2|B=inf']['S3_over_S2_written']['median'], 3)" % B3E),
+    ("f3/S3_S2_written_N50", "0.336", "fx(%s['N=50|B=inf']['S3_over_S2_written']['median'], 3)" % B3E),
+    ("f3/S3_S2_time_N8", "0.999", "fx(%s['N=8|B=inf']['S3_over_S2_time']['median'], 3)" % B3E),
+    ("f3/engine_max_written", "0.63", "fx(max(d['S3_over_S2_written'] for k, v in %s.items() for d in v['by_engine'].values() if d.get('S3_over_S2_written') is not None), 2)" % B3E),
+    ("f3/S2_written_vs_S0", "1.70", "fx(1 - %s['N=8|B=inf']['S2_written_saving']['median'])" % BE),
+    ("f3/S3_foot_ret_N8", "0.76", "fx(%s['N=8|B=inf']['S3_over_S0_peak_foot'])" % BH),
+    ("f3/S3_foot_ret_N2", "0.91", "fx(%s['N=2|B=inf']['S3_over_S0_peak_foot'])" % BH),
+    ("f3/S3_foot_seq_1_16", "1.27", "fx(%s['N=8|B=1/16']['S3_over_S0_peak_foot_seq'])" % BE),
+    ("f3/seq_less_max", "44", "fx((1 - min(%s[k]['S3_over_S2_peak_foot_seq']['median'] for k in %s)) * 100, 0)" % (BE, "[k for k in %s if k.startswith(('N=2|', 'N=4|', 'N=8|'))]" % BE)),
+    ("f3/seq_less_min", "25", "fx((1 - max(%s[k]['S3_over_S2_peak_foot_seq']['median'] for k in %s)) * 100, 0)" % (BE, "[k for k in %s if k.startswith(('N=2|', 'N=4|', 'N=8|'))]" % BE)),
+    ("f3/live_cells", "9", "cnt(%s['retained']['live2']['cells_with_admitted_bytes'])" % CS),
+    ("f3/live_S3_median", "0.68", "fx(%s['retained']['live2']['S3_over_S0_live']['median'])" % CS),
+    ("f3/live_S3_min", "0.21", "fx(%s['retained']['live2']['S3_over_S0_live']['min'])" % CS),
+    ("f3/live_S3_max", "1.00", "fx(%s['retained']['live2']['S3_over_S0_live']['max'])" % CS),
+    ("f3/live_S2_median", "1.55", "fx(%s['retained']['live2']['S2_over_S0_live']['median'])" % CS),
+    ("f3/live_du_runs", "180", "%s['retained']['du_equals_accounting']['live2'].split('/')[1]" % CS),
+    ("f3/S3_S2c_unit", "1.000", "fx(%s['N=8|B=inf']['S3_over_S2c_written']['median'], 3)" % BH),
+    ("f3/S3_S2c_bytes", "1.0029", "fx(%s['N=8|B=1/16']['S3_over_S2c_written']['median'], 4)" % BH),
+    ("f3/S3_S2c_time_min", "0.997", "fx(min(v['S3_over_S2c_time']['median'] for v in %s.values()), 3)" % BH),
+    ("f3/S3_S2c_time_max", "0.999", "fx(max(v['S3_over_S2c_time']['median'] for v in %s.values()), 3)" % BH),
+    ("f3/S3_S2c_bytes_other_budgets_max", "1.000", "fx(max(v[x]['median'] for k, v in %s.items() if not k.endswith('|B=1/16') for x in ('S3_over_S2c_written', 'S3_over_S2c_peak_foot')), 3)" % BH),
+    ("f3/S3_S2c_bytes_other_budgets_min", "1.000", "fx(min(v[x]['median'] for k, v in %s.items() if not k.endswith('|B=1/16') for x in ('S3_over_S2c_written', 'S3_over_S2c_peak_foot')), 3)" % BH),
+    ("f3/live3_S2", "59.1", "pct(%s['cow|inf']['S2']['live_time_saving_tw'])" % LV3),
+    ("f3/live3_S2c", "56.3", "pct(%s['cow|inf']['S2c']['live_time_saving_tw'])" % LV3),
+    ("f3/live3_S3", "59.3", "pct(%s['cow|inf']['S3']['live_time_saving_tw'])" % LV3),
+    ("f3/live3_written", "0.38", "fx(%s['cow|inf']['S3']['live_written_vs_S0'])" % LV3),
+    ("f3/live3_cells", "six", "word(len(FILES('results/live3/calib_E_cow_*.json')))"),
+    ("f3/live3_clone_ms", "0.29", "fx(J('results/live3/costs.json')['clone_s'] * 1e3)"),
+    ("f3/live3_alias_us", "12.2", "fx(J('results/live3/costs.json')['alias_s'] * 1e6, 1)"),
+    # ---- F3: end to end ----------------------------------------------------------------------------------------------
+    ("f3/e2e_hits", "2,443", "cnt(%s['S3']['hits'])" % E2E),
+    ("f3/e2e_hit_mismatch", "two", "['zero', 'one', 'two', 'three'][%s['S3']['mismatches_on_hits']]" % E2E),
+    ("f3/e2e_records", "49", "cnt(sum(1 for d in %s if d['class'] == 'live_error'))" % DIAG),
+    ("f3/e2e_queries", "29", "cnt(len({d['query'] for d in %s if d['class'] == 'live_error'}))" % DIAG),
+    ("f3/e2e_replay_min", "8.5", "fx(min(sorted(v)[1] for v in {d['query']: d['replay_exec_s'] for d in %s if d['class'] == 'live_error'}.values()), 1)" % DIAG),
+    ("f3/e2e_replay_max", "80", "fx(max(sorted(v)[1] for v in {d['query']: d['replay_exec_s'] for d in %s if d['class'] == 'live_error'}.values()), 0)" % DIAG),
+    ("f3/e2e_consumers", "4,655", "cnt(%s['S3']['consumers_identical'])" % E2E),
+    ("f3/e2e_ok", "3,381", "cnt(%s['S3']['consumers_identical_ok'])" % E2E),
+    ("f3/e2e_fail", "1,274", "cnt(%s['S3']['consumers_identical_failed'])" % E2E),
+    ("f3/e2e_nondet", "14", "cnt(%s['S0']['consumers_nondeterministic'])" % E2E),
+    ("f3/e2e_probes", "630", "cnt(%s['S3']['probes_refused'])" % E2E),
+    # ---- F3: concurrency -----------------------------------------------------------------------------------------------
+    ("f3/conc_dup_share", "16", "fx(sum(r['dup_exec'] for r in %s) / sum(r['execs'] for r in %s) * 100, 0)" % (CLO, CLO)),
+    ("f3/conc_fewer", "16", "fx((1 - sum(r['execs'] for r in %s) / sum(r['execs'] for r in %s)) * 100, 0)" % (CLS, CLO)),
+    ("f3/conc_sim_c2", "2.8", "pct(%s['dup_exec_s_share'])" % (CONC % (2, "optimistic"))),
+    ("f3/conc_sim_c4", "8.1", "pct(%s['dup_exec_s_share'])" % (CONC % (4, "optimistic"))),
+    ("f3/conc_sim_c8", "16.7", "pct(%s['dup_exec_s_share'])" % (CONC % (8, "optimistic"))),
+    ("f3/conc_wait_c2", "5.3", "pct(%s['wait_s_share_of_tool'])" % (CONC % (2, "singleflight"))),
+    ("f3/conc_wait_c8", "26.3", "pct(%s['wait_s_share_of_tool'])" % (CONC % (8, "singleflight"))),
+    ("f3/conc_makespan_c8", "0.24", "fx(%s['makespan_vs_c1'])" % (CONC % (8, "optimistic"))),
+    # ---- F3: sensitivity -----------------------------------------------------------------------------------------------
+    ("f3/evict_lru_1", "0.45", "fx(%s['S3_over_S2_written']['median'])" % (AB % ("base_E", 8, "1"))),
+    ("f3/evict_lru_16", "0.52", "fx(%s['S3_over_S2_written']['median'])" % (AB % ("base_E", 8, "1/16"))),
+    ("f3/evict_fifo_1", "0.45", "fx(%s['S3_over_S2_written']['median'])" % (AB % ("fifo_E", 8, "1"))),
+    ("f3/evict_fifo_16", "0.52", "fx(%s['S3_over_S2_written']['median'])" % (AB % ("fifo_E", 8, "1/16"))),
+    ("f3/evict_belady_1", "0.45", "fx(%s['S3_over_S2_written']['median'])" % (AB % ("belady_E", 8, "1"))),
+    ("f3/evict_belady_16", "0.52", "fx(%s['S3_over_S2_written']['median'])" % (AB % ("belady_E", 8, "1/16"))),
+    ("f3/evict_none_16", "0.60", "fx(%s['S3_over_S2_written']['median'])" % (AB % ("noevict_E", 8, "1/16"))),
+    ("f3/bypass_none", "33,525", "cnt(%s['S3_bypass_total'])" % (AB % ("noevict_E", 8, "1/16"))),
+    ("f3/bypass_lru", "5,822", "cnt(%s['S3_bypass_total'])" % (AB % ("base_E", 8, "1/16"))),
+    ("f3/cap_quarter", "24.5", "pct(%s['S2_exec_saving']['median'])" % (AB % ("base_E", 8, "1/4"))),
+    ("f3/cap_16", "22.4", "pct(%s['S2_exec_saving']['median'])" % (AB % ("base_E", 8, "1/16"))),
+    ("f3/class_inline", "9.6", "pct(%s['S2_exec_saving']['median'])" % (AB % ("inline_only_E", 8, "inf"))),
+    ("f3/class_spilled", "3.4", "pct(%s['S2_exec_saving']['median'])" % (AB % ("spilled_only_E", 8, "inf"))),
+    ("f3/class_inline_w", "1.00", "fx(%s['S3_over_S2_written']['median'])" % (AB % ("inline_only_E", 8, "inf"))),
+    ("f3/class_spilled_w", "0.45", "fx(%s['S3_over_S2_written']['median'])" % (AB % ("spilled_only_E", 8, "inf"))),
+    ("f3/regen_ms", "82", "fx(J('results/live3/costs.json')['regen_s_median'] * 1e3, 0)"),
+    ("f3/regen_S2", "52.1", "pct(%s['regen|inf']['S2']['live_time_saving_tw'])" % LV3),
+    ("f3/regen_S3", "52.7", "pct(%s['regen|inf']['S3']['live_time_saving_tw'])" % LV3),
+    ("f3/base_S2_live", "59.1", "pct(%s['cow|inf']['S2']['live_time_saving_tw'])" % LV3),
+    ("f3/heavy_err", "12.6", "pct(%s['timing']['heavy']['median_time_rel_err_uncal'])" % CS),
+    ("f3/cheap_err", "51.7", "pct(%s['timing']['cheap']['median_time_rel_err_uncal'])" % CS),
+    ("f3/heavy_tasks", "three", "['zero', 'one', 'two', 'three', 'four'][%s['timing']['heavy']['tasks']]" % CS),
+    ("f3/cheap_tasks", "nine", "['', '', '', '', '', '', '', '', '', 'nine'][%s['timing']['cheap']['tasks']]" % CS),
+    ("f3/heavy_gap_min", "0.1", "fx(min(abs(float(r['S2_live_saving']) - float(r['S2_pred_saving'])) for r in __import__('csv').DictReader(open(__import__('os').path.join(ROOT_, 'results/live2/pertask_agreement.csv'))) if r['contract'] == 'E' and float(r['S0_live_s']) >= 5) * 100, 1)"),
+    ("f3/heavy_gap_max", "1.1", "fx(max(abs(float(r['S2_live_saving']) - float(r['S2_pred_saving'])) for r in __import__('csv').DictReader(open(__import__('os').path.join(ROOT_, 'results/live2/pertask_agreement.csv'))) if r['contract'] == 'E' and float(r['S0_live_s']) >= 5) * 100, 1)"),
+    ("f3/S3_ge_S2_tasks", "12", "cnt(sum(1 for r in __import__('csv').DictReader(open(__import__('os').path.join(ROOT_, 'results/live2/pertask_agreement.csv'))) if r['contract'] == 'E' and r['budget'] == 'inf' and float(r['S3_live_saving']) >= float(r['S2_live_saving'])))"),
+    ("cap/fig1_desc_N50", "47", "fx(%s['N=50|B=inf']['S2_exec_saving']['median'] * 100, 0)" % B2),
+    ("cap/fig4_desc_seq_N2", "1.14", "fx(%s['N=2|B=inf']['S3_over_S0_peak_foot_seq'])" % BE),
+    ("cap/fig4_desc_seq_N8", "1.76", "fx(%s['N=8|B=inf']['S3_over_S0_peak_foot_seq'])" % BE),
+    ("cap/tab3_calls_per_config", "757", "cnt(sum(r['calls'] for r in %s))" % CLO),
+    ("work/lookup_us", "1.27", "fx(%s['lookup_s'] * 1e6)" % SIMCOST),
+    ("work/alias_us", "12.6", "fx(%s['alias_s'] * 1e6, 1)" % SIMCOST),
+    ("work/copy_ns_per_byte", "0.46", "fx(%s['copy_s_per_byte'] * 1e9)" % SIMCOST),
+    ("work/clone_ms", "0.29", "fx(J('results/ablate/base_E.json')['opts']['clone_s'] * 1e3)"),
+    ("work/costs_remeasured_pct", "7.3", "pct(max(abs(J('results/%%s/costs.json' %% d)[k] / %s[k] - 1) for d in ('live2', 'live3') for k in ('lookup_s', 'alias_s', 'copy_s_per_byte')))" % SIMCOST),
+    # ---- boundaries ------------------------------------------------------------------------------------------------------
+    ("c4/E_err_cal", "39.6", "pct(J('results/live2/validate_E.json')['median_time_rel_err'])"),
+    ("c4/E_err_uncal", "43.9", "pct(J('results/live2/validate_E.json')['median_time_rel_err_uncalibrated'])"),
+    ("c4/B_tasks", "8", "cnt(%s['N=8|B=inf']['S3_written_saving']['n'])" % B3B),
+    ("c4/mongo_bytes", "47.2", "pct(%s['mongo_fidelity']['spilled']['equiv_share_bytes'])" % EX),
+]
+
+
+def main():
+    bad = 0
+    rows = []
+    for loc, printed, expr in ROWS:
+        got = ev(expr)
+        if got != printed:
+            bad += 1
+            print("MISMATCH %s: printed %r, source gives %r" % (loc, printed, got))
+        rows.append({"id": loc, "location": "text/" + loc, "printed": printed, "expr": expr})
+    keep = []
+    if os.path.exists(LEDGER):
+        with open(LEDGER) as f:
+            keep = [r for r in csv.DictReader(f) if r["location"].startswith(TABLE_PREFIXES)]
+    with open(LEDGER, "w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=["id", "location", "printed", "expr"])
+        w.writeheader()
+        w.writerows(keep + rows)
+    print("%d text rows (%d mismatches), %d table rows kept" % (len(rows), bad, len(keep)))
+    return bad
+
+
+if __name__ == "__main__":
+    sys.exit(1 if main() else 0)

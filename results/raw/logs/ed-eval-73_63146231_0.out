@@ -1,0 +1,168 @@
+[ed-eval-73 c0 task 0] module load singularity/4.4.1 && singularity exec --no-home -B /scratch $PROJECT_DIR/envs/ed-py312-v2.sif python code/certify.py | tail -1 && singularity exec --no-home -B /scratch --env ED_REPLAY_DIR=work/v2/replay_dab $PROJECT_DIR/envs/ed-py312-v2.sif python code/analyze2.py work/v2 work/v2/analysis_dab_r3 200 200 3 work/v2/live/costs.json && singularity exec --no-home -B /scratch $PROJECT_DIR/envs/ed-py312-v2.sif python code/stats_tests.py work/v2/analysis_dab_r3 work/v2/analysis_dab_r3/stats.json && singularity exec --no-home -B /scratch $PROJECT_DIR/envs/ed-dab.sif python code/footprint_summary.py work/v2/analysis_dab_r3 work/v2/analysis_dab_r3/footprint_summary.json
+code-sha256 b2b6dcdc28a62aa52f651f84707f268773cbf62a073611a939c3e77ef0970cf4  code/analyze2.py
+code-sha256 a60ce4625a483ac1a54da0fe21c29935cbe89ce4bc8ab9f19d7c911d836c0c61  code/analyze_reuse.py
+code-sha256 f5135935df30e5771eeaa14222401d6e3e5aa522d3ef7b8865198e64c0297293  code/b1_planned.py
+code-sha256 09078098bfed65ffff40837cff9d3ffca803f20109263d9a9d8b3973aab15bf7  code/certify.py
+code-sha256 921575bb65607394eb39496d74ebe34b7d8505d4663fe903ce2c7e11c2a8a70e  code/cert_reasons.py
+code-sha256 f6083d99e388b380b1ca4cfcc252845bb70feaff0706743ab266ff993c56df56  code/cidr_subplans.py
+code-sha256 4b62e95266451181b35eaf74f97db400fc64b36ea5f82c95e74f265e760eeebf  code/claim_support.py
+code-sha256 e2b8b5c051c855246e0ca8d18d7d87484e708520382d422b228b4c12f8d61dc0  code/concurrent_sim.py
+code-sha256 b975c6a3253d27aaf0540ce30032dc5489c20af75899b58b7df6061326054fb6  code/cpu_submit.py
+code-sha256 595ebdc75a53eb8915ce1e6fb1812dadf29620b2f89f0d7426fa362d44e1476e  code/dab_inputs.py
+code-sha256 7433c026491e3ed6b953cdf36c9f425c2ef68f8b8197f5be3219b721766b6445  code/dab_parse.py
+code-sha256 7b4ac5458f3c675e5df0f755020eb7b20cdeeb1e04f48f8b45d735e0a90f2dba  code/dab_stats.py
+code-sha256 8d501005a2cd6ed4d10649b60f7c9ec1372f5ab623576f723dbad5544a9a53e3  code/dataset_table.py
+code-sha256 c033b68a1b55265a62ae14c5b118154989df548e4cb51a576953866afd8bfbab  code/diag_mismatch.py
+code-sha256 ad2a88c17dfdfee44e952c9134b4e934843634490860dfaf7316fcb571b480af  code/e2e_mismatch_diag.py
+code-sha256 0ec3dbfd224460d7ecf2bae82eb398db9b1c1554d5aa923b00f351bfdc3e046e  code/extra_analyses.py
+code-sha256 4938090c917f002f8aea2a2cba3421d65be377e874203c57bf5ef6642d5ee3da  code/footprint_summary.py
+code-sha256 ed46e35236dba8dfa6aac92c018b30dca98fa5d576770c07ab343520b5ec715e  code/job_ledger.py
+code-sha256 c5bb4a961cad8dc000887785cbb5b892ff2461df68ba724cbc67384fa28f7191  code/live.py
+code-sha256 546c43fc6ad62797163efa62656a85a59fd9a73c64660c8d8915eaa9fdc0ea14  code/n_weights.py
+code-sha256 0884f165414754b578b32871b5db24677996f35c2ee29f860f88ec975495e2a5  code/p2_audit.py
+code-sha256 86dbccab1334dbc6362b412c2bb507122a9d1dd4c8e814600d1c4fcdb162a6ed  code/package_artifact.py
+code-sha256 be296eec130057612260211d5f4a3e6b85aca89e524673a16b32ba74dd270ee7  code/paper_stats.py
+code-sha256 c019e95ae32799bf8e70da1a0bad6374b309fb23d15025430a6d371e7b4526ff  code/parse2.py
+code-sha256 1a5c55a46ae1134410c8e6aafe038115c56afdf90d1675df16ed0624025486e8  code/pilot_handoff.py
+code-sha256 27a78311cee0b169a86b716a3dee709216591fbda6816dc3686405ba96dbffe8  code/pilot_tracestore.py
+code-sha256 80d94c7f264c9903204a6d2288603f9acd86f28a39beebd53bb3f59a4ed9dc25  code/plan_provenance.py
+code-sha256 a63cb4cb24f5821dc90fa8e71c0b15b5eddb86018769a9ee671325de81ebcfe9  code/raw_manifest.py
+code-sha256 f2d180312f5f26d1905f5eb95ec3691b5f71519b9a244a393fdf24a3bd1773d7  code/replay2.py
+code-sha256 71ee225c257ef9da004200cbb4aab60ae4aea05a0c548b9adca948e8ce42f1cd  code/replay.py
+code-sha256 71bdc58354780729a3e2eb90625ce3f0ca27b7b0bbf983136d7c941012336f31  code/reproduce.py
+code-sha256 7d78daf3fb550b8c82e9363255d1c99bed62bb2d9e699e34110991e677226a38  code/schema_collations.py
+code-sha256 4434e37e5b0b13132587494c5c18310bf9a22118105a8668929964dabfd1558c  code/sim_ablate.py
+code-sha256 8ae2f99adc393fa18e4c45728fa19c3b85655b86e8ff3261f2323eba560f633d  code/sim_agreement.py
+code-sha256 d6e55ac1494498735321efe0f25c9dc387520257edf1c92c4c391767c30e76bc  code/static_share.py
+code-sha256 1e709e19da3f15fbfac69a2d4ebde699ef52e428121d976037dc98c76d2bba62  code/static_tiers.py
+code-sha256 76ced603a328dc83501dccc3ab60a4d0945df1f3c2ac0f5bed3e0b6a3c373e8c  code/stats_tests.py
+code-sha256 1772aeaa6f5938619484956f5890dc3360e7315de96eaf8259708fe112f5ee79  code/xharness.py
+code-sha256 43c7dc908e793eecb6ff2d434ea9584ad11418bd44d04d31a84f9bd8dcd282ae  code/consumer_run.sh
+code-sha256 9041f47f7116242bb96f3f44feb4ba24d47e92253fe4dafea14383919aa3f5f9  code/run_replay.sh
+code-sha256 e319736528b26eb0b7af48a7735d398c2478e0419e8396d86e3dc6093991db0f  code/run_with_db.sh
+unit tests: 181 assertions (131 SQL B, 5 Mongo B, 6 E, 39 earlier rules), failures: 0
+'LOAD sqlite' contains unsupported syntax. Falling back to parsing as a 'Command'.
+'LOAD sqlite_scanner' contains unsupported syntax. Falling back to parsing as a 'Command'.
+'CREATE TEMPORARY TABLE shell_apache_repos AS SELECT UNNEST(['jitsi/jipopro', 'NuGet/json-ld.net', 'v' contains unsupported syntax. Falling back to parsing as a 'Command'.
+'CREATE EXTENSION IF NOT EXISTS pgcrypto' contains unsupported syntax. Falling back to parsing as a 'Command'.
+'LOAD sqlite_scanner' contains unsupported syntax. Falling back to parsing as a 'Command'.
+'LOAD sqlite' contains unsupported syntax. Falling back to parsing as a 'Command'.
+'LOAD sqlite_scanner' contains unsupported syntax. Falling back to parsing as a 'Command'.
+'LOAD sqlite' contains unsupported syntax. Falling back to parsing as a 'Command'.
+'LOAD sqlite_scanner' contains unsupported syntax. Falling back to parsing as a 'Command'.
+'CREATE TEMPORARY TABLE shell_apache_repos AS SELECT UNNEST(['jitsi/jipopro', 'NuGet/json-ld.net', 'v' contains unsupported syntax. Falling back to parsing as a 'Command'.
+'CREATE EXTENSION IF NOT EXISTS pgcrypto' contains unsupported syntax. Falling back to parsing as a 'Command'.
+'LOAD sqlite_scanner' contains unsupported syntax. Falling back to parsing as a 'Command'.
+'LOAD sqlite' contains unsupported syntax. Falling back to parsing as a 'Command'.
+'LOAD sqlite_scanner' contains unsupported syntax. Falling back to parsing as a 'Command'.
+$PROJECT_DIR/code/analyze2.py:190: UserWarning: This pattern is interpreted as a regular expression, and has match groups. To actually get the groups, use str.extract.
+  audit = {"python_calls": int(len(py)), "python_writes_result_path": int(py.text.str.contains(WRITE_RE).sum())}
+{
+ "runs": 13482,
+ "runs_without_tool_calls": 30,
+ "validation": {
+  "fail": 8939,
+  "pass": 4543
+ },
+ "tool_calls": 151293,
+ "query_db": 76213,
+ "distinct_replayed": 41616,
+ "outcome_classes": {
+  "stable": 37675,
+  "error": 3917,
+  "timeout": 15,
+  "not_replayed": 6,
+  "value_unstable": 3
+ },
+ "mutation_audit": {
+  "python_calls": 55241,
+  "python_writes_result_path": 1
+ },
+ "costs": {
+  "lookup_s": 1.2721866369247437e-06,
+  "alias_s": 1.2569129467010498e-05,
+  "copy_s_per_byte": 4.6261427145930745e-10,
+  "miss_overhead_s": 0.0,
+  "hit_overhead_s": 0.0
+ },
+ "costs_source": "work/v2/live/costs.json",
+ "n_orders": 200,
+ "n_resamples": 200,
+ "seed_offset": 0
+}
+$PROJECT_DIR/code/analyze2.py:246: RuntimeWarning: Mean of empty slice
+  res[w] = {s: {"mean": float(np.nanmean(per_order[:, j])), "p2.5": float(np.nanpercentile(per_order[:, j], 2.5)),
+/usr/local/lib/python3.12/site-packages/numpy/lib/_nanfunctions_impl.py:1396: RuntimeWarning: All-NaN slice encountered
+  return _nanquantile_unchecked(
+B1 overall exec_s: {'session': 0.093, 'trials': 0.335, 'models': 0.018, 'tasks': 0.005, 'none': 0.549}
+B1 overall payload_bytes: {'session': 0.137, 'trials': 0.608, 'models': 0.043, 'tasks': 0.018, 'none': 0.194}
+fidelity N=1|B=inf 54 {'S1_exec_saving': 0.03, 'S1_payload_saving': 0.029, 'S1_written_saving': 0.018, 'S2_exec_saving': 0.03, 'S2_payload_saving': 0.029, 'S2_written_saving': -0.964, 'S3_exec_saving': 0.03, 'S3_payload_saving': 0.029, 'S3_written_saving': 0.018, 'S3_over_S2_time': 0.998, 'S3_over_S2_written': 0.5, 'S3_over_S2_peak_foot': 0.5, 'S3_over_S2_peak_foot_seq': 0.5}
+fidelity N=2|B=inf 54 {'S1_exec_saving': 0.03, 'S1_payload_saving': 0.032, 'S1_written_saving': 0.018, 'S2_exec_saving': 0.096, 'S2_payload_saving': 0.095, 'S2_written_saving': -0.877, 'S3_exec_saving': 0.096, 'S3_payload_saving': 0.095, 'S3_written_saving': 0.089, 'S3_over_S2_time': 0.999, 'S3_over_S2_written': 0.488, 'S3_over_S2_peak_foot': 0.488, 'S3_over_S2_peak_foot_seq': 0.556}
+fidelity N=4|B=inf 54 {'S1_exec_saving': 0.034, 'S1_payload_saving': 0.038, 'S1_written_saving': 0.024, 'S2_exec_saving': 0.166, 'S2_payload_saving': 0.159, 'S2_written_saving': -0.794, 'S3_exec_saving': 0.166, 'S3_payload_saving': 0.159, 'S3_written_saving': 0.165, 'S3_over_S2_time': 0.999, 'S3_over_S2_written': 0.471, 'S3_over_S2_peak_foot': 0.471, 'S3_over_S2_peak_foot_seq': 0.624}
+fidelity N=8|B=inf 54 {'S1_exec_saving': 0.031, 'S1_payload_saving': 0.036, 'S1_written_saving': 0.024, 'S2_exec_saving': 0.241, 'S2_payload_saving': 0.239, 'S2_written_saving': -0.703, 'S3_exec_saving': 0.241, 'S3_payload_saving': 0.239, 'S3_written_saving': 0.241, 'S3_over_S2_time': 0.999, 'S3_over_S2_written': 0.448, 'S3_over_S2_peak_foot': 0.448, 'S3_over_S2_peak_foot_seq': 0.69}
+fidelity N=16|B=inf 54 {'S1_exec_saving': 0.03, 'S1_payload_saving': 0.034, 'S1_written_saving': 0.025, 'S2_exec_saving': 0.322, 'S2_payload_saving': 0.348, 'S2_written_saving': -0.604, 'S3_exec_saving': 0.322, 'S3_payload_saving': 0.348, 'S3_written_saving': 0.348, 'S3_over_S2_time': 0.999, 'S3_over_S2_written': 0.414, 'S3_over_S2_peak_foot': 0.414, 'S3_over_S2_peak_foot_seq': 0.771}
+fidelity N=50|B=inf 54 {'S1_exec_saving': 0.032, 'S1_payload_saving': 0.035, 'S1_written_saving': 0.025, 'S2_exec_saving': 0.47, 'S2_payload_saving': 0.512, 'S2_written_saving': -0.439, 'S3_exec_saving': 0.47, 'S3_payload_saving': 0.512, 'S3_written_saving': 0.523, 'S3_over_S2_time': 0.999, 'S3_over_S2_written': 0.336, 'S3_over_S2_peak_foot': 0.336, 'S3_over_S2_peak_foot_seq': 0.863}
+Bcert N=1|B=inf 53 {'S1_exec_saving': 0.0, 'S1_payload_saving': 0.0, 'S1_written_saving': 0.0, 'S2_exec_saving': 0.0, 'S2_payload_saving': 0.0, 'S2_written_saving': -1.0, 'S3_exec_saving': 0.0, 'S3_payload_saving': 0.0, 'S3_written_saving': 0.0, 'S3_over_S2_time': 1.0, 'S3_over_S2_written': 0.5, 'S3_over_S2_peak_foot': 0.5, 'S3_over_S2_peak_foot_seq': 0.5}
+Bcert N=2|B=1 53 {'S1_exec_saving': 0.0, 'S1_payload_saving': 0.0, 'S1_written_saving': 0.0, 'S2_exec_saving': 0.005, 'S2_payload_saving': 0.001, 'S2_written_saving': -1.0, 'S3_exec_saving': 0.005, 'S3_payload_saving': 0.003, 'S3_written_saving': 0.0, 'S3_over_S2_time': 1.0, 'S3_over_S2_written': 0.5, 'S3_over_S2_peak_foot': 0.5, 'S3_over_S2_peak_foot_seq': 0.501}
+Bcert N=2|B=1/16 53 {'S1_exec_saving': 0.0, 'S1_payload_saving': 0.0, 'S1_written_saving': 0.0, 'S2_exec_saving': 0.0, 'S2_payload_saving': 0.0, 'S2_written_saving': 0.0, 'S3_exec_saving': 0.0, 'S3_payload_saving': 0.0, 'S3_written_saving': 0.0, 'S3_over_S2_time': 1.0, 'S3_over_S2_written': 1.0, 'S3_over_S2_peak_foot': 1.0, 'S3_over_S2_peak_foot_seq': 1.0}
+Bcert N=2|B=1/4 53 {'S1_exec_saving': 0.0, 'S1_payload_saving': 0.0, 'S1_written_saving': 0.0, 'S2_exec_saving': 0.0, 'S2_payload_saving': 0.0, 'S2_written_saving': 0.0, 'S3_exec_saving': 0.0, 'S3_payload_saving': 0.0, 'S3_written_saving': 0.0, 'S3_over_S2_time': 1.0, 'S3_over_S2_written': 1.0, 'S3_over_S2_peak_foot': 1.0, 'S3_over_S2_peak_foot_seq': 1.0}
+Bcert N=2|B=inf 53 {'S1_exec_saving': 0.0, 'S1_payload_saving': 0.0, 'S1_written_saving': 0.0, 'S2_exec_saving': 0.007, 'S2_payload_saving': 0.002, 'S2_written_saving': -1.0, 'S3_exec_saving': 0.007, 'S3_payload_saving': 0.002, 'S3_written_saving': 0.0, 'S3_over_S2_time': 1.0, 'S3_over_S2_written': 0.5, 'S3_over_S2_peak_foot': 0.5, 'S3_over_S2_peak_foot_seq': 0.5}
+Bcert N=4|B=1 53 {'S1_exec_saving': 0.0, 'S1_payload_saving': 0.0, 'S1_written_saving': 0.0, 'S2_exec_saving': 0.015, 'S2_payload_saving': 0.005, 'S2_written_saving': -1.0, 'S3_exec_saving': 0.014, 'S3_payload_saving': 0.005, 'S3_written_saving': 0.0, 'S3_over_S2_time': 1.0, 'S3_over_S2_written': 0.5, 'S3_over_S2_peak_foot': 0.5, 'S3_over_S2_peak_foot_seq': 0.501}
+Bcert N=4|B=1/16 53 {'S1_exec_saving': 0.0, 'S1_payload_saving': 0.0, 'S1_written_saving': 0.0, 'S2_exec_saving': 0.0, 'S2_payload_saving': 0.0, 'S2_written_saving': 0.0, 'S3_exec_saving': 0.0, 'S3_payload_saving': 0.0, 'S3_written_saving': 0.0, 'S3_over_S2_time': 1.0, 'S3_over_S2_written': 1.0, 'S3_over_S2_peak_foot': 1.0, 'S3_over_S2_peak_foot_seq': 1.0}
+Bcert N=4|B=1/4 53 {'S1_exec_saving': 0.0, 'S1_payload_saving': 0.0, 'S1_written_saving': 0.0, 'S2_exec_saving': 0.002, 'S2_payload_saving': 0.0, 'S2_written_saving': 0.0, 'S3_exec_saving': 0.0, 'S3_payload_saving': 0.0, 'S3_written_saving': 0.0, 'S3_over_S2_time': 1.0, 'S3_over_S2_written': 1.0, 'S3_over_S2_peak_foot': 1.0, 'S3_over_S2_peak_foot_seq': 1.0}
+Bcert N=4|B=inf 53 {'S1_exec_saving': 0.0, 'S1_payload_saving': 0.0, 'S1_written_saving': 0.0, 'S2_exec_saving': 0.026, 'S2_payload_saving': 0.013, 'S2_written_saving': -1.0, 'S3_exec_saving': 0.026, 'S3_payload_saving': 0.013, 'S3_written_saving': 0.0, 'S3_over_S2_time': 1.0, 'S3_over_S2_written': 0.5, 'S3_over_S2_peak_foot': 0.5, 'S3_over_S2_peak_foot_seq': 0.5}
+Bcert N=8|B=1 53 {'S1_exec_saving': 0.0, 'S1_payload_saving': 0.0, 'S1_written_saving': 0.0, 'S2_exec_saving': 0.032, 'S2_payload_saving': 0.008, 'S2_written_saving': -1.0, 'S3_exec_saving': 0.03, 'S3_payload_saving': 0.008, 'S3_written_saving': 0.0, 'S3_over_S2_time': 1.0, 'S3_over_S2_written': 0.5, 'S3_over_S2_peak_foot': 0.5, 'S3_over_S2_peak_foot_seq': 0.501}
+Bcert N=8|B=1/16 53 {'S1_exec_saving': 0.0, 'S1_payload_saving': 0.0, 'S1_written_saving': 0.0, 'S2_exec_saving': 0.0, 'S2_payload_saving': 0.0, 'S2_written_saving': 0.0, 'S3_exec_saving': 0.0, 'S3_payload_saving': 0.0, 'S3_written_saving': 0.0, 'S3_over_S2_time': 1.0, 'S3_over_S2_written': 1.0, 'S3_over_S2_peak_foot': 1.0, 'S3_over_S2_peak_foot_seq': 1.0}
+Bcert N=8|B=1/4 53 {'S1_exec_saving': 0.0, 'S1_payload_saving': 0.0, 'S1_written_saving': 0.0, 'S2_exec_saving': 0.008, 'S2_payload_saving': 0.0, 'S2_written_saving': 0.0, 'S3_exec_saving': 0.008, 'S3_payload_saving': 0.0, 'S3_written_saving': 0.0, 'S3_over_S2_time': 1.0, 'S3_over_S2_written': 1.0, 'S3_over_S2_peak_foot': 1.0, 'S3_over_S2_peak_foot_seq': 1.0}
+Bcert N=8|B=inf 53 {'S1_exec_saving': 0.0, 'S1_payload_saving': 0.0, 'S1_written_saving': 0.0, 'S2_exec_saving': 0.065, 'S2_payload_saving': 0.03, 'S2_written_saving': -1.0, 'S3_exec_saving': 0.065, 'S3_payload_saving': 0.03, 'S3_written_saving': 0.0, 'S3_over_S2_time': 1.0, 'S3_over_S2_written': 0.5, 'S3_over_S2_peak_foot': 0.5, 'S3_over_S2_peak_foot_seq': 0.5}
+Bcert N=16|B=inf 53 {'S1_exec_saving': 0.0, 'S1_payload_saving': 0.0, 'S1_written_saving': 0.0, 'S2_exec_saving': 0.093, 'S2_payload_saving': 0.064, 'S2_written_saving': -1.0, 'S3_exec_saving': 0.093, 'S3_payload_saving': 0.064, 'S3_written_saving': 0.0, 'S3_over_S2_time': 1.0, 'S3_over_S2_written': 0.5, 'S3_over_S2_peak_foot': 0.5, 'S3_over_S2_peak_foot_seq': 0.5}
+Bcert N=50|B=inf 53 {'S1_exec_saving': 0.0, 'S1_payload_saving': 0.0, 'S1_written_saving': 0.0, 'S2_exec_saving': 0.21, 'S2_payload_saving': 0.133, 'S2_written_saving': -1.0, 'S3_exec_saving': 0.21, 'S3_payload_saving': 0.133, 'S3_written_saving': 0.0, 'S3_over_S2_time': 1.0, 'S3_over_S2_written': 0.5, 'S3_over_S2_peak_foot': 0.5, 'S3_over_S2_peak_foot_seq': 0.5}
+Ecert N=1|B=inf 54 {'S1_exec_saving': 0.033, 'S1_payload_saving': 0.04, 'S1_written_saving': 0.023, 'S2_exec_saving': 0.033, 'S2_payload_saving': 0.04, 'S2_written_saving': -0.955, 'S3_exec_saving': 0.033, 'S3_payload_saving': 0.04, 'S3_written_saving': 0.023, 'S3_over_S2_time': 0.998, 'S3_over_S2_written': 0.5, 'S3_over_S2_peak_foot': 0.5, 'S3_over_S2_peak_foot_seq': 0.5}
+Ecert N=2|B=1 54 {'S1_exec_saving': 0.029, 'S1_payload_saving': 0.034, 'S1_written_saving': 0.019, 'S2_exec_saving': 0.099, 'S2_payload_saving': 0.081, 'S2_written_saving': -0.876, 'S3_exec_saving': 0.099, 'S3_payload_saving': 0.081, 'S3_written_saving': 0.085, 'S3_over_S2_time': 0.999, 'S3_over_S2_written': 0.489, 'S3_over_S2_peak_foot': 0.489, 'S3_over_S2_peak_foot_seq': 0.555}
+Ecert N=2|B=1/16 54 {'S1_exec_saving': 0.029, 'S1_payload_saving': 0.027, 'S1_written_saving': 0.015, 'S2_exec_saving': 0.095, 'S2_payload_saving': 0.088, 'S2_written_saving': -0.593, 'S3_exec_saving': 0.094, 'S3_payload_saving': 0.072, 'S3_written_saving': 0.064, 'S3_over_S2_time': 0.999, 'S3_over_S2_written': 0.541, 'S3_over_S2_peak_foot': 0.551, 'S3_over_S2_peak_foot_seq': 0.626}
+Ecert N=2|B=1/4 54 {'S1_exec_saving': 0.029, 'S1_payload_saving': 0.031, 'S1_written_saving': 0.023, 'S2_exec_saving': 0.098, 'S2_payload_saving': 0.09, 'S2_written_saving': -0.838, 'S3_exec_saving': 0.098, 'S3_payload_saving': 0.09, 'S3_written_saving': 0.085, 'S3_over_S2_time': 0.999, 'S3_over_S2_written': 0.489, 'S3_over_S2_peak_foot': 0.489, 'S3_over_S2_peak_foot_seq': 0.566}
+Ecert N=2|B=inf 54 {'S1_exec_saving': 0.029, 'S1_payload_saving': 0.03, 'S1_written_saving': 0.02, 'S2_exec_saving': 0.095, 'S2_payload_saving': 0.095, 'S2_written_saving': -0.881, 'S3_exec_saving': 0.095, 'S3_payload_saving': 0.095, 'S3_written_saving': 0.087, 'S3_over_S2_time': 0.998, 'S3_over_S2_written': 0.489, 'S3_over_S2_peak_foot': 0.489, 'S3_over_S2_peak_foot_seq': 0.559}
+Ecert N=4|B=1 54 {'S1_exec_saving': 0.033, 'S1_payload_saving': 0.034, 'S1_written_saving': 0.023, 'S2_exec_saving': 0.175, 'S2_payload_saving': 0.152, 'S2_written_saving': -0.809, 'S3_exec_saving': 0.175, 'S3_payload_saving': 0.152, 'S3_written_saving': 0.157, 'S3_over_S2_time': 0.999, 'S3_over_S2_written': 0.47, 'S3_over_S2_peak_foot': 0.47, 'S3_over_S2_peak_foot_seq': 0.622}
+Ecert N=4|B=1/16 54 {'S1_exec_saving': 0.027, 'S1_payload_saving': 0.027, 'S1_written_saving': 0.021, 'S2_exec_saving': 0.155, 'S2_payload_saving': 0.142, 'S2_written_saving': -0.512, 'S3_exec_saving': 0.149, 'S3_payload_saving': 0.133, 'S3_written_saving': 0.098, 'S3_over_S2_time': 0.999, 'S3_over_S2_written': 0.529, 'S3_over_S2_peak_foot': 0.514, 'S3_over_S2_peak_foot_seq': 0.704}
+Ecert N=4|B=1/4 54 {'S1_exec_saving': 0.034, 'S1_payload_saving': 0.038, 'S1_written_saving': 0.023, 'S2_exec_saving': 0.17, 'S2_payload_saving': 0.151, 'S2_written_saving': -0.74, 'S3_exec_saving': 0.17, 'S3_payload_saving': 0.151, 'S3_written_saving': 0.158, 'S3_over_S2_time': 0.999, 'S3_over_S2_written': 0.473, 'S3_over_S2_peak_foot': 0.473, 'S3_over_S2_peak_foot_seq': 0.639}
+Ecert N=4|B=inf 54 {'S1_exec_saving': 0.031, 'S1_payload_saving': 0.035, 'S1_written_saving': 0.025, 'S2_exec_saving': 0.178, 'S2_payload_saving': 0.157, 'S2_written_saving': -0.795, 'S3_exec_saving': 0.178, 'S3_payload_saving': 0.157, 'S3_written_saving': 0.155, 'S3_over_S2_time': 0.998, 'S3_over_S2_written': 0.47, 'S3_over_S2_peak_foot': 0.47, 'S3_over_S2_peak_foot_seq': 0.624}
+Ecert N=8|B=1 54 {'S1_exec_saving': 0.031, 'S1_payload_saving': 0.038, 'S1_written_saving': 0.023, 'S2_exec_saving': 0.252, 'S2_payload_saving': 0.24, 'S2_written_saving': -0.701, 'S3_exec_saving': 0.252, 'S3_payload_saving': 0.24, 'S3_written_saving': 0.245, 'S3_over_S2_time': 0.998, 'S3_over_S2_written': 0.448, 'S3_over_S2_peak_foot': 0.448, 'S3_over_S2_peak_foot_seq': 0.693}
+Ecert N=8|B=1/16 54 {'S1_exec_saving': 0.028, 'S1_payload_saving': 0.032, 'S1_written_saving': 0.021, 'S2_exec_saving': 0.224, 'S2_payload_saving': 0.18, 'S2_written_saving': -0.487, 'S3_exec_saving': 0.221, 'S3_payload_saving': 0.177, 'S3_written_saving': 0.151, 'S3_over_S2_time': 1.0, 'S3_over_S2_written': 0.517, 'S3_over_S2_peak_foot': 0.472, 'S3_over_S2_peak_foot_seq': 0.746}
+Ecert N=8|B=1/4 54 {'S1_exec_saving': 0.031, 'S1_payload_saving': 0.035, 'S1_written_saving': 0.025, 'S2_exec_saving': 0.247, 'S2_payload_saving': 0.242, 'S2_written_saving': -0.639, 'S3_exec_saving': 0.247, 'S3_payload_saving': 0.242, 'S3_written_saving': 0.235, 'S3_over_S2_time': 0.999, 'S3_over_S2_written': 0.449, 'S3_over_S2_peak_foot': 0.448, 'S3_over_S2_peak_foot_seq': 0.708}
+Ecert N=8|B=inf 54 {'S1_exec_saving': 0.03, 'S1_payload_saving': 0.032, 'S1_written_saving': 0.024, 'S2_exec_saving': 0.251, 'S2_payload_saving': 0.237, 'S2_written_saving': -0.707, 'S3_exec_saving': 0.251, 'S3_payload_saving': 0.237, 'S3_written_saving': 0.239, 'S3_over_S2_time': 0.999, 'S3_over_S2_written': 0.448, 'S3_over_S2_peak_foot': 0.448, 'S3_over_S2_peak_foot_seq': 0.696}
+Ecert N=16|B=inf 54 {'S1_exec_saving': 0.033, 'S1_payload_saving': 0.035, 'S1_written_saving': 0.024, 'S2_exec_saving': 0.329, 'S2_payload_saving': 0.344, 'S2_written_saving': -0.615, 'S3_exec_saving': 0.329, 'S3_payload_saving': 0.344, 'S3_written_saving': 0.344, 'S3_over_S2_time': 0.998, 'S3_over_S2_written': 0.413, 'S3_over_S2_peak_foot': 0.413, 'S3_over_S2_peak_foot_seq': 0.764}
+Ecert N=50|B=inf 54 {'S1_exec_saving': 0.032, 'S1_payload_saving': 0.034, 'S1_written_saving': 0.025, 'S2_exec_saving': 0.461, 'S2_payload_saving': 0.513, 'S2_written_saving': -0.439, 'S3_exec_saving': 0.461, 'S3_payload_saving': 0.513, 'S3_written_saving': 0.523, 'S3_over_S2_time': 0.998, 'S3_over_S2_written': 0.336, 'S3_over_S2_peak_foot': 0.336, 'S3_over_S2_peak_foot_seq': 0.864}
+B1 exec_s: other attempts > session              n= 54 p=9.10e-11 p_holm=2.64e-09 rb=+0.997 ratio=None
+B1 payload_bytes: other attempts > session       n= 54 p=3.43e-10 p_holm=8.58e-09 rb=+0.965 ratio=None
+B2 N=2: S2 vs S1 DB execution                    n= 54 p=1.63e-10 p_holm=4.55e-09 rb=-1.000 ratio=0.9426862533566456
+B2 N=4: S2 vs S1 DB execution                    n= 54 p=1.63e-10 p_holm=4.55e-09 rb=-1.000 ratio=0.8795389371881386
+B2 N=8: S2 vs S1 DB execution                    n= 54 p=1.63e-10 p_holm=4.55e-09 rb=-1.000 ratio=0.8009807030855574
+B3-E N=2 B=inf: S3 vs S2 written                 n= 52 p=3.50e-10 p_holm=8.58e-09 rb=-1.000 ratio=0.48935309335370114
+B3-E N=2 B=inf: S3 vs S2 peak_foot               n= 52 p=3.50e-10 p_holm=8.58e-09 rb=-1.000 ratio=0.48935309335370114
+B3-E N=2 B=inf: S3 vs S2 peak_foot_seq           n= 52 p=3.50e-10 p_holm=8.58e-09 rb=-1.000 ratio=0.5585152030197771
+B3-E N=2 B=inf: S3 vs S2 time                    n= 52 p=8.35e-10 p_holm=8.58e-09 rb=-0.978 ratio=0.9981242768720109
+B3-E N=2 B=1/4: S3 vs S2 written                 n= 52 p=3.50e-10 p_holm=8.58e-09 rb=-1.000 ratio=0.4890015644988577
+B3-E N=2 B=1/4: S3 vs S2 peak_foot               n= 52 p=3.50e-10 p_holm=8.58e-09 rb=-1.000 ratio=0.4893626799545744
+B3-E N=2 B=1/4: S3 vs S2 peak_foot_seq           n= 52 p=3.50e-10 p_holm=8.58e-09 rb=-1.000 ratio=0.5658415125215128
+B3-E N=2 B=1/4: S3 vs S2 time                    n= 52 p=1.25e-09 p_holm=8.58e-09 rb=-0.968 ratio=0.9987384953709038
+B3-E N=4 B=inf: S3 vs S2 written                 n= 52 p=3.50e-10 p_holm=8.58e-09 rb=-1.000 ratio=0.47043490030917234
+B3-E N=4 B=inf: S3 vs S2 peak_foot               n= 52 p=3.50e-10 p_holm=8.58e-09 rb=-1.000 ratio=0.47043490030917234
+B3-E N=4 B=inf: S3 vs S2 peak_foot_seq           n= 52 p=3.50e-10 p_holm=8.58e-09 rb=-1.000 ratio=0.6242603439923073
+B3-E N=4 B=inf: S3 vs S2 time                    n= 52 p=5.60e-09 p_holm=2.24e-08 rb=-0.929 ratio=0.9980035084958814
+B3-E N=4 B=1/4: S3 vs S2 written                 n= 52 p=3.50e-10 p_holm=8.58e-09 rb=-1.000 ratio=0.4731205387417612
+B3-E N=4 B=1/4: S3 vs S2 peak_foot               n= 52 p=3.50e-10 p_holm=8.58e-09 rb=-1.000 ratio=0.4727329824149644
+B3-E N=4 B=1/4: S3 vs S2 peak_foot_seq           n= 52 p=3.50e-10 p_holm=8.58e-09 rb=-1.000 ratio=0.6392008711245118
+B3-E N=4 B=1/4: S3 vs S2 time                    n= 52 p=1.19e-08 p_holm=3.57e-08 rb=-0.909 ratio=0.9982465550906575
+B3-E N=8 B=inf: S3 vs S2 written                 n= 52 p=3.50e-10 p_holm=8.58e-09 rb=-1.000 ratio=0.4483772118306989
+B3-E N=8 B=inf: S3 vs S2 peak_foot               n= 52 p=3.50e-10 p_holm=8.58e-09 rb=-1.000 ratio=0.4483772118306989
+B3-E N=8 B=inf: S3 vs S2 peak_foot_seq           n= 52 p=3.50e-10 p_holm=8.58e-09 rb=-1.000 ratio=0.6957323019770384
+B3-E N=8 B=inf: S3 vs S2 time                    n= 52 p=5.15e-08 p_holm=1.03e-07 rb=-0.868 ratio=0.9982665869137357
+B3-E N=8 B=1/4: S3 vs S2 written                 n= 52 p=3.50e-10 p_holm=8.58e-09 rb=-1.000 ratio=0.44882211432576896
+B3-E N=8 B=1/4: S3 vs S2 peak_foot               n= 52 p=3.50e-10 p_holm=8.58e-09 rb=-1.000 ratio=0.4483095492351806
+B3-E N=8 B=1/4: S3 vs S2 peak_foot_seq           n= 52 p=3.50e-10 p_holm=8.58e-09 rb=-1.000 ratio=0.7084949873076611
+B3-E N=8 B=1/4: S3 vs S2 time                    n= 52 p=7.36e-08 p_holm=1.03e-07 rb=-0.858 ratio=0.9982593475647092
+E N=2|B=inf {'tasks': 52, 'S1_over_S0_peak_foot': 0.98, 'S1_over_S0_peak_foot_seq': 0.976, 'S2_over_S0_peak_foot': 1.881, 'S2_over_S0_peak_foot_seq': 2.069, 'S3_over_S0_peak_foot': 0.913, 'S3_over_S0_peak_foot_seq': 1.141, 'S3_over_S2_peak_foot': 0.489, 'S3_over_S2_peak_foot_seq': 0.559}
+E N=4|B=inf {'tasks': 52, 'S1_over_S0_peak_foot': 0.975, 'S1_over_S0_peak_foot_seq': 0.969, 'S2_over_S0_peak_foot': 1.795, 'S2_over_S0_peak_foot_seq': 2.253, 'S3_over_S0_peak_foot': 0.845, 'S3_over_S0_peak_foot_seq': 1.373, 'S3_over_S2_peak_foot': 0.47, 'S3_over_S2_peak_foot_seq': 0.624}
+E N=8|B=inf {'tasks': 52, 'S1_over_S0_peak_foot': 0.976, 'S1_over_S0_peak_foot_seq': 0.965, 'S2_over_S0_peak_foot': 1.707, 'S2_over_S0_peak_foot_seq': 2.552, 'S3_over_S0_peak_foot': 0.761, 'S3_over_S0_peak_foot_seq': 1.782, 'S3_over_S2_peak_foot': 0.448, 'S3_over_S2_peak_foot_seq': 0.696}
+E N=8|B=1/4 {'tasks': 52, 'S1_over_S0_peak_foot': 0.975, 'S1_over_S0_peak_foot_seq': 0.962, 'S2_over_S0_peak_foot': 1.606, 'S2_over_S0_peak_foot_seq': 2.44, 'S3_over_S0_peak_foot': 0.753, 'S3_over_S0_peak_foot_seq': 1.692, 'S3_over_S2_peak_foot': 0.448, 'S3_over_S2_peak_foot_seq': 0.708}
+E N=8|B=1/16 {'tasks': 52, 'S1_over_S0_peak_foot': 0.979, 'S1_over_S0_peak_foot_seq': 0.972, 'S2_over_S0_peak_foot': 1.336, 'S2_over_S0_peak_foot_seq': 1.75, 'S3_over_S0_peak_foot': 0.656, 'S3_over_S0_peak_foot_seq': 1.291, 'S3_over_S2_peak_foot': 0.472, 'S3_over_S2_peak_foot_seq': 0.746}

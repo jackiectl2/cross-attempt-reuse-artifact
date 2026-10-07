@@ -1,0 +1,44 @@
+You are an adversarial reviewer of a static SQL certificate. Read `certify.py` and `p2_audit.py` in the working
+directory. The certificate under review is `certify_sql_b` (reached through `certify(text, engine, strict=True,
+schema=...)` when the environment variable ED_CONTRACT_B is unset): a default-deny whitelist whose rules are in the
+module docstring. Ignore `certify_sql` (earlier rules, kept for old results) and `certify_mongo`.
+
+## What the certificate claims
+`certify(text, engine, schema=S)` returns True only for queries whose serialized result is byte-identical in every
+correct execution on the same snapshot, whatever the plan, the degree of parallelism or the physical row order.
+Engines: SQLite 3.x, DuckDB 1.3, PostgreSQL 16 (database created with C collation). `S` maps every base table of the
+query's database to its stored columns and, per column, whether it passed `p2_audit.py` ("P2-safe": no two values of
+the column compare equal and print differently). Assumed and not to be attacked: the snapshot, engine versions and
+session configuration (time zone, float formatting, search path) are fixed; no database declares a non-binary
+collation; results are serialized by a deterministic serializer that prints every value from its engine-returned
+Python value.
+
+## Your task
+Break it. Find concrete queries that `certify_sql_b` ADMITS but whose result bytes can legitimately differ between two
+correct executions on the same snapshot in at least one of the three engines. For each candidate give: the engine and
+exact query text (state the schema dict you pass); a trace through the code showing that every check passes (run the
+code if you can); the engine semantics that make the bytes differ, with a small example dataset; and the smallest
+additional rule that rejects it.
+
+Look in particular at: how sqlglot 30 parses each admitted construct per dialect (double-quoted strings in SQLite,
+`Div` typing, `Round`, `Trim` variants, `Substring`, `Cast` / `TryCast` targets and their aliases, `ILike`, `Is`,
+`Between`, `In`, `Case` / `If`, `Coalesce`, anonymous functions on the list `_B_ANON`, `Limit` / `Offset` forms such as
+`LIMIT a, b`, `FETCH FIRST`, `LIMIT ALL`, `Ordered` flags, `Distinct`, table aliases, schema-qualified tables,
+comma joins, join kinds and sides including `SEMI`, `ANTI`, `ASOF`, `POSITIONAL`, `CROSS`, `FULL`); at name binding
+(`_fold`, quoted identifiers, aliases that shadow columns, columns named like keywords or like SQLite's `rowid`, bare
+`true` / `false`, alias references in ORDER BY and HAVING, ordinals in GROUP BY and ORDER BY, tables attached under
+another schema); at the three shapes (is the one-row shape really one row; are ties in the ordered and grouped shapes
+really byte-identical rows; can an ORDER BY term that is not an output break determinism; DISTINCT with ORDER BY on a
+non-output column; LIMIT 0 and negative or huge literals); at values (anything that can make an admitted output or a
+MIN / MAX or grouping value pick between representations: integer vs real in SQLite, negative zero, NaN, numeric scale
+in PostgreSQL, `char(n)`, blobs, booleans, implicit casts, text that an engine parses as a date or as the clock in a
+comparison, row expressions whose value depends on evaluation order or raises an error only in some plans, e.g.
+division by zero or a failing cast that a different join order or short-circuit would skip); and at `p2_audit.py`
+(a column that passes the audit but has two values that compare equal and print differently in the engine-returned
+Python value; types wrongly listed as safe; views or attached tables that are missed).
+
+Also list queries that are obviously byte-stable but rejected only because of an implementation slip rather than by
+the stated rule.
+
+Report at most 12 counterexamples, strongest first, and say plainly for each category whether you found none. Do not
+propose a redesign; do not modify any file.

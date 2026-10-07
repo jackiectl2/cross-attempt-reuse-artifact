@@ -1,0 +1,272 @@
+{
+ "dab:gemini-2.5-flash": {
+  "model": "gemini-2.5-flash",
+  "runs": 269,
+  "queries": 54,
+  "db_calls": 958,
+  "scope_shares": {
+   "calls": {
+    "session": 0.1868,
+    "other_attempts": 0.1472,
+    "other_queries": 0.0198,
+    "none": 0.6461
+   },
+   "result_chars": {
+    "session": 0.1473,
+    "other_attempts": 0.2042,
+    "other_queries": 0.0357,
+    "none": 0.6127
+   }
+  },
+  "task_median": {
+   "calls_session": 0.0,
+   "calls_other_attempts": 0.1667,
+   "bytes_session": 0.0,
+   "bytes_other_attempts": 0.19319999999999998
+  },
+  "reuse_curve": {
+   "1": {
+    "median_task_call_reuse": 0.0,
+    "median_task_byte_reuse": 0.0,
+    "tasks": 54
+   },
+   "2": {
+    "median_task_call_reuse": 0.13537530266343828,
+    "median_task_byte_reuse": 0.1444587513799227,
+    "tasks": 54
+   },
+   "3": {
+    "median_task_call_reuse": 0.20376739721644538,
+    "median_task_byte_reuse": 0.21133948707673667,
+    "tasks": 54
+   },
+   "4": {
+    "median_task_call_reuse": 0.2673802410544469,
+    "median_task_byte_reuse": 0.24061117097450524,
+    "tasks": 54
+   },
+   "5": {
+    "median_task_call_reuse": 0.3,
+    "median_task_byte_reuse": 0.2850793473869004,
+    "tasks": 53
+   }
+  },
+  "llm_latency_s": null
+ },
+ "dab:gemini-3-pro": {
+  "model": "gemini-3-pro",
+  "runs": 270,
+  "queries": 54,
+  "db_calls": 1708,
+  "scope_shares": {
+   "calls": {
+    "session": 0.0006,
+    "other_attempts": 0.2324,
+    "other_queries": 0.0457,
+    "none": 0.7213
+   },
+   "result_chars": {
+    "session": 0.0001,
+    "other_attempts": 0.2874,
+    "other_queries": 0.0467,
+    "none": 0.6658
+   }
+  },
+  "task_median": {
+   "calls_session": 0.0,
+   "calls_other_attempts": 0.2457,
+   "bytes_session": 0.0,
+   "bytes_other_attempts": 0.2664
+  },
+  "reuse_curve": {
+   "1": {
+    "median_task_call_reuse": 0.0,
+    "median_task_byte_reuse": 0.0,
+    "tasks": 54
+   },
+   "2": {
+    "median_task_call_reuse": 0.08233535040810583,
+    "median_task_byte_reuse": 0.08750456986205826,
+    "tasks": 54
+   },
+   "3": {
+    "median_task_call_reuse": 0.15489130434782608,
+    "median_task_byte_reuse": 0.15136253168117444,
+    "tasks": 54
+   },
+   "4": {
+    "median_task_call_reuse": 0.209391563267735,
+    "median_task_byte_reuse": 0.21037480967324235,
+    "tasks": 54
+   },
+   "5": {
+    "median_task_call_reuse": 0.2456896551724138,
+    "median_task_byte_reuse": 0.26640973612086216,
+    "tasks": 54
+   }
+  },
+  "llm_latency_s": null
+ },
+ "dab:gpt-5-mini": {
+  "model": "gpt-5-mini",
+  "runs": 270,
+  "queries": 54,
+  "db_calls": 1388,
+  "scope_shares": {
+   "calls": {
+    "session": 0.005,
+    "other_attempts": 0.0864,
+    "other_queries": 0.0158,
+    "none": 0.8927
+   },
+   "result_chars": {
+    "session": 0.0016,
+    "other_attempts": 0.1298,
+    "other_queries": 0.0294,
+    "none": 0.8392
+   }
+  },
+  "task_median": {
+   "calls_session": 0.0,
+   "calls_other_attempts": 0.10555,
+   "bytes_session": 0.0,
+   "bytes_other_attempts": 0.0795
+  },
+  "reuse_curve": {
+   "1": {
+    "median_task_call_reuse": 0.0,
+    "median_task_byte_reuse": 0.0,
+    "tasks": 54
+   },
+   "2": {
+    "median_task_call_reuse": 0.03661707481813998,
+    "median_task_byte_reuse": 0.02581982217688658,
+    "tasks": 54
+   },
+   "3": {
+    "median_task_call_reuse": 0.07091411791506345,
+    "median_task_byte_reuse": 0.049309240211420385,
+    "tasks": 54
+   },
+   "4": {
+    "median_task_call_reuse": 0.09503815070657817,
+    "median_task_byte_reuse": 0.06054915127424614,
+    "tasks": 54
+   },
+   "5": {
+    "median_task_call_reuse": 0.1125,
+    "median_task_byte_reuse": 0.07950539766468384,
+    "tasks": 54
+   }
+  },
+  "llm_latency_s": null
+ },
+ "dab:gpt-5.2": {
+  "model": "gpt-5.2",
+  "runs": 270,
+  "queries": 54,
+  "db_calls": 1093,
+  "scope_shares": {
+   "calls": {
+    "session": 0.0009,
+    "other_attempts": 0.1354,
+    "other_queries": 0.022,
+    "none": 0.8417
+   },
+   "result_chars": {
+    "session": 0.0027,
+    "other_attempts": 0.2018,
+    "other_queries": 0.0356,
+    "none": 0.76
+   }
+  },
+  "task_median": {
+   "calls_session": 0.0,
+   "calls_other_attempts": 0.13165,
+   "bytes_session": 0.0,
+   "bytes_other_attempts": 0.138
+  },
+  "reuse_curve": {
+   "1": {
+    "median_task_call_reuse": 0.0,
+    "median_task_byte_reuse": 0.0,
+    "tasks": 54
+   },
+   "2": {
+    "median_task_call_reuse": 0.04530232814741256,
+    "median_task_byte_reuse": 0.04203179800646384,
+    "tasks": 54
+   },
+   "3": {
+    "median_task_call_reuse": 0.07588919825801385,
+    "median_task_byte_reuse": 0.0909332554814326,
+    "tasks": 54
+   },
+   "4": {
+    "median_task_call_reuse": 0.10748198231666542,
+    "median_task_byte_reuse": 0.11596492497240615,
+    "tasks": 54
+   },
+   "5": {
+    "median_task_call_reuse": 0.13167013167013167,
+    "median_task_byte_reuse": 0.1379970934206995,
+    "tasks": 54
+   }
+  },
+  "llm_latency_s": null
+ },
+ "dab:kimi-k2": {
+  "model": "kimi-k2",
+  "runs": 266,
+  "queries": 54,
+  "db_calls": 2287,
+  "scope_shares": {
+   "calls": {
+    "session": 0.1163,
+    "other_attempts": 0.0831,
+    "other_queries": 0.0332,
+    "none": 0.7674
+   },
+   "result_chars": {
+    "session": 0.1391,
+    "other_attempts": 0.1039,
+    "other_queries": 0.0308,
+    "none": 0.7261
+   }
+  },
+  "task_median": {
+   "calls_session": 0.06615,
+   "calls_other_attempts": 0.0667,
+   "bytes_session": 0.0781,
+   "bytes_other_attempts": 0.06359999999999999
+  },
+  "reuse_curve": {
+   "1": {
+    "median_task_call_reuse": 0.0659122027356035,
+    "median_task_byte_reuse": 0.07110983959673178,
+    "tasks": 54
+   },
+   "2": {
+    "median_task_call_reuse": 0.09244424099081916,
+    "median_task_byte_reuse": 0.1261282294275165,
+    "tasks": 54
+   },
+   "3": {
+    "median_task_call_reuse": 0.11719645249853314,
+    "median_task_byte_reuse": 0.16669338654188137,
+    "tasks": 54
+   },
+   "4": {
+    "median_task_call_reuse": 0.11946532999164577,
+    "median_task_byte_reuse": 0.18625024465880335,
+    "tasks": 53
+   },
+   "5": {
+    "median_task_call_reuse": 0.13333333333333333,
+    "median_task_byte_reuse": 0.18604296258721267,
+    "tasks": 51
+   }
+  },
+  "llm_latency_s": null
+ }
+}

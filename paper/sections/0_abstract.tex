@@ -1,0 +1,9 @@
+Data agents built on large language models (LLMs) are executed repeatedly on the same task through retries,
+best-of-$N$ sampling and $k$-trial evaluation. This paper characterizes the database work that such repetition
+duplicates and establishes how a data system reuses it with byte-identical results. We replay 41,610 of the 41,616
+distinct database--query pairs behind 76,213 database calls from 13,482 public runs of the DAB benchmark. The replay
+spans five LLMs, 54 tasks and four engines in a version-pinned runtime. Three findings emerge. First, reuse is a
+cross-attempt phenomenon. Repeats from other attempts carry 33.5\% of isolated DB-execution time and 60.8\% of result
+bytes, against 9.3\% and 13.7\% within a session. In simulation, a cache shared by eight attempts saves 24.1\% of oracle-admitted DB time for the median task and 47.0\% at fifty attempts. Second, an offline-qualified pinned runtime unlocks this payoff.
+It reproduces all 71,275 statically admissible calls whose replay succeeded, byte for byte. A static across-plan certificate reaches 12.2\% of the reusable DB time. Third, ownership governs storage cost. At eight attempts, a simulated read-only shared store writes 0.45$\times$ the bytes of private copies for the median task with spilled results. With retained outputs, it holds 0.76$\times$ the peak footprint of no sharing.
+In a live tool-boundary replay of 270 task--model cells, all 4,655 consumer executions whose two uncached runs agreed produce the same output under reuse.
